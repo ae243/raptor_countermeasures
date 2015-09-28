@@ -1,0 +1,85 @@
+% TEMPLATE for Usenix papers, specifically to meet requirements of
+%  USENIX '05
+% originally a template for producing IEEE-format articles using LaTeX.
+%   written by Matthew Ward, CS Department, Worcester Polytechnic Institute.
+% adapted by David Beazley for his excellent SWIG paper in Proceedings,
+%   Tcl 96
+% turned into a smartass generic template by De Clarke, with thanks to
+%   both the above pioneers
+% use at your own risk.  Complaints to /dev/null.
+% make it two column with no page numbering, default is 10 point
+
+% Munged by Fred Douglis <douglis@research.att.com> 10/97 to separate
+% the .sty file from the LaTeX source template, so that people can
+% more easily include the .sty file into an existing document.  Also
+% changed to more closely follow the style guidelines as represented
+% by the Word sample file. 
+
+% Note that since 2010, USENIX does not require endnotes. If you want
+% foot of page notes, don't include the endnotes package in the 
+% usepackage command, below.
+
+% This version uses the latex2e styles, not the very ancient 2.09 stuff.
+\newcommand{\comment}[1]{}
+
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{graphicx}
+\usepackage{usenix,epsfig}
+\usepackage{url}
+\usepackage{listings}
+\usepackage{subfigure}
+\usepackage{paralist}
+\usepackage{textcomp}
+\usepackage{xspace}
+\usepackage{ifthen}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+
+\begin{document}
+
+%don't want date printed
+\date{}
+
+\title{\Large \bf Countermeasures for RAPTOR Attacks}
+\author{
+ {\rm Yixin Sun}\\
+ Princeton University
+ \and
+ {\rm Anne Edmundson}\\
+ Princeton University
+} % end author
+
+\maketitle
+
+%\thispagestyle{empty}
+
+\subsection*{Motivation}
+\cite{sun2015raptor}
+
+\subsection*{Goals/Contributions}
+Goal: provide (effective) countermeasures against active RAPTOR attacks.
+
+{\bf Shortest Path Selection.}
+-path selection against active attacks
+-how to pick a good/close guard relay
+
+{\bf Monitoring Framework.}
+-monitor BGP announcements, use traceroute to verify (becomes optimization problem)
+-use relay info to selectively monitor relays
+-differentiate between hijacks and interceptions
+{\footnotesize \bibliographystyle{acm}
+\bibliography{paper.bib}}
+
+%\theendnotes
+
+\end{document}
+
+
+
+
+
+
+
