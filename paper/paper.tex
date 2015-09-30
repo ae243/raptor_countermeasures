@@ -22,7 +22,7 @@
 % This version uses the latex2e styles, not the very ancient 2.09 stuff.
 \newcommand{\comment}[1]{}
 
-\documentclass[letterpaper,twocolumn,10pt]{article}
+\documentclass{acm_proc_article-sp}
 \usepackage{graphicx}
 \usepackage{usenix,epsfig}
 \usepackage{url}
@@ -56,10 +56,10 @@
 
 %\thispagestyle{empty}
 
-\subsection*{Motivation}
+\section{Problem Motivation}
 \cite{sun2015raptor}
 
-\subsection*{Goals/Contributions}
+\section{Novel Ideas/Perspectives}
 Goal: provide (effective) countermeasures against active RAPTOR attacks.
 
 {\bf Shortest Path Selection.}
@@ -73,6 +73,8 @@ Goal: provide (effective) countermeasures against active RAPTOR attacks.
 
 NOTE: other ideas
 -check resilience of relays to prefix hijacking (see AS resilience work)
+
+\section{Summary of Proposed Contributions}
 
 {\footnotesize \bibliographystyle{acm}
 \bibliography{paper.bib}}
