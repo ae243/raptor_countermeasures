@@ -62,14 +62,22 @@
 \section{Novel Ideas/Perspectives}
 Goal: provide (effective) countermeasures against active RAPTOR attacks.
 
-{\bf Shortest Path Selection.}
--path selection against active attacks
--how to pick a good/close guard relay
+\subsection{Path Selection of Guard Relay}
+-path selection against active attacks\\
+-how to pick a good/close guard relay\\
+-how to handle the tradeoff between resilience and privacy - for instance, picking a guard that's too far away makes the client more vulnerable to equally-specific prefix attacks, while picking a guard that's too close may reveal the location information of the client. 
 
-{\bf Monitoring Framework.}
--monitor BGP announcements, use traceroute to verify (becomes optimization problem)
--use relay info to selectively monitor relays
--differentiate between hijacks and interceptions
+\subsection{Live Monitoring Framework}
+{\bf BGP Monitoring Framework}
+
+{\bf Traceroute Monitoring Framework}
+
+{\bf Challenges}
+
+-monitor BGP announcements, use traceroute to verify (becomes optimization problem)\\
+-use relay info to selectively monitor relays\\
+-differentiate between hijacks and interceptions\\
+-differentiate between attacks and legitimate announcements by multi-origin AS\\
 
 NOTE: other ideas
 -check resilience of relays to prefix hijacking (see AS resilience work)
