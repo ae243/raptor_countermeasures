@@ -68,17 +68,16 @@ On the other hand, we also don't want to pick a guard relay that is too close - 
 Therefore, we plan to develop new path selection algorithm that incorporates this aspect, picking a guard relay that satisfies the optimal balance between resilience to routing attacks and privacy protection. 
 
 \subsection{Live Monitoring Framework}
+The live monitoring framework aims at detecting suspicious routing attacks that affect Tor relays, and then react correspondingly to alert Tor clients of the scenario. The monitoring framework consists of two parts: BGP monitoring and Traceroute monitoring.\\
 {\bf BGP Monitoring Framework}
-
+monitors the control plane of internet routing. We plan to collect live BGP announcements data from sources like RouteViews, RIPE-RIS, etc., as well as the most current up-to-date Tor relay information. Then, we will extract the Tor-related BGP activity from the data, and check if any activity hits certain detection threshold. (save offline relay bgp info for a period of time?)\\ 
 {\bf Traceroute Monitoring Framework}
-
-{\bf Challenges}
-
+monitors the data plane of internet routing, i.e., how packets travel through in real. \\
 -monitor BGP announcements, use traceroute to verify (becomes optimization problem)\\
 -use relay info to selectively monitor relays\\
+{\bf Challenges}\\
 -differentiate between hijacks and interceptions\\
 -differentiate between attacks and legitimate announcements by multi-origin AS\\
-
 NOTE: other ideas
 -check resilience of relays to prefix hijacking (see AS resilience work)
 
