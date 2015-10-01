@@ -60,12 +60,12 @@
 Tor is a wildly used system for anonymous communications. However, Tor is known to be vulnerable to traffic correlation attacks in which an adversary can correlate the traffic at both ends of the communication to deanonymize the users. Recently, researchers have shown that AS-level adversaries can exploit the dynamics of BGP routing and launch new attacks on Tor \cite{sun2015raptor}, including both passive attacks exploiting routing asymmetry and natural churn, as well as active attacks with BGP prefix hijacking/interception. Thus, these new attacks urge the need to build countermeasures to defend Tor against such malicious AS-level adversaries. In this work, we will focus on developing countermeasures against active BGP routing attacks. 
 
 \section{Novel Ideas/Perspectives}
-Goal: provide (effective) countermeasures against active RAPTOR attacks.
+There are two potential ways to counter the attacks: (1) Mitigating traffic interception, and (2) Mitigating correlation attacks. However, mitigating correlation attacks usually involve employing extra encryption schemes and/or packet obfuscation, which either requires lots of engineering efforts, or could result in high latency of Tor. Thus, given the constraints of mitigating correlation attacks, we will build countermeasures that focus on mitigating traffic interception, more specifically, against active BGP routing attacks. Our approach includes two parts, as following. 
 
 \subsection{Path Selection of Guard Relay}
--path selection against active attacks\\
--how to pick a good/close guard relay\\
--how to handle the tradeoff between resilience and privacy - for instance, picking a guard that's too far away makes the client more vulnerable to equally-specific prefix attacks, while picking a guard that's too close may reveal the location information of the client. 
+Guard relay is at an important position that it has direct connection with the Tor client. Thus, securing the guard relay would be our first step. It has been shown that AS-level adversaries can launch a more-specific prefix attack to intercept the Tor traffic from the guard relay to the malicious AS \cite{sun2015raptor}, and this can be potentially prevented by advertising /24 prefixes. However, even if the guard relay belongs to a /24 prefix, it is still subject to an equally-specific prefix attack. Unlike more-specific attacks which spread through the whole internet, equally-specific attacks can only affect connections within a small range - i.e., ASes that are within a certain number of hops away, depending on the influence of the announcing AS. Thus, picking a guard relay that is relatively close to the client AS could make it more resilient to such equally-specific attack. \\
+On the other hand, we also don't want to pick a guard relay that is too close - in an extreme case, picking a guard within the same AS as the client will reveal client location to the adversary. \\
+Therefore, we plan to develop new path selection algorithm that incorporates this aspect, picking a guard relay that satisfies the optimal balance between resilience to routing attacks and privacy protection. 
 
 \subsection{Live Monitoring Framework}
 {\bf BGP Monitoring Framework}
