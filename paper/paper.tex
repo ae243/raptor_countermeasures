@@ -139,7 +139,10 @@ Relation with hierarchy:
 \cite{starov2015measuring}
 \cite{juen2014defending}
 
-{\bf Tor Path Selection Algorithms.}
+{\bf AS-level Tor Path Selection.}
+Network-level adversaries who can perform traffic correlation analysis to deanonymize Tor users are known. Feamster and Dingledine \cite{feamster2004location} first investigated AS-level path in anonymity networks, which showed that some AS could appear on nearly 30\% of entry-exit pairs. Furthermore, Edman and Syverson \cite{edman2009awareness} demonstrated that even given the explosive growth of Tor during the past years, still about 18\% of Tor circuits result in a single AS being able to observe both ends. These urged the need to incorporate AS-awareness path selection in Tor. In 2012, Akhoondi \emph{et al.} \cite{akhoondi2012lastor} proposed LASTor, a Tor client which takes into account AS-level path and relay locations in path selection, although LASTor neglected relay capacity and its AS resilience to active attacks. Recently, Nithyanand \emph{et al.} \cite{starov2015measuring} constructed a new Tor client, Astoria, which adopted a new path selection algorithm which considered more aspects - relay capacity, asymmetric routing, colluding ASes, etc.. However, Astoria only considers a passive AS-level attacker, while does not evaluate the AS resilience to an active routing attack. \\
+Towards this goal, it is important to understand AS-level internet topology and network path predictions. Lad \emph{et al.} \cite{lad2007understanding} investigated the relation between internet topology and prefix hijacking, and provided a metric for evaluating AS resilience to active prefix hijack attacks. Although, the study was conducted in 2007 when there were far less ASes than now. Recently, Juen \emph{et al.} \cite{juen2014defending} performed a measurement study using Tracecroutes on network-level paths that Tor traffic actually get routed through. 
+
 
 {\footnotesize \bibliographystyle{acm}
 \bibliography{paper.bib}}
