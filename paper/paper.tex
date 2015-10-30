@@ -129,6 +129,26 @@ The existence of network-level adversaires urges the need to incorporate AS-awar
 
 Towards this goal, it is important to understand AS-level internet topology and network path predictions. Lad \emph{et al.} \cite{lad2007understanding} investigated the relation between internet topology and prefix hijacking, and provided a metric for evaluating AS resilience to active prefix hijack attacks. Although, the study was conducted in 2007 when there were far less ASes than now. Recently, Juen \emph{et al.} \cite{juen2014defending} performed a measurement study using Tracecroutes on network-level paths that Tor traffic actually get routed through. 
 
+\section{Notes}
+Proactive approaches:
+\begin{itemize}
+\item Getting relays to be in a /24 instead of a larger prefix
+\item Path Selection algorithm
+\item Static routing (ask Nick)
+\end{itemize}
+
+Reactive/Detection approaches:
+\begin{itemize}
+\item Monitoring framework - how to use live BGP feed and traceroutes to detect attacks?  Evaluate false positives?  Think about the attack space on traceroutes.
+\item Deployment experience - how the monitoring framework works in the real world
+\end{itemize}
+
+Measurements/Metrics/Evaluation Techniques:
+\begin{itemize}
+\item Resiliency wrt path selection
+\item Resiliency of the Tor network in general or of specific relays (some ASes may contain more relays, so this should be taken into account when looking at resilience
+\item Other possible metrics to analyze the Tor network (impact, probability) - possibly look at the probability of "normal" (non-Tor) hijacks impacting the Tor network?
+\end{itemize}
 
 {\footnotesize \bibliographystyle{acm}
 \bibliography{paper.bib}}
