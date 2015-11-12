@@ -1,6 +1,0 @@
-Changes
-Makefile.PL
-MANIFEST
-README
-t/BGPmon-test.t
-lib/BGPmon/test.pm
