@@ -1,6 +1,6 @@
-\section{Measuring Tor's Current State of Resiliency to Hijack Attacks}
-\annie{I'll work on this section - cleaning up and more specifically stating what we'll do}
-While the Tor network is susceptible to network-level adversaries, and we propose a proactive path selection defense, we aim to quantify how much of the Tor network would be affected by a BGP prefix hijack.  Proposed metrics will help enlighten the community about the state of the Tor network, in terms of how resilient the relays are to hijack attacks.  Specifically, we aim to measure:
+\section{Measuring Tor's Current State of \\Resiliency to Hijack Attacks}
+
+Because the Tor network is susceptible to network-level adversaries, we aim to quantify how much of the Tor network would be affected by a BGP prefix hijack.  Proposed metrics will help enlighten the community about the state of the Tor network, in terms of how resilient the relays are to hijack attacks.  Specifically, we aim to measure:
 
 \begin{itemize}
 \item Resiliency of the ASes that contain relays and compare the resiliency of ASes that contain more relays to those that contain few relays.
@@ -10,8 +10,29 @@ While the Tor network is susceptible to network-level adversaries, and we propos
 
 Previous work has tackled these questions using simulations of the entire Internet \cite{lad2007understanding}.  We will build off of this work by applying these metrics to the Tor network.  There is also space for metrics regarding specific relays' resiliency to BGP prefix hijack attacks, as well as metrics regarding BGP prefix interception attacks (AS- and relay-level).  
 
-These metrics will help quantify how vulnerable the Tor network is to network-level adversaries in a novel way.  We plan to look at the resiliency of guard relays (as a group) as well as exit relays (as a group). 
+These metrics will help quantify how vulnerable the Tor network is to network-level adversaries in a novel way.  We also plan to specifically look at the resiliency of guard relays (as a group) as well as exit relays (as a group). 
+
+Additionally, we will measure how the resilience of Tor relays has differed over the years.  We want to answer the following questions:
+
+\begin{itemize}
+\item Have Tor relays become more resilient since the initial network was built?
+\item How fast does relay resilience change? 
+\end{itemize}
+
+We plan to answer the first question by calculating the given resilience and impact metrics for each past year - similar to a longitudinal study of Tor relay resiliency.  We plan to answer the second question by calculating the given resilience and impact metrics each week for the next couple of months.  The results from answering the first question will also help us answer the second question.
+
+In order to calculate these metrics, we will simulate prefix hijack attacks on an Internet derived topology.  More information can be found in \cite{lad2007understanding}.  It's important to note that this work was done in 2007 and the number of AS links has greatly changed~\cite{internettopology}.  Additionally, we are specifically looking at Tor relays' resilience, not any given AS. 
 
 \subsection{Recent Hijacks in the Wild}
-\annie{I'll look into any recent (since the RAPTOR paper) attacks that have affected Tor relays}
+
+There have been a number of prefix hijack attacks in the past year.  We plan to analyze the BGP routing announcements and withdrawals to find the prefixes that were hijacked and compare them to the list of Tor relay IP addresses at the time.  This will give us information about whether or not prefix hijacks (or routing leaks) in the past year have affected Tor relays.
+
+Some of the hijacks/leaks include: 
+
+\begin{itemize}
+\item On November 6th, 2015, AS9498 (BHARTI Airtel Ltd.) hijacked about 16,000 prefixes~\cite{indiahijack}.
+\item On June 12th, 2015, AS4788 Telekom Malaysia started to announce about 179,000 of prefixes to Level3 (AS3549, the Global crossing AS)~\cite{malaysialeak}.
+\item On March 27th, 2015, a BGP traffic optimizer leaked prefixes, which resulted in more than 7,000 new more-specific prefixes affecting roughly 280 Autonomous Systems, including large networks such as Rogers Cable, Telstra, Telenor, KDDI, BT-UK, Orange, Deutsche Telekom , Sprint, China Telecom, SHAW, LGI-UPC, AT\&T, Comcast, Amazon, Internap, Time Warner Cable, Choopa, Syrian Telecommunications and many more~\cite{bgpoptimizer}.
+\end{itemize}
+
 
