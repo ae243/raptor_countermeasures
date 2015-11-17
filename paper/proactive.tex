@@ -1,0 +1,15 @@
+\section{Proactive Approaches}
+We take three different proactive approaches to counter RAPTOR attacks: 1) convincing relay operators to announce the relay in a /24 prefix, 2) analyzing the feasibiity of having a static route to guard relays, and 3) introducing a new path selection algorithm that minimizes the likelihood that a client sees a hijacked route in the case that her guard is hijacked.
+
+\subsection{Using /24 Prefixes}
+
+\subsection{Static Routing (or path protection mechanisms?)}
+\annie{I'll look into this and write up this section}
+
+\subsection{Path Selection of Guard Relay}
+
+Guard relay is at an important position that it has direct connection with the Tor client. Thus, securing the guard relay would be our first step. It has been shown that AS-level adversaries can launch a more-specific prefix attack to intercept the Tor traffic from the guard relay to the malicious AS \cite{sun2015raptor}, and this can be potentially prevented by advertising /24 prefixes. However, even if the guard relay belongs to a /24 prefix, it is still subject to an equally-specific prefix attack. Unlike more-specific attacks which spread through the whole internet, equally-specific attacks can only affect connections within a small range - i.e., ASes that are within a certain number of hops away, depending on the influence of the announcing AS. Thus, picking a guard relay that is relatively close to the client AS could make it more resilient to such equally-specific attack.
+
+On the other hand, we also don't want to pick a guard relay that is too close - in an extreme case, picking a guard within the same AS as the client will reveal client location to the adversary. 
+
+Therefore, we plan to develop new path selection algorithm that incorporates this aspect, picking a guard relay that satisfies the optimal balance between resilience to routing attacks and privacy protection. 

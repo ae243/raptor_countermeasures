@@ -38,6 +38,8 @@
 \usepackage{algpseudocode}
 \usepackage{algorithm}
 
+\input{commands}
+
 \begin{document}
 
 %don't want date printed
@@ -56,99 +58,12 @@
 
 %\thispagestyle{empty}
 
-\section{Problem Motivation}
-
-Tor is a wildly used system for anonymous communications. However, Tor is known to be vulnerable to traffic correlation attacks in which an adversary can correlate the traffic at both ends of the communication to deanonymize the users. Recently, researchers have shown that AS-level adversaries can exploit the dynamics of BGP routing and launch new attacks on Tor \cite{sun2015raptor}, including both passive attacks exploiting routing asymmetry and natural churn, as well as active attacks with BGP prefix hijacking/interception. Thus, these new attacks urge the need to build countermeasures to defend Tor against such malicious AS-level adversaries. In this work, we will focus on developing countermeasures against active BGP routing attacks. 
-
-\section{Novel Ideas/Perspectives}
-
-There are two potential ways to counter the attacks: (1) Mitigating traffic interception, and (2) Mitigating correlation attacks. However, mitigating correlation attacks usually involve employing extra encryption schemes and/or packet obfuscation, which either requires lots of engineering efforts, or could result in high latency of Tor. Thus, given the constraints of mitigating correlation attacks, we will build countermeasures that focus on mitigating traffic interception, more specifically, against active BGP routing attacks. Our approach includes two parts, as following. 
-
-\subsection{Path Selection of Guard Relay}
-
-Guard relay is at an important position that it has direct connection with the Tor client. Thus, securing the guard relay would be our first step. It has been shown that AS-level adversaries can launch a more-specific prefix attack to intercept the Tor traffic from the guard relay to the malicious AS \cite{sun2015raptor}, and this can be potentially prevented by advertising /24 prefixes. However, even if the guard relay belongs to a /24 prefix, it is still subject to an equally-specific prefix attack. Unlike more-specific attacks which spread through the whole internet, equally-specific attacks can only affect connections within a small range - i.e., ASes that are within a certain number of hops away, depending on the influence of the announcing AS. Thus, picking a guard relay that is relatively close to the client AS could make it more resilient to such equally-specific attack.
-
-On the other hand, we also don't want to pick a guard relay that is too close - in an extreme case, picking a guard within the same AS as the client will reveal client location to the adversary. 
-
-Therefore, we plan to develop new path selection algorithm that incorporates this aspect, picking a guard relay that satisfies the optimal balance between resilience to routing attacks and privacy protection. 
-
-\subsection{Relay Resilience to Attacks}
-
-While the Tor network is susceptible to network-level adversaries, and we propose a proactive path selection defense, we aim to quantify how much of the Tor network would be affected by a BGP prefix hijack.  Specifically, we aim to measure:
-
-\begin{itemize}
-\item Resiliency of the ASes that contain relays and compare the resiliency of ASes that contain more relays to those that contain few relays.
-\item Impact of a BGP prefix hijack on the Tor network.
-\item Probability of any given Tor relay being decieved by a BGP prefix hijack.
-\end{itemize}
-
-Previous work has tackled these questions using simulations of the entire Internet \cite{lad2007understanding}.  We will build off of this work by applying these metrics to the Tor network.  There is also space for metrics regarding specific relays' resiliency to BGP prefix hijack attacks, as well as metrics regarding BGP prefix interception attacks (AS- and relay-level).  
-
-These metrics will help quantify how vulnerable the Tor network is to network-level adversaries in a novel way.  We plan to look at the resiliency of guard relays (as a group) as well as exit relays (as a group). 
-
-\subsection{Live Monitoring Framework}
-
-The live monitoring framework aims at detecting suspicious routing attacks that affect Tor relays, and then react correspondingly to alert Tor clients of the scenario. The monitoring framework consists of two parts: BGP monitoring and Traceroute monitoring.
-
-{\bf BGP Monitoring Framework} monitors the control plane of internet routing. We plan to collect live BGP announcements data from sources like RouteViews, RIPE-RIS, etc., as well as the most current up-to-date Tor relay information. Then, we will extract the Tor-related BGP activity from the data, and check if any activity looks anomalous.  These anomalies can be detected by developing certain heuristics, such as the amount of time that a BGP path is used or the frequency that a path us announced; if certain anomalies fall under a threshold for a given heuristic, they should be flagged as potential attacks. This analysis will require saving offline relay bgp info for some period of time.  This framework should help:
-\begin{itemize}
-\item Differentiate between hijack attacks and interception attacks~\cite{ballani2007study}.
-\item Differentiate between attacks and ``normal'' behavior, such as multiple origin AS conflicts, backup paths, etc~\cite{zhao2001analysis}.
-%-check resilience of relays to prefix hijacking (see AS resilience work)
-\end{itemize}
-
-{\bf Traceroute Monitoring Framework} monitors the data plane of internet routing, i.e., how packets travel through the Internet in reality. The traceroute monitoring framework is used as a verification mechanism if the BGP monitoring framework flags certain behavior. There may be many false positives in detecting hijack/interception attacks due to the nature of BGP.  With many false positives, the traceroute monitoring framework will be used often for verification - this raises a question of optimization, which we will also address.
-
-Due to the information provided by the Tor Project about the relays, the monitoring framework can selectively monitor ``relays of interest'' more closely than others.  These ``relays of interest'' may be relays that have had a history of being attacked, provide a significant amount of bandwidth to the Tor network, etc.
-
-The live monitoring framework will be evaluated on a number of characteristics, including false positive rate, false negative rate, as well as performance and overhead.
-
-NOTES: info from looking up openly available monitoring tools:\\
-  -BGPMon + Routeviews (perl) (\url{http://www.bgpmon.io/)(https://www.nanog.org/sites/default/files/monday_general_olschanowsky_routeviews_33.pdf})\\
-  -Argus (\url{http://argus.tcp4me.com/docs.html})\\
-  -Cyclops - can't get code (\url{http://cyclops.cs.ucla.edu/})\\
-  -Traceroutes: scamper
-
-\section{Related Work}
-
-{\bf BGP Attacks and Security.}
-BGP attacks are well-studied, particularly prefix hijack and interception attacks~\cite{ballani2007study, mcarthur2009stealthy, zhang2012studying}.  Arnbak, et al. showed that prefix interceptions could be used by nation-states as a way to conduct surveillance on their citizens \cite{arnbak2014loopholes}.  It's also known that routing anomalies can lead to network snapshots that look similar to attack scenarios.  These are due to a range of routing policies, misconfigurations, and multiple origin AS conflicts~\cite{caesar2005bgp, mahajan2002understanding, zhao2001analysis}.  
-
-The research community has contributed a number of protocols to help secure interdomain routing \cite{boldyreva2012provable, chan2006modeling, gill2011let, hu2004spv, zhang2009hc, van2007interdomain}.  Unfortunately, it has also been shown that partial deployment of secure interdomain routing protocols does not provide much security \cite{lychev2013bgp}.
-
-There is also a large body of research with the goal of defending against and detecting prefix hijacks and interceptions.  These include defensive and detection tools~\cite{lad2006phas, hu2007accurate, shi2012detecting, zhang2008ispy, zheng2007light, sriram2009comparative, zhang2007practical}, as well as mechanisms such as PGBGP, which allow network administrators more time to determine if an attack is happening before using new routes~\cite{karlin2006pretty}.  There has also been research not only on detecting attacks, but on determining the location of the attacker~\cite{qiu2009locating}.  Qui, et al. detected any bogus routes, not just hijacks or interceptions~\cite{qiu2007detecting}.  In addition to detection algorithms, there has been research in visualization of real-time detection algorithms \cite{teoh2006bgp}.  Our work does not aim to contribute a new hijack detection tool, but rather compliments existing tools by applying a monitoring framework to the Tor network.  
-
-{\bf BGP Attack Resiliency.}
-Prior research on prefix hijack attack resilience has been simulated on the Internet for equal-length prefix hijacks \cite{lad2007understanding}.  They find that customers of Tier-1 ASes are the most resilient and also create the most impact (if they were to hijack a prefix).  There has been some related work in relating hijack attacks to the Internet hierarchy \cite{zhao2012relation, zhao2012analysis}.  This differs from our work; we focus on the resilience of ASes that contain Tor relays, as well as measure the resilience of guard relays and exit relays as groups.
-
-{\bf Network Adversaries on Tor.}
-Network-level adversaries are known in anonymity networks. Feamster and Dingledine \cite{feamster2004location} first investigated AS-level path in anonymity networks, which showed that some AS could appear on nearly 30\% of entry-exit pairs. Murdoch and Zielinski \cite{murdoch2007sampled} later demonstrated the threat posed by network-level adversaries who can deanonymize users by performing traffic analysis. Furthermore, Edman and Syverson \cite{edman2009awareness} demonstrated that even given the explosive growth of Tor during the past years, still about 18\% of Tor circuits result in a single AS being able to observe both ends. In 2013, Johnson \emph{et al.} \cite{johnson2013users} evaluated the security of Tor users over a period of time, and the result indicated that a network-level adversary with just low bandwidth cost can deanonymize any users within three months with over 50\% probability and within six months with over 80\% probability.
-
-{\bf AS-level Tor Path Selection.}
-The existence of network-level adversaires urges the need to incorporate AS-awareness path selection in Tor. In 2012, Akhoondi \emph{et al.} \cite{akhoondi2012lastor} proposed LASTor, a Tor client which takes into account AS-level path and relay locations in path selection, although LASTor neglected relay capacity and its AS resilience to active attacks. Recently, Nithyanand \emph{et al.} \cite{starov2015measuring} constructed a new Tor client, Astoria, which adopted a new path selection algorithm which considered more aspects - relay capacity, asymmetric routing, colluding ASes, etc.. However, Astoria only considers a passive AS-level attacker, while does not evaluate the AS resilience to an active routing attack.
-
-Towards this goal, it is important to understand AS-level internet topology and network path predictions. Lad \emph{et al.} \cite{lad2007understanding} investigated the relation between internet topology and prefix hijacking, and provided a metric for evaluating AS resilience to active prefix hijack attacks. Although, the study was conducted in 2007 when there were far less ASes than now. Recently, Juen \emph{et al.} \cite{juen2014defending} performed a measurement study using Tracecroutes on network-level paths that Tor traffic actually get routed through. 
-
-\section{Notes}
-Proactive approaches:
-\begin{itemize}
-\item Getting relays to be in a /24 instead of a larger prefix
-\item Path Selection algorithm
-\item Static routing (ask Nick)
-\end{itemize}
-
-Reactive/Detection approaches:
-\begin{itemize}
-\item Monitoring framework - how to use live BGP feed and traceroutes to detect attacks?  Evaluate false positives?  Think about the attack space on traceroutes.
-\item Deployment experience - how the monitoring framework works in the real world
-\end{itemize}
-
-Measurements/Metrics/Evaluation Techniques:
-\begin{itemize}
-\item Resiliency wrt path selection
-\item Resiliency of the Tor network in general or of specific relays (some ASes may contain more relays, so this should be taken into account when looking at resilience
-\item Other possible metrics to analyze the Tor network (impact, probability) - possibly look at the probability of "normal" (non-Tor) hijacks impacting the Tor network?
-\end{itemize}
+\input{intro}
+\input{measure}
+\input{proactive}
+\input{reactive}
+\input{related}
+\input{notes}
 
 {\footnotesize \bibliographystyle{acm}
 \bibliography{paper.bib}}

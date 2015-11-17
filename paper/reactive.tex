@@ -1,0 +1,21 @@
+\section{Reactive Approaches}
+\annie{I can add information about the BGP monitoring framework, as well as the small study on accuracy of ASNs in Team Cymru or other registries (to motivate our use of them in the monitoring framework)}
+
+\subsection{A Live Monitoring Framework for Tor}
+The live monitoring framework aims at detecting suspicious routing attacks that affect Tor relays, and then react correspondingly to alert Tor clients of the scenario. The monitoring framework consists of two parts: BGP monitoring and Traceroute monitoring.
+
+{\bf BGP Monitoring Framework} monitors the control plane of internet routing. We plan to collect live BGP announcements data from sources like RouteViews, RIPE-RIS, etc., as well as the most current up-to-date Tor relay information. Then, we will extract the Tor-related BGP activity from the data, and check if any activity looks anomalous.  These anomalies can be detected by developing certain heuristics, such as the amount of time that a BGP path is used or the frequency that a path us announced; if certain anomalies fall under a threshold for a given heuristic, they should be flagged as potential attacks. This analysis will require saving offline relay bgp info for some period of time.  This framework should help:
+\begin{itemize}
+\item Differentiate between hijack attacks and interception attacks~\cite{ballani2007study}.
+\item Differentiate between attacks and ``normal'' behavior, such as multiple origin AS conflicts, backup paths, etc~\cite{zhao2001analysis}.
+%-check resilience of relays to prefix hijacking (see AS resilience work)
+\end{itemize}
+
+{\bf Traceroute Monitoring Framework} monitors the data plane of internet routing, i.e., how packets travel through the Internet in reality. The traceroute monitoring framework is used as a verification mechanism if the BGP monitoring framework flags certain behavior. There may be many false positives in detecting hijack/interception attacks due to the nature of BGP.  With many false positives, the traceroute monitoring framework will be used often for verification - this raises a question of optimization, which we will also address.
+
+Due to the information provided by the Tor Project about the relays, the monitoring framework can selectively monitor ``relays of interest'' more closely than others.  These ``relays of interest'' may be relays that have had a history of being attacked, provide a significant amount of bandwidth to the Tor network, etc.
+
+\subsection{Framework Evaluation}
+The live monitoring framework will be evaluated on a number of characteristics, including false positive rate, false negative rate, as well as performance and overhead.
+
+\subsection{Deployment Experience}
