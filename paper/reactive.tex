@@ -4,6 +4,18 @@
 \subsection{A Live Monitoring Framework for Tor}
 The live monitoring framework aims at detecting suspicious routing attacks that affect Tor relays, and then react correspondingly to alert Tor clients of the scenario. The monitoring framework consists of two parts: BGP monitoring and Traceroute monitoring.
 
+{\bf Relay Info from Tor Consensus} Tor consensus releases up-to-date information for current running relays every hour. Our system automatically grabs this consensus data once it's updated. We focus on guard relays and exit relays, which reside at the two ends of the communication path and can easily be the target of an adversary. Further more, since we focus on AS-level adversaries, so it is unnecessary to monitor each individual relay by its IP address. But instead, we monitor the /24 prefixes which contain Tor guard and exit relays. Note that, there is no need to monitor a more specific prefix than /24, since generally /24 is the longest prefix accepted in BGP announcement. \\
+Thus, we construct a live monitoring database which is being updated every hour with latest Tor relay data. The table contains the following fields:
+\begin{center}
+\begin{tabular}{ p{8mm} | p{1.4cm} | p{1.3cm} | p{1.3cm} | p{1.3cm}}
+  \hline			
+  $/24$ Prefix & Total Bandwidth & Number of Guards & Number of Exits & Timestamp \\
+  \hline  
+\end{tabular}
+\label{tab:relayinfo}
+\end{center}
+Each /24 prefix that contains any guard/exit relays will have one entry in the table, and the list of /24 prefixes will be used for our BGP and Traceroute monitoring frameworks, which we describe in the following. 
+
 {\bf BGP Monitoring Framework} monitors the control plane of internet routing. We plan to collect live BGP announcements data from sources like RouteViews, RIPE-RIS, etc., as well as the most current up-to-date Tor relay information. Then, we will extract the Tor-related BGP activity from the data, and check if any activity looks anomalous.  These anomalies can be detected by developing certain heuristics, such as the amount of time that a BGP path is used or the frequency that a path us announced; if certain anomalies fall under a threshold for a given heuristic, they should be flagged as potential attacks. This analysis will require saving offline relay bgp info for some period of time.  This framework should help:
 \begin{itemize}
 \item Differentiate between hijack attacks and interception attacks~\cite{ballani2007study}.
@@ -13,7 +25,33 @@ The live monitoring framework aims at detecting suspicious routing attacks that 
 
 {\bf Traceroute Monitoring Framework} monitors the data plane of internet routing, i.e., how packets travel through the Internet in reality. The traceroute monitoring framework is used as a verification mechanism if the BGP monitoring framework flags certain behavior. There may be many false positives in detecting hijack/interception attacks due to the nature of BGP.  With many false positives, the traceroute monitoring framework will be used often for verification - this raises a question of optimization, which we will also address.
 
-Due to the information provided by the Tor Project about the relays, the monitoring framework can selectively monitor ``relays of interest'' more closely than others.  These ``relays of interest'' may be relays that have had a history of being attacked, provide a significant amount of bandwidth to the Tor network, etc.
+Our Traceroute monitoring framework retrieves updated Tor relay data hourly from the database described above. Since running large number of continuous traceroutes to relay IP addresses may create unnecessary extra traffic to the Tor network, so we selectively monitor a subset of prefixes at certain frequency rates when there is no anomaly from BGP monitoring data, and when there is suspicious activity report by BGP monitoring, the traceroute monitoring can be "triggered" to target the suspicious prefix announcement to verify the anomaly. 
+\begin{itemize}
+\item Selectively monitor relays of interest.\\
+A /24 prefix can be evaluated based on several factors: (1) total combined bandwidth of Tor relays it covers, denoted as $b_i$ for prefix $i$; (2) total number of guard relays it covers, denoted as $g_i$; (3) total number of exit relays it covers, denoted as $e_i$; and (4) resilience of the prefix to BGP hijack/interception attacks. These factors can make the prefix an attractive target to adversaries. Using these factors, we want to formulate the overall security of the system as following, and the goal is to find the monitoring frequency $f_i$ for each relay $i$ that maximizes the overall security of the network. \\
+\yixin{not including the resilience factor for now. can add it after we figure out the resilience stuff.}
+\begin{align}
+\max \sum_{i=1}^N & \frac {\log {(f_i + 1)}} {b_i + g_i + e_i}\\
+\text{s.t. } &\sum_{i=1}^N f_i \leq F\\
+&0 < f_i \leq (notsure), \forall i
+\end{align}
+Given the solution, we use a collection of Planetlab nodes located in different ASes to send traceroutes to the prefix at its frequency rate. 
+\item Monitoring target prefixes triggered by BGP.\\
+If we detect any anomaly from the BGP monitoring framework, we will immediately send traceroutes to the suspicious prefixes to verify whether there is truly a path change happening on the data plane to the Tor relays. 
+\item Detecting anomaly from Traceroutes\\
+Even when there is no suspicious activity reported by BGP monitoring, it is also possible we detect anomaly from our selective traceroute monitoring. We keep track of the past traceroute monitoring results in a database table, as following:
+\begin{center}
+\begin{tabular}{ p{8mm} | p{8mm} | p{6mm} | p{1cm} | p{1.1cm} | p{8mm}}
+  \hline			
+  Source Prefix & Dest Prefix & AS Path & Time Created & Time Last Updated & Current \\
+  \hline  
+\end{tabular}
+\label{tab:pathinfo}
+\end{center}
+With this table, we will be able to compare the current AS path with past AS paths to detect any path changes, which may indicate a hijack event happening. 
+
+\end{itemize}
+
 
 \subsection{Framework Evaluation}
 The live monitoring framework will be evaluated on a number of characteristics, including false positive rate, false negative rate, as well as performance and overhead.
