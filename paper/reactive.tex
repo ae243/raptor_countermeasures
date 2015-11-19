@@ -1,5 +1,5 @@
 \section{Reactive Approaches}
-\annie{I can add information about the BGP monitoring framework, as well as the small study on accuracy of ASNs in Team Cymru or other registries (to motivate our use of them in the monitoring framework)}
+In addition to proactive approaches to helping prevent RAPTOR attacks, we have also taken a reactive approach.  In the case that an attack is happening, we can detect it using a live monitoring framework.
 
 \subsection{A Live Monitoring Framework for Tor}
 The live monitoring framework aims at detecting suspicious routing attacks that affect Tor relays, and then react correspondingly to alert Tor clients of the scenario. The monitoring framework consists of two parts: BGP monitoring and Traceroute monitoring.
@@ -23,6 +23,12 @@ Each /24 prefix that contains any guard/exit relays will have one entry in the t
 We use Team Cymru to obtain AS ownership of prefixes. Some prefixes are owned by organization with multiple AS numbers, so we take this aspect into consideration and store the AS origins of these prefixes. If we observe any change in AS paths, we will first check if the prefix has multi-AS origins, and if so, as long as the new on-path AS also owns the prefix, then it would not be seen as an attack. 
 %-check resilience of relays to prefix hijacking (see AS resilience work)
 \end{itemize}
+
+The implementation of the BGP Monitoring framework is based on BGP Stream~\cite{bgpstream}.  We analyze the live stream of BGP updates and withdrawals, focusing just on the prefixes that contain a Tor relay.  We monitor the prefixes that are reported through Team Cymru, as well as the /24 that contains each relay; we do this because we would like to be able to detect sub-prefix hijack attacks, so we must monitor longer prefixes in addition to the reported prefix.  
+
+As of now, our analysis involves checking the origin AS in the live BGP update and comparing it to the owner AS reported by Team Cymru.  If these don't match up, then we flag the update (and prefix) as a potential hijack, otherwise we ignore it.  
+
+In the future, we may use heuristics (such as frequency, timing, and the number of collectors that saw the specific update) and store past updates/withdrawals, to increase the accuracy of our framework.
 
 {\bf Traceroute Monitoring Framework} monitors the data plane of internet routing, i.e., how packets travel through the Internet in reality. The traceroute monitoring framework is used as a verification mechanism if the BGP monitoring framework flags certain behavior. There may be many false positives in detecting hijack/interception attacks due to the nature of BGP.  With many false positives, the traceroute monitoring framework will be used often for verification - this raises a question of optimization, which we will also address.
 
