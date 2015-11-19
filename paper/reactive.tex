@@ -33,9 +33,9 @@ A /24 prefix can be evaluated based on several factors: (1) total combined bandw
 \begin{align}
 \max \sum_{i=1}^N & \frac {\log {(f_i + 1)}} {b_i + g_i + e_i}\\
 \text{s.t. } &\sum_{i=1}^N f_i \leq F\\
-&0 < f_i \leq (notsure), \forall i
+&0 < f_i \leq M, \forall i
 \end{align}
-Given the solution, we use a collection of Planetlab nodes located in different ASes to send traceroutes to the prefix at its frequency rate. 
+$N$ is the total number of prefixes we want to monitor, $F$ is the constraint on total number of traceroutes we can send from each Planetlab node per day, and $M$ is the constraint on total number of traceroutes needed for each prefix. Given the solution, we use a collection of Planetlab nodes located in different ASes to send traceroutes to the prefix at its frequency rate. 
 \item Monitoring target prefixes triggered by BGP.\\
 If we detect any anomaly from the BGP monitoring framework, we will immediately send traceroutes to the suspicious prefixes to verify whether there is truly a path change happening on the data plane to the Tor relays. 
 \item Detecting anomaly from Traceroutes\\
