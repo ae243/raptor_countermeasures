@@ -1,0 +1,60 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: paper.aux
+The style file: acm.bst
+Database file #1: paper.bib.bib
+Warning--to sort, need author or key in internettopology
+Warning--to sort, need author or key in indiahijack
+Warning--to sort, need author or key in malaysialeak
+Warning--to sort, need author or key in bgpoptimizer
+Warning--to sort, need author or key in staticroute
+Warning--to sort, need author or key in bgpstream
+Warning--can't use both volume and number fields in ballani2007study
+Warning--can't use both volume and number fields in chan2006modeling
+Warning--can't use both volume and number fields in gill2011let
+Warning--can't use both volume and number fields in hu2004spv
+Warning--can't use both volume and number fields in mahajan2002understanding
+Warning--can't use both volume and number fields in zhang2008ispy
+Warning--can't use both volume and number fields in zheng2007light
+You've used 42 entries,
+            2253 wiz_defined-function locations,
+            737 strings with 11613 characters,
+and the built_in function-call counts, 16842 in all, are:
+= -- 1626
+> -- 748
+< -- 0
++ -- 315
+- -- 268
+* -- 1207
+:= -- 2460
+add.period$ -- 119
+call.type$ -- 42
+change.case$ -- 259
+chr.to.int$ -- 0
+cite$ -- 55
+duplicate$ -- 742
+empty$ -- 1430
+format.name$ -- 268
+if$ -- 3716
+int.to.chr$ -- 0
+int.to.str$ -- 42
+missing$ -- 36
+newline$ -- 206
+num.names$ -- 72
+pop$ -- 364
+preamble$ -- 1
+purify$ -- 218
+quote$ -- 0
+skip$ -- 571
+stack$ -- 0
+substring$ -- 998
+swap$ -- 269
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 166
+warning$ -- 13
+while$ -- 156
+width$ -- 44
+write$ -- 431
+(There were 13 warnings)
