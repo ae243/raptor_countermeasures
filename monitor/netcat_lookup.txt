@@ -1,4 +1,4 @@
-Bulk mode; whois.cymru.com [2015-11-20 16:36:36 +0000]
+Bulk mode; whois.cymru.com [2015-12-06 20:43:39 +0000]
 3       | 128.52.128.0     | 128.52.0.0/16       | US | arin     |            | MIT-GATEWAYS - Massachusetts Institute of Technology,US
 3       | 18.125.1.0       | 18.0.0.0/8          | US | arin     |            | MIT-GATEWAYS - Massachusetts Institute of Technology,US
 3       | 18.181.5.0       | 18.181.0.0/20       | US | arin     |            | MIT-GATEWAYS - Massachusetts Institute of Technology,US
@@ -634,6 +634,7 @@ Bulk mode; whois.cymru.com [2015-11-20 16:36:36 +0000]
 15830   | 178.79.173.0     | 178.79.128.0/18     | GB | ripencc  | 2010-05-10 | TELECITY-LON TELECITYGROUP INTERNATIONAL LIMITED,GB
 15830   | 212.71.246.0     | 212.71.244.0/22     | GB | ripencc  | 2000-05-18 | TELECITY-LON TELECITYGROUP INTERNATIONAL LIMITED,GB
 15830   | 80.85.84.0       | 80.85.84.0/22       | GB | ripencc  | 2003-05-19 | TELECITY-LON TELECITYGROUP INTERNATIONAL LIMITED,GB
+15836   | 37.156.247.0     | 37.156.247.0/24     | RO | ripencc  | 2012-03-13 | AXAUTSYS Arax-Impex s.r.l.,MD
 15962   | 95.105.164.0     | 95.105.128.0/17     | SK | ripencc  | 2008-12-01 | OSK-DNI Orange Slovensko a.s.,SK
 16086   | 82.128.249.0     | 82.128.128.0/17     | FI | ripencc  | 2003-06-18 | DNA DNA Oy,FI
 16086   | 85.23.243.0      | 85.23.0.0/16        | FI | ripencc  | 2005-04-06 | DNA DNA Oy,FI
@@ -939,6 +940,7 @@ Bulk mode; whois.cymru.com [2015-11-20 16:36:36 +0000]
 19975   | 104.244.223.0    | 104.244.220.0/22    | US | arin     | 2014-11-20 | CASCADELINK - CASCADELINK INC,US
 20115   | 104.159.219.0    | 104.159.208.0/20    | US | arin     | 2014-07-30 | CHARTER-NET-HKY-NC - Charter Communications,US
 20115   | 96.35.130.0      | 96.35.128.0/19      | US | arin     | 2007-12-19 | CHARTER-NET-HKY-NC - Charter Communications,US
+20278   | 173.243.112.0    | 173.243.112.0/24    | US | arin     | 2010-06-02 | NEXEON - Nexeon Technologies, Inc.,US
 20454   | 198.15.79.0      | 198.15.64.0/18      | US | arin     | 2012-07-20 | SSASN2 - SECURED SERVERS LLC,US
 20473   | 104.207.128.0    | 104.207.128.0/23    | US | arin     | 2014-10-01 | AS-CHOOPA - Choopa, LLC,US
 20473   | 104.238.167.0    | 104.238.166.0/23    | US | arin     | 2014-11-13 | AS-CHOOPA - Choopa, LLC,US
@@ -1199,9 +1201,9 @@ Bulk mode; whois.cymru.com [2015-11-20 16:36:36 +0000]
 28908   | 213.21.123.0     | 213.21.64.0/18      | SE | ripencc  | 2008-02-20 | T3 Telecom3 Sverige AB,SE
 28908   | 80.244.81.0      | 80.244.64.0/19      | SE | ripencc  | 2005-02-24 | T3 Telecom3 Sverige AB,SE
 29066   | 5.44.101.0       | 5.44.100.0/23       | DE | ripencc  | 2012-05-23 | VELIANET-AS velia.net Internetdienste GmbH,DE
-29073   | 93.174.90.0      | 93.174.88.0/21      | NL | ripencc  | 2008-06-20 | ECATEL-AS Ecatel LTD,NL
-29073   | 93.174.93.0      | 93.174.88.0/21      | NL | ripencc  | 2008-06-20 | ECATEL-AS Ecatel LTD,NL
-29073   | 94.102.53.0      | 94.102.48.0/20      | NL | ripencc  | 2008-08-29 | ECATEL-AS Ecatel LTD,NL
+29073   | 93.174.90.0      | 93.174.88.0/21      | NL | ripencc  | 2008-06-20 | ECATEL-AS Quasi Networks LTD.,NL
+29073   | 93.174.93.0      | 93.174.88.0/21      | NL | ripencc  | 2008-06-20 | ECATEL-AS Quasi Networks LTD.,NL
+29073   | 94.102.53.0      | 94.102.48.0/20      | NL | ripencc  | 2008-08-29 | ECATEL-AS Quasi Networks LTD.,NL
 29169   | 173.246.103.0    | 173.246.96.0/20     | US | arin     | 2010-06-18 | GANDI-AS GANDI SAS,FR
 29169   | 217.70.191.0     | 217.70.176.0/20     | FR | ripencc  | 2003-07-31 | GANDI-AS GANDI SAS,FR
 29169   | 95.142.161.0     | 95.142.160.0/20     | FR | ripencc  | 2009-08-04 | GANDI-AS GANDI SAS,FR
@@ -1211,7 +1213,6 @@ Bulk mode; whois.cymru.com [2015-11-20 16:36:36 +0000]
 29182   | 188.120.253.0    | 188.120.253.0/24    | RU | ripencc  | 2009-05-04 | ISPSYSTEM-AS JSC _ISPsystem_,LU
 29182   | 212.109.216.0    | 212.109.216.0/23    | RU | ripencc  |            | ISPSYSTEM-AS JSC _ISPsystem_,LU
 29182   | 82.146.47.0      | 82.146.40.0/21      | RU | ripencc  | 2003-06-18 | ISPSYSTEM-AS JSC _ISPsystem_,LU
-29182   | 93.170.123.0     | 93.170.123.0/24     | CZ | ripencc  | 2008-03-20 | ISPSYSTEM-AS JSC _ISPsystem_,LU
 29208   | 212.24.144.0     | 212.24.128.0/19     | CZ | ripencc  |            | DIALTELECOM-AS Dial Telecom, a.s.,SK
 29278   | 79.172.193.0     | 79.172.192.0/18     | HU | ripencc  | 2007-10-25 | DENINET-HU-AS Deninet KFT,HU
 29405   | 109.74.151.0     | 109.74.144.0/20     | SK | ripencc  | 2009-10-29 | VNET-AS VNET a.s.,SK
@@ -1400,8 +1401,8 @@ Bulk mode; whois.cymru.com [2015-11-20 16:36:36 +0000]
 39389   | 185.34.33.0      | 185.34.32.0/22      | FR | ripencc  | 2013-08-28 | CURSYS-MAIN Cursys Sarl,FR
 39572   | 213.174.156.0    | 213.174.128.0/19    | NL | ripencc  | 2008-01-17 | ADVANCEDHOSTERS-AS DataWeb Global Group B.V.,NL
 39608   | 176.37.40.0      | 176.36.0.0/14       | UA | ripencc  | 2011-05-20 | LANETUA-AS Lanet Network Ltd.,UA
-39642   | 46.32.38.0       | 46.32.32.0/19       | DK | ripencc  | 2010-08-12 | DK-ESS-AS Syd Energi Bredbaand A/S,DK
-39642   | 95.154.24.0      | 95.154.0.0/18       | DK | ripencc  | 2009-02-23 | DK-ESS-AS Syd Energi Bredbaand A/S,DK
+39642   | 46.32.38.0       | 46.32.32.0/19       | DK | ripencc  | 2010-08-12 | DK-ESS-AS Stofa A/S,DK
+39642   | 95.154.24.0      | 95.154.0.0/18       | DK | ripencc  | 2009-02-23 | DK-ESS-AS Stofa A/S,DK
 39651   | 80.216.123.0     | 80.216.0.0/15       | SE | ripencc  | 2002-03-06 | COMHEM-SWEDEN Com Hem AB,SE
 39651   | 83.248.101.0     | 83.248.0.0/13       | SE | ripencc  | 2004-03-04 | COMHEM-SWEDEN Com Hem AB,SE
 39651   | 83.252.218.0     | 83.248.0.0/13       | SE | ripencc  | 2004-03-04 | COMHEM-SWEDEN Com Hem AB,SE
@@ -1455,9 +1456,9 @@ Bulk mode; whois.cymru.com [2015-11-20 16:36:36 +0000]
 43082   | 31.24.34.0       | 31.24.34.0/24       | GB | ripencc  | 2011-02-22 | SERVERSPACE-AS ServerSpace Ltd,GR
 43234   | 92.7.159.0       | 92.4.0.0/14         | GB | ripencc  | 2007-06-28 | TT-AOLUK-AS TalkTalk Communications Limited,GB
 43289   | 178.17.170.0     | 178.17.160.0/20     | MD | ripencc  | 2010-03-23 | TRABIA trabia network,MD
-43289   | 178.17.171.0     | 178.17.171.0/24     | MD | ripencc  | 2010-03-23 | TRABIA trabia network,MD
+43289   | 178.17.171.0     | 178.17.160.0/20     | MD | ripencc  | 2010-03-23 | TRABIA trabia network,MD
 43289   | 178.17.174.0     | 178.17.160.0/20     | MD | ripencc  | 2010-03-23 | TRABIA trabia network,MD
-43289   | 178.175.128.0    | 178.175.128.0/24    | MD | ripencc  | 2010-05-04 | TRABIA trabia network,MD
+43289   | 178.175.128.0    | 178.175.128.0/17    | MD | ripencc  | 2010-05-04 | TRABIA trabia network,MD
 43289   | 178.175.131.0    | 178.175.128.0/17    | MD | ripencc  | 2010-05-04 | TRABIA trabia network,MD
 43317   | 94.242.57.0      | 94.242.0.0/18       | RU | ripencc  | 2008-10-15 | FISHNET-AS OOO _Fishnet Communications_,RU
 43317   | 94.242.58.0      | 94.242.0.0/18       | RU | ripencc  | 2008-10-15 | FISHNET-AS OOO _Fishnet Communications_,RU
@@ -1514,6 +1515,7 @@ Bulk mode; whois.cymru.com [2015-11-20 16:36:36 +0000]
 48347   | 93.95.100.0      | 93.95.100.0/22      | RU | ripencc  | 2008-03-28 | MTW-AS JSC MediaSoft Ekspert,RU
 48635   | 185.66.250.0     | 185.66.248.0/22     | NL | ripencc  | 2014-08-12 | PCEXTREME PCextreme B.V.,NL
 48635   | 89.18.174.0      | 89.18.174.0/24      | NL | ripencc  | 2006-08-14 | PCEXTREME PCextreme B.V.,NL
+48666   | 93.170.123.0     | 93.170.123.0/24     | CZ | ripencc  | 2008-03-20 | AS-MAROSNET MAROSNET Telecommunication Company LLC,RU
 48815   | 109.233.127.0    | 109.233.127.0/24    | IT | ripencc  | 2009-12-17 | CRITICALCASE Critical Case s.r.l,IT
 48823   | 185.11.136.0     | 185.11.136.0/22     | DE | ripencc  | 2012-11-29 | AS48823 AS48823,DE
 49335   | 141.105.68.0     | 141.105.68.0/24     | RU | ripencc  | 2011-06-27 | NCONNECT-AS Mir Telematiki Ltd.,RU
@@ -1608,7 +1610,6 @@ Bulk mode; whois.cymru.com [2015-11-20 16:36:36 +0000]
 52173   | 95.215.47.0      | 95.215.47.0/24      | LV | ripencc  | 2009-02-16 | MAKONIX Makonix SIA,LV
 52201   | 46.38.48.0       | 46.38.48.0/21       | RU | ripencc  | 2010-11-24 | TCTEL LLC _TC TEL_,RU
 52284   | 200.63.47.0      | 200.63.40.0/21      | PA | lacnic   | 2008-03-28 | Panamaserver.com,PA
-53264   | 173.243.112.0    | 173.243.112.0/20    | US | arin     | 2010-06-02 | CDC-LMB1 - Continuum Data Centers, LLC.,US
 53667   | 198.98.51.0      | 198.98.51.0/24      | US | arin     | 2012-07-05 | PONYNET - FranTech Solutions,US
 53667   | 199.195.249.0    | 199.195.248.0/21    | US | arin     | 2012-06-06 | PONYNET - FranTech Solutions,US
 53667   | 209.141.45.0     | 209.141.32.0/19     | US | arin     | 2011-01-27 | PONYNET - FranTech Solutions,US
@@ -1748,7 +1749,7 @@ Bulk mode; whois.cymru.com [2015-11-20 16:36:36 +0000]
 197216  | 79.98.107.0      | 79.98.104.0/21      | BG | ripencc  | 2012-08-29 | DELTA-BG-AS Delta Softmedia Ltd.,BG
 197226  | 155.133.38.0     | 155.133.38.0/24     | DE | ripencc  |            | SPRINT-SDC _SPRINT_ S.A.,PL
 197328  | 176.53.22.0      | 176.53.22.0/24      | TR | ripencc  | 2011-05-26 | INETLTD INTER NET BILGISAYAR TURIZM TIC LTD STI,TR
-197422  | 89.234.157.0     | 89.234.156.0/23     | FR | ripencc  | 2006-05-23 | TETANEUTRAL-NET-AS Tetaneutral.net,FR
+197422  | 89.234.157.0     | 89.234.157.0/24     | FR | ripencc  | 2006-05-23 | TETANEUTRAL-NET-AS Tetaneutral.net,FR
 197540  | 37.120.162.0     | 37.120.160.0/19     | DE | ripencc  | 2012-02-13 | NETCUP-AS netcup GmbH,DE
 197540  | 37.120.169.0     | 37.120.160.0/19     | DE | ripencc  | 2012-02-13 | NETCUP-AS netcup GmbH,DE
 197540  | 37.120.172.0     | 37.120.160.0/19     | DE | ripencc  | 2012-02-13 | NETCUP-AS netcup GmbH,DE
