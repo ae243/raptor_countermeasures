@@ -1,0 +1,640 @@
+ris rrc04 update 1446789125 valid A 192.65.185.247 34781 {'next-hop': '192.65.185.247', 'prefix': '1.9.177.0/24', 'as-path': '34781 9498'}
+ris rrc04 update 1446789125 valid A 192.65.185.247 34781 {'next-hop': '192.65.185.247', 'prefix': '1.9.0.0/16', 'as-path': '34781 9498'}
+ris rrc04 update 1446789125 valid A 192.65.185.247 34781 {'next-hop': '192.65.185.247', 'prefix': '1.4.192.0/19', 'as-path': '34781 9498'}
+ris rrc04 update 1446789125 valid A 192.65.185.247 34781 {'next-hop': '192.65.185.247', 'prefix': '1.4.192.0/18', 'as-path': '34781 9498'}
+ris rrc04 update 1446789125 valid A 192.65.185.247 34781 {'next-hop': '192.65.185.247', 'prefix': '1.4.128.0/17', 'as-path': '34781 9498'}
+routeviews route-views.sfmix update 1446789125 valid A 206.197.187.10 14061 {'next-hop': '206.197.187.10', 'prefix': '1.4.192.0/19', 'as-path': '14061 9498'}
+routeviews route-views.sfmix update 1446789125 valid A 206.197.187.10 14061 {'next-hop': '206.197.187.10', 'prefix': '1.4.192.0/18', 'as-path': '14061 9498'}
+routeviews route-views.sfmix update 1446789125 valid A 206.197.187.10 14061 {'next-hop': '206.197.187.10', 'prefix': '1.4.128.0/17', 'as-path': '14061 9498'}
+routeviews route-views.perth update 1446789125 valid A 198.32.212.11 24516 {'next-hop': '198.32.212.11', 'prefix': '1.4.128.0/17', 'as-path': '24516 9498'}
+routeviews route-views.perth update 1446789125 valid A 198.32.212.11 24516 {'next-hop': '198.32.212.11', 'prefix': '1.4.192.0/19', 'as-path': '24516 9498'}
+routeviews route-views.perth update 1446789125 valid A 198.32.212.11 24516 {'next-hop': '198.32.212.11', 'prefix': '1.4.192.0/18', 'as-path': '24516 9498'}
+routeviews route-views.sg update 1446789125 valid A 202.79.197.159 24482 {'next-hop': '202.79.197.40', 'prefix': '1.4.128.0/17', 'as-path': '24482 9498'}
+routeviews route-views.sg update 1446789125 valid A 202.79.197.159 24482 {'next-hop': '202.79.197.40', 'prefix': '1.4.192.0/18', 'as-path': '24482 9498'}
+routeviews route-views.sg update 1446789125 valid A 202.79.197.159 24482 {'next-hop': '202.79.197.40', 'prefix': '1.9.0.0/16', 'as-path': '24482 9498'}
+routeviews route-views.sg update 1446789125 valid A 202.79.197.159 24482 {'next-hop': '202.79.197.40', 'prefix': '1.4.192.0/19', 'as-path': '24482 9498'}
+routeviews route-views.perth update 1446789125 valid A 198.32.212.11 24516 {'next-hop': '198.32.212.11', 'prefix': '1.9.0.0/16', 'as-path': '24516 9498'}
+routeviews route-views.perth update 1446789125 valid A 198.32.212.11 24516 {'next-hop': '198.32.212.11', 'prefix': '1.9.177.0/24', 'as-path': '24516 9498'}
+routeviews route-views.sydney update 1446789125 valid A 202.167.228.20 4739 {'next-hop': '202.167.228.20', 'prefix': '1.9.177.0/24', 'as-path': '4739 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.224.99 13237 {'next-hop': '195.66.224.99', 'prefix': '1.4.192.0/18', 'as-path': '13237 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.224.99 13237 {'next-hop': '195.66.224.99', 'prefix': '1.4.128.0/17', 'as-path': '13237 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.224.99 13237 {'next-hop': '195.66.224.99', 'prefix': '1.4.192.0/19', 'as-path': '13237 9498'}
+ris rrc05 update 1446789125 valid A 193.203.0.91 13237 {'next-hop': '193.203.0.91', 'prefix': '1.9.0.0/16', 'as-path': '13237 9498'}
+ris rrc05 update 1446789125 valid A 193.203.0.91 13237 {'next-hop': '193.203.0.91', 'prefix': '1.4.192.0/18', 'as-path': '13237 9498'}
+ris rrc05 update 1446789125 valid A 193.203.0.91 13237 {'next-hop': '193.203.0.91', 'prefix': '1.4.192.0/19', 'as-path': '13237 9498'}
+ris rrc05 update 1446789125 valid A 193.203.0.91 13237 {'next-hop': '193.203.0.91', 'prefix': '1.4.128.0/17', 'as-path': '13237 9498'}
+routeviews route-views.sydney update 1446789125 valid A 202.167.228.20 4739 {'next-hop': '202.167.228.20', 'prefix': '1.4.128.0/17', 'as-path': '4739 9498'}
+routeviews route-views.sydney update 1446789125 valid A 202.167.228.20 4739 {'next-hop': '202.167.228.20', 'prefix': '1.4.192.0/18', 'as-path': '4739 9498'}
+ris rrc07 update 1446789125 valid A 194.68.123.226 24482 {'next-hop': '194.68.123.226', 'prefix': '1.4.192.0/18', 'as-path': '24482 9498'}
+ris rrc07 update 1446789125 valid A 194.68.123.226 24482 {'next-hop': '194.68.123.226', 'prefix': '1.4.192.0/19', 'as-path': '24482 9498'}
+ris rrc07 update 1446789125 valid A 194.68.123.226 24482 {'next-hop': '194.68.123.226', 'prefix': '1.4.128.0/17', 'as-path': '24482 9498'}
+routeviews route-views.sydney update 1446789125 valid A 202.167.228.20 4739 {'next-hop': '202.167.228.20', 'prefix': '1.4.192.0/19', 'as-path': '4739 9498'}
+ris rrc05 update 1446789125 valid A 193.203.0.134 39912 {'next-hop': '193.203.0.134', 'prefix': '1.4.192.0/18', 'as-path': '39912 9498'}
+ris rrc05 update 1446789125 valid A 193.203.0.134 39912 {'next-hop': '193.203.0.134', 'prefix': '1.4.128.0/17', 'as-path': '39912 9498'}
+ris rrc05 update 1446789125 valid A 193.203.0.134 39912 {'next-hop': '193.203.0.134', 'prefix': '1.4.192.0/19', 'as-path': '39912 9498'}
+routeviews route-views.nwax update 1446789125 valid A 198.32.195.24 15301 {'next-hop': '198.32.195.24', 'prefix': '1.9.177.0/24', 'as-path': '15301 6939 9498'}
+ris rrc05 update 1446789125 valid A 193.203.0.91 13237 {'next-hop': '193.203.0.91', 'prefix': '1.9.177.0/24', 'as-path': '13237 9498'}
+routeviews route-views.nwax update 1446789125 valid A 198.32.195.46 54073 {'next-hop': '198.32.195.46', 'prefix': '1.9.177.0/24', 'as-path': '54073 2044 6939 9498'}
+ris rrc14 update 1446789125 valid A 198.32.176.177 7575 {'next-hop': '198.32.176.203', 'prefix': '1.4.192.0/18', 'as-path': '7575 9498'}
+ris rrc14 update 1446789125 valid A 198.32.176.177 7575 {'next-hop': '198.32.176.203', 'prefix': '1.4.192.0/19', 'as-path': '7575 9498'}
+ris rrc10 update 1446789125 valid A 217.29.66.86 12637 {'next-hop': '217.29.66.86', 'prefix': '1.4.192.0/19', 'as-path': '12637 9498'}
+ris rrc10 update 1446789125 valid A 217.29.66.86 12637 {'next-hop': '217.29.66.86', 'prefix': '1.4.128.0/17', 'as-path': '12637 9498'}
+ris rrc10 update 1446789125 valid A 217.29.66.86 12637 {'next-hop': '217.29.66.86', 'prefix': '1.4.192.0/18', 'as-path': '12637 9498'}
+ris rrc11 update 1446789125 valid A 198.32.160.103 13030 {'next-hop': '198.32.160.103', 'prefix': '1.4.128.0/17', 'as-path': '13030 9498'}
+ris rrc11 update 1446789125 valid A 198.32.160.103 13030 {'next-hop': '198.32.160.103', 'prefix': '1.4.192.0/19', 'as-path': '13030 9498'}
+ris rrc11 update 1446789125 valid A 198.32.160.103 13030 {'next-hop': '198.32.160.103', 'prefix': '1.4.192.0/18', 'as-path': '13030 9498'}
+ris rrc11 update 1446789125 valid A 198.32.160.103 13030 {'next-hop': '198.32.160.103', 'prefix': '1.9.0.0/16', 'as-path': '13030 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.236.175 13030 {'next-hop': '195.66.236.175', 'prefix': '1.9.0.0/16', 'as-path': '13030 9498'}
+ris rrc14 update 1446789125 valid A 198.32.176.177 7575 {'next-hop': '198.32.176.203', 'prefix': '1.4.128.0/17', 'as-path': '7575 9498'}
+routeviews route-views.sg update 1446789125 valid A 202.79.197.201 133165 {'next-hop': '202.79.197.40', 'prefix': '1.4.192.0/18', 'as-path': '133165 9498'}
+routeviews route-views.sg update 1446789125 valid A 202.79.197.201 133165 {'next-hop': '202.79.197.40', 'prefix': '1.4.192.0/19', 'as-path': '133165 9498'}
+routeviews route-views.sg update 1446789125 valid A 202.79.197.201 133165 {'next-hop': '202.79.197.40', 'prefix': '1.4.128.0/17', 'as-path': '133165 9498'}
+ris rrc01 update 1446789125 valid A 195.66.224.175 13030 {'next-hop': '195.66.224.175', 'prefix': '1.9.0.0/16', 'as-path': '13030 9498'}
+routeviews route-views.telxatl update 1446789125 valid A 198.32.132.75 6939 {'next-hop': '198.32.132.75', 'prefix': '1.9.0.0/16', 'as-path': '6939 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.236.175 13030 {'next-hop': '195.66.236.175', 'prefix': '1.4.128.0/17', 'as-path': '13030 9498'}
+routeviews route-views.nwax update 1446789125 valid A 198.32.195.24 15301 {'next-hop': '198.32.195.24', 'prefix': '1.9.0.0/16', 'as-path': '15301 6939 9498'}
+ris rrc01 update 1446789125 valid A 195.66.224.175 13030 {'next-hop': '195.66.224.175', 'prefix': '1.4.128.0/17', 'as-path': '13030 9498'}
+routeviews route-views.nwax update 1446789125 valid A 198.32.195.46 54073 {'next-hop': '198.32.195.46', 'prefix': '1.9.0.0/16', 'as-path': '54073 2044 6939 9498'}
+ris rrc07 update 1446789125 valid A 194.68.123.157 9002 {'next-hop': '194.68.123.157', 'prefix': '1.4.192.0/19', 'as-path': '9002 9498'}
+ris rrc07 update 1446789125 valid A 194.68.123.157 9002 {'next-hop': '194.68.123.157', 'prefix': '1.4.192.0/18', 'as-path': '9002 9498'}
+ris rrc07 update 1446789125 valid A 194.68.123.157 9002 {'next-hop': '194.68.123.157', 'prefix': '1.4.128.0/17', 'as-path': '9002 9498'}
+ris rrc07 update 1446789125 valid A 194.68.123.157 9002 {'next-hop': '194.68.123.157', 'prefix': '1.9.0.0/16', 'as-path': '9002 9498'}
+ris rrc10 update 1446789125 valid A 217.29.66.158 24482 {'next-hop': '217.29.66.158', 'prefix': '1.4.192.0/18', 'as-path': '24482 9498'}
+ris rrc10 update 1446789125 valid A 217.29.66.158 24482 {'next-hop': '217.29.66.158', 'prefix': '1.4.192.0/19', 'as-path': '24482 9498'}
+ris rrc10 update 1446789125 valid A 217.29.66.158 24482 {'next-hop': '217.29.66.158', 'prefix': '1.4.128.0/17', 'as-path': '24482 9498'}
+routeviews route-views.telxatl update 1446789125 valid A 198.32.132.75 6939 {'next-hop': '198.32.132.75', 'prefix': '1.9.177.0/24', 'as-path': '6939 9498'}
+ris rrc03 update 1446789125 valid A 80.249.211.217 8455 {'next-hop': '80.249.211.217', 'prefix': '1.4.192.0/18', 'as-path': '8455 9498'}
+ris rrc03 update 1446789125 valid A 80.249.211.217 8455 {'next-hop': '80.249.211.217', 'prefix': '1.4.192.0/19', 'as-path': '8455 9498'}
+ris rrc03 update 1446789125 valid A 80.249.211.217 8455 {'next-hop': '80.249.211.217', 'prefix': '1.4.128.0/17', 'as-path': '8455 9498'}
+ris rrc07 update 1446789125 valid A 194.68.123.157 9002 {'next-hop': '194.68.123.157', 'prefix': '1.9.177.0/24', 'as-path': '9002 9498'}
+routeviews route-views.sg update 1446789125 valid A 202.79.197.159 24482 {'next-hop': '202.79.197.40', 'prefix': '1.9.177.0/24', 'as-path': '24482 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.224.175 13030 {'next-hop': '195.66.224.175', 'prefix': '1.9.0.0/16', 'as-path': '13030 9498'}
+routeviews route-views.telxatl update 1446789125 valid A 198.32.132.28 4181 {'next-hop': '198.32.132.28', 'prefix': '1.9.177.0/24', 'as-path': '4181 9498'}
+routeviews route-views.telxatl update 1446789125 valid A 198.32.132.28 4181 {'next-hop': '198.32.132.28', 'prefix': '1.9.0.0/16', 'as-path': '4181 9498'}
+routeviews route-views.telxatl update 1446789125 valid A 198.32.132.28 4181 {'next-hop': '198.32.132.28', 'prefix': '1.4.192.0/18', 'as-path': '4181 9498'}
+routeviews route-views.telxatl update 1446789125 valid A 198.32.132.28 4181 {'next-hop': '198.32.132.28', 'prefix': '1.4.192.0/19', 'as-path': '4181 9498'}
+routeviews route-views.telxatl update 1446789125 valid A 198.32.132.28 4181 {'next-hop': '198.32.132.28', 'prefix': '1.4.128.0/17', 'as-path': '4181 9498'}
+routeviews route-views.isc update 1446789125 valid A 198.32.176.206 5580 {'next-hop': '198.32.176.206', 'prefix': '1.4.192.0/18', 'as-path': '5580 9498'}
+routeviews route-views.isc update 1446789125 valid A 198.32.176.206 5580 {'next-hop': '198.32.176.206', 'prefix': '1.4.192.0/19', 'as-path': '5580 9498'}
+routeviews route-views.isc update 1446789125 valid A 198.32.176.206 5580 {'next-hop': '198.32.176.206', 'prefix': '1.4.128.0/17', 'as-path': '5580 9498'}
+routeviews route-views.isc update 1446789125 valid A 198.32.176.206 5580 {'next-hop': '198.32.176.206', 'prefix': '1.9.0.0/16', 'as-path': '5580 9498'}
+routeviews route-views.isc update 1446789125 valid A 198.32.176.206 5580 {'next-hop': '198.32.176.206', 'prefix': '1.9.177.0/24', 'as-path': '5580 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.224.175 13030 {'next-hop': '195.66.224.175', 'prefix': '1.4.128.0/17', 'as-path': '13030 9498'}
+routeviews route-views.sydney update 1446789125 valid A 202.167.228.149 58511 {'next-hop': '202.167.228.149', 'prefix': '1.4.128.0/17', 'as-path': '58511 9498'}
+routeviews route-views.sydney update 1446789125 valid A 202.167.228.149 58511 {'next-hop': '202.167.228.149', 'prefix': '1.4.192.0/19', 'as-path': '58511 9498'}
+routeviews route-views.sydney update 1446789125 valid A 202.167.228.149 58511 {'next-hop': '202.167.228.149', 'prefix': '1.4.192.0/18', 'as-path': '58511 9498'}
+routeviews route-views.sydney update 1446789125 valid A 202.167.228.149 58511 {'next-hop': '202.167.228.149', 'prefix': '1.9.0.0/16', 'as-path': '58511 9498'}
+routeviews route-views.sydney update 1446789125 valid A 202.167.228.149 58511 {'next-hop': '202.167.228.149', 'prefix': '1.9.177.0/24', 'as-path': '58511 9498'}
+ris rrc14 update 1446789125 valid A 198.32.176.147 14061 {'next-hop': '198.32.176.203', 'prefix': '1.4.192.0/19', 'as-path': '14061 9498'}
+ris rrc14 update 1446789125 valid A 198.32.176.147 14061 {'next-hop': '198.32.176.203', 'prefix': '1.4.192.0/18', 'as-path': '14061 9498'}
+ris rrc14 update 1446789125 valid A 198.32.176.147 14061 {'next-hop': '198.32.176.203', 'prefix': '1.4.128.0/17', 'as-path': '14061 9498'}
+ris rrc10 update 1446789125 valid A 217.29.66.86 12637 {'next-hop': '217.29.66.86', 'prefix': '1.9.0.0/16', 'as-path': '12637 9498'}
+routeviews route-views.telxatl update 1446789125 valid A 198.32.132.28 4181 {'next-hop': '198.32.132.28', 'prefix': '1.4.128.0/17', 'as-path': '4181 9498'}
+routeviews route-views.telxatl update 1446789125 valid A 198.32.132.28 4181 {'next-hop': '198.32.132.28', 'prefix': '1.4.192.0/19', 'as-path': '4181 9498'}
+routeviews route-views.telxatl update 1446789125 valid A 198.32.132.28 4181 {'next-hop': '198.32.132.28', 'prefix': '1.4.192.0/18', 'as-path': '4181 9498'}
+routeviews route-views.telxatl update 1446789125 valid A 198.32.132.28 4181 {'next-hop': '198.32.132.28', 'prefix': '1.9.0.0/16', 'as-path': '4181 9498'}
+routeviews route-views.telxatl update 1446789125 valid A 198.32.132.28 4181 {'next-hop': '198.32.132.28', 'prefix': '1.9.177.0/24', 'as-path': '4181 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.224.99 13237 {'next-hop': '195.66.224.99', 'prefix': '1.9.0.0/16', 'as-path': '13237 9498'}
+ris rrc07 update 1446789125 valid A 194.68.123.226 24482 {'next-hop': '194.68.123.226', 'prefix': '1.4.192.0/18', 'as-path': '24482 9498'}
+ris rrc07 update 1446789125 valid A 194.68.123.226 24482 {'next-hop': '194.68.123.226', 'prefix': '1.4.192.0/19', 'as-path': '24482 9498'}
+ris rrc07 update 1446789125 valid A 194.68.123.226 24482 {'next-hop': '194.68.123.226', 'prefix': '1.4.128.0/17', 'as-path': '24482 9498'}
+ris rrc10 update 1446789125 valid A 217.29.66.86 12637 {'next-hop': '217.29.66.86', 'prefix': '1.9.177.0/24', 'as-path': '12637 9498'}
+ris rrc03 update 1446789125 valid A 80.249.208.34 1103 {'next-hop': '80.249.211.191', 'prefix': '1.4.192.0/19', 'as-path': '1103 9498'}
+ris rrc03 update 1446789125 valid A 80.249.208.34 1103 {'next-hop': '80.249.211.191', 'prefix': '1.4.192.0/18', 'as-path': '1103 9498'}
+ris rrc03 update 1446789125 valid A 80.249.208.34 1103 {'next-hop': '80.249.211.191', 'prefix': '1.4.128.0/17', 'as-path': '1103 9498'}
+ris rrc07 update 1446789125 valid A 194.68.123.226 24482 {'next-hop': '194.68.123.226', 'prefix': '1.9.0.0/16', 'as-path': '24482 9498'}
+ris rrc00 update 1446789125 valid A 146.228.1.3 1836 {'next-hop': '146.228.1.3', 'prefix': '1.9.0.0/16', 'as-path': '1836 13030 9498'}
+ris rrc07 update 1446789125 valid A 194.68.123.226 24482 {'next-hop': '194.68.123.226', 'prefix': '1.9.177.0/24', 'as-path': '24482 9498'}
+routeviews route-views.sg update 1446789125 valid A 202.79.197.201 133165 {'next-hop': '202.79.197.40', 'prefix': '1.9.177.0/24', 'as-path': '133165 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.224.99 13237 {'next-hop': '195.66.224.99', 'prefix': '1.9.177.0/24', 'as-path': '13237 9498'}
+ris rrc11 update 1446789125 valid A 198.32.160.103 13030 {'next-hop': '198.32.160.103', 'prefix': '1.9.177.0/24', 'as-path': '13030 9498'}
+routeviews route-views.isc update 1446789125 valid A 198.32.176.177 7575 {'next-hop': '198.32.176.203', 'prefix': '1.4.192.0/18', 'as-path': '7575 9498'}
+routeviews route-views.isc update 1446789125 valid A 198.32.176.177 7575 {'next-hop': '198.32.176.203', 'prefix': '1.4.192.0/19', 'as-path': '7575 9498'}
+ris rrc13 update 1446789125 valid A 193.232.244.147 28917 {'next-hop': '193.232.244.147', 'prefix': '1.9.0.0/16', 'as-path': '28917 9498'}
+ris rrc01 update 1446789125 valid A 195.66.226.20 56730 {'next-hop': '195.66.225.109', 'prefix': '1.4.192.0/18', 'as-path': '56730 9498'}
+ris rrc01 update 1446789125 valid A 195.66.226.20 56730 {'next-hop': '195.66.225.109', 'prefix': '1.4.128.0/17', 'as-path': '56730 9498'}
+ris rrc01 update 1446789125 valid A 195.66.226.20 56730 {'next-hop': '195.66.225.109', 'prefix': '1.4.192.0/19', 'as-path': '56730 9498'}
+ris rrc11 update 1446789125 valid A 198.32.160.242 24482 {'next-hop': '198.32.160.242', 'prefix': '1.9.0.0/16', 'as-path': '24482 9498'}
+routeviews route-views.isc update 1446789125 valid A 198.32.176.177 7575 {'next-hop': '198.32.176.203', 'prefix': '1.4.128.0/17', 'as-path': '7575 9498'}
+ris rrc12 update 1446789125 valid A 80.81.194.59 29140 {'next-hop': '80.81.194.59', 'prefix': '1.4.128.0/17', 'as-path': '29140 9498'}
+ris rrc12 update 1446789125 valid A 80.81.194.59 29140 {'next-hop': '80.81.194.59', 'prefix': '1.4.192.0/18', 'as-path': '29140 9498'}
+ris rrc12 update 1446789125 valid A 80.81.194.59 29140 {'next-hop': '80.81.194.59', 'prefix': '1.4.192.0/19', 'as-path': '29140 9498'}
+routeviews route-views.sg update 1446789125 valid A 202.79.197.169 38880 {'next-hop': '202.79.197.169', 'prefix': '1.4.128.0/17', 'as-path': '38880 9498'}
+routeviews route-views.sg update 1446789125 valid A 202.79.197.169 38880 {'next-hop': '202.79.197.169', 'prefix': '1.4.192.0/18', 'as-path': '38880 9498'}
+routeviews route-views.sg update 1446789125 valid A 202.79.197.169 38880 {'next-hop': '202.79.197.169', 'prefix': '1.4.192.0/19', 'as-path': '38880 9498'}
+routeviews route-views.sg update 1446789125 valid A 202.79.197.169 38880 {'next-hop': '202.79.197.169', 'prefix': '1.9.0.0/16', 'as-path': '38880 9498'}
+routeviews route-views.sg update 1446789125 valid A 202.79.197.169 38880 {'next-hop': '202.79.197.169', 'prefix': '1.9.177.0/24', 'as-path': '38880 9498'}
+ris rrc01 update 1446789125 valid A 195.66.224.175 13030 {'next-hop': '195.66.224.175', 'prefix': '1.4.128.0/17', 'as-path': '13030 9498'}
+ris rrc01 update 1446789125 valid A 195.66.224.175 13030 {'next-hop': '195.66.224.175', 'prefix': '1.4.192.0/19', 'as-path': '13030 9498'}
+ris rrc01 update 1446789125 valid A 195.66.224.175 13030 {'next-hop': '195.66.224.175', 'prefix': '1.4.192.0/18', 'as-path': '13030 9498'}
+ris rrc01 update 1446789125 valid A 195.66.224.175 13030 {'next-hop': '195.66.224.175', 'prefix': '1.9.0.0/16', 'as-path': '13030 9498'}
+routeviews route-views3 update 1446789125 valid A 104.192.216.1 46450 {'next-hop': '104.192.216.1', 'prefix': '1.9.177.0/24', 'as-path': '46450 6939 9498'}
+ris rrc01 update 1446789125 valid A 195.66.224.175 13030 {'next-hop': '195.66.224.175', 'prefix': '1.9.177.0/24', 'as-path': '13030 9498'}
+ris rrc00 update 1446789125 valid A 146.228.1.3 1836 {'next-hop': '146.228.1.3', 'prefix': '1.9.177.0/24', 'as-path': '1836 13030 9498'}
+ris rrc10 update 1446789125 valid A 217.29.66.158 24482 {'next-hop': '217.29.66.158', 'prefix': '1.4.192.0/18', 'as-path': '24482 9498'}
+ris rrc10 update 1446789125 valid A 217.29.66.158 24482 {'next-hop': '217.29.66.158', 'prefix': '1.4.192.0/19', 'as-path': '24482 9498'}
+ris rrc10 update 1446789125 valid A 217.29.66.158 24482 {'next-hop': '217.29.66.158', 'prefix': '1.4.128.0/17', 'as-path': '24482 9498'}
+ris rrc13 update 1446789125 valid A 193.232.244.147 28917 {'next-hop': '193.232.244.147', 'prefix': '1.9.177.0/24', 'as-path': '28917 9498'}
+routeviews route-views.isc update 1446789125 valid A 198.32.176.20 6939 {'next-hop': '198.32.176.20', 'prefix': '1.9.0.0/16', 'as-path': '6939 9498'}
+routeviews route-views.isc update 1446789125 valid A 198.32.176.20 6939 {'next-hop': '198.32.176.20', 'prefix': '1.9.177.0/24', 'as-path': '6939 9498'}
+ris rrc12 update 1446789125 valid A 80.81.194.140 25220 {'next-hop': '80.81.194.140', 'prefix': '1.4.192.0/19', 'as-path': '25220 9498'}
+ris rrc12 update 1446789125 valid A 80.81.194.140 25220 {'next-hop': '80.81.194.140', 'prefix': '1.4.128.0/17', 'as-path': '25220 9498'}
+ris rrc12 update 1446789125 valid A 80.81.194.140 25220 {'next-hop': '80.81.194.140', 'prefix': '1.4.192.0/18', 'as-path': '25220 9498'}
+ris rrc07 update 1446789125 valid A 194.68.123.226 24482 {'next-hop': '194.68.123.226', 'prefix': '1.9.0.0/16', 'as-path': '24482 9498'}
+ris rrc03 update 1446789125 valid A 80.249.211.217 8455 {'next-hop': '80.249.211.217', 'prefix': '1.9.0.0/16', 'as-path': '8455 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.224.21 6939 {'next-hop': '195.66.224.21', 'prefix': '1.9.0.0/16', 'as-path': '6939 9498'}
+ris rrc07 update 1446789125 valid A 194.68.123.226 24482 {'next-hop': '194.68.123.226', 'prefix': '1.9.177.0/24', 'as-path': '24482 9498'}
+ris rrc10 update 1446789125 valid A 217.29.66.158 24482 {'next-hop': '217.29.66.158', 'prefix': '1.9.0.0/16', 'as-path': '24482 9498'}
+ris rrc03 update 1446789125 valid A 80.249.211.217 8455 {'next-hop': '80.249.211.217', 'prefix': '1.9.177.0/24', 'as-path': '8455 9498'}
+ris rrc12 update 1446789125 valid A 80.81.192.74 13237 {'next-hop': '80.81.192.74', 'prefix': '1.4.192.0/18', 'as-path': '13237 9498'}
+ris rrc12 update 1446789125 valid A 80.81.192.74 13237 {'next-hop': '80.81.192.74', 'prefix': '1.4.192.0/19', 'as-path': '13237 9498'}
+ris rrc12 update 1446789125 valid A 80.81.192.74 13237 {'next-hop': '80.81.192.74', 'prefix': '1.4.128.0/17', 'as-path': '13237 9498'}
+ris rrc10 update 1446789125 valid A 217.29.66.158 24482 {'next-hop': '217.29.66.158', 'prefix': '1.9.177.0/24', 'as-path': '24482 9498'}
+ris rrc13 update 1446789125 valid A 193.232.244.136 39792 {'next-hop': '193.232.244.136', 'prefix': '1.4.192.0/19', 'as-path': '39792 9498'}
+ris rrc13 update 1446789125 valid A 193.232.244.136 39792 {'next-hop': '193.232.244.136', 'prefix': '1.4.192.0/18', 'as-path': '39792 9498'}
+ris rrc13 update 1446789125 valid A 193.232.244.136 39792 {'next-hop': '193.232.244.136', 'prefix': '1.4.128.0/17', 'as-path': '39792 9498'}
+ris rrc01 update 1446789125 valid A 195.66.224.175 13030 {'next-hop': '195.66.224.175', 'prefix': '1.9.177.0/24', 'as-path': '13030 9498'}
+ris rrc13 update 1446789125 valid A 193.232.244.136 39792 {'next-hop': '193.232.244.136', 'prefix': '1.9.0.0/16', 'as-path': '39792 9498'}
+ris rrc03 update 1446789125 valid A 80.249.208.34 1103 {'next-hop': '80.249.211.191', 'prefix': '1.9.0.0/16', 'as-path': '1103 9498'}
+ris rrc12 update 1446789125 valid A 80.81.192.74 13237 {'next-hop': '80.81.192.74', 'prefix': '1.9.0.0/16', 'as-path': '13237 9498'}
+ris rrc13 update 1446789125 valid A 193.232.244.136 39792 {'next-hop': '193.232.244.136', 'prefix': '1.9.177.0/24', 'as-path': '39792 9498'}
+routeviews route-views3 update 1446789125 valid A 216.218.252.164 6939 {'next-hop': '216.218.252.164', 'prefix': '1.9.0.0/16', 'as-path': '6939 9498'}
+routeviews route-views3 update 1446789125 valid A 216.218.252.164 6939 {'next-hop': '216.218.252.164', 'prefix': '1.9.177.0/24', 'as-path': '6939 9498'}
+ris rrc12 update 1446789125 valid A 80.81.194.140 25220 {'next-hop': '80.81.194.140', 'prefix': '1.9.0.0/16', 'as-path': '25220 9498'}
+routeviews route-views.saopaulo update 1446789125 valid A 187.16.218.57 28294 {'next-hop': '187.16.218.57', 'prefix': '1.4.128.0/17', 'as-path': '28294 12989 9498'}
+routeviews route-views.saopaulo update 1446789125 valid A 187.16.218.57 28294 {'next-hop': '187.16.218.57', 'prefix': '1.4.192.0/18', 'as-path': '28294 12989 9498'}
+routeviews route-views.saopaulo update 1446789125 valid A 187.16.218.57 28294 {'next-hop': '187.16.218.57', 'prefix': '1.4.192.0/19', 'as-path': '28294 12989 9498'}
+ris rrc01 update 1446789125 valid A 195.66.226.20 56730 {'next-hop': '195.66.226.20', 'prefix': '1.9.0.0/16', 'as-path': '56730 51945 39326 9498'}
+ris rrc03 update 1446789125 valid A 80.249.211.161 8283 {'next-hop': '80.249.211.161', 'prefix': '1.4.128.0/17', 'as-path': '8283 5580 9498'}
+ris rrc03 update 1446789125 valid A 80.249.211.161 8283 {'next-hop': '80.249.211.161', 'prefix': '1.4.192.0/18', 'as-path': '8283 5580 9498'}
+ris rrc03 update 1446789125 valid A 80.249.211.161 8283 {'next-hop': '80.249.211.161', 'prefix': '1.4.192.0/19', 'as-path': '8283 5580 9498'}
+routeviews route-views4 update 1446789125 valid A 38.122.147.130 38880 {'next-hop': '38.122.147.130', 'prefix': '1.4.128.0/17', 'as-path': '38880 9498'}
+routeviews route-views4 update 1446789125 valid A 38.122.147.130 38880 {'next-hop': '38.122.147.130', 'prefix': '1.4.192.0/19', 'as-path': '38880 9498'}
+routeviews route-views4 update 1446789125 valid A 38.122.147.130 38880 {'next-hop': '38.122.147.130', 'prefix': '1.4.192.0/18', 'as-path': '38880 9498'}
+routeviews route-views4 update 1446789125 valid A 38.122.147.130 38880 {'next-hop': '38.122.147.130', 'prefix': '1.9.0.0/16', 'as-path': '38880 9498'}
+ris rrc11 update 1446789125 valid A 198.32.160.170 62567 {'next-hop': '198.32.160.223', 'prefix': '1.4.192.0/18', 'as-path': '62567 9498'}
+ris rrc11 update 1446789125 valid A 198.32.160.170 62567 {'next-hop': '198.32.160.223', 'prefix': '1.4.192.0/19', 'as-path': '62567 9498'}
+ris rrc11 update 1446789125 valid A 198.32.160.170 62567 {'next-hop': '198.32.160.223', 'prefix': '1.4.128.0/17', 'as-path': '62567 9498'}
+ris rrc03 update 1446789125 valid A 80.249.208.34 1103 {'next-hop': '80.249.211.191', 'prefix': '1.9.177.0/24', 'as-path': '1103 9498'}
+ris rrc13 update 1446789125 valid A 193.232.245.109 24482 {'next-hop': '193.232.245.109', 'prefix': '1.4.192.0/18', 'as-path': '24482 9498'}
+ris rrc13 update 1446789125 valid A 193.232.245.109 24482 {'next-hop': '193.232.245.109', 'prefix': '1.4.192.0/19', 'as-path': '24482 9498'}
+ris rrc13 update 1446789125 valid A 193.232.245.109 24482 {'next-hop': '193.232.245.109', 'prefix': '1.4.128.0/17', 'as-path': '24482 9498'}
+ris rrc11 update 1446789125 valid A 198.32.160.170 62567 {'next-hop': '198.32.160.223', 'prefix': '1.9.0.0/16', 'as-path': '62567 9498'}
+ris rrc10 update 1446789125 valid A 217.29.66.158 24482 {'next-hop': '217.29.66.158', 'prefix': '1.9.0.0/16', 'as-path': '24482 9498'}
+ris rrc11 update 1446789125 valid A 198.32.160.170 62567 {'next-hop': '198.32.160.223', 'prefix': '1.9.177.0/24', 'as-path': '62567 9498'}
+ris rrc12 update 1446789125 valid A 80.81.194.140 25220 {'next-hop': '80.81.194.140', 'prefix': '1.9.177.0/24', 'as-path': '25220 9498'}
+ris rrc10 update 1446789125 valid A 217.29.66.158 24482 {'next-hop': '217.29.66.158', 'prefix': '1.9.177.0/24', 'as-path': '24482 9498'}
+ris rrc12 update 1446789125 valid A 80.81.192.74 13237 {'next-hop': '80.81.192.74', 'prefix': '1.9.177.0/24', 'as-path': '13237 9498'}
+ris rrc11 update 1446789125 valid A 198.32.160.242 24482 {'next-hop': '198.32.160.242', 'prefix': '1.9.177.0/24', 'as-path': '24482 9498'}
+routeviews route-views3 update 1446789125 valid A 206.248.155.130 5645 {'next-hop': '206.248.155.130', 'prefix': '1.9.177.0/24', 'as-path': '5645 6939 9498'}
+routeviews route-views.eqix update 1446789125 valid A 206.126.236.37 6939 {'next-hop': '206.126.236.37', 'prefix': '1.9.0.0/16', 'as-path': '6939 9498'}
+routeviews route-views.eqix update 1446789125 valid A 206.126.236.37 6939 {'next-hop': '206.126.236.37', 'prefix': '1.9.177.0/24', 'as-path': '6939 9498'}
+routeviews route-views.eqix update 1446789125 valid A 206.126.236.24 11666 {'next-hop': '206.126.236.24', 'prefix': '1.4.128.0/17', 'as-path': '11666 9498'}
+ris rrc13 update 1446789125 valid A 193.232.244.187 9002 {'next-hop': '193.232.244.187', 'prefix': '1.4.192.0/18', 'as-path': '9002 9498'}
+ris rrc13 update 1446789125 valid A 193.232.244.187 9002 {'next-hop': '193.232.244.187', 'prefix': '1.4.128.0/17', 'as-path': '9002 9498'}
+ris rrc13 update 1446789125 valid A 193.232.244.187 9002 {'next-hop': '193.232.244.187', 'prefix': '1.4.192.0/19', 'as-path': '9002 9498'}
+ris rrc03 update 1446789125 valid A 80.249.208.189 20562 {'next-hop': '80.249.211.191', 'prefix': '1.4.192.0/18', 'as-path': '20562 9498'}
+ris rrc03 update 1446789125 valid A 80.249.208.189 20562 {'next-hop': '80.249.211.191', 'prefix': '1.4.192.0/19', 'as-path': '20562 9498'}
+ris rrc03 update 1446789125 valid A 80.249.208.189 20562 {'next-hop': '80.249.211.191', 'prefix': '1.4.128.0/17', 'as-path': '20562 9498'}
+ris rrc12 update 1446789125 valid A 80.81.194.59 29140 {'next-hop': '80.81.194.59', 'prefix': '1.9.0.0/16', 'as-path': '29140 9498'}
+ris rrc12 update 1446789125 valid A 80.81.194.59 29140 {'next-hop': '80.81.194.59', 'prefix': '1.9.177.0/24', 'as-path': '29140 9498'}
+routeviews route-views.eqix update 1446789125 valid A 206.126.236.24 11666 {'next-hop': '206.126.236.24', 'prefix': '1.4.192.0/18', 'as-path': '11666 9498'}
+routeviews route-views.eqix update 1446789125 valid A 206.126.236.24 11666 {'next-hop': '206.126.236.24', 'prefix': '1.4.192.0/19', 'as-path': '11666 9498'}
+ris rrc13 update 1446789125 valid A 193.232.244.187 9002 {'next-hop': '193.232.244.187', 'prefix': '1.9.0.0/16', 'as-path': '9002 9498'}
+ris rrc03 update 1446789125 valid A 193.239.116.17 20562 {'next-hop': '193.239.116.17', 'prefix': '1.4.192.0/18', 'as-path': '20562 9498'}
+ris rrc03 update 1446789125 valid A 193.239.116.17 20562 {'next-hop': '193.239.116.17', 'prefix': '1.4.192.0/19', 'as-path': '20562 9498'}
+ris rrc03 update 1446789125 valid A 193.239.116.17 20562 {'next-hop': '193.239.116.17', 'prefix': '1.4.128.0/17', 'as-path': '20562 9498'}
+routeviews route-views.eqix update 1446789125 valid A 206.126.236.24 11666 {'next-hop': '206.126.236.24', 'prefix': '1.9.0.0/16', 'as-path': '11666 9498'}
+ris rrc13 update 1446789125 valid A 193.232.244.187 9002 {'next-hop': '193.232.244.187', 'prefix': '1.9.177.0/24', 'as-path': '9002 9498'}
+routeviews route-views.eqix update 1446789125 valid A 206.126.236.24 11666 {'next-hop': '206.126.236.24', 'prefix': '1.9.177.0/24', 'as-path': '11666 9498'}
+ris rrc11 update 1446789125 valid A 198.32.160.182 9002 {'next-hop': '198.32.160.182', 'prefix': '1.4.192.0/18', 'as-path': '9002 9498'}
+ris rrc11 update 1446789125 valid A 198.32.160.182 9002 {'next-hop': '198.32.160.182', 'prefix': '1.4.128.0/17', 'as-path': '9002 9498'}
+ris rrc11 update 1446789125 valid A 198.32.160.182 9002 {'next-hop': '198.32.160.182', 'prefix': '1.4.192.0/19', 'as-path': '9002 9498'}
+ris rrc03 update 1446789125 valid A 80.249.208.189 20562 {'next-hop': '80.249.208.189', 'prefix': '1.4.192.0/18', 'as-path': '20562 9498'}
+ris rrc03 update 1446789125 valid A 80.249.208.189 20562 {'next-hop': '80.249.208.189', 'prefix': '1.4.192.0/19', 'as-path': '20562 9498'}
+ris rrc03 update 1446789125 valid A 80.249.208.189 20562 {'next-hop': '80.249.208.189', 'prefix': '1.4.128.0/17', 'as-path': '20562 9498'}
+ris rrc03 update 1446789125 valid A 193.239.116.17 20562 {'next-hop': '193.239.117.107', 'prefix': '1.4.192.0/18', 'as-path': '20562 9498'}
+ris rrc03 update 1446789125 valid A 193.239.116.17 20562 {'next-hop': '193.239.117.107', 'prefix': '1.4.192.0/19', 'as-path': '20562 9498'}
+ris rrc03 update 1446789125 valid A 193.239.116.17 20562 {'next-hop': '193.239.117.107', 'prefix': '1.4.128.0/17', 'as-path': '20562 9498'}
+ris rrc11 update 1446789125 valid A 198.32.160.182 9002 {'next-hop': '198.32.160.182', 'prefix': '1.9.0.0/16', 'as-path': '9002 9498'}
+ris rrc03 update 1446789125 valid A 80.249.208.189 20562 {'next-hop': '80.249.211.191', 'prefix': '1.9.0.0/16', 'as-path': '20562 9498'}
+ris rrc13 update 1446789125 valid A 193.232.245.109 24482 {'next-hop': '193.232.245.109', 'prefix': '1.4.192.0/18', 'as-path': '24482 9498'}
+ris rrc13 update 1446789125 valid A 193.232.245.109 24482 {'next-hop': '193.232.245.109', 'prefix': '1.4.192.0/19', 'as-path': '24482 9498'}
+ris rrc13 update 1446789125 valid A 193.232.245.109 24482 {'next-hop': '193.232.245.109', 'prefix': '1.4.128.0/17', 'as-path': '24482 9498'}
+ris rrc03 update 1446789125 valid A 193.239.116.17 20562 {'next-hop': '193.239.116.17', 'prefix': '1.9.0.0/16', 'as-path': '20562 9498'}
+ris rrc13 update 1446789125 valid A 193.232.245.109 24482 {'next-hop': '193.232.245.109', 'prefix': '1.9.0.0/16', 'as-path': '24482 9498'}
+ris rrc03 update 1446789125 valid A 80.249.208.189 20562 {'next-hop': '80.249.211.191', 'prefix': '1.9.177.0/24', 'as-path': '20562 9498'}
+ris rrc11 update 1446789125 valid A 198.32.160.182 9002 {'next-hop': '198.32.160.182', 'prefix': '1.9.177.0/24', 'as-path': '9002 9498'}
+ris rrc03 update 1446789125 valid A 193.239.116.17 20562 {'next-hop': '193.239.116.17', 'prefix': '1.9.177.0/24', 'as-path': '20562 9498'}
+ris rrc11 update 1446789125 valid A 198.32.160.103 13030 {'next-hop': '198.32.160.103', 'prefix': '1.4.128.0/17', 'as-path': '13030 9498'}
+ris rrc11 update 1446789125 valid A 198.32.160.103 13030 {'next-hop': '198.32.160.103', 'prefix': '1.4.192.0/19', 'as-path': '13030 9498'}
+ris rrc11 update 1446789125 valid A 198.32.160.103 13030 {'next-hop': '198.32.160.103', 'prefix': '1.4.192.0/18', 'as-path': '13030 9498'}
+ris rrc11 update 1446789125 valid A 198.32.160.103 13030 {'next-hop': '198.32.160.103', 'prefix': '1.9.0.0/16', 'as-path': '13030 9498'}
+ris rrc11 update 1446789125 valid A 198.32.160.103 13030 {'next-hop': '198.32.160.103', 'prefix': '1.9.177.0/24', 'as-path': '13030 9498'}
+ris rrc13 update 1446789125 valid A 193.232.244.130 20632 {'next-hop': '193.232.244.130', 'prefix': '1.4.192.0/19', 'as-path': '20632 31133 9498'}
+ris rrc13 update 1446789125 valid A 193.232.244.130 20632 {'next-hop': '193.232.244.130', 'prefix': '1.4.128.0/17', 'as-path': '20632 31133 9498'}
+ris rrc13 update 1446789125 valid A 193.232.244.130 20632 {'next-hop': '193.232.244.130', 'prefix': '1.4.192.0/18', 'as-path': '20632 31133 9498'}
+routeviews route-views4 update 1446789125 valid A 38.122.147.130 38880 {'next-hop': '38.122.147.130', 'prefix': '1.9.177.0/24', 'as-path': '38880 9498'}
+ris rrc13 update 1446789125 valid A 193.232.244.130 20632 {'next-hop': '193.232.244.130', 'prefix': '1.9.0.0/16', 'as-path': '20632 31133 9498'}
+ris rrc03 update 1446789125 valid A 80.249.211.161 8283 {'next-hop': '80.249.211.161', 'prefix': '1.4.192.0/18', 'as-path': '8283 9498'}
+ris rrc03 update 1446789125 valid A 80.249.211.161 8283 {'next-hop': '80.249.211.161', 'prefix': '1.4.128.0/17', 'as-path': '8283 9498'}
+ris rrc03 update 1446789125 valid A 80.249.211.161 8283 {'next-hop': '80.249.211.161', 'prefix': '1.4.192.0/19', 'as-path': '8283 9498'}
+ris rrc13 update 1446789125 valid A 193.232.244.130 20632 {'next-hop': '193.232.244.130', 'prefix': '1.9.177.0/24', 'as-path': '20632 31133 9498'}
+ris rrc11 update 1446789125 valid A 198.32.160.39 9304 {'next-hop': '198.32.160.39', 'prefix': '1.4.192.0/18', 'as-path': '9304 9498'}
+routeviews route-views4 update 1446789125 valid A 125.254.49.250 24516 {'next-hop': '125.254.49.250', 'prefix': '1.4.128.0/17', 'as-path': '24516 9498'}
+routeviews route-views4 update 1446789125 valid A 125.254.49.250 24516 {'next-hop': '125.254.49.250', 'prefix': '1.4.192.0/19', 'as-path': '24516 9498'}
+routeviews route-views4 update 1446789125 valid A 125.254.49.250 24516 {'next-hop': '125.254.49.250', 'prefix': '1.4.192.0/18', 'as-path': '24516 9498'}
+ris rrc05 update 1446789125 valid A 193.203.0.1 1853 {'next-hop': '193.203.0.1', 'prefix': '1.4.192.0/19', 'as-path': '1853 1764 9498'}
+ris rrc05 update 1446789125 valid A 193.203.0.1 1853 {'next-hop': '193.203.0.1', 'prefix': '1.4.192.0/18', 'as-path': '1853 1764 9498'}
+ris rrc05 update 1446789125 valid A 193.203.0.1 1853 {'next-hop': '193.203.0.1', 'prefix': '1.4.128.0/17', 'as-path': '1853 1764 9498'}
+ris rrc13 update 1446789125 valid A 193.232.245.109 24482 {'next-hop': '193.232.245.109', 'prefix': '1.9.177.0/24', 'as-path': '24482 9498'}
+ris rrc11 update 1446789125 valid A 198.32.160.242 24482 {'next-hop': '198.32.160.242', 'prefix': '1.9.0.0/16', 'as-path': '24482 9498'}
+ris rrc11 update 1446789125 valid A 198.32.160.242 24482 {'next-hop': '198.32.160.242', 'prefix': '1.9.177.0/24', 'as-path': '24482 9498'}
+ris rrc03 update 1446789125 valid A 80.249.211.161 8283 {'next-hop': '80.249.211.161', 'prefix': '1.9.177.0/24', 'as-path': '8283 8455 9498'}
+routeviews route-views4 update 1446789125 valid A 125.254.48.250 24516 {'next-hop': '125.254.48.250', 'prefix': '1.4.128.0/17', 'as-path': '24516 9498'}
+routeviews route-views4 update 1446789125 valid A 125.254.48.250 24516 {'next-hop': '125.254.48.250', 'prefix': '1.4.192.0/19', 'as-path': '24516 9498'}
+routeviews route-views4 update 1446789125 valid A 125.254.48.250 24516 {'next-hop': '125.254.48.250', 'prefix': '1.4.192.0/18', 'as-path': '24516 9498'}
+ris rrc11 update 1446789125 valid A 198.32.160.39 9304 {'next-hop': '198.32.160.39', 'prefix': '1.4.192.0/19', 'as-path': '9304 9498'}
+ris rrc11 update 1446789125 valid A 198.32.160.39 9304 {'next-hop': '198.32.160.39', 'prefix': '1.4.128.0/17', 'as-path': '9304 9498'}
+routeviews route-views3 update 1446789125 valid A 195.215.109.254 3292 {'next-hop': '195.215.109.254', 'prefix': '1.4.192.0/19', 'as-path': '3292 9498'}
+routeviews route-views3 update 1446789125 valid A 195.215.109.254 3292 {'next-hop': '195.215.109.254', 'prefix': '1.4.128.0/17', 'as-path': '3292 9498'}
+routeviews route-views3 update 1446789125 valid A 195.215.109.254 3292 {'next-hop': '195.215.109.254', 'prefix': '1.4.192.0/18', 'as-path': '3292 9498'}
+routeviews route-views4 update 1446789125 valid A 103.245.217.254 24516 {'next-hop': '103.245.217.254', 'prefix': '1.4.128.0/17', 'as-path': '24516 9498'}
+routeviews route-views4 update 1446789125 valid A 103.245.217.254 24516 {'next-hop': '103.245.217.254', 'prefix': '1.4.192.0/19', 'as-path': '24516 9498'}
+routeviews route-views4 update 1446789125 valid A 103.245.217.254 24516 {'next-hop': '103.245.217.254', 'prefix': '1.4.192.0/18', 'as-path': '24516 9498'}
+routeviews route-views3 update 1446789125 valid A 195.215.109.254 3292 {'next-hop': '195.215.109.254', 'prefix': '1.9.0.0/16', 'as-path': '3292 9498'}
+ris rrc11 update 1446789125 valid A 198.32.160.39 9304 {'next-hop': '198.32.160.39', 'prefix': '1.9.177.0/24', 'as-path': '9304 9498'}
+routeviews route-views3 update 1446789125 valid A 195.215.109.254 3292 {'next-hop': '195.215.109.254', 'prefix': '1.9.177.0/24', 'as-path': '3292 9498'}
+ris rrc03 update 1446789125 valid A 80.249.211.161 8283 {'next-hop': '80.249.211.161', 'prefix': '1.9.0.0/16', 'as-path': '8283 5580 9498'}
+ris rrc03 update 1446789125 valid A 80.249.211.161 8283 {'next-hop': '80.249.211.161', 'prefix': '1.9.177.0/24', 'as-path': '8283 5580 9498'}
+ris rrc13 update 1446789125 valid A 193.232.245.109 24482 {'next-hop': '193.232.245.109', 'prefix': '1.9.0.0/16', 'as-path': '24482 9498'}
+routeviews route-views4 update 1446789125 valid A 103.245.218.250 24516 {'next-hop': '103.245.218.250', 'prefix': '1.4.128.0/17', 'as-path': '24516 9498'}
+routeviews route-views4 update 1446789125 valid A 103.245.218.250 24516 {'next-hop': '103.245.218.250', 'prefix': '1.4.192.0/19', 'as-path': '24516 9498'}
+routeviews route-views4 update 1446789125 valid A 103.245.218.250 24516 {'next-hop': '103.245.218.250', 'prefix': '1.4.192.0/18', 'as-path': '24516 9498'}
+ris rrc11 update 1446789125 valid A 198.32.160.242 24482 {'next-hop': '198.32.160.242', 'prefix': '1.9.0.0/16', 'as-path': '24482 9498'}
+ris rrc13 update 1446789125 valid A 193.232.245.109 24482 {'next-hop': '193.232.245.109', 'prefix': '1.9.177.0/24', 'as-path': '24482 9498'}
+routeviews route-views4 update 1446789125 valid A 103.227.200.254 24516 {'next-hop': '103.227.200.254', 'prefix': '1.4.128.0/17', 'as-path': '24516 9498'}
+routeviews route-views4 update 1446789125 valid A 103.227.200.254 24516 {'next-hop': '103.227.200.254', 'prefix': '1.4.192.0/19', 'as-path': '24516 9498'}
+routeviews route-views4 update 1446789125 valid A 103.227.200.254 24516 {'next-hop': '103.227.200.254', 'prefix': '1.4.192.0/18', 'as-path': '24516 9498'}
+ris rrc03 update 1446789125 valid A 193.239.116.17 20562 {'next-hop': '193.239.117.107', 'prefix': '1.9.0.0/16', 'as-path': '20562 9498'}
+ris rrc03 update 1446789125 valid A 193.239.116.17 20562 {'next-hop': '193.239.117.107', 'prefix': '1.9.177.0/24', 'as-path': '20562 9498'}
+ris rrc03 update 1446789125 valid A 80.249.211.161 8283 {'next-hop': '80.249.211.161', 'prefix': '1.9.0.0/16', 'as-path': '8283 9498'}
+routeviews route-views4 update 1446789125 valid A 120.136.0.156 45177 {'next-hop': '120.136.0.156', 'prefix': '1.4.128.0/17', 'as-path': '45177 9498'}
+routeviews route-views4 update 1446789125 valid A 120.136.0.156 45177 {'next-hop': '120.136.0.156', 'prefix': '1.4.192.0/19', 'as-path': '45177 9498'}
+routeviews route-views4 update 1446789125 valid A 120.136.0.156 45177 {'next-hop': '120.136.0.156', 'prefix': '1.4.192.0/18', 'as-path': '45177 9498'}
+routeviews route-views4 update 1446789125 valid A 120.136.0.156 45177 {'next-hop': '120.136.0.156', 'prefix': '1.9.0.0/16', 'as-path': '45177 9498'}
+routeviews route-views4 update 1446789125 valid A 120.136.0.156 45177 {'next-hop': '120.136.0.156', 'prefix': '1.9.177.0/24', 'as-path': '45177 9498'}
+ris rrc11 update 1446789125 valid A 198.32.160.242 24482 {'next-hop': '198.32.160.242', 'prefix': '1.9.177.0/24', 'as-path': '24482 9498'}
+routeviews route-views4 update 1446789125 valid A 198.98.84.131 19754 {'next-hop': '198.98.84.131', 'prefix': '1.9.0.0/16', 'as-path': '19754 6939 9498'}
+routeviews route-views4 update 1446789125 valid A 198.98.84.131 19754 {'next-hop': '198.98.84.131', 'prefix': '1.9.177.0/24', 'as-path': '19754 6939 9498'}
+routeviews route-views4 update 1446789125 valid A 125.254.49.250 24516 {'next-hop': '125.254.49.250', 'prefix': '1.9.0.0/16', 'as-path': '24516 9498'}
+routeviews route-views4 update 1446789125 valid A 125.254.49.250 24516 {'next-hop': '125.254.49.250', 'prefix': '1.9.177.0/24', 'as-path': '24516 9498'}
+routeviews route-views4 update 1446789125 valid A 103.247.3.41 58511 {'next-hop': '103.247.3.41', 'prefix': '1.4.128.0/17', 'as-path': '58511 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.236.175 13030 {'next-hop': '195.66.236.175', 'prefix': '1.4.128.0/17', 'as-path': '13030 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.236.175 13030 {'next-hop': '195.66.236.175', 'prefix': '1.9.0.0/16', 'as-path': '13030 9498'}
+routeviews route-views4 update 1446789125 valid A 103.247.3.30 58511 {'next-hop': '103.247.3.30', 'prefix': '1.4.128.0/17', 'as-path': '58511 9498'}
+routeviews route-views4 update 1446789125 valid A 103.247.3.30 58511 {'next-hop': '103.247.3.30', 'prefix': '1.4.192.0/19', 'as-path': '58511 9498'}
+routeviews route-views4 update 1446789125 valid A 103.247.3.30 58511 {'next-hop': '103.247.3.30', 'prefix': '1.4.192.0/18', 'as-path': '58511 9498'}
+routeviews route-views4 update 1446789125 valid A 103.247.3.30 58511 {'next-hop': '103.247.3.30', 'prefix': '1.9.0.0/16', 'as-path': '58511 9498'}
+routeviews route-views4 update 1446789125 valid A 103.247.3.30 58511 {'next-hop': '103.247.3.30', 'prefix': '1.9.177.0/24', 'as-path': '58511 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.236.175 13030 {'next-hop': '195.66.236.175', 'prefix': '1.9.177.0/24', 'as-path': '13030 9498'}
+routeviews route-views4 update 1446789125 valid A 103.245.217.254 24516 {'next-hop': '103.245.217.254', 'prefix': '1.9.0.0/16', 'as-path': '24516 9498'}
+routeviews route-views4 update 1446789125 valid A 103.245.217.254 24516 {'next-hop': '103.245.217.254', 'prefix': '1.9.177.0/24', 'as-path': '24516 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.226.74 41695 {'next-hop': '195.66.225.109', 'prefix': '1.4.128.0/17', 'as-path': '41695 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.226.74 41695 {'next-hop': '195.66.225.109', 'prefix': '1.4.192.0/19', 'as-path': '41695 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.226.74 41695 {'next-hop': '195.66.225.109', 'prefix': '1.4.192.0/18', 'as-path': '41695 9498'}
+routeviews route-views4 update 1446789125 valid A 103.245.218.250 24516 {'next-hop': '103.245.218.250', 'prefix': '1.9.0.0/16', 'as-path': '24516 9498'}
+routeviews route-views4 update 1446789125 valid A 103.245.218.250 24516 {'next-hop': '103.245.218.250', 'prefix': '1.9.177.0/24', 'as-path': '24516 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.224.175 13030 {'next-hop': '195.66.224.175', 'prefix': '1.4.128.0/17', 'as-path': '13030 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.224.175 13030 {'next-hop': '195.66.224.175', 'prefix': '1.4.192.0/19', 'as-path': '13030 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.224.175 13030 {'next-hop': '195.66.224.175', 'prefix': '1.4.192.0/18', 'as-path': '13030 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.224.175 13030 {'next-hop': '195.66.224.175', 'prefix': '1.9.0.0/16', 'as-path': '13030 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.224.175 13030 {'next-hop': '195.66.224.175', 'prefix': '1.9.177.0/24', 'as-path': '13030 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.224.21 6939 {'next-hop': '195.66.224.21', 'prefix': '1.9.177.0/24', 'as-path': '6939 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.224.233 19151 {'next-hop': '195.66.224.233', 'prefix': '1.9.177.0/24', 'as-path': '19151 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.224.233 19151 {'next-hop': '195.66.224.233', 'prefix': '1.9.0.0/16', 'as-path': '19151 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.224.233 19151 {'next-hop': '195.66.224.233', 'prefix': '1.4.192.0/18', 'as-path': '19151 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.224.233 19151 {'next-hop': '195.66.224.233', 'prefix': '1.4.192.0/19', 'as-path': '19151 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.224.233 19151 {'next-hop': '195.66.224.233', 'prefix': '1.4.128.0/17', 'as-path': '19151 9498'}
+routeviews route-views4 update 1446789125 valid A 103.227.200.254 24516 {'next-hop': '103.227.200.254', 'prefix': '1.9.0.0/16', 'as-path': '24516 9498'}
+routeviews route-views4 update 1446789125 valid A 103.227.200.254 24516 {'next-hop': '103.227.200.254', 'prefix': '1.9.177.0/24', 'as-path': '24516 9498'}
+routeviews route-views4 update 1446789125 valid A 125.254.48.250 24516 {'next-hop': '125.254.48.250', 'prefix': '1.9.0.0/16', 'as-path': '24516 9498'}
+routeviews route-views4 update 1446789125 valid A 125.254.48.250 24516 {'next-hop': '125.254.48.250', 'prefix': '1.9.177.0/24', 'as-path': '24516 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.225.196 41811 {'next-hop': '195.66.225.109', 'prefix': '1.4.192.0/18', 'as-path': '41811 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.225.196 41811 {'next-hop': '195.66.225.109', 'prefix': '1.4.192.0/19', 'as-path': '41811 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.225.196 41811 {'next-hop': '195.66.225.109', 'prefix': '1.4.128.0/17', 'as-path': '41811 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.236.175 13030 {'next-hop': '195.66.236.175', 'prefix': '1.4.128.0/17', 'as-path': '13030 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.236.175 13030 {'next-hop': '195.66.236.175', 'prefix': '1.4.192.0/19', 'as-path': '13030 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.236.175 13030 {'next-hop': '195.66.236.175', 'prefix': '1.4.192.0/18', 'as-path': '13030 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.236.175 13030 {'next-hop': '195.66.236.175', 'prefix': '1.9.0.0/16', 'as-path': '13030 9498'}
+routeviews route-views2 update 1446789125 valid A 103.247.3.45 58511 {'next-hop': '103.247.3.45', 'prefix': '1.4.128.0/17', 'as-path': '58511 9498'}
+routeviews route-views2 update 1446789125 valid A 103.247.3.45 58511 {'next-hop': '103.247.3.45', 'prefix': '1.4.192.0/19', 'as-path': '58511 9498'}
+routeviews route-views2 update 1446789125 valid A 103.247.3.45 58511 {'next-hop': '103.247.3.45', 'prefix': '1.4.192.0/18', 'as-path': '58511 9498'}
+routeviews route-views2 update 1446789125 valid A 103.247.3.45 58511 {'next-hop': '103.247.3.45', 'prefix': '1.9.0.0/16', 'as-path': '58511 9498'}
+routeviews route-views2 update 1446789125 valid A 103.247.3.45 58511 {'next-hop': '103.247.3.45', 'prefix': '1.9.177.0/24', 'as-path': '58511 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.224.233 19151 {'next-hop': '195.66.224.233', 'prefix': '1.9.177.0/24', 'as-path': '19151 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.224.233 19151 {'next-hop': '195.66.224.233', 'prefix': '1.9.0.0/16', 'as-path': '19151 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.224.233 19151 {'next-hop': '195.66.224.233', 'prefix': '1.4.192.0/18', 'as-path': '19151 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.224.233 19151 {'next-hop': '195.66.224.233', 'prefix': '1.4.192.0/19', 'as-path': '19151 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.224.233 19151 {'next-hop': '195.66.224.233', 'prefix': '1.4.128.0/17', 'as-path': '19151 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.236.175 13030 {'next-hop': '195.66.236.175', 'prefix': '1.9.177.0/24', 'as-path': '13030 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.225.76 251 {'next-hop': '195.66.225.76', 'prefix': '1.4.128.0/17', 'as-path': '251 9498'}
+ris rrc03 update 1446789125 valid A 193.239.116.200 31019 {'next-hop': '193.239.117.107', 'prefix': '1.4.128.0/17', 'as-path': '31019 9498'}
+ris rrc03 update 1446789125 valid A 193.239.116.200 31019 {'next-hop': '193.239.117.107', 'prefix': '1.4.192.0/19', 'as-path': '31019 9498'}
+ris rrc03 update 1446789125 valid A 193.239.116.200 31019 {'next-hop': '193.239.117.107', 'prefix': '1.4.192.0/18', 'as-path': '31019 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.225.76 251 {'next-hop': '195.66.225.76', 'prefix': '1.9.0.0/16', 'as-path': '251 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.225.76 251 {'next-hop': '195.66.225.76', 'prefix': '1.9.177.0/24', 'as-path': '251 9498'}
+ris rrc03 update 1446789125 valid A 193.239.116.200 31019 {'next-hop': '193.239.117.107', 'prefix': '1.9.0.0/16', 'as-path': '31019 9498'}
+ris rrc03 update 1446789125 valid A 193.239.116.200 31019 {'next-hop': '193.239.117.107', 'prefix': '1.9.177.0/24', 'as-path': '31019 9498'}
+ris rrc03 update 1446789125 valid A 80.249.211.161 8283 {'next-hop': '80.249.211.161', 'prefix': '1.9.177.0/24', 'as-path': '8283 9498'}
+ris rrc03 update 1446789125 valid A 80.249.208.189 20562 {'next-hop': '80.249.208.189', 'prefix': '1.9.0.0/16', 'as-path': '20562 9498'}
+routeviews route-views2 update 1446789125 valid A 192.241.164.4 62567 {'next-hop': '192.241.164.4', 'prefix': '1.4.192.0/18', 'as-path': '62567 9498'}
+routeviews route-views2 update 1446789125 valid A 192.241.164.4 62567 {'next-hop': '192.241.164.4', 'prefix': '1.4.192.0/19', 'as-path': '62567 9498'}
+routeviews route-views2 update 1446789125 valid A 192.241.164.4 62567 {'next-hop': '192.241.164.4', 'prefix': '1.4.128.0/17', 'as-path': '62567 9498'}
+ris rrc03 update 1446789125 valid A 80.249.208.189 20562 {'next-hop': '80.249.208.189', 'prefix': '1.9.177.0/24', 'as-path': '20562 9498'}
+routeviews route-views2 update 1446789125 valid A 192.241.164.4 62567 {'next-hop': '192.241.164.4', 'prefix': '1.9.0.0/16', 'as-path': '62567 9498'}
+routeviews route-views2 update 1446789125 valid A 192.241.164.4 62567 {'next-hop': '192.241.164.4', 'prefix': '1.9.177.0/24', 'as-path': '62567 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.224.175 13030 {'next-hop': '195.66.224.175', 'prefix': '1.9.177.0/24', 'as-path': '13030 9498'}
+routeviews route-views2 update 1446789125 valid A 216.221.157.162 40191 {'next-hop': '216.221.157.162', 'prefix': '1.9.177.0/24', 'as-path': '40191 6939 9498'}
+routeviews route-views2 update 1446789125 valid A 216.218.252.164 6939 {'next-hop': '216.218.252.164', 'prefix': '1.9.0.0/16', 'as-path': '6939 9498'}
+routeviews route-views2 update 1446789125 valid A 216.218.252.164 6939 {'next-hop': '216.218.252.164', 'prefix': '1.9.177.0/24', 'as-path': '6939 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.236.175 13030 {'next-hop': '195.66.236.175', 'prefix': '1.9.177.0/24', 'as-path': '13030 9498'}
+routeviews route-views2 update 1446789125 valid A 213.144.128.203 13030 {'next-hop': '213.144.128.203', 'prefix': '1.4.128.0/17', 'as-path': '13030 9498'}
+routeviews route-views2 update 1446789125 valid A 213.144.128.203 13030 {'next-hop': '213.144.128.203', 'prefix': '1.9.0.0/16', 'as-path': '13030 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.226.25 202109 {'next-hop': '195.66.225.109', 'prefix': '1.4.128.0/17', 'as-path': '202109 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.226.25 202109 {'next-hop': '195.66.225.109', 'prefix': '1.4.192.0/19', 'as-path': '202109 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.226.25 202109 {'next-hop': '195.66.225.109', 'prefix': '1.4.192.0/18', 'as-path': '202109 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.226.25 202109 {'next-hop': '195.66.225.109', 'prefix': '1.9.0.0/16', 'as-path': '202109 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.226.25 202109 {'next-hop': '195.66.225.109', 'prefix': '1.9.177.0/24', 'as-path': '202109 9498'}
+routeviews route-views2 update 1446789125 valid A 95.85.0.2 200130 {'next-hop': '95.85.0.2', 'prefix': '1.4.128.0/17', 'as-path': '200130 9498'}
+routeviews route-views2 update 1446789125 valid A 95.85.0.2 200130 {'next-hop': '95.85.0.2', 'prefix': '1.4.192.0/19', 'as-path': '200130 9498'}
+routeviews route-views2 update 1446789125 valid A 95.85.0.2 200130 {'next-hop': '95.85.0.2', 'prefix': '1.4.192.0/18', 'as-path': '200130 9498'}
+routeviews route-views2 update 1446789125 valid A 105.16.0.247 37100 {'next-hop': '105.16.0.247', 'prefix': '1.4.192.0/19', 'as-path': '37100 9498'}
+routeviews route-views2 update 1446789125 valid A 105.16.0.247 37100 {'next-hop': '105.16.0.247', 'prefix': '1.4.192.0/18', 'as-path': '37100 9498'}
+routeviews route-views2 update 1446789125 valid A 105.16.0.247 37100 {'next-hop': '105.16.0.247', 'prefix': '1.4.128.0/17', 'as-path': '37100 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.226.74 41695 {'next-hop': '195.66.226.204', 'prefix': '1.4.128.0/17', 'as-path': '41695 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.226.74 41695 {'next-hop': '195.66.226.204', 'prefix': '1.4.192.0/19', 'as-path': '41695 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.226.74 41695 {'next-hop': '195.66.226.204', 'prefix': '1.4.192.0/18', 'as-path': '41695 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.225.196 41811 {'next-hop': '195.66.226.204', 'prefix': '1.9.177.0/24', 'as-path': '41811 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.225.196 41811 {'next-hop': '195.66.226.204', 'prefix': '1.9.0.0/16', 'as-path': '41811 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.225.196 41811 {'next-hop': '195.66.226.204', 'prefix': '1.4.192.0/18', 'as-path': '41811 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.225.196 41811 {'next-hop': '195.66.226.204', 'prefix': '1.4.192.0/19', 'as-path': '41811 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.225.196 41811 {'next-hop': '195.66.226.204', 'prefix': '1.4.128.0/17', 'as-path': '41811 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.226.74 41695 {'next-hop': '195.66.226.204', 'prefix': '1.9.0.0/16', 'as-path': '41695 9498'}
+routeviews route-views2 update 1446789125 valid A 5.101.110.2 202018 {'next-hop': '5.101.110.2', 'prefix': '1.4.192.0/18', 'as-path': '202018 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.226.74 41695 {'next-hop': '195.66.226.204', 'prefix': '1.9.177.0/24', 'as-path': '41695 9498'}
+routeviews route-views2 update 1446789125 valid A 5.101.110.2 202018 {'next-hop': '5.101.110.2', 'prefix': '1.4.128.0/17', 'as-path': '202018 9498'}
+routeviews route-views2 update 1446789125 valid A 5.101.110.2 202018 {'next-hop': '5.101.110.2', 'prefix': '1.4.192.0/19', 'as-path': '202018 9498'}
+routeviews route-views2 update 1446789125 valid A 5.101.110.2 202018 {'next-hop': '5.101.110.2', 'prefix': '1.9.0.0/16', 'as-path': '202018 9498'}
+routeviews route-views2 update 1446789125 valid A 5.101.110.2 202018 {'next-hop': '5.101.110.2', 'prefix': '1.9.177.0/24', 'as-path': '202018 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.238.25 202109 {'next-hop': '195.66.238.25', 'prefix': '1.4.192.0/19', 'as-path': '202109 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.238.25 202109 {'next-hop': '195.66.238.25', 'prefix': '1.4.192.0/18', 'as-path': '202109 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.238.25 202109 {'next-hop': '195.66.238.25', 'prefix': '1.4.128.0/17', 'as-path': '202109 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.238.25 202109 {'next-hop': '195.66.238.25', 'prefix': '1.9.0.0/16', 'as-path': '202109 9498'}
+routeviews route-views2 update 1446789125 valid A 85.114.0.217 8492 {'next-hop': '85.114.0.217', 'prefix': '1.4.128.0/17', 'as-path': '8492 9498'}
+routeviews route-views2 update 1446789125 valid A 85.114.0.217 8492 {'next-hop': '85.114.0.217', 'prefix': '1.4.192.0/19', 'as-path': '8492 9498'}
+routeviews route-views2 update 1446789125 valid A 85.114.0.217 8492 {'next-hop': '85.114.0.217', 'prefix': '1.4.192.0/18', 'as-path': '8492 9498'}
+routeviews route-views2 update 1446789125 valid A 85.114.0.217 8492 {'next-hop': '85.114.0.217', 'prefix': '1.9.177.0/24', 'as-path': '8492 9002 9498'}
+routeviews route-views.linx update 1446789125 valid A 195.66.238.25 202109 {'next-hop': '195.66.238.25', 'prefix': '1.9.177.0/24', 'as-path': '202109 9498'}
+routeviews route-views2 update 1446789125 valid A 85.114.0.217 8492 {'next-hop': '85.114.0.217', 'prefix': '1.9.0.0/16', 'as-path': '8492 9498'}
+routeviews route-views2 update 1446789125 valid A 85.114.0.217 8492 {'next-hop': '85.114.0.217', 'prefix': '1.9.177.0/24', 'as-path': '8492 9498'}
+routeviews route-views2 update 1446789125 valid A 213.144.128.203 13030 {'next-hop': '213.144.128.203', 'prefix': '1.9.177.0/24', 'as-path': '13030 9498'}
+routeviews route-views2 update 1446789125 valid A 213.144.128.203 13030 {'next-hop': '213.144.128.203', 'prefix': '1.4.128.0/17', 'as-path': '13030 9498'}
+routeviews route-views2 update 1446789125 valid A 213.144.128.203 13030 {'next-hop': '213.144.128.203', 'prefix': '1.4.192.0/19', 'as-path': '13030 9498'}
+routeviews route-views2 update 1446789125 valid A 213.144.128.203 13030 {'next-hop': '213.144.128.203', 'prefix': '1.4.192.0/18', 'as-path': '13030 9498'}
+routeviews route-views2 update 1446789125 valid A 213.144.128.203 13030 {'next-hop': '213.144.128.203', 'prefix': '1.9.0.0/16', 'as-path': '13030 9498'}
+ris rrc01 update 1446789126 valid A 195.66.226.20 56730 {'next-hop': '195.66.226.20', 'prefix': '1.9.177.0/24', 'as-path': '56730 51945 39326 9498'}
+routeviews route-views.saopaulo update 1446789126 valid A 187.16.218.57 28294 {'next-hop': '187.16.218.57', 'prefix': '1.9.177.0/24', 'as-path': '28294 12989 9498'}
+ris rrc05 update 1446789126 valid A 193.203.0.134 39912 {'next-hop': '193.203.0.134', 'prefix': '1.9.177.0/24', 'as-path': '39912 33891 9498'}
+routeviews route-views.isc update 1446789126 valid A 198.32.176.207 36351 {'next-hop': '198.32.176.207', 'prefix': '1.4.192.0/19', 'as-path': '36351 9498'}
+routeviews route-views.isc update 1446789126 valid A 198.32.176.207 36351 {'next-hop': '198.32.176.207', 'prefix': '1.4.128.0/17', 'as-path': '36351 9498'}
+routeviews route-views.isc update 1446789126 valid A 198.32.176.207 36351 {'next-hop': '198.32.176.207', 'prefix': '1.4.192.0/18', 'as-path': '36351 9498'}
+routeviews route-views.isc update 1446789126 valid A 198.32.176.207 36351 {'next-hop': '198.32.176.207', 'prefix': '1.9.0.0/16', 'as-path': '36351 9498'}
+routeviews route-views2 update 1446789126 valid A 95.85.0.2 200130 {'next-hop': '95.85.0.2', 'prefix': '1.9.0.0/16', 'as-path': '200130 9498'}
+routeviews route-views.eqix update 1446789126 valid A 206.126.236.10 4589 {'next-hop': '206.126.236.10', 'prefix': '1.4.128.0/17', 'as-path': '4589 9498'}
+routeviews route-views.eqix update 1446789126 valid A 206.126.236.10 4589 {'next-hop': '206.126.236.10', 'prefix': '1.4.192.0/19', 'as-path': '4589 9498'}
+routeviews route-views.eqix update 1446789126 valid A 206.126.236.10 4589 {'next-hop': '206.126.236.10', 'prefix': '1.4.192.0/18', 'as-path': '4589 9498'}
+ris rrc05 update 1446789126 valid A 193.203.0.134 39912 {'next-hop': '193.203.0.134', 'prefix': '1.9.177.0/24', 'as-path': '39912 9498'}
+routeviews route-views.isc update 1446789126 valid A 198.32.176.207 36351 {'next-hop': '198.32.176.207', 'prefix': '1.9.177.0/24', 'as-path': '36351 9498'}
+ris rrc05 update 1446789126 valid A 193.203.0.134 39912 {'next-hop': '193.203.0.134', 'prefix': '1.9.0.0/16', 'as-path': '39912 9498'}
+routeviews route-views2 update 1446789126 valid A 95.85.0.2 200130 {'next-hop': '95.85.0.2', 'prefix': '1.9.177.0/24', 'as-path': '200130 9498'}
+ris rrc00 update 1446789126 valid A 212.25.27.44 8758 {'next-hop': '212.25.27.44', 'prefix': '1.9.0.0/16', 'as-path': '8758 8220 9498'}
+ris rrc00 update 1446789126 valid A 212.25.27.44 8758 {'next-hop': '212.25.27.44', 'prefix': '1.9.177.0/24', 'as-path': '8758 8220 9498'}
+ris rrc00 update 1446789126 valid A 212.25.27.44 8758 {'next-hop': '212.25.27.44', 'prefix': '1.4.192.0/18', 'as-path': '8758 8220 9498'}
+ris rrc00 update 1446789126 valid A 212.25.27.44 8758 {'next-hop': '212.25.27.44', 'prefix': '1.4.192.0/19', 'as-path': '8758 8220 9498'}
+routeviews route-views.eqix update 1446789126 valid A 206.126.236.10 4589 {'next-hop': '206.126.236.10', 'prefix': '1.9.0.0/16', 'as-path': '4589 9498'}
+routeviews route-views.saopaulo update 1446789126 valid A 187.16.218.57 28294 {'next-hop': '187.16.218.57', 'prefix': '1.9.0.0/16', 'as-path': '28294 12989 9498'}
+routeviews route-views.eqix update 1446789126 valid A 206.126.236.10 4589 {'next-hop': '206.126.236.10', 'prefix': '1.9.177.0/24', 'as-path': '4589 9498'}
+ris rrc12 update 1446789126 valid A 80.81.192.194 6762 {'next-hop': '80.81.192.194', 'prefix': '1.9.177.0/24', 'as-path': '6762 174 9498'}
+ris rrc01 update 1446789126 valid A 195.66.226.20 56730 {'next-hop': '195.66.226.204', 'prefix': '1.4.192.0/18', 'as-path': '56730 9498'}
+ris rrc01 update 1446789126 valid A 195.66.226.20 56730 {'next-hop': '195.66.226.204', 'prefix': '1.4.128.0/17', 'as-path': '56730 9498'}
+ris rrc01 update 1446789126 valid A 195.66.226.20 56730 {'next-hop': '195.66.226.204', 'prefix': '1.4.192.0/19', 'as-path': '56730 9498'}
+ris rrc01 update 1446789126 valid A 195.66.226.20 56730 {'next-hop': '195.66.226.204', 'prefix': '1.9.0.0/16', 'as-path': '56730 9498'}
+ris rrc12 update 1446789126 valid A 80.81.192.14 4589 {'next-hop': '80.81.192.14', 'prefix': '1.4.192.0/18', 'as-path': '4589 9498'}
+ris rrc12 update 1446789126 valid A 80.81.192.14 4589 {'next-hop': '80.81.192.14', 'prefix': '1.4.192.0/19', 'as-path': '4589 9498'}
+ris rrc12 update 1446789126 valid A 80.81.192.14 4589 {'next-hop': '80.81.192.14', 'prefix': '1.4.128.0/17', 'as-path': '4589 9498'}
+routeviews route-views.linx update 1446789126 valid A 195.66.224.153 6762 {'next-hop': '195.66.224.153', 'prefix': '1.9.177.0/24', 'as-path': '6762 174 9498'}
+ris rrc01 update 1446789126 valid A 195.66.226.20 56730 {'next-hop': '195.66.226.204', 'prefix': '1.9.177.0/24', 'as-path': '56730 9498'}
+ris rrc12 update 1446789126 valid A 80.81.192.14 4589 {'next-hop': '80.81.192.14', 'prefix': '1.9.0.0/16', 'as-path': '4589 9498'}
+routeviews route-views.sydney update 1446789126 valid A 202.167.228.46 7575 {'next-hop': '202.167.228.46', 'prefix': '1.4.192.0/19', 'as-path': '7575 9498'}
+routeviews route-views.sydney update 1446789126 valid A 202.167.228.46 7575 {'next-hop': '202.167.228.46', 'prefix': '1.4.192.0/18', 'as-path': '7575 9498'}
+ris rrc12 update 1446789126 valid A 80.81.192.14 4589 {'next-hop': '80.81.192.14', 'prefix': '1.9.177.0/24', 'as-path': '4589 9498'}
+routeviews route-views.sydney update 1446789126 valid A 202.167.228.46 7575 {'next-hop': '202.167.228.46', 'prefix': '1.4.128.0/17', 'as-path': '7575 9498'}
+routeviews route-views4 update 1446789126 valid A 103.247.3.41 58511 {'next-hop': '103.247.3.41', 'prefix': '1.4.192.0/19', 'as-path': '58511 9498'}
+routeviews route-views4 update 1446789126 valid A 103.247.3.41 58511 {'next-hop': '103.247.3.41', 'prefix': '1.4.192.0/18', 'as-path': '58511 9498'}
+routeviews route-views4 update 1446789126 valid A 103.247.3.41 58511 {'next-hop': '103.247.3.41', 'prefix': '1.9.0.0/16', 'as-path': '58511 9498'}
+routeviews route-views4 update 1446789126 valid A 103.247.3.41 58511 {'next-hop': '103.247.3.41', 'prefix': '1.9.177.0/24', 'as-path': '58511 9498'}
+routeviews route-views2 update 1446789126 valid A 105.16.0.247 37100 {'next-hop': '105.16.0.247', 'prefix': '1.9.0.0/16', 'as-path': '37100 9498'}
+routeviews route-views2 update 1446789126 valid A 105.16.0.247 37100 {'next-hop': '105.16.0.247', 'prefix': '1.9.177.0/24', 'as-path': '37100 9498'}
+ris rrc03 update 1446789126 valid A 80.249.208.149 15435 {'next-hop': '80.249.208.149', 'prefix': '1.9.0.0/16', 'as-path': '15435 9498'}
+ris rrc03 update 1446789126 valid A 80.249.208.149 15435 {'next-hop': '80.249.208.149', 'prefix': '1.9.177.0/24', 'as-path': '15435 9498'}
+ris rrc03 update 1446789126 valid A 80.249.208.149 15435 {'next-hop': '80.249.208.149', 'prefix': '1.4.192.0/18', 'as-path': '15435 9498'}
+ris rrc03 update 1446789126 valid A 80.249.208.149 15435 {'next-hop': '80.249.208.149', 'prefix': '1.4.192.0/19', 'as-path': '15435 9498'}
+ris rrc03 update 1446789126 valid A 80.249.208.149 15435 {'next-hop': '80.249.208.149', 'prefix': '1.4.128.0/17', 'as-path': '15435 9498'}
+routeviews route-views.sydney update 1446789126 valid A 202.167.228.20 4739 {'next-hop': '202.167.228.20', 'prefix': '1.33.0.0/16', 'as-path': '4739 9498'}
+routeviews route-views.sydney update 1446789126 valid A 202.167.228.20 4739 {'next-hop': '202.167.228.20', 'prefix': '1.34.0.0/15', 'as-path': '4739 9498'}
+routeviews route-views.isc update 1446789126 valid A 198.32.176.206 5580 {'next-hop': '198.32.176.206', 'prefix': '1.34.0.0/16', 'as-path': '5580 9498'}
+routeviews route-views.isc update 1446789126 valid A 198.32.176.206 5580 {'next-hop': '198.32.176.206', 'prefix': '1.33.0.0/16', 'as-path': '5580 9498'}
+routeviews route-views.isc update 1446789126 valid A 198.32.176.206 5580 {'next-hop': '198.32.176.206', 'prefix': '1.34.0.0/15', 'as-path': '5580 9498'}
+routeviews route-views.telxatl update 1446789126 valid A 198.32.132.75 6939 {'next-hop': '198.32.132.75', 'prefix': '1.34.0.0/16', 'as-path': '6939 9498'}
+routeviews route-views.telxatl update 1446789126 valid A 198.32.132.75 6939 {'next-hop': '198.32.132.75', 'prefix': '1.34.0.0/15', 'as-path': '6939 9498'}
+routeviews route-views3 update 1446789126 valid A 195.215.109.254 3292 {'next-hop': '195.215.109.254', 'prefix': '1.4.128.0/17', 'as-path': '3292 9498'}
+routeviews route-views3 update 1446789126 valid A 195.215.109.254 3292 {'next-hop': '195.215.109.254', 'prefix': '1.4.192.0/18', 'as-path': '3292 9498'}
+routeviews route-views3 update 1446789126 valid A 195.215.109.254 3292 {'next-hop': '195.215.109.254', 'prefix': '1.4.192.0/19', 'as-path': '3292 9498'}
+routeviews route-views3 update 1446789126 valid A 195.215.109.254 3292 {'next-hop': '195.215.109.254', 'prefix': '1.9.0.0/16', 'as-path': '3292 9498'}
+routeviews route-views3 update 1446789126 valid A 195.215.109.254 3292 {'next-hop': '195.215.109.254', 'prefix': '1.9.177.0/24', 'as-path': '3292 9498'}
+routeviews route-views.nwax update 1446789126 valid A 198.32.195.24 15301 {'next-hop': '198.32.195.24', 'prefix': '1.34.0.0/16', 'as-path': '15301 6939 9498'}
+routeviews route-views.nwax update 1446789126 valid A 198.32.195.24 15301 {'next-hop': '198.32.195.24', 'prefix': '1.34.0.0/15', 'as-path': '15301 6939 9498'}
+routeviews route-views.nwax update 1446789126 valid A 198.32.195.46 54073 {'next-hop': '198.32.195.46', 'prefix': '1.34.0.0/16', 'as-path': '54073 2044 6939 9498'}
+routeviews route-views.nwax update 1446789126 valid A 198.32.195.46 54073 {'next-hop': '198.32.195.46', 'prefix': '1.34.0.0/15', 'as-path': '54073 2044 6939 9498'}
+routeviews route-views2 update 1446789126 valid A 213.144.128.203 13030 {'next-hop': '213.144.128.203', 'prefix': '1.9.177.0/24', 'as-path': '13030 9498'}
+ris rrc03 update 1446789126 valid A 80.249.211.161 8283 {'next-hop': '80.249.211.161', 'prefix': '1.34.0.0/16', 'as-path': '8283 5580 9498'}
+ris rrc03 update 1446789126 valid A 80.249.211.161 8283 {'next-hop': '80.249.211.161', 'prefix': '1.33.0.0/16', 'as-path': '8283 5580 9498'}
+ris rrc03 update 1446789126 valid A 80.249.211.161 8283 {'next-hop': '80.249.211.161', 'prefix': '1.34.0.0/15', 'as-path': '8283 5580 9498'}
+ris rrc14 update 1446789126 valid A 198.32.176.70 6762 {'next-hop': '198.32.176.70', 'prefix': '1.9.177.0/24', 'as-path': '6762 174 9498'}
+routeviews route-views.eqix update 1446789126 valid A 206.126.236.37 6939 {'next-hop': '206.126.236.37', 'prefix': '1.34.0.0/16', 'as-path': '6939 9498'}
+routeviews route-views.eqix update 1446789126 valid A 206.126.236.37 6939 {'next-hop': '206.126.236.37', 'prefix': '1.34.0.0/15', 'as-path': '6939 9498'}
+ris rrc11 update 1446789126 valid A 198.32.160.39 9304 {'next-hop': '198.32.160.39', 'prefix': '1.33.0.0/16', 'as-path': '9304 9498'}
+routeviews route-views.isc update 1446789126 valid A 198.32.176.20 6939 {'next-hop': '198.32.176.20', 'prefix': '1.34.0.0/16', 'as-path': '6939 9498'}
+routeviews route-views.isc update 1446789126 valid A 198.32.176.20 6939 {'next-hop': '198.32.176.20', 'prefix': '1.34.0.0/15', 'as-path': '6939 9498'}
+ris rrc15 update 1446789126 valid A 187.16.217.48 16735 {'next-hop': '187.16.217.48', 'prefix': '1.9.177.0/24', 'as-path': '16735 52320 9498'}
+routeviews route-views3 update 1446789126 valid A 104.192.216.1 46450 {'next-hop': '104.192.216.1', 'prefix': '1.34.0.0/16', 'as-path': '46450 6939 9498'}
+routeviews route-views3 update 1446789126 valid A 104.192.216.1 46450 {'next-hop': '104.192.216.1', 'prefix': '1.34.0.0/15', 'as-path': '46450 6939 9498'}
+routeviews route-views3 update 1446789126 valid A 216.218.252.164 6939 {'next-hop': '216.218.252.164', 'prefix': '1.34.0.0/16', 'as-path': '6939 9498'}
+routeviews route-views3 update 1446789126 valid A 216.218.252.164 6939 {'next-hop': '216.218.252.164', 'prefix': '1.34.0.0/15', 'as-path': '6939 9498'}
+routeviews route-views4 update 1446789126 valid A 120.136.0.156 45177 {'next-hop': '120.136.0.156', 'prefix': '1.4.192.0/19', 'as-path': '45177 9498'}
+routeviews route-views4 update 1446789126 valid A 120.136.0.156 45177 {'next-hop': '120.136.0.156', 'prefix': '1.4.128.0/17', 'as-path': '45177 9498'}
+routeviews route-views4 update 1446789126 valid A 120.136.0.156 45177 {'next-hop': '120.136.0.156', 'prefix': '1.4.192.0/18', 'as-path': '45177 9498'}
+routeviews route-views4 update 1446789126 valid A 205.166.205.202 6360 {'next-hop': '205.166.205.202', 'prefix': '1.4.192.0/18', 'as-path': '6360 4323 9498'}
+routeviews route-views4 update 1446789126 valid A 205.166.205.202 6360 {'next-hop': '205.166.205.202', 'prefix': '1.4.192.0/19', 'as-path': '6360 4323 9498'}
+routeviews route-views4 update 1446789126 valid A 205.166.205.202 6360 {'next-hop': '205.166.205.202', 'prefix': '1.4.128.0/17', 'as-path': '6360 4323 9498'}
+routeviews route-views4 update 1446789126 valid A 205.166.205.202 6360 {'next-hop': '205.166.205.202', 'prefix': '1.9.177.0/24', 'as-path': '6360 4323 9498'}
+routeviews route-views2 update 1446789126 valid A 216.218.252.164 6939 {'next-hop': '216.218.252.164', 'prefix': '1.34.0.0/16', 'as-path': '6939 9498'}
+routeviews route-views2 update 1446789126 valid A 216.218.252.164 6939 {'next-hop': '216.218.252.164', 'prefix': '1.34.0.0/15', 'as-path': '6939 9498'}
+routeviews route-views4 update 1446789126 valid A 120.136.0.156 45177 {'next-hop': '120.136.0.156', 'prefix': '1.9.0.0/16', 'as-path': '45177 9498'}
+routeviews route-views4 update 1446789126 valid A 120.136.0.156 45177 {'next-hop': '120.136.0.156', 'prefix': '1.9.177.0/24', 'as-path': '45177 9498'}
+routeviews route-views2 update 1446789126 valid A 216.221.157.162 40191 {'next-hop': '216.221.157.162', 'prefix': '1.34.0.0/15', 'as-path': '40191 6939 9498'}
+routeviews route-views2 update 1446789126 valid A 216.221.157.162 40191 {'next-hop': '216.221.157.162', 'prefix': '1.34.0.0/16', 'as-path': '40191 6939 9498'}
+routeviews route-views4 update 1446789126 valid A 198.98.84.131 19754 {'next-hop': '198.98.84.131', 'prefix': '1.34.0.0/16', 'as-path': '19754 6939 9498'}
+routeviews route-views4 update 1446789126 valid A 198.98.84.131 19754 {'next-hop': '198.98.84.131', 'prefix': '1.34.0.0/15', 'as-path': '19754 6939 9498'}
+routeviews route-views3 update 1446789127 valid A 206.248.155.130 5645 {'next-hop': '206.248.155.130', 'prefix': '1.34.0.0/16', 'as-path': '5645 6939 9498'}
+routeviews route-views3 update 1446789127 valid A 206.248.155.130 5645 {'next-hop': '206.248.155.130', 'prefix': '1.34.0.0/15', 'as-path': '5645 6939 9498'}
+ris rrc14 update 1446789127 valid A 198.32.176.24 2497 {'next-hop': '198.32.176.24', 'prefix': '1.9.177.0/24', 'as-path': '2497 9498'}
+ris rrc14 update 1446789127 valid A 198.32.176.24 2497 {'next-hop': '198.32.176.24', 'prefix': '1.9.0.0/16', 'as-path': '2497 9498'}
+ris rrc14 update 1446789127 valid A 198.32.176.24 2497 {'next-hop': '198.32.176.24', 'prefix': '1.4.192.0/19', 'as-path': '2497 9498'}
+ris rrc14 update 1446789127 valid A 198.32.176.24 2497 {'next-hop': '198.32.176.24', 'prefix': '1.4.128.0/17', 'as-path': '2497 9498'}
+ris rrc14 update 1446789127 valid A 198.32.176.24 2497 {'next-hop': '198.32.176.24', 'prefix': '1.4.192.0/18', 'as-path': '2497 9498'}
+ris rrc03 update 1446789127 valid A 80.249.208.200 12859 {'next-hop': '80.249.208.200', 'prefix': '1.4.192.0/19', 'as-path': '12859 9498'}
+ris rrc03 update 1446789127 valid A 80.249.208.200 12859 {'next-hop': '80.249.208.200', 'prefix': '1.4.192.0/18', 'as-path': '12859 9498'}
+ris rrc03 update 1446789127 valid A 80.249.208.200 12859 {'next-hop': '80.249.208.200', 'prefix': '1.4.128.0/17', 'as-path': '12859 9498'}
+ris rrc03 update 1446789127 valid A 80.249.208.200 12859 {'next-hop': '80.249.208.200', 'prefix': '1.9.0.0/16', 'as-path': '12859 9498'}
+ris rrc03 update 1446789127 valid A 80.249.208.200 12859 {'next-hop': '80.249.208.200', 'prefix': '1.9.177.0/24', 'as-path': '12859 9498'}
+ris rrc01 update 1446789127 valid A 195.66.224.121 8419 {'next-hop': '195.66.226.204', 'prefix': '1.4.128.0/17', 'as-path': '8419 9498'}
+ris rrc01 update 1446789127 valid A 195.66.224.121 8419 {'next-hop': '195.66.226.204', 'prefix': '1.4.192.0/19', 'as-path': '8419 9498'}
+ris rrc01 update 1446789127 valid A 195.66.224.121 8419 {'next-hop': '195.66.226.204', 'prefix': '1.4.192.0/18', 'as-path': '8419 9498'}
+ris rrc01 update 1446789127 valid A 195.66.224.121 8419 {'next-hop': '195.66.226.204', 'prefix': '1.9.0.0/16', 'as-path': '8419 9498'}
+ris rrc01 update 1446789127 valid A 195.66.224.121 8419 {'next-hop': '195.66.226.204', 'prefix': '1.9.177.0/24', 'as-path': '8419 9498'}
+routeviews route-views.linx update 1446789127 valid A 195.66.224.21 6939 {'next-hop': '195.66.224.21', 'prefix': '1.34.0.0/16', 'as-path': '6939 9498'}
+routeviews route-views.linx update 1446789127 valid A 195.66.224.21 6939 {'next-hop': '195.66.224.21', 'prefix': '1.34.0.0/15', 'as-path': '6939 9498'}
+ris rrc07 update 1446789127 valid A 194.68.123.226 24482 {'next-hop': '194.68.123.226', 'prefix': '1.34.0.0/15', 'as-path': '24482 9498'}
+ris rrc07 update 1446789127 valid A 194.68.123.226 24482 {'next-hop': '194.68.123.226', 'prefix': '1.34.0.0/16', 'as-path': '24482 9498'}
+routeviews route-views.sg update 1446789127 valid A 202.79.197.159 24482 {'next-hop': '202.79.197.40', 'prefix': '1.33.0.0/16', 'as-path': '24482 9498'}
+routeviews route-views.sg update 1446789127 valid A 202.79.197.159 24482 {'next-hop': '202.79.197.40', 'prefix': '1.34.0.0/16', 'as-path': '24482 9498'}
+routeviews route-views.sg update 1446789127 valid A 202.79.197.159 24482 {'next-hop': '202.79.197.40', 'prefix': '1.34.0.0/15', 'as-path': '24482 9498'}
+routeviews route-views.sg update 1446789127 valid A 202.79.197.201 133165 {'next-hop': '202.79.197.40', 'prefix': '1.33.0.0/16', 'as-path': '133165 9498'}
+routeviews route-views.sg update 1446789127 valid A 202.79.197.201 133165 {'next-hop': '202.79.197.40', 'prefix': '1.34.0.0/15', 'as-path': '133165 9498'}
+routeviews route-views.sg update 1446789127 valid A 202.79.197.201 133165 {'next-hop': '202.79.197.40', 'prefix': '1.34.0.0/16', 'as-path': '133165 9498'}
+ris rrc11 update 1446789127 valid A 198.32.160.242 24482 {'next-hop': '198.32.160.242', 'prefix': '1.34.0.0/16', 'as-path': '24482 9498'}
+ris rrc11 update 1446789127 valid A 198.32.160.242 24482 {'next-hop': '198.32.160.242', 'prefix': '1.34.0.0/15', 'as-path': '24482 9498'}
+ris rrc10 update 1446789127 valid A 217.29.66.127 49605 {'next-hop': '217.29.66.127', 'prefix': '1.4.192.0/18', 'as-path': '49605 5580 9498'}
+ris rrc10 update 1446789127 valid A 217.29.66.127 49605 {'next-hop': '217.29.66.127', 'prefix': '1.9.177.0/24', 'as-path': '49605 5580 9498'}
+ris rrc10 update 1446789127 valid A 217.29.66.127 49605 {'next-hop': '217.29.66.127', 'prefix': '1.4.192.0/19', 'as-path': '49605 5580 9498'}
+ris rrc10 update 1446789127 valid A 217.29.66.127 49605 {'next-hop': '217.29.66.127', 'prefix': '1.4.128.0/17', 'as-path': '49605 5580 9498'}
+ris rrc10 update 1446789127 valid A 217.29.66.127 49605 {'next-hop': '217.29.66.127', 'prefix': '1.9.0.0/16', 'as-path': '49605 5580 9498'}
+ris rrc13 update 1446789127 valid A 193.232.245.109 24482 {'next-hop': '193.232.245.109', 'prefix': '1.34.0.0/15', 'as-path': '24482 9498'}
+ris rrc13 update 1446789127 valid A 193.232.245.109 24482 {'next-hop': '193.232.245.109', 'prefix': '1.34.0.0/16', 'as-path': '24482 9498'}
+ris rrc10 update 1446789127 valid A 217.29.66.158 24482 {'next-hop': '217.29.66.158', 'prefix': '1.34.0.0/15', 'as-path': '24482 9498'}
+ris rrc10 update 1446789127 valid A 217.29.66.158 24482 {'next-hop': '217.29.66.158', 'prefix': '1.34.0.0/16', 'as-path': '24482 9498'}
+routeviews route-views.perth update 1446789128 valid A 198.32.212.11 24516 {'next-hop': '198.32.212.11', 'prefix': '1.34.0.0/16', 'as-path': '24516 6939 9498'}
+routeviews route-views.perth update 1446789128 valid A 198.32.212.11 24516 {'next-hop': '198.32.212.11', 'prefix': '1.34.0.0/15', 'as-path': '24516 6939 9498'}
+routeviews route-views.telxatl update 1446789128 valid A 198.32.132.186 18786 {'next-hop': '198.32.132.186', 'prefix': '1.4.128.0/17', 'as-path': '18786 5580 9498'}
+routeviews route-views.telxatl update 1446789128 valid A 198.32.132.186 18786 {'next-hop': '198.32.132.186', 'prefix': '1.4.192.0/19', 'as-path': '18786 5580 9498'}
+routeviews route-views.telxatl update 1446789128 valid A 198.32.132.186 18786 {'next-hop': '198.32.132.186', 'prefix': '1.9.0.0/16', 'as-path': '18786 5580 9498'}
+routeviews route-views.telxatl update 1446789128 valid A 198.32.132.186 18786 {'next-hop': '198.32.132.186', 'prefix': '1.4.192.0/18', 'as-path': '18786 5580 9498'}
+routeviews route-views.telxatl update 1446789128 valid A 198.32.132.186 18786 {'next-hop': '198.32.132.186', 'prefix': '1.9.177.0/24', 'as-path': '18786 5580 9498'}
+ris rrc10 update 1446789128 valid A 217.29.66.127 49605 {'next-hop': '217.29.66.127', 'prefix': '1.34.0.0/16', 'as-path': '49605 5580 9498'}
+ris rrc10 update 1446789128 valid A 217.29.66.127 49605 {'next-hop': '217.29.66.127', 'prefix': '1.33.0.0/16', 'as-path': '49605 5580 9498'}
+ris rrc10 update 1446789128 valid A 217.29.66.127 49605 {'next-hop': '217.29.66.127', 'prefix': '1.34.0.0/15', 'as-path': '49605 5580 9498'}
+routeviews route-views4 update 1446789128 valid A 87.251.152.15 39792 {'next-hop': '87.251.152.15', 'prefix': '1.4.128.0/17', 'as-path': '39792 9498'}
+routeviews route-views4 update 1446789128 valid A 87.251.152.15 39792 {'next-hop': '87.251.152.15', 'prefix': '1.4.192.0/19', 'as-path': '39792 9498'}
+routeviews route-views4 update 1446789128 valid A 87.251.152.15 39792 {'next-hop': '87.251.152.15', 'prefix': '1.4.192.0/18', 'as-path': '39792 9498'}
+routeviews route-views4 update 1446789128 valid A 87.251.152.15 39792 {'next-hop': '87.251.152.15', 'prefix': '1.9.0.0/16', 'as-path': '39792 9498'}
+routeviews route-views4 update 1446789128 valid A 87.251.152.15 39792 {'next-hop': '87.251.152.15', 'prefix': '1.9.177.0/24', 'as-path': '39792 9498'}
+routeviews route-views.eqix update 1446789128 valid A 206.126.236.120 41095 {'next-hop': '206.126.236.120', 'prefix': '1.9.0.0/16', 'as-path': '41095 9498'}
+routeviews route-views.eqix update 1446789128 valid A 206.126.236.120 41095 {'next-hop': '206.126.236.120', 'prefix': '1.9.177.0/24', 'as-path': '41095 9498'}
+routeviews route-views4 update 1446789128 valid A 125.254.49.250 24516 {'next-hop': '125.254.49.250', 'prefix': '1.34.0.0/16', 'as-path': '24516 6939 9498'}
+routeviews route-views4 update 1446789128 valid A 125.254.49.250 24516 {'next-hop': '125.254.49.250', 'prefix': '1.34.0.0/15', 'as-path': '24516 6939 9498'}
+routeviews route-views4 update 1446789128 valid A 125.254.48.250 24516 {'next-hop': '125.254.48.250', 'prefix': '1.34.0.0/16', 'as-path': '24516 6939 9498'}
+routeviews route-views4 update 1446789128 valid A 125.254.48.250 24516 {'next-hop': '125.254.48.250', 'prefix': '1.34.0.0/15', 'as-path': '24516 6939 9498'}
+routeviews route-views4 update 1446789128 valid A 103.245.217.254 24516 {'next-hop': '103.245.217.254', 'prefix': '1.34.0.0/16', 'as-path': '24516 6939 9498'}
+routeviews route-views4 update 1446789128 valid A 103.245.217.254 24516 {'next-hop': '103.245.217.254', 'prefix': '1.34.0.0/15', 'as-path': '24516 6939 9498'}
+routeviews route-views4 update 1446789128 valid A 103.227.200.254 24516 {'next-hop': '103.227.200.254', 'prefix': '1.34.0.0/16', 'as-path': '24516 6939 9498'}
+routeviews route-views4 update 1446789128 valid A 103.227.200.254 24516 {'next-hop': '103.227.200.254', 'prefix': '1.34.0.0/15', 'as-path': '24516 6939 9498'}
+routeviews route-views4 update 1446789128 valid A 103.245.218.250 24516 {'next-hop': '103.245.218.250', 'prefix': '1.34.0.0/16', 'as-path': '24516 6939 9498'}
+routeviews route-views4 update 1446789128 valid A 103.245.218.250 24516 {'next-hop': '103.245.218.250', 'prefix': '1.34.0.0/15', 'as-path': '24516 6939 9498'}
+ris rrc06 update 1446789129 valid A 202.249.2.185 25152 {'next-hop': '202.249.2.185', 'prefix': '1.9.177.0/24', 'as-path': '25152 6939 9498'}
+ris rrc01 update 1446789129 valid A 195.66.224.132 29636 {'next-hop': '195.66.226.204', 'prefix': '1.34.0.0/15', 'as-path': '29636 9498'}
+ris rrc01 update 1446789129 valid A 195.66.224.132 29636 {'next-hop': '195.66.226.204', 'prefix': '1.34.0.0/16', 'as-path': '29636 9498'}
+ris rrc01 update 1446789129 valid A 195.66.226.20 56730 {'next-hop': '195.66.226.204', 'prefix': '1.33.0.0/16', 'as-path': '56730 9498'}
+ris rrc01 update 1446789129 valid A 195.66.226.20 56730 {'next-hop': '195.66.226.204', 'prefix': '1.34.0.0/15', 'as-path': '56730 9498'}
+ris rrc01 update 1446789129 valid A 195.66.226.20 56730 {'next-hop': '195.66.226.204', 'prefix': '1.34.0.0/16', 'as-path': '56730 9498'}
+routeviews route-views.linx update 1446789129 valid A 195.66.226.74 41695 {'next-hop': '195.66.226.204', 'prefix': '1.33.0.0/16', 'as-path': '41695 9498'}
+routeviews route-views.linx update 1446789129 valid A 195.66.226.74 41695 {'next-hop': '195.66.226.204', 'prefix': '1.34.0.0/15', 'as-path': '41695 9498'}
+routeviews route-views.linx update 1446789129 valid A 195.66.226.74 41695 {'next-hop': '195.66.226.204', 'prefix': '1.34.0.0/16', 'as-path': '41695 9498'}
+routeviews route-views.linx update 1446789129 valid A 195.66.225.196 41811 {'next-hop': '195.66.226.204', 'prefix': '1.34.0.0/16', 'as-path': '41811 9498'}
+routeviews route-views.linx update 1446789129 valid A 195.66.225.196 41811 {'next-hop': '195.66.226.204', 'prefix': '1.34.0.0/15', 'as-path': '41811 9498'}
+routeviews route-views.linx update 1446789129 valid A 195.66.225.196 41811 {'next-hop': '195.66.226.204', 'prefix': '1.33.0.0/16', 'as-path': '41811 9498'}
+ris rrc07 update 1446789129 valid A 194.68.123.226 24482 {'next-hop': '194.68.123.226', 'prefix': '1.34.0.0/15', 'as-path': '24482 9498'}
+ris rrc07 update 1446789129 valid A 194.68.123.226 24482 {'next-hop': '194.68.123.226', 'prefix': '1.33.0.0/16', 'as-path': '24482 9498'}
+ris rrc07 update 1446789129 valid A 194.68.123.226 24482 {'next-hop': '194.68.123.226', 'prefix': '1.34.0.0/16', 'as-path': '24482 9498'}
+routeviews route-views.telxatl update 1446789129 valid A 198.32.132.186 18786 {'next-hop': '198.32.132.186', 'prefix': '1.33.0.0/16', 'as-path': '18786 5580 9498'}
+routeviews route-views.linx update 1446789129 valid A 195.66.224.118 14537 {'next-hop': '195.66.224.118', 'prefix': '1.34.0.0/15', 'as-path': '14537 9498'}
+routeviews route-views.linx update 1446789129 valid A 195.66.224.118 14537 {'next-hop': '195.66.224.118', 'prefix': '1.34.0.0/16', 'as-path': '14537 9498'}
+ris rrc11 update 1446789129 valid A 198.32.160.242 24482 {'next-hop': '198.32.160.242', 'prefix': '1.34.0.0/16', 'as-path': '24482 9498'}
+ris rrc11 update 1446789129 valid A 198.32.160.242 24482 {'next-hop': '198.32.160.242', 'prefix': '1.34.0.0/15', 'as-path': '24482 9498'}
+routeviews route-views4 update 1446789129 valid A 119.18.185.44 38726 {'next-hop': '119.18.185.44', 'prefix': '1.9.177.0/24', 'as-path': '38726 6939 9498'}
+ris rrc10 update 1446789129 valid A 217.29.66.158 24482 {'next-hop': '217.29.66.158', 'prefix': '1.34.0.0/15', 'as-path': '24482 9498'}
+ris rrc10 update 1446789129 valid A 217.29.66.158 24482 {'next-hop': '217.29.66.158', 'prefix': '1.33.0.0/16', 'as-path': '24482 9498'}
+ris rrc10 update 1446789129 valid A 217.29.66.158 24482 {'next-hop': '217.29.66.158', 'prefix': '1.34.0.0/16', 'as-path': '24482 9498'}
+ris rrc11 update 1446789129 valid A 198.32.160.182 9002 {'next-hop': '198.32.160.182', 'prefix': '1.34.0.0/15', 'as-path': '9002 9498'}
+ris rrc11 update 1446789129 valid A 198.32.160.182 9002 {'next-hop': '198.32.160.182', 'prefix': '1.34.0.0/16', 'as-path': '9002 9498'}
+ris rrc11 update 1446789129 valid A 198.32.160.182 9002 {'next-hop': '198.32.160.182', 'prefix': '1.33.0.0/16', 'as-path': '9002 9498'}
+routeviews route-views.telxatl update 1446789129 valid A 198.32.132.186 18786 {'next-hop': '198.32.132.186', 'prefix': '1.34.0.0/16', 'as-path': '18786 5580 9498'}
+ris rrc15 update 1446789129 valid A 187.16.218.21 52888 {'next-hop': '187.16.218.21', 'prefix': '1.9.177.0/24', 'as-path': '52888 1251 20080 9498'}
+ris rrc13 update 1446789129 valid A 193.232.245.109 24482 {'next-hop': '193.232.245.109', 'prefix': '1.34.0.0/15', 'as-path': '24482 9498'}
+ris rrc13 update 1446789129 valid A 193.232.245.109 24482 {'next-hop': '193.232.245.109', 'prefix': '1.33.0.0/16', 'as-path': '24482 9498'}
+ris rrc13 update 1446789129 valid A 193.232.245.109 24482 {'next-hop': '193.232.245.109', 'prefix': '1.34.0.0/16', 'as-path': '24482 9498'}
+ris rrc15 update 1446789129 valid A 187.16.216.4 1916 {'next-hop': '187.16.216.4', 'prefix': '1.9.177.0/24', 'as-path': '1916 20080 9498'}
+routeviews route-views.saopaulo update 1446789129 valid A 187.16.216.20 28571 {'next-hop': '187.16.216.20', 'prefix': '1.9.177.0/24', 'as-path': '28571 1251 20080 9498'}
+ris rrc01 update 1446789129 valid A 195.66.225.2 39202 {'next-hop': '195.66.226.204', 'prefix': '1.34.0.0/16', 'as-path': '39202 9498'}
+ris rrc01 update 1446789129 valid A 195.66.225.2 39202 {'next-hop': '195.66.226.204', 'prefix': '1.34.0.0/15', 'as-path': '39202 9498'}
+ris rrc01 update 1446789129 valid A 195.66.225.2 39202 {'next-hop': '195.66.226.204', 'prefix': '1.33.0.0/16', 'as-path': '39202 9498'}
+ris rrc01 update 1446789129 valid A 195.66.225.2 39202 {'next-hop': '195.66.226.204', 'prefix': '1.9.177.0/24', 'as-path': '39202 9498'}
+ris rrc01 update 1446789129 valid A 195.66.225.2 39202 {'next-hop': '195.66.226.204', 'prefix': '1.9.0.0/16', 'as-path': '39202 9498'}
+ris rrc01 update 1446789129 valid A 195.66.225.2 39202 {'next-hop': '195.66.226.204', 'prefix': '1.4.192.0/18', 'as-path': '39202 9498'}
+ris rrc01 update 1446789129 valid A 195.66.225.2 39202 {'next-hop': '195.66.226.204', 'prefix': '1.4.192.0/19', 'as-path': '39202 9498'}
+ris rrc01 update 1446789129 valid A 195.66.225.2 39202 {'next-hop': '195.66.226.204', 'prefix': '1.4.128.0/17', 'as-path': '39202 9498'}
+ris rrc13 update 1446789129 valid A 193.232.244.187 9002 {'next-hop': '193.232.244.187', 'prefix': '1.33.0.0/16', 'as-path': '9002 9498'}
+ris rrc13 update 1446789129 valid A 193.232.244.187 9002 {'next-hop': '193.232.244.187', 'prefix': '1.34.0.0/16', 'as-path': '9002 9498'}
+ris rrc13 update 1446789129 valid A 193.232.244.187 9002 {'next-hop': '193.232.244.187', 'prefix': '1.34.0.0/15', 'as-path': '9002 9498'}
+ris rrc03 update 1446789129 valid A 80.249.208.34 1103 {'next-hop': '80.249.208.34', 'prefix': '1.34.0.0/16', 'as-path': '1103 9498'}
+ris rrc03 update 1446789129 valid A 80.249.208.34 1103 {'next-hop': '80.249.208.34', 'prefix': '1.34.0.0/15', 'as-path': '1103 9498'}
+ris rrc03 update 1446789129 valid A 80.249.208.34 1103 {'next-hop': '80.249.208.34', 'prefix': '1.33.0.0/16', 'as-path': '1103 9498'}
+routeviews route-views.saopaulo update 1446789129 valid A 187.16.218.21 52888 {'next-hop': '187.16.218.21', 'prefix': '1.9.177.0/24', 'as-path': '52888 1251 20080 9498'}
+routeviews route-views.saopaulo update 1446789129 valid A 187.16.216.4 1916 {'next-hop': '187.16.216.4', 'prefix': '1.9.177.0/24', 'as-path': '1916 20080 9498'}
+routeviews route-views4 update 1446789129 valid A 133.205.1.142 2518 {'next-hop': '133.205.1.142', 'prefix': '1.9.177.0/24', 'as-path': '2518 7473 9498'}
+ris rrc01 update 1446789129 valid A 195.66.224.132 29636 {'next-hop': '195.66.226.204', 'prefix': '1.9.177.0/24', 'as-path': '29636 9498'}
+routeviews route-views.linx update 1446789129 valid A 195.66.226.25 202109 {'next-hop': '195.66.226.204', 'prefix': '1.34.0.0/15', 'as-path': '202109 9498'}
+routeviews route-views.linx update 1446789129 valid A 195.66.226.25 202109 {'next-hop': '195.66.226.204', 'prefix': '1.34.0.0/16', 'as-path': '202109 9498'}
+routeviews route-views.linx update 1446789129 valid A 195.66.226.25 202109 {'next-hop': '195.66.226.204', 'prefix': '1.33.0.0/16', 'as-path': '202109 9498'}
+routeviews route-views.linx update 1446789129 valid A 195.66.224.118 14537 {'next-hop': '195.66.224.118', 'prefix': '1.9.177.0/24', 'as-path': '14537 9498'}
+routeviews route-views.linx update 1446789129 valid A 195.66.238.25 202109 {'next-hop': '195.66.238.25', 'prefix': '1.34.0.0/15', 'as-path': '202109 9498'}
+routeviews route-views.linx update 1446789129 valid A 195.66.238.25 202109 {'next-hop': '195.66.238.25', 'prefix': '1.34.0.0/16', 'as-path': '202109 9498'}
+routeviews route-views.linx update 1446789129 valid A 195.66.238.25 202109 {'next-hop': '195.66.238.25', 'prefix': '1.33.0.0/16', 'as-path': '202109 9498'}
+routeviews route-views.linx update 1446789129 valid A 195.66.224.51 6453 {'next-hop': '195.66.224.51', 'prefix': '1.4.128.0/17', 'as-path': '6453 174 9498'}
+routeviews route-views.isc update 1446789130 valid A 198.32.176.207 36351 {'next-hop': '198.32.176.207', 'prefix': '1.34.0.0/15', 'as-path': '36351 9498'}
+routeviews route-views.isc update 1446789130 valid A 198.32.176.207 36351 {'next-hop': '198.32.176.207', 'prefix': '1.34.0.0/16', 'as-path': '36351 9498'}
+routeviews route-views.telxatl update 1446789130 valid A 198.32.132.186 18786 {'next-hop': '198.32.132.186', 'prefix': '1.34.0.0/15', 'as-path': '18786 5580 9498'}
+ris rrc07 update 1446789130 valid A 194.68.123.157 9002 {'next-hop': '194.68.123.157', 'prefix': '1.33.0.0/16', 'as-path': '9002 9498'}
+ris rrc07 update 1446789130 valid A 194.68.123.157 9002 {'next-hop': '194.68.123.157', 'prefix': '1.34.0.0/15', 'as-path': '9002 9498'}
+ris rrc07 update 1446789130 valid A 194.68.123.157 9002 {'next-hop': '194.68.123.157', 'prefix': '1.34.0.0/16', 'as-path': '9002 9498'}
+ris rrc15 update 1446789130 valid A 187.16.217.48 16735 {'next-hop': '187.16.217.48', 'prefix': '1.34.0.0/16', 'as-path': '16735 52320 9498'}
+ris rrc15 update 1446789130 valid A 187.16.217.48 16735 {'next-hop': '187.16.217.48', 'prefix': '1.34.0.0/15', 'as-path': '16735 52320 9498'}
+routeviews route-views.saopaulo update 1446789130 valid A 187.16.218.57 28294 {'next-hop': '187.16.218.57', 'prefix': '1.34.0.0/16', 'as-path': '28294 16735 52320 9498'}
+routeviews route-views.saopaulo update 1446789130 valid A 187.16.218.57 28294 {'next-hop': '187.16.218.57', 'prefix': '1.34.0.0/15', 'as-path': '28294 16735 52320 9498'}
+ris rrc13 update 1446789130 valid A 193.232.244.130 20632 {'next-hop': '193.232.244.130', 'prefix': '1.34.0.0/16', 'as-path': '20632 31133 9498'}
+ris rrc13 update 1446789130 valid A 193.232.244.130 20632 {'next-hop': '193.232.244.130', 'prefix': '1.33.0.0/16', 'as-path': '20632 31133 9498'}
+ris rrc13 update 1446789130 valid A 193.232.244.130 20632 {'next-hop': '193.232.244.130', 'prefix': '1.34.0.0/15', 'as-path': '20632 31133 9498'}
+routeviews route-views4 update 1446789130 valid A 119.18.185.44 38726 {'next-hop': '119.18.185.44', 'prefix': '1.9.177.0/24', 'as-path': '38726 6453 7473 9498'}
+ris rrc03 update 1446789130 valid A 80.249.209.167 6453 {'next-hop': '80.249.209.167', 'prefix': '1.4.128.0/17', 'as-path': '6453 174 9498'}
+routeviews route-views4 update 1446789130 valid A 120.136.0.156 45177 {'next-hop': '120

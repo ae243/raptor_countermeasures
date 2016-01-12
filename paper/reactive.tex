@@ -2,6 +2,13 @@
 In addition to proactive approaches to helping prevent RAPTOR attacks, we have also taken a reactive approach.  In the case that an attack is happening, we can detect it using a live monitoring framework.
 
 \subsection{A Live Monitoring Framework for Tor}
+A possible countermeasure against routing attacks on the Tor network is attack 
+detection and user notification.  Routing authorities then know which relays are 
+being hijacked and/or intercepted, and can make routing decisious accordingly.  
+We observed that routing attacks are almost always short-lived, which allows 
+routing authorities to suspend use of hijacked/intercepted relays until enough 
+time has passed to use them again.
+
 The live monitoring framework aims at detecting suspicious routing attacks that affect Tor relays, and then react correspondingly to alert Tor clients of the scenario. The monitoring framework consists of two parts: BGP monitoring and Traceroute monitoring.
 
 {\bf Relay Info from Tor Consensus} Tor consensus releases up-to-date information for current running relays every hour. Our system automatically grabs this consensus data once it's updated. We focus on guard relays and exit relays, which reside at the two ends of the communication path and can easily be the target of an adversary. Further more, since we focus on AS-level adversaries, so it is unnecessary to monitor each individual relay by its IP address. But instead, we monitor the /24 prefixes which contain Tor guard and exit relays. Note that, there is no need to monitor a more specific prefix than /24, since generally /24 is the longest prefix accepted in BGP announcement. \\
@@ -16,19 +23,31 @@ Thus, we construct a live monitoring database which is being updated every hour 
 \end{center}
 Each /24 prefix that contains any guard/exit relays will have one entry in the table, and the list of /24 prefixes will be used for our BGP and Traceroute monitoring frameworks, which we describe in the following. 
 
-{\bf BGP Monitoring Framework} monitors the control plane of internet routing. We collect live BGP announcements data from BGP Stream, in combination with the latest Tor relay data. We monitor all the Tor-related /24 prefixes we obtain, as described in the table above. We check if any activity related with the prefixes exhibit any anomaly. These anomalies can be detected by developing certain heuristics, such as the amount of time that a BGP path is used or the frequency that a path us announced; if certain anomalies fall under a threshold for a given heuristic, they should be flagged as potential attacks. This analysis will require saving offline relay bgp info for some period of time.  This framework should help:
+{\bf BGP Monitoring Framework} monitors the control plane of internet routing. We collect live BGP announcements data from BGP Stream, in combination with the latest Tor relay data. We monitor all the Tor-related /24 prefixes we obtain, as described in the table above. We check if any activity related with the prefixes exhibit any anomaly. These anomalies can be detected by developing certain heuristics, such as the amount of time that a BGP path is used or the frequency that a path us announced; if certain anomalies fall under a threshold for a given heuristic, they should be flagged as potential attacks. This analysis will require saving offline relay bgp info for some period of time.  This framework helps:
+
 \begin{itemize}
 \item Differentiate between hijack attacks and interception attacks~\cite{ballani2007study}.
 \item Differentiate between attacks and ``normal'' behavior, such as multiple origin AS conflicts, backup paths, etc~\cite{zhao2001analysis}.
-We use Team Cymru to obtain AS ownership of prefixes. Some prefixes are owned by organization with multiple AS numbers, so we take this aspect into consideration and store the AS origins of these prefixes. If we observe any change in AS paths, we will first check if the prefix has multi-AS origins, and if so, as long as the new on-path AS also owns the prefix, then it would not be seen as an attack. 
-%-check resilience of relays to prefix hijacking (see AS resilience work)
 \end{itemize}
+
+We use Team Cymru to obtain AS ownership of prefixes. Some prefixes are owned by an organization with multiple AS numbers, so we take this aspect into consideration and store the AS origins of these prefixes. If we observe any change in AS paths, we will first check if the prefix has multiple AS origins, and if so, as long as the new on-path AS also owns the prefix, then it would not be seen as an attack. 
 
 The implementation of the BGP Monitoring framework is based on BGP Stream~\cite{bgpstream}.  We analyze the live stream of BGP updates and withdrawals, focusing just on the prefixes that contain a Tor relay.  We monitor the prefixes that are reported through Team Cymru, as well as the /24 that contains each relay; we do this because we would like to be able to detect sub-prefix hijack attacks, so we must monitor longer prefixes in addition to the reported prefix.  
 
-As of now, our analysis involves checking the origin AS in the live BGP update and comparing it to the owner AS reported by Team Cymru.  If these don't match up, then we flag the update (and prefix) as a potential hijack, otherwise we ignore it.  
+Our analysis involves three different detection techniques:
 
-In the future, we may use heuristics (such as frequency, timing, and the number of collectors that saw the specific update) and store past updates/withdrawals, to increase the accuracy of our framework.
+\begin{enumerate}
+\item Origin AS check.  We collect the origin AS in the live BGP update and comparing it to the owner AS reported by Team Cymru.  If these don't match up, then we flag the update (and prefix) as a potential hijack, otherwise we ignore it. 
+\item Frequency heuristic.  Routing attacks can be 
+characterized by an AS announcing a path once (or extremely rarely) to a prefix 
+that it does not own.  The frequency heuristic detects attacks that exhibit this behavior. 
+It measures the frequency of each AS that originates a given prefix; if the frequency is 
+lower than a specified threshold, then it could be a potential hijack attack.
+\item Time heuristic.  Most known attacks 
+last a relatively short amount of time. The time heuristic measures the amount of time each 
+path to a prefix is announced for; if the amount of time is extremely small (below a specified threshold), 
+then there is the possibility of it being a routing attack. 
+\end{enumerate}  
 
 {\bf Traceroute Monitoring Framework} monitors the data plane of internet routing, i.e., how packets travel through the Internet in reality. The traceroute monitoring framework is used as a verification mechanism if the BGP monitoring framework flags certain behavior. There may be many false positives in detecting hijack/interception attacks due to the nature of BGP.  With many false positives, the traceroute monitoring framework will be used often for verification - this raises a question of optimization, which we will also address.
 
@@ -64,3 +83,4 @@ With this table, we will be able to compare the current AS path with past AS pat
 The live monitoring framework will be evaluated on a number of characteristics, including false positive rate, false negative rate, as well as performance and overhead.
 
 \subsection{Deployment Experience}
+The BGP monitoring framework has been running for a week.  It has recorded over 3 million announcements (not specific to Tor), 330 announcements that include a Tor relay, and none announcements that include a Tor relay and have an origin AS that disagrees with Team Cymru's data.  

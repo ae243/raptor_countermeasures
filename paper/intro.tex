@@ -3,3 +3,22 @@
 Tor is a wildly used system for anonymous communications. However, Tor is known to be vulnerable to traffic correlation attacks in which an adversary can correlate the traffic at both ends of the communication to deanonymize the users. Recently, researchers have shown that AS-level adversaries can exploit the dynamics of BGP routing and launch new attacks on Tor \cite{sun2015raptor}, including both passive attacks exploiting routing asymmetry and natural churn, as well as active attacks with BGP prefix hijacking/interception. Thus, these new attacks urge the need to build countermeasures to defend Tor against such malicious AS-level adversaries. In this work, we will focus on developing countermeasures against active BGP routing attacks. 
 
 There are two potential ways to counter the attacks: (1) Mitigating traffic interception, and (2) Mitigating correlation attacks. However, mitigating correlation attacks usually involve employing extra encryption schemes and/or packet obfuscation, which either requires lots of engineering efforts, or could result in high latency of Tor. Thus, given the constraints of mitigating correlation attacks, we will build countermeasures that focus on mitigating traffic interception, more specifically, against active BGP routing attacks. Our approach includes two parts, as following. 
+
+The first part is a set of proactive approaches to countering BGP attacks.  These approaches make it more difficult for an attacker to hijack Tor traffic.  There's a surprisingly large number \annie{calculate this number} of Tor relays that are announced in prefixes that are larger than /24, which means they are vulnerable to sub-prefix hijack attacks.  Therefore, one countermeasure is for operators to announce Tor relays in a /24.  Similarly, operators can use a static route to guard relays, so that the traffic cannot be hijacked.  In the case of equal-length prefix hijack attacks, we also propose a new path selection algorithm for the path from the client to the guard relay.  
+
+The second part is a reactive approach: a monitoring framework that can detect attacks in real-time.  We have built a BGP monitoring framework for the Tor network that uses multiple different techniques to detect suspicious prefix announcements.  This is used in conjunction with a traceroute monitoring framework for validation of path changes and suspicious paths.  
+
+Previous work has shown that the Tor network is susceptible to AS-level adversaries, and specifically prefix hijacks.  In this work, we measure how resilient each AS -- with at least one Tor relay -- is to a prefix hijack from anywhere else on the Internet.  Our contributions are:
+
+\begin{itemize}
+\item Measure resiliency of the ASes that contain relays and compare the resiliency of ASes that contain more relays to those that contain few relays.
+\item Measure impact of a BGP prefix hijack on the Tor network.
+\item Measure probability of any given Tor relay being decieved by a BGP prefix hijack.
+\item Quantify if Tor relays have become more resilient since the initial network was built.
+\item Quantify how fast relay resilience changes.
+\item Build a real-time monitoring system for the Tor network, which uses both the control plane and data plane.
+\item Develop a new path selection technique for Tor clients, which we evaluate and show is more resistent to hijack attacks.
+\item Discuss experiences with relay operators in regards to: announcing relays in a /24 and using static routing.
+\end{itemize}
+
+The rest of the paper is as follows.  Section 2 describes the metrics and methodology used to measure Tor relay resilience to prefix hijack attacks.  Proactive countermeasures and reactive countermeasures are presented and discussed in Sections 3 and 4, respectively.  Section 5 discusses related work and we conclude in Section 6.
