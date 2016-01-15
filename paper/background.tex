@@ -1,0 +1,43 @@
+\section{Background}
+Here we discuss some background on the Tor network as well as RAPTOR attacks~\cite{sun2015raptor}.
+
+\subsection{Tor}
+To communicate with a destination, Tor clients establish
+layered circuits through three subsequent Tor relays. The
+three relays are referred to as: entry (or guard) for the
+first one, middle for the second one, and exit relay for
+the last one. To load balance its traffic, Tor clients select
+relays with a probability that is proportional to their
+network capacity. Encryption is used to ensure that each
+relay learns the identity of only the previous hop and the
+next hop in the communications, and no single relay can
+link the client to the destination server.
+
+It is well known that if an attacker can observe the
+traffic from the destination server to the exit relay as well
+as from the entry relay to the client (or traffic from the
+client to the entry relay and from the exit relay to the
+destination server), then it can leverage correlation between
+packet timing and sizes to infer the network identities
+of clients and servers (end-to-end timing analysis).
+This timing analysis works even if the communication is
+encrypted.
+
+\subsection{RAPTOR Attacks}
+RAPTOR attacks are a suite of attacks that can be launched by 
+Autonomous Systems (ASes) to compromise user anonymity.  There are 
+three different types of attacks in this classification.
+
+{\bf Asymmetric Traffic Analysis.} AS-level adversaries can
+exploit the asymmetric nature of Internet routing to increase
+the chance of observing at least one direction of
+user traffic at both ends of the communication.
+
+{\bf Natural Churn.} AS-level adversaries can exploit natural churn in Internet
+routing to lie on the BGP paths for more users over
+time.
+
+{\bf BGP Hijacks.} Strategic AS-level adversaries can manipulate Internet
+routing via BGP hijacks (to discover the users using
+specific Tor guard nodes) and interceptions (to perform
+traffic analysis).

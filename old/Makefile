@@ -7,7 +7,7 @@ XFIG   := xfig
 GNUPLOT:= gnuplot
 
 SOURCES=$(NAME).tex \
-	sigproc.bib
+	paper.bib
 # FIGS=	data/one.pdf \
 #	data/two.pdf
 

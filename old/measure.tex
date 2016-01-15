@@ -1,0 +1,111 @@
+\section{Measuring Tor's Current State of \\Resiliency to Hijack Attacks}
+
+Because the Tor network is susceptible to network-level adversaries, we aim to quantify how much of the Tor network would be affected by a BGP prefix hijack.  The metrics used help enlighten the community about the state of the Tor network, in terms of how resilient the relays are to hijack attacks.  Additionally, this helps quantify how vulnerable the Tor network is to network-level adversaries in a novel way.  Specifically, we measure:
+
+\begin{itemize}
+\item Resiliency of the ASes that contain relays and compare the resiliency of ASes that contain more relays to those that contain few relays.
+\item Impact of a BGP prefix hijack on the Tor network.
+\item Probability of any given Tor relay being decieved by a BGP prefix hijack.
+\end{itemize}
+
+Previous work has tackled these questions using simulations of the entire Internet \cite{lad2007understanding}.  We build off of this work by applying these metrics to the Tor network.  First, we measure the resiliency of Tor-related ASes to equal-length prefix hijack attacks.  To do so, we use an Internet topology~\cite{caida} to get all of the AS relationships, and construct and AS-level graph.  We identify the Tor-related ASes and simulate prefix hijacks on the graph. Our methodology is:
+
+\begin{enumerate}
+\item Construct an AS-level graph from an Internet topology.
+\item Identify ASes that have at least one Tor relay.
+\item Calculate the number of equally preferred paths from AS A to AS B, where AS B is a Tor-related AS.
+\item Calculate the number of equally preferred paths from AS A to AS C, where AS C is the attacking (hijacking) AS.
+\item Calculate resiliency using the equation in \cite{lad2007understanding}.
+\end{enumerate}
+
+We follow this methodology for every AS A $\neq$ a Tor-related AS, every AS C $\neq$ a Tor-related AS, and for every AS B $=$ Tor-related AS.
+
+\cite{lad2007understanding} explains the probability of a node $v$ being deceived by a given false origin $a$ announcing a route that belongs to true origin $t$:
+
+\[\beta(a,t,v) = \frac{p(v,a)}{p(v,a) + p(v,t)}\]
+
+where $p(v,a)$ is the number of equally preferred paths from node $v$ to false origin $a$ and $p(v,t)$ is the number of equally preferred paths from node $v$ to true origin $t$.  Using this probability, the same researchers introduced the resiliency metric -- the resilience of a node $t$ is the fraction of nodes that believe the true origin $t$ given an arbitrary  hijack against $t$:
+
+\[R(t) = \sum_{a \in N} \sum_{v \in N} \frac{\beta(t,a,v)}{(N-1)(N-2)}\]
+
+where N is the total number of ASes.
+
+%There is also space for metrics regarding specific relays' resiliency to BGP prefix hijack attacks, as well as metrics regarding BGP prefix interception attacks (AS- and relay-level).  
+
+%  We also plan to specifically look at the resiliency of guard relays (as a group) as well as exit relays (as a group). 
+
+In addition to measuring the current state of resilience, we measure how the resilience of Tor relays has changed over the years.  We answer the following questions:
+
+\begin{itemize}
+\item Have Tor relays become more resilient since the initial network was built?
+\item How fast does relay resilience change? 
+\end{itemize}
+
+We plan to answer the first question by calculating the given resilience metrics for each past year - similar to a longitudinal study of Tor relay resiliency.  We plan to answer the second question by calculating the given resilience metrics each week for the next couple of months.  The results from answering the first question will also help us answer the second question.
+
+Next we measure the resiliency of Tor-related ASes to prefix interception attacks.  We modify the methodology from above for this measurement in the following way:
+
+\begin{enumerate}
+\item Construct an AS-level graph from an Internet topology.
+\item Identify ASes that have at least one Tor relay.
+\item Calculate the number of equally preferred paths from AS A to AS B, where AS A $\neq$ AS B, AS A and AS B are not Tor-related ASes, and there must be a Tor relay on the path from AS A to AS B.
+\item Calculate the number of equally preferred paths from AS A to AS B, where AS A $\neq$ AS B, AS A and AS B are not Tor-related ASes, there must an AS C (intercepting AS) on the path from AS A to AS B, and no Tor-related AS on the path from AS A to AS B.
+\item Calculate resiliency using the equation described above.
+\end{enumerate}
+
+Similarly, we measure how this resilience to interception attacks has changed over time.
+
+\subsection{Recent Hijacks in the Wild}
+
+There have been a number of prefix hijack attacks in the past year.  We plan to analyze the BGP routing announcements and withdrawals to find the prefixes that were hijacked and compare them to the list of Tor relay IP addresses at the time.  This will give us information about whether or not prefix hijacks (or routing leaks) in the past year have affected Tor relays.
+
+Some of the hijacks/leaks include: 
+
+\begin{itemize}
+\item On November 6th, 2015, AS9498 (BHARTI Airtel Ltd.) hijacked about 16,000 prefixes~\cite{indiahijack}.
+\item On June 12th, 2015, AS4788 Telekom Malaysia started to announce about 179,000 of prefixes to Level3 (AS3549, the Global crossing AS)~\cite{malaysialeak}.
+\item On March 27th, 2015, a BGP traffic optimizer leaked prefixes, which resulted in more than 7,000 new more-specific prefixes affecting roughly 280 Autonomous Systems, including large networks such as Rogers Cable, Telstra, Telenor, KDDI, BT-UK, Orange, Deutsche Telekom , Sprint, China Telecom, SHAW, LGI-UPC, AT\&T, Comcast, Amazon, Internap, Time Warner Cable, Choopa, Syrian Telecommunications and many more~\cite{bgpoptimizer}.
+\end{itemize}
+
+\subsection{Resiliency of ASes against BGP Hijacks}
+
+We obtained the list of Tor guard/exit relays from Tor consensus in December 2015 and retrieved their belonging ASes. Then, we downloaded the AS topology published by CAIDA in December 2015. We evaluated the resiliency of each of the ASes which contain Tor guard/exit relays based on the AS topology using the method in ~\cite{lad2007understanding}. 
+
+The AS topology contains 52680 ASes, in which 612 ASes contain a total of 2548 Tor guard/exit relays. We simulated \emph{all} possible hijacking scenarios against each of the 612 ASes, totaling $52679 \times 612 = 32,239,548$ prefix hijacks. As stated in ~\cite{lad2007understanding}, the resiliency of an AS t is calculated by:
+\begin{equation}
+R(t) = \sum_{a \in N} \sum_{v \in N} \frac {\bar{\beta}(t,a,v)} {(N-1)(N-2)}
+\end{equation}
+
+in which $N$ is the set of all ASes, and $\bar{\beta}(t,a,v)$ is defined as:
+\begin{equation}
+\bar{\beta}(t,a,v) = \frac {p(v,t)} {p(v,t) + p(v,a)}
+\end{equation}
+
+in which $p(v,n)$ is the number of equally preferred paths from node $v$ to node $n$ given the routing policy and path lengths. Thus, we first calculate the resiliency of each Tor AS from each of the 52680 ASes as the \emph{source} AS as following, and then sum up the resulting resiliency $R$ to obtain the total resiliency for each of the Tor ASes. 
+
+\begin{algorithmic}
+\Function{CalcResilience}{graph $G$, node $t$}
+    \State \Call{CalcPathsFromNode}{$G,t$}
+    \State $zeros(R)$
+    \For{each reachable node $v$ from node $t$} 
+    	\If{node $v$ contains Tor guard/exit relays}
+		\State $n \gets $ number of less preferred nodes than node $v$
+		\State $R[v] \gets n + (\bar{\beta}(v,a,t)$ $\forall$ equally preferred node a)
+	\EndIf
+    \EndFor
+    \State \Return $R$
+\EndFunction
+\end{algorithmic}
+
+Note that, the $\Call{CalcPathsFromNode}{G,t}$ step above requires AS-level path predictions. Previous works have shown that AS level paths are determined mainly based on two preferences (citation here):\\
+\textbf{Local Preference} [more text here]\\
+\textbf{Shortest Path} [more text here]\\
+Further more, the AS paths should also have the \emph{valley free} property (citation here), meaning that  [summarize here about the property]. Thus, we use depth first search to traverse the graph from a given source node based on this property and the preferences. We first explore provider-customer paths, which are the most preferred; next, we explore one peer-to-peer path followed by a sequence of provider-customer paths, which are the next preferred; finally, we explore customer-provider paths followed by an optional peer-to-peer path and then followed by a sequence of provider-customer paths. Note that, nodes are explored in the most preferred to least preferred order, and those which are explored in the same step are equally preferred. This ordering will help the above resiliency calculation. 
+
+\begin{algorithmic}
+\Function{CalcPathsFromNode}{graph $G$, node $t$}
+	\State [to be filled]
+\EndFunction
+\end{algorithmic}
+
+The results show that [I will insert a plot here of the 612 Tor ASes here of resiliency v.s. number of relays].

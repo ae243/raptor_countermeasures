@@ -6,8 +6,8 @@ TGIF   := tgif
 XFIG   := xfig
 GNUPLOT:= gnuplot
 
-SOURCES=$(NAME).tex \
-	sigproc.bib
+SOURCES=$(NAME).tex 
+
 # FIGS=	data/one.pdf \
 #	data/two.pdf
 
