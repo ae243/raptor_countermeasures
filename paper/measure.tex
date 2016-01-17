@@ -64,7 +64,7 @@ in which $N$ is the set of all ASes, and $\bar{\beta}(t,a,v)$ is defined as:
 \end{equation}
 
 in which $p(v,n)$ is the number of equally preferred paths from node $v$ to node $n$ given the routing policy and path lengths. Thus, we first calculate the resiliency of each Tor AS from each of the 52680 ASes as the \emph{source} AS as following, and then sum up the resulting resiliency $R$ to obtain the total resiliency for each of the Tor ASes. 
-
+\\
 \begin{algorithmic}
 \Function{CalcResilience}{graph $G$, node $t$}
     \State \Call{CalcPathsFromNode}{$G,t$}
@@ -79,11 +79,15 @@ in which $p(v,n)$ is the number of equally preferred paths from node $v$ to node
 \EndFunction
 \end{algorithmic}
 
-Note that, the $\Call{CalcPathsFromNode}{G,t}$ step above requires AS-level path predictions. Previous works have shown that AS level paths are determined mainly based on two preferences (citation here):\\
-\textbf{Local Preference} [more text here]\\
-\textbf{Shortest Path} [more text here]\\
-Further more, the AS paths should also have the \emph{valley free} property (citation here), meaning that  [summarize here about the property]. Thus, we use depth first search to traverse the graph from a given source node based on this property and the preferences. We first explore provider-customer paths, which are the most preferred; next, we explore one peer-to-peer path followed by a sequence of provider-customer paths, which are the next preferred; finally, we explore customer-provider paths followed by an optional peer-to-peer path and then followed by a sequence of provider-customer paths. Note that, nodes are explored in the most preferred to least preferred order, and those which are explored in the same step are equally preferred. This ordering will help the above resiliency calculation. 
+Note that, the $\Call{CalcPathsFromNode}{G,t}$ step above requires AS-level path predictions. Previous works have shown that AS level paths are determined mainly based on two preferences~\cite{starov2015measuring}:
 
+\begin{itemize}
+\item Local Preference
+\item Shortest Path
+\end{itemize}
+
+Further more, the AS paths should also have the \emph{valley free} property (citation here), meaning that  [summarize here about the property]. Thus, we use depth first search to traverse the graph from a given source node based on this property and the preferences. We first explore provider-customer paths, which are the most preferred; next, we explore one peer-to-peer path followed by a sequence of provider-customer paths, which are the next preferred; finally, we explore customer-provider paths followed by an optional peer-to-peer path and then followed by a sequence of provider-customer paths. Note that, nodes are explored in the most preferred to least preferred order, and those which are explored in the same step are equally preferred. This ordering will help the above resiliency calculation. 
+\\
 \begin{algorithmic}
 \Function{CalcPathsFromNode}{graph $G$, node $t$}
 	\State [to be filled]
