@@ -54,10 +54,9 @@ then there is the possibility of it being a routing attack.
 Our Traceroute monitoring framework retrieves updated Tor relay data hourly from the database described above. Since running large number of continuous traceroutes to relay IP addresses may create unnecessary extra traffic to the Tor network, so we selectively monitor a subset of prefixes at certain frequency rates when there is no anomaly from BGP monitoring data, and when there is suspicious activity report by BGP monitoring, the traceroute monitoring can be "triggered" to target the suspicious prefix announcement to verify the anomaly. 
 \begin{itemize}
 \item Selectively monitor relays of interest.\\
-A /24 prefix can be evaluated based on several factors: (1) total combined bandwidth of Tor relays it covers, denoted as $b_i$ for prefix $i$; (2) total number of guard relays it covers, denoted as $g_i$; (3) total number of exit relays it covers, denoted as $e_i$; and (4) resilience of the prefix to BGP hijack/interception attacks. These factors can make the prefix an attractive target to adversaries. Using these factors, we want to formulate the overall security of the system as following, and the goal is to find the monitoring frequency $f_i$ for each relay $i$ that maximizes the overall security of the network. \\
-\yixin{not including the resilience factor for now. can add it after we figure out the resilience stuff.}
+A /24 prefix can be evaluated based on several factors: (1) total combined bandwidth of Tor relays it covers, denoted as $b_i$ for prefix $i$; (2) total number of guard relays it covers, denoted as $g_i$; (3) total number of exit relays it covers, denoted as $e_i$; and (4) resilience of the prefix to BGP hijack/interception attacks, denoted as $r_i$. These factors can make the prefix an attractive target to adversaries. Using these factors, we want to formulate the overall security of the system as following, and the goal is to find the monitoring frequency $f_i$ for each relay $i$ that maximizes the overall security of the network. \\
 \begin{align}
-\max \sum_{i=1}^N & \frac {\log {(f_i + 1)}} {b_i + g_i + e_i}\\
+\max \sum_{i=1}^N & \frac {\log {(f_i + 1)}} {b_i + g_i + e_i + r_i}\\
 \text{s.t. } &\sum_{i=1}^N f_i \leq F\\
 &0 < f_i \leq M, \forall i
 \end{align}

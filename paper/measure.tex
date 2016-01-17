@@ -71,8 +71,8 @@ in which $p(v,n)$ is the number of equally preferred paths from node $v$ to node
     \State $zeros(R)$
     \For{each reachable node $v$ from node $t$} 
     	\If{node $v$ contains Tor guard/exit relays}
-		\State $n \gets $ number of less preferred nodes than node $v$
-		\State $R[v] \gets n + (\bar{\beta}(v,a,t)$ $\forall$ equally preferred node a)
+		\State $n \gets $ num. of less preferred nodes than node $v$
+		\State $R[v] \gets n + \bar{\beta}(v,a,t)$ $\forall$ equally preferred node a
 	\EndIf
     \EndFor
     \State \Return $R$
@@ -86,13 +86,7 @@ Note that, the $\Call{CalcPathsFromNode}{G,t}$ step above requires AS-level path
 \item Shortest Path
 \end{itemize}
 
-Further more, the AS paths should also have the \emph{valley free} property (citation here), meaning that  [summarize here about the property]. Thus, we use depth first search to traverse the graph from a given source node based on this property and the preferences. We first explore provider-customer paths, which are the most preferred; next, we explore one peer-to-peer path followed by a sequence of provider-customer paths, which are the next preferred; finally, we explore customer-provider paths followed by an optional peer-to-peer path and then followed by a sequence of provider-customer paths. Note that, nodes are explored in the most preferred to least preferred order, and those which are explored in the same step are equally preferred. This ordering will help the above resiliency calculation. 
-\\
-\begin{algorithmic}
-\Function{CalcPathsFromNode}{graph $G$, node $t$}
-	\State [to be filled]
-\EndFunction
-\end{algorithmic}
+Further more, the AS paths should also have the \emph{valley free} property. Thus, we use breadth first search to traverse the graph from a given source node based on this property and the preferences. We first explore provider-customer paths, which are the most preferred; next, we explore one peer-to-peer path followed by a sequence of provider-customer paths, which are the next preferred; finally, we explore customer-provider paths followed by an optional peer-to-peer path and then followed by a sequence of provider-customer paths. Note that, nodes are explored in the most preferred to least preferred order, and those which are explored in the same step are equally preferred. This ordering will help the above resiliency calculation. 
 
 After calculating the resilience for each AS that contains at least one Tor relay, we can see that most ASes lie in the middle of the spectrum for resilience (as shown in Figure~\ref{fig:resilience_histogram}).
 

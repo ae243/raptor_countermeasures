@@ -36,4 +36,26 @@ in which $R(i)$ is the resiliency calculated from the previous step and $B(i)$ i
 
 \subsection{Relay Selection Evaluation}
 
+We evaluate the AS resilience based relay selection from performance and security perspectives. 
+
+\textbf{Performance Evaluation}\\
+First, we evaluate the runtime of the AS resilience calculation given a source AS. We pick $1000$ ASes randomly as the source AS, and record how much time it takes each of them to complete the calculation. Figure ~\ref{fig_ascal} show the CDF of the runtime of AS resilience calculation. Most of the source ASes finish within $0.6$ second. 
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=80mm]{figure/runtime}
+\caption{Runtime of AS resilience calculation from a given source AS \label{fig_ascal}}
+\end{figure}
+
+\textbf{Security Evaluation}\\
+Next, we evaluate the security aspect of the relay selection. We first evaluate the relay selection variance in entropy without doing the clustering in step 4. We use the Gini coefficient as the entropy evaluation metric, as it has been used in previous work to measure anonymity selection in Tor ~\cite{akhoondi2012lastor}. We evaluate five values of $\alpha: \{0, 0.25, 0.5, 0.75, 1\}$. Note that when $\alpha = 0$, it is equivalent to bandwidth-based selection. Figure ~\ref{fig_gini} shows the result. The green line to the right is when $\alpha = 0$, so it's solely based on bandwidth resulting in a Gini coefficient of $0.607$ for all source ASes. It is interesting that the Gini coefficients for the other four $\alpha$ values which involve resilience-based selection are very similar, all with much lower Gini coefficients (higher entropy and lower skew in relay selection probability) than bandwidth-based selection. 
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=80mm]{figure/gini}
+\caption{Gini coefficients with different $\alpha$ values \label{fig_gini}}
+\end{figure}
+
+
+
 
