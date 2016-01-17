@@ -12,7 +12,26 @@ There are still a number of characteristics of the Tor network that would be use
 \item Quantify how fast relay resilience changes.
 \end{itemize}
 
-These metrics will better allow us to see how vulnerable the Tor network is to prefix hijack and interception attacks.  
+These metrics will better allow us to see how vulnerable the Tor network is to prefix hijack and interception attacks.  In addition to measuring the current state of resilience, as was shown in Section 3, we will measure how the resilience of Tor relays has changed over the years.  We answer the following questions:
+
+\begin{itemize}
+\item Have Tor relays become more resilient since the initial network was built?
+\item How fast does relay resilience change? 
+\end{itemize}
+
+We plan to answer the first question by calculating the given resilience metrics for each past year - similar to a longitudinal study of Tor relay resiliency.  We plan to answer the second question by calculating the given resilience metrics each week for the next couple of months.  The results from answering the first question will also help us answer the second question.
+
+Next we measure the resiliency of Tor-related ASes to prefix interception attacks.  We modify the methodology from above for this measurement in the following way:
+
+\begin{enumerate}
+\item Construct an AS-level graph from an Internet topology.
+\item Identify ASes that have at least one Tor relay.
+\item Calculate the number of equally preferred paths from AS A to AS B, where AS A $\neq$ AS B, AS A and AS B are not Tor-related ASes, and there must be a Tor relay on the path from AS A to AS B.
+\item Calculate the number of equally preferred paths from AS A to AS B, where AS A $\neq$ AS B, AS A and AS B are not Tor-related ASes, there must an AS C (intercepting AS) on the path from AS A to AS B, and no Tor-related AS on the path from AS A to AS B.
+\item Calculate resiliency using the equation described above.
+\end{enumerate}
+
+Similarly, we measure how this resilience to interception attacks has changed over time. 
 
 {\bf Monitoring Framework.}  
 

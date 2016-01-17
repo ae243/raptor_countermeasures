@@ -1,6 +1,6 @@
-\section{Measuring Tor's Current State of \\Resiliency to Hijack Attacks}
+\section{Measuring Tor's Current State of Resiliency to Hijack Attacks}
 
-Because the Tor network is susceptible to network-level adversaries, we aim to quantify how much of the Tor network would be affected by a BGP prefix hijack.  The metrics used help enlighten the community about the state of the Tor network, in terms of how resilient the relays are to hijack attacks.  Additionally, this helps quantify how vulnerable the Tor network is to network-level adversaries in a novel way.  Specifically, we measure:
+Because the Tor network is susceptible to network-level adversaries, we aim to quantify how much of the Tor network would be affected by a BGP prefix hijack.  First, we start by analyzing recent, publicized hijacks, and determine if they have affected the Tor network.  Then, we look at how to evaluate the Tor network in terms to susceptibility to hijack attacks.  The metrics used help enlighten the community about the state of the Tor network, in terms of how resilient the relays are to hijack attacks.  Additionally, this helps quantify how vulnerable the Tor network is to network-level adversaries in a novel way.  Specifically, we measure:
 
 \begin{itemize}
 \item Resiliency of the ASes that contain relays and compare the resiliency of ASes that contain more relays to those that contain few relays.
@@ -8,7 +8,22 @@ Because the Tor network is susceptible to network-level adversaries, we aim to q
 \item Probability of any given Tor relay being decieved by a BGP prefix hijack.
 \end{itemize}
 
-Previous work has tackled these questions using simulations of the entire Internet \cite{lad2007understanding}.  We build off of this work by applying these metrics to the Tor network.  First, we measure the resiliency of Tor-related ASes to equal-length prefix hijack attacks.  To do so, we use an Internet topology~\cite{caida} to get all of the AS relationships, and construct and AS-level graph.  We identify the Tor-related ASes and simulate prefix hijacks on the graph. Our methodology is:
+\subsection{Recent Hijacks in the Wild}
+
+There have been a number of prefix hijack attacks in the past year.  We analyzed the BGP routing announcements and withdrawals from the known time-frames to find the prefixes that were hijacked and compared them to the list of Tor relay IP addresses at the time.  This shows us that prefix hijacks in the past year have affected Tor relays; it's also important to note that the analysis of publicized hijacks is not exhaustive.  There may be hijack attacks that were not publicized or not recorded, and could have affected the Tor network as well.  This analysis presents a lower-bound on the number of affected relays from two separate hijack attacks.  
+
+From routing announcement logs, we have seen two attacks that have involved Tor relays: 
+
+\begin{itemize}
+\item On November 6th, 2015, AS9498 (BHARTI Airtel Ltd.) hijacked about 16,000 prefixes~\cite{indiahijack}.
+\item On June 12th, 2015, AS4788 Telekom Malaysia started to announce about 179,000 of prefixes to Level3 (AS3549, the Global crossing AS)~\cite{malaysialeak}.
+\end{itemize}
+
+These are just incidents from the past year, but previous work has shown other, additional attacks that have affected the Tor network prior to 2015~\cite{sun2015raptor}.
+
+\subsection{Resilience Methodology}
+
+Previous work has tackled questions of AS resilience using simulations of the entire Internet \cite{lad2007understanding}.  We build off of this work by applying these metrics to the Tor network.  First, we measure the resiliency of Tor-related ASes to equal-length prefix hijack attacks.  To do so, we use an Internet topology~\cite{caida} to get all of the AS relationships, and construct and AS-level graph.  We identify the Tor-related ASes and simulate prefix hijacks on the graph. Specifically, our methodology consists of:
 
 \begin{enumerate}
 \item Construct an AS-level graph from an Internet topology.
@@ -34,40 +49,7 @@ where N is the total number of ASes.
 
 %  We also plan to specifically look at the resiliency of guard relays (as a group) as well as exit relays (as a group). 
 
-In addition to measuring the current state of resilience, we measure how the resilience of Tor relays has changed over the years.  We answer the following questions:
-
-\begin{itemize}
-\item Have Tor relays become more resilient since the initial network was built?
-\item How fast does relay resilience change? 
-\end{itemize}
-
-We plan to answer the first question by calculating the given resilience metrics for each past year - similar to a longitudinal study of Tor relay resiliency.  We plan to answer the second question by calculating the given resilience metrics each week for the next couple of months.  The results from answering the first question will also help us answer the second question.
-
-Next we measure the resiliency of Tor-related ASes to prefix interception attacks.  We modify the methodology from above for this measurement in the following way:
-
-\begin{enumerate}
-\item Construct an AS-level graph from an Internet topology.
-\item Identify ASes that have at least one Tor relay.
-\item Calculate the number of equally preferred paths from AS A to AS B, where AS A $\neq$ AS B, AS A and AS B are not Tor-related ASes, and there must be a Tor relay on the path from AS A to AS B.
-\item Calculate the number of equally preferred paths from AS A to AS B, where AS A $\neq$ AS B, AS A and AS B are not Tor-related ASes, there must an AS C (intercepting AS) on the path from AS A to AS B, and no Tor-related AS on the path from AS A to AS B.
-\item Calculate resiliency using the equation described above.
-\end{enumerate}
-
-Similarly, we measure how this resilience to interception attacks has changed over time.
-
-\subsection{Recent Hijacks in the Wild}
-
-There have been a number of prefix hijack attacks in the past year.  We plan to analyze the BGP routing announcements and withdrawals to find the prefixes that were hijacked and compare them to the list of Tor relay IP addresses at the time.  This will give us information about whether or not prefix hijacks (or routing leaks) in the past year have affected Tor relays.
-
-Some of the hijacks/leaks include: 
-
-\begin{itemize}
-\item On November 6th, 2015, AS9498 (BHARTI Airtel Ltd.) hijacked about 16,000 prefixes~\cite{indiahijack}.
-\item On June 12th, 2015, AS4788 Telekom Malaysia started to announce about 179,000 of prefixes to Level3 (AS3549, the Global crossing AS)~\cite{malaysialeak}.
-\item On March 27th, 2015, a BGP traffic optimizer leaked prefixes, which resulted in more than 7,000 new more-specific prefixes affecting roughly 280 Autonomous Systems, including large networks such as Rogers Cable, Telstra, Telenor, KDDI, BT-UK, Orange, Deutsche Telekom , Sprint, China Telecom, SHAW, LGI-UPC, AT\&T, Comcast, Amazon, Internap, Time Warner Cable, Choopa, Syrian Telecommunications and many more~\cite{bgpoptimizer}.
-\end{itemize}
-
-\subsection{Resiliency of ASes against BGP Hijacks}
+\subsection{Resiliency Results and Values}
 
 We obtained the list of Tor guard/exit relays from Tor consensus in December 2015 and retrieved their belonging ASes. Then, we downloaded the AS topology published by CAIDA in December 2015. We evaluated the resiliency of each of the ASes which contain Tor guard/exit relays based on the AS topology using the method in ~\cite{lad2007understanding}. 
 
