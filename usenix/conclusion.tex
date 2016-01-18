@@ -1,0 +1,15 @@
+\section{Conclusion}
+
+In this work, we have presented countermeasures to a set of RAPTOR attacks - attacks that 
+involve AS-level adversaries.  In particular, our proposed countermeasures target routing 
+manipulations such as BGP prefix hijack and interception attacks.  
+
+First, we evaluated the Tor network for it's current state of resilience to hijack attacks.  
+We saw some ASes have a much higher resilience than others, and we compared this to the number 
+of relays that each AS contains.  
+
+Then we presented proactive and reactive countermeasures.  The proactive countermeasures included 
+having operators announce relays in a /24, using a static route to guard relays, and introducing 
+a new path selection algorithm for a client to a guard relay.  The reactive countermeasures included 
+a live monitoring framework with both a data plane and control plane component, as well as a set of 
+heuristics that help identify suspicious routing changes.  

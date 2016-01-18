@@ -22,14 +22,21 @@
 % This version uses the latex2e styles, not the very ancient 2.09 stuff.
 \documentclass[letterpaper,twocolumn,10pt]{article}
 \usepackage{usenix,epsfig,endnotes}
-\usepackage{amsthm}
-\usepackage{xcolor}
-\usepackage{algorithm}
-\usepackage[noend]{algpseudocode}
-\usepackage{subfigure}
-\usepackage{listings}
+\usepackage{graphicx}
 \usepackage{url}
+\usepackage{listings}
+\usepackage{subfigure}
+\usepackage{paralist}
+\usepackage{textcomp}
 \usepackage{xspace}
+\usepackage{ifthen}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+
+\input{commands}
 
 \begin{document}
 
@@ -40,20 +47,20 @@
 \title{\Large \bf RAPTOR Countermeasures}
 
 %for single author (just remove % characters)
-\author{
-{\rm Yixin Sun}\\
-Princeton University
-\and
-{\rm Annie Edmundson}\\
-Princeton University
-\and
-{\rm Prateek Mittal}\\
-Princeton University
+%\author{
+%{}\\
+%Princeton University
+%\and
+%{}\\
+%Princeton University
+%\and
+%{}\\
+%Princeton University
 % copy the following lines to add more authors
 % \and
 % {\rm Name}\\
 %Name Institution
-} % end author
+%} % end author
 
 \maketitle
 
@@ -62,24 +69,28 @@ Princeton University
 \thispagestyle{empty}
 
 \subsection*{Abstract}
+Tor is a widely-used anonymity system, but has also been shown to be vulnerable to 
+different types of traffic analysis attacks.  Recently, experiments have shown that 
+Tor is susceptible to asymmetric traffic analysis attacks, as well as other attacks 
+at the AS level.  These include malicious manipulations of traffic such as BGP prefix 
+hijack and interception attacks.  
+This paper presents a new evaluation of how resilient the Tor network is to prefix 
+hijack attacks.  We also present a set of novel countermeasures that will help 
+prevent these types of attacks from being successful: a new path selection algorithm, 
+a live monitoring framework that uses a variety of heuristics for attack detection, and 
+suggestions for Tor relay operators. 
 
-
-\section{Introduction}
-
-\section{Background}
-
-\section{Datasets}
-
-\section{Methodology}
-
-\section{Results} 
-
-\section{Discussion}
-
-\section{Conclusion}
+\input{intro}
+\input{background}
+\input{measure}
+\input{proactive}
+\input{reactive}
+\input{related}
+\input{future}
+\input{conclusion}
 
 {\footnotesize \bibliographystyle{acm}
-\bibliography{local}}
+\bibliography{sigproc.bib}}
 
 %\theendnotes
 

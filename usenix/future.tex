@@ -1,0 +1,46 @@
+\section{Future Work}
+
+This is an important research area, and there is still much more to do.  There are three main areas where we wish to further this work: quantification of resiliency, monitoring framework, and qualitative suggestions for relay operators.
+
+{\bf Resiliency.}  
+
+There are still a number of characteristics of the Tor network that would be useful and helpful to quantify.  These include:
+
+\begin{itemize}
+\item Quantify how resilient Tor ASes are to interception attacks.
+\item Quantify if Tor relays have become more resilient since the initial network was built.
+\item Quantify how fast relay resilience changes.
+\end{itemize}
+
+These metrics will better allow us to see how vulnerable the Tor network is to prefix hijack and interception attacks.  In addition to measuring the current state of resilience, as was shown in Section 3, we will measure how the resilience of Tor relays has changed over the years.  We answer the following questions:
+
+\begin{itemize}
+\item Have Tor relays become more resilient since the initial network was built?
+\item How fast does relay resilience change? 
+\end{itemize}
+
+We plan to answer the first question by calculating the given resilience metrics for each past year - similar to a longitudinal study of Tor relay resiliency.  We plan to answer the second question by calculating the given resilience metrics each week for the next couple of months.  The results from answering the first question will also help us answer the second question.
+
+Next we measure the resiliency of Tor-related ASes to prefix interception attacks.  We modify the methodology from above for this measurement in the following way:
+
+\begin{enumerate}
+\item Construct an AS-level graph from an Internet topology.
+\item Identify ASes that have at least one Tor relay.
+\item Calculate the number of equally preferred paths from AS A to AS B, where AS A $\neq$ AS B, AS A and AS B are not Tor-related ASes, and there must be a Tor relay on the path from AS A to AS B.
+\item Calculate the number of equally preferred paths from AS A to AS B, where AS A $\neq$ AS B, AS A and AS B are not Tor-related ASes, there must an AS C (intercepting AS) on the path from AS A to AS B, and no Tor-related AS on the path from AS A to AS B.
+\item Calculate resiliency using the equation described above.
+\end{enumerate}
+
+Similarly, we measure how this resilience to interception attacks has changed over time. 
+
+{\bf Monitoring Framework.}  
+
+As of now, our live monitoring framework consists of two parts: data plane and control plane.  One of the most important next steps is to connect both parts and run the system as one large framework.  The BGP monitoring framework could run consistently, and when any suspicious announcements are flagged (either by the heuristics or the AS comparison), then this could trigger the traceroute monitoring framework.  
+
+Other future work includes developing methods to detect interception attacks - this has been shown to be difficult and accurate detection is still an open problem~\cite{ballani2007study}.  Furthermore, making the already implemented heuristics and techniques more accurate and precise is still to be done.  
+
+Lastly, the monitoring framework needs methods for evaluation.  Metrics such as false positive rate, true positive rate, time and performance, will all be beneficial to showing the importance of the framework, as well as for improving the framework.  
+
+{\bf Qualitative Suggestions.}
+
+Additional work includes setting up our own set of relays at Princeton University and working with the necessary operators to announce the relays in their own /24 network and think of the possibility of static routing to the guard relay.

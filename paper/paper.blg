@@ -1,0 +1,59 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: paper.aux
+The style file: acm.bst
+Database file #1: sigproc.bib.bib
+Warning--to sort, need author or key in indiahijack
+Warning--to sort, need author or key in malaysialeak
+Warning--to sort, need author or key in caida
+Warning--to sort, need author or key in staticroute
+Warning--to sort, need author or key in bgpstream
+Warning--can't use both volume and number fields in ballani2007study
+Warning--can't use both volume and number fields in chan2006modeling
+Warning--can't use both volume and number fields in gill2011let
+Warning--can't use both volume and number fields in hu2004spv
+Warning--can't use both volume and number fields in mahajan2002understanding
+Warning--can't use both volume and number fields in zhang2008ispy
+Warning--can't use both volume and number fields in zheng2007light
+You've used 41 entries,
+            2253 wiz_defined-function locations,
+            734 strings with 11510 characters,
+and the built_in function-call counts, 16685 in all, are:
+= -- 1611
+> -- 747
+< -- 0
++ -- 315
+- -- 268
+* -- 1202
+:= -- 2443
+add.period$ -- 117
+call.type$ -- 41
+change.case$ -- 256
+chr.to.int$ -- 0
+cite$ -- 53
+duplicate$ -- 735
+empty$ -- 1407
+format.name$ -- 268
+if$ -- 3676
+int.to.chr$ -- 0
+int.to.str$ -- 41
+missing$ -- 36
+newline$ -- 202
+num.names$ -- 72
+pop$ -- 356
+preamble$ -- 1
+purify$ -- 216
+quote$ -- 0
+skip$ -- 563
+stack$ -- 0
+substring$ -- 994
+swap$ -- 268
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 162
+warning$ -- 12
+while$ -- 156
+width$ -- 43
+write$ -- 424
+(There were 12 warnings)
