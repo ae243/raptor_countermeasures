@@ -114,7 +114,7 @@ def update_resilience():
         else:
             for node in buffer:
                 tordict[node[0]] += nodes + unreachable + ((node[1] / eq_path) if eq_nodes > 1 else 0)
-                buffer = []
+            buffer = []
             nodes += eq_nodes
             eq_path = val[1]
             eq_nodes = 1
