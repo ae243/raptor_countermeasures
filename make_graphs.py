@@ -55,7 +55,7 @@ for o in od:
 
 x = od.values()
 y = od.keys()
-plt.plot(x, y, '.')
+plt.plot(x, y, '.', markersize=20)
 plt.xlabel('Resilience')
 plt.ylabel('# of Relays in AS')
 plt.title('Resilience and Corresponding Number of Relays per AS')

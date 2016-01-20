@@ -90,20 +90,20 @@ Further more, the AS paths should also have the \emph{valley free} property. Thu
 
 After calculating the resilience for each AS that contains at least one Tor relay, we can see that most ASes lie in the middle of the spectrum for resilience (as shown in Figure~\ref{fig:resilience_histogram}).
 
-\begin{figure*}
+\begin{figure}
 \centering
 \includegraphics[width=.5\textwidth]{resilience_histogram}
 \caption{A histogram of resilience values for all ASes that contain a Tor relay.}
 \label{fig:resilience_histogram}
-\end{figure*}
+\end{figure}
 
 We then looked at which ASes had the most relays, and what their corresponding resilience is; ideally, ASes with more relays are also more resilient to hijack attacks.  Figure~\ref{fig:res_relays} shows the resilience value for an AS and the AS's corresponding number of relays.  
 
-\begin{figure*}
+\begin{figure}
 \centering
 \includegraphics[width=.5\textwidth]{res_num_relays}
 \caption{Resilience values for each AS and each AS's corresponding number of relays.}
 \label{fig:res_relays}
-\end{figure*}
+\end{figure}
 
 We can see one outlier - AS16276 - which contains 339 relays; unfortunately, this AS also has a relatively low resilience against hijack attacks.  This motivates our proactive and reactive countermeasures against hijack attacks.
