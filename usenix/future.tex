@@ -33,6 +33,8 @@ Next we measure the resiliency of Tor-related ASes to prefix interception attack
 
 Similarly, we measure how this resilience to interception attacks has changed over time. 
 
+We also want to give some perspective to the resilience values by running the resilience calculations on a topology from a time when a known attack has occurred.  We can then check what the resilience is of the AS that was actually hijacked - this will give up a notion of how accurate resiliency is.  (This can be done multiple times to increase our confidence in the resiliency metric.)
+
 {\bf Monitoring Framework.}  
 
 As of now, our live monitoring framework consists of two parts: data plane and control plane.  One of the most important next steps is to connect both parts and run the system as one large framework.  The BGP monitoring framework could run consistently, and when any suspicious announcements are flagged (either by the heuristics or the AS comparison), then this could trigger the traceroute monitoring framework.  
