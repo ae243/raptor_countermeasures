@@ -2,13 +2,16 @@ from __future__ import division
 import sys
 import json
 import time
-from queue import Queue
+#from queue import Queue
+from collections import deque
 
 f = sys.argv[1] #the topology file
 f2 = sys.argv[2] #the tor file
 
 # use dictionary to save the as relationships
 # asdict[asn] = [[provider-customer edges],[peer-to-peer edges],[customer-provider edges]]
+# use BFS to traverse the graph from a source AS
+# graph[node] = [weight, equal_paths, uphill_hops]
 
 asdict = {}
 graph = {}
@@ -46,51 +49,63 @@ def init(root):
     return graph
 
 # provider to customer
-def bfs_pc(root):
-    q = Queue()
-    q.put(root)
-    while not q.empty():
-        current = q.get()
+def bfs_pc(q_lst):
+    #q = Queue()
+    #q.put(root)
+    q = deque(q_lst)
+    while q:
+        current = q.popleft()
         val = graph[current]
         for node in asdict[current][0]:
             if not graph.has_key(node):
                 graph[node] = [val[0] + 1, val[1], val[2]]
-                q.put(node)
+                q.append(node)
             elif graph[node][0] == val[0] + 1:
                 graph[node][1] += val[1]
 
 # peer to peer
-def bfs_pp(root):
-    q = Queue()
-    for node in asdict[root][1]:
-        if not graph.has_key(node):
-            graph[node] = [graph[root][0] + 53000, graph[root][1], graph[root][2]]
-            q.put(node)
-    while not q.empty():
-        current = q.get()
+def bfs_pp(q_lst):
+    #q = Queue()
+    q = deque()
+    for rt in q_lst:
+        for node in asdict[rt][1]:
+            if not graph.has_key(node):
+                graph[node] = [graph[rt][0] + total_as, graph[rt][1], graph[rt][2]]
+                q.append(node)
+            elif graph[node][0] == graph[rt][0] + total_as:
+                graph[node][1] += graph[rt][1]
+    while q:
+        current = q.popleft()
         val = graph[current]
         for node in asdict[current][0]:
             if not graph.has_key(node):
                 graph[node] = [val[0] + 1, val[1], val[2]]
-                q.put(node)
+                q.append(node)
             elif graph[node][0] == val[0] + 1:
                 graph[node][1] += val[1]
 
 # customer to provider
 def bfs_cp(root):
-    q = Queue()
-    q.put(root)
-    while not q.empty():
-        current = q.get()
+    #q = Queue()
+    #q.put(root)
+    q = deque([root])
+    curlst = []
+    curlevel = 0
+    while q:
+        current = q.popleft()
         val = graph[current]
+        if val[2] > curlevel:
+            bfs_pc(curlst)
+            bfs_pp(curlst)
+            curlst = []
+            curlevel = val[2]
         for node in asdict[current][2]:
             if not graph.has_key(node):
-                graph[node] = [val[0] + 1, val[1], val[2] + 1]
-                q.put(node)
-            elif graph[node][2] == (val[2]+1) and graph[node][0] == (val[0]+1):
+                graph[node] = [val[0], val[1], val[2] + 1]
+                q.append(node)
+                curlst.append(node)
+            elif graph[node][2] == (val[2]+1):
                 graph[node][1] += val[1]
-            bfs_pc(node)
-            bfs_pp(node)
 
 # traverse nodes to calculate resiliency
 def update_resilience():
@@ -132,8 +147,8 @@ def update_resilience():
 for item in asdict:
     #print "item is %s =========" % item
     graph = init(item)
-    bfs_pc(item)
-    bfs_pp(item)
+    bfs_pc([item])
+    bfs_pp([item])
     bfs_cp(item)
     graph.pop(item,None)
     update_resilience()
