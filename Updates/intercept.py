@@ -37,7 +37,7 @@ with open(f,'r') as fin:
             asdict[asn2][abs(rel)+1] = [asn1]
 
 total_as = len(asdict)
-#print total_as
+print total_as
 
 with open(f2,'r') as fin:
     for line in fin:
@@ -175,6 +175,7 @@ def update_resilience():
                     else:
                         counter_paths = sum([graph[i][1] for i in set_unreach])
                         frac = len(set_unreach) + (node[1] / (eq_path - counter_paths))
+                    eq_nodes.append(node[0])
                     '''
                     counter_eq = 0
                     for i in eq_nodes:
@@ -222,6 +223,7 @@ def update_resilience():
             else:
                 counter_paths = sum([graph[i][1] for i in set_unreach])
                 frac = len(set_unreach) + (node[1] / (eq_path - counter_paths))
+            eq_nodes.append(node[0])
         tordict[node[0]] += total_as - 1 - len(nodes) - len(eq_nodes) + num_unreach + frac
 
 
@@ -279,9 +281,9 @@ print end - start
 #===============Main part: calc resiliency from all source nodes===========#
 start = time.time()
 
-counter = 99
+counter = 9
 for item in asdict:
-    print item
+    #print item
     graph = init(item)
     bfs_pc([item])
     bfs_pp([item])
