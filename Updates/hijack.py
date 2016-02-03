@@ -160,6 +160,12 @@ for item in asdict:
 
 #end = time.time()
 #print end - start
+
+#normalize the resiliency data to [0,1]
+divid = (total_as - 2) * (total_as - 1)
+for item in tordict:
+    tordict[item] = tordict[item] / divid
+
 with open('data.json', 'w+') as fp:
     json.dump(tordict, fp)
 
