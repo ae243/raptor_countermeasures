@@ -3,14 +3,8 @@ We take three different proactive approaches to counter RAPTOR attacks: 1) convi
 
 \subsection{Using /24 Prefixes}
 
-Sun \emph{et al.} \cite{sun2015raptor} recently found that >90\% of BGP prefixes hosting relays are
+Sun \emph{et al.} \cite{sun2015raptor} recently found that more than 90\% of BGP prefixes hosting relays are
 shorter than /24, making them vulnerable to a more-specific BGP prefix attack. Thus, one quick way to make Tor relays more resilient to such active routing attacks is to announce /24 prefix covering Tor relays. In order to make real world impact of this approach, we plan to start a campaign by contacting network operators whose prefixes contain Tor relays, and asking them to announce a more specific /24 prefix covering the relay. 
-
-\subsection{Static Routing and Path Protection Mechanisms}
-
-There has been progress in protecting certain BGP paths by using static routes, or other protection mechanisms.  We plan to explore how difficult it is to create static routes to guard relays in order to help prevent prefix hijacks that aim to hijack a guard relay.  
-
-In the past, there has been work on protecting routes to top-level DNS servers.  This was done by a fairly aggressive set of filters to be a little more more conservative in accepting alternate routes to the DNS servers~\cite{staticroute}.
 
 \subsection{Guard Relay Selection}
 
