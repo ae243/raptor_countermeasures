@@ -85,13 +85,22 @@ We obtained the list of Tor guard/exit relays from Tor consensus in December 201
 
 The AS topology contains 52680 ASes, in which 612 ASes contain a total of 2548 Tor guard/exit relays. We simulated \emph{all} possible hijacking scenarios against each of the 612 ASes, totaling $52679 \times 612 = 32,239,548$ prefix hijacks. Thus, we first calculate the resiliency of each Tor AS from each of the 52680 ASes as the \emph{source} AS as following, and then sum up the resulting resiliency $R$ to obtain the total resiliency for each of the Tor ASes. 
 
-After calculating the resilience for each AS that contains at least one Tor relay, we can see that most ASes lie in the middle of the spectrum for resilience (as shown in Figure~\ref{fig:resilience_histogram}).
+After calculating the hijack resilience for each AS that contains at least one Tor relay, we can see that most ASes lie in the middle of the spectrum for resilience (as shown in Figure~\ref{fig:resilience_histogram}).
 
 \begin{figure}
 \centering
 \includegraphics[width=.5\textwidth]{resilience_histogram}
 \caption{A histogram of resilience values for all ASes that contain a Tor relay.}
 \label{fig:resilience_histogram}
+\end{figure}
+
+We also measured the resilience to interception attacks for each Tor-related AS.  The distribution of interception resilience values is shown in Figure~\ref{fig:interception_histogram}, and we can see that many Tor-related ASes have a much higher resiliency to interception attacks that could be carried out by Tier 1 ASes.  
+
+\begin{figure}
+\centering
+\includegraphics[width=.5\textwidth]{interception_resiliency}
+\caption{A histogram of resilience values for all ASes that contain a Tor relay in 2015.}
+\label{fig:interception_histogram}
 \end{figure}
 
 We then looked at which ASes had the most relays, and what their corresponding resilience is; ideally, ASes with more relays are also more resilient to hijack attacks.  Figure~\ref{fig:res_relays} shows the resilience value for an AS and the AS's corresponding number of relays.  
@@ -107,71 +116,11 @@ We can see one outlier - AS16276 - which contains 339 relays; unfortunately, thi
 
 \subsection{Longitudinal Resiliency Results}
 
-We conducted our measurements on past data to analyze the resiliency trend on the Tor network.  Figures~\ref{fig:resilience_histogram2008}-\ref{fig:resilience_histogram2015} show the distribution of resilience values among ASes that contain Tor relays from 2008 to 2015.
-
-\comment{
-\begin{figure}
-\centering
-\includegraphics[width=.4\textwidth]{resiliency_hist_2008}
-\caption{A histogram of resilience values for all ASes that contain a Tor relay in 2008.}
-\label{fig:resilience_histogram2008}
-\end{figure}
+We conducted our measurements on past data to analyze the hijack resiliency trend on the Tor network.  Figure~\ref{fig:resilience_trend} shows the average AS resiliency to hijack attacks each year.  We can see that the average resiliency has increased since 2008, but still remains below .50.  
 
 \begin{figure}
 \centering
-\includegraphics[width=.4\textwidth]{resiliency_hist_2009}
-\caption{A histogram of resilience values for all ASes that contain a Tor relay in 2009.}
-\label{fig:resilience_histogram}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=.4\textwidth]{resiliency_hist_2010}
-\caption{A histogram of resilience values for all ASes that contain a Tor relay in 2010.}
-\label{fig:resilience_histogram}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=.4\textwidth]{resiliency_hist_2011}
-\caption{A histogram of resilience values for all ASes that contain a Tor relay in 2011.}
-\label{fig:resilience_histogram}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=.4\textwidth]{resiliency_hist_2012}
-\caption{A histogram of resilience values for all ASes that contain a Tor relay in 2012.}
-\label{fig:resilience_histogram}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=.4\textwidth]{resiliency_hist_2013}
-\caption{A histogram of resilience values for all ASes that contain a Tor relay in 2013.}
-\label{fig:resilience_histogram}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=.4\textwidth]{resiliency_hist_2014}
-\caption{A histogram of resilience values for all ASes that contain a Tor relay in 2014.}
-\label{fig:resilience_histogram}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=.4\textwidth]{resiliency_hist_2015}
-\caption{A histogram of resilience values for all ASes that contain a Tor relay in 2015.}
-\label{fig:resilience_histogram2015}
-\end{figure}
-}
-
-\subsection{Current Interception Resiliency Results}
-
-\begin{figure}
-\centering
-\includegraphics[width=.4\textwidth]{interception_resiliency}
-\caption{A histogram of resilience values for all ASes that contain a Tor relay in 2015.}
-\label{fig:resilience_histogram2015}
+\includegraphics[width=.5\textwidth]{hijack_resilience_trend}
+\caption{Average Tor AS resilience each year from 2008-2016.}
+\label{fig:resilience_trend}
 \end{figure}
