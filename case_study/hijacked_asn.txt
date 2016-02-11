@@ -1,0 +1,43 @@
+Bulk mode; whois.cymru.com [2016-02-11 20:58:05 +0000]
+24961   | 5.199.142.124    | MYLOC-AS myLoc managed IT AG,DE
+197540  | 5.45.106.216     | NETCUP-AS netcup GmbH,DE
+58073   | 46.182.106.190   | YISP-AS YISP B.V.,NL
+197540  | 5.45.97.127      | NETCUP-AS netcup GmbH,DE
+50673   | 5.178.64.203     | SERVERIUS-AS Serverius Holding B.V.,NL
+44869   | 5.103.71.98      | FIBIA-P-S Fibia P/S,DK
+50673   | 5.178.64.140     | SERVERIUS-AS Serverius Holding B.V.,NL
+39138   | 31.172.31.207    | OPENAP-WIRELESS-NETWORKS-AS rrbone UG (haftungsbeschraenkt),DE
+197540  | 5.45.98.111      | NETCUP-AS netcup GmbH,DE
+20773   | 5.35.249.38      | HOSTEUROPE-AS Host Europe GmbH,DE
+197540  | 5.45.104.141     | NETCUP-AS netcup GmbH,DE
+197540  | 5.45.99.75       | NETCUP-AS netcup GmbH,DE
+24961   | 5.199.142.195    | MYLOC-AS myLoc managed IT AG,DE
+44869   | 5.103.231.100    | FIBIA-P-S Fibia P/S,DK
+12874   | 2.225.166.192    | FASTWEB Fastweb SpA,IT
+50673   | 5.255.87.204     | SERVERIUS-AS Serverius Holding B.V.,NL
+20773   | 5.35.240.61      | HOSTEUROPE-AS Host Europe GmbH,DE
+49544   | 5.104.224.5      | INTERACTIVE3D i3d B.V.,NL
+12874   | 2.231.245.29     | FASTWEB Fastweb SpA,IT
+198310  | 37.0.123.207     | PALLADA-AS Pallada Web Service LLC,RU
+49544   | 5.104.224.246    | INTERACTIVE3D i3d B.V.,NL
+50923   | 5.129.250.77     | METRO-SET-AS Metroset Ltd.,RU
+198310  | 37.0.123.152     | PALLADA-AS Pallada Web Service LLC,RU
+197540  | 5.45.106.129     | NETCUP-AS netcup GmbH,DE
+44869   | 5.103.56.79      | FIBIA-P-S Fibia P/S,DK
+200429  | 5.255.78.242     | HOSTSLIM HostSlim BV,NL
+39138   | 31.172.30.4      | OPENAP-WIRELESS-NETWORKS-AS rrbone UG (haftungsbeschraenkt),DE
+31863   | 23.92.62.86      | DACEN-2 - Centrilogic, Inc.,US
+50673   | 5.255.87.156     | SERVERIUS-AS Serverius Holding B.V.,NL
+39138   | 31.172.30.2      | OPENAP-WIRELESS-NETWORKS-AS rrbone UG (haftungsbeschraenkt),DE
+24961   | 5.199.130.188    | MYLOC-AS myLoc managed IT AG,DE
+39138   | 31.172.30.3      | OPENAP-WIRELESS-NETWORKS-AS rrbone UG (haftungsbeschraenkt),DE
+50673   | 5.255.87.213     | SERVERIUS-AS Serverius Holding B.V.,NL
+NA      | 5.44.248.197     | NA
+20773   | 5.35.241.48      | HOSTEUROPE-AS Host Europe GmbH,DE
+31042   | 24.135.68.67     | SERBIA-BROADBAND-AS Serbia BroadBand-Srpske Kablovske mreze d.o.o.,RS
+24961   | 5.199.142.230    | MYLOC-AS myLoc managed IT AG,DE
+50673   | 5.255.87.219     | SERVERIUS-AS Serverius Holding B.V.,NL
+39138   | 31.172.30.1      | OPENAP-WIRELESS-NETWORKS-AS rrbone UG (haftungsbeschraenkt),DE
+57858   | 5.34.241.111     | AS57858 Inter Connects Inc,EE
+12874   | 2.230.164.254    | FASTWEB Fastweb SpA,IT
+24961   | 5.199.133.193    | MYLOC-AS myLoc managed IT AG,DE

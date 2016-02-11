@@ -1,4 +1,4 @@
-Bulk mode; whois.cymru.com [2016-02-03 18:50:17 +0000]
+Bulk mode; whois.cymru.com [2016-02-11 20:10:14 +0000]
 43847   | 46.182.19.151    | NBISERV-AS Martin Prager trading as _NbIServ_,DE
 16276   | 94.23.219.192    | OVH OVH SAS,FR
 2588    | 159.148.186.122  | LATNETSERVISS-AS LATNET SERVISS Ltd.,LV
@@ -141,11 +141,11 @@ Bulk mode; whois.cymru.com [2016-02-03 18:50:17 +0000]
 50613   | 82.221.129.96    | THORDC-AS THOR Data Center ehf,IS
 5089    | 86.19.252.85     | NTL Virgin Media Limited,GB
 5650    | 50.39.160.18     | FRONTIER-FRTR - Frontier Communications of America, Inc.,US
-8422    | 89.0.115.197     | NETCOLOGNE NetCologne GmbH,DE
+9198    | 89.0.115.197     | KAZTELECOM-AS JSC Kazakhtelecom,KZ
 16276   | 178.32.189.88    | OVH OVH SAS,FR
 197019  | 37.157.193.107   | WEDOS WEDOS Internet, a.s.,CZ
 15497   | 62.149.13.57     | COLOCALL Colocall Ltd.,UA
-2516    | 106.185.28.170   | KDDI KDDI CORPORATION,JP
+2516    | 106.185.28.170   | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 11351   | 198.255.228.205  | RR-NYSREGION-ASN-01 - Time Warner Cable Internet LLC,US
 15830   | 176.58.96.199    | TELECITY-LON TELECITYGROUP INTERNATIONAL LIMITED,GB
 16276   | 5.39.80.135      | OVH OVH SAS,FR
@@ -155,12 +155,12 @@ Bulk mode; whois.cymru.com [2016-02-03 18:50:17 +0000]
 2840    | 46.239.117.180   | GSIX Stiftelsen Goteborgs Studentbostader,SE
 8560    | 77.68.36.93      | ONEANDONE-AS 1&1 Internet AG,DE
 12322   | 88.168.81.140    | PROXAD Free SAS,FR
-2527    | 223.135.76.186   | SO-NET So-net Entertainment Corporation,JP
+2527    | 223.135.76.186   | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 51852   | 185.12.46.130    | PLI-AS Private Layer INC,CH
 2119    | 213.114.154.42   | TELENOR-NEXTEL Telenor Norge AS,NO
 31400   | 82.211.19.129    | ACCELERATED-IT Accelerated IT Services GmbH,DE
 48971   | 185.19.87.52     | DATAWIRE-AS DATAWIRE AG,CH
-3209    | 178.2.171.109    | VODANET Vodafone GmbH,DE
+31334   | 178.2.171.109    | KABELDEUTSCHLAND-AS Vodafone Kabel Deutschland GmbH,DE
 16276   | 178.32.221.207   | OVH OVH SAS,FR
 15830   | 176.58.120.22    | TELECITY-LON TELECITYGROUP INTERNATIONAL LIMITED,GB
 24961   | 89.163.227.28    | MYLOC-AS myLoc managed IT AG,DE
@@ -220,9 +220,9 @@ Bulk mode; whois.cymru.com [2016-02-03 18:50:17 +0000]
 16276   | 37.187.1.149     | OVH OVH SAS,FR
 16863   | 64.20.23.37      | HOMESC - Home Telephone Company, Inc.,US
 42708   | 31.220.45.6      | PORTLANE Portlane AB,SE
-2856    | 109.148.232.11   | BT-UK-AS BT Public Internet Service,GB
+2856    | 109.148.232.11   | BT-UK-AS British Telecommunications PLC,GB
 6939    | 65.49.60.164     | HURRICANE - Hurricane Electric, Inc.,US
-2514    | 61.197.250.179   | INFOSPHERE NTT PC Communications, Inc.,JP
+2514    | 61.197.250.179   | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 62567   | 107.170.123.11   | DIGITALOCEAN-ASN-NY2 - Digital Ocean, Inc.,US
 7922    | 174.63.53.93     | COMCAST-7922 - Comcast Cable Communications, Inc.,US
 21502   | 81.66.203.113    | ASN-NUMERICABLE NC Numericable S.A.,FR
@@ -727,7 +727,7 @@ Bulk mode; whois.cymru.com [2016-02-03 18:50:17 +0000]
 32244   | 67.227.240.79    | LIQUID-WEB-INC - Liquid Web, Inc.,US
 22561   | 184.156.216.122  | CENTURYLINK-LEGACY-LIGHTCORE - CenturyTel Internet Holdings, Inc.,US
 51852   | 179.43.143.162   | PLI-AS Private Layer INC,CH
-2856    | 5.81.160.254     | BT-UK-AS BT Public Internet Service,GB
+2856    | 5.81.160.254     | BT-UK-AS British Telecommunications PLC,GB
 9318    | 1.230.159.50     | HANARO-AS Hanaro Telecom Inc.,KR
 6079    | 209.6.68.29      | RCN-AS - RCN,US
 63949   | 103.3.63.75      | LINODE-AP Linode, LLC,SG
@@ -847,7 +847,7 @@ Bulk mode; whois.cymru.com [2016-02-03 18:50:17 +0000]
 46375   | 70.36.146.247    | AS-SONICTELECOM - Sonic Telecom LLC,US
 60117   | 185.117.72.26    | HS Host Sailor Ltd.,AE
 12876   | 212.47.248.68    | AS12876 ONLINE S.A.S.,FR
-NA      | 193.228.143.225  | NA
+43326   | 193.228.143.225  | FLASHDANCE-AS Flashdance AB,SE
 35425   | 80.68.92.249     | BYTEMARK-AS Bytemark Limited,GB
 200130  | 188.226.174.82   | DIGITALOCEAN-ASN-1 Digital Ocean, Inc.,EU
 24971   | 37.205.11.149    | MASTER-AS Master Internet s.r.o,CZ
@@ -996,7 +996,7 @@ NA      | 193.228.143.225  | NA
 13030   | 212.51.156.183   | INIT7 Init7 (Switzerland) Ltd.,CH
 6830    | 109.91.114.97    | LGI-UPC Liberty Global Operations B.V.,AT
 36351   | 198.58.102.234   | SOFTLAYER - SoftLayer Technologies Inc.,US
-3209    | 178.2.234.134    | VODANET Vodafone GmbH,DE
+31334   | 178.2.234.134    | KABELDEUTSCHLAND-AS Vodafone Kabel Deutschland GmbH,DE
 44395   | 46.162.192.182   | ORG-UL31-RIPE UCOM LLC,AM
 60118   | 176.126.252.12   | ALISTAR-AS ALISTAR SECURITY SRL,RO
 60118   | 176.126.252.11   | ALISTAR-AS ALISTAR SECURITY SRL,RO
@@ -1062,7 +1062,7 @@ NA      | 193.228.143.225  | NA
 16276   | 51.254.35.151    | OVH OVH SAS,FR
 202109  | 46.101.60.210    | DIGITALOCEAN-ASN-2 Digital Ocean, Inc.,GB
 29695   | 51.175.194.118   | ALTIBOX_AS Altibox AS,NO
-2516    | 106.187.43.110   | KDDI KDDI CORPORATION,JP
+2516    | 106.187.43.110   | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 30083   | 69.64.48.168     | SERVER4YOU - Hosting Solutions International, Inc.,US
 20115   | 75.134.151.31    | CHARTER-NET-HKY-NC - Charter Communications,US
 6724    | 85.214.133.111   | STRATO STRATO AG,DE
@@ -1086,7 +1086,7 @@ NA      | 193.228.143.225  | NA
 42708   | 178.73.210.240   | PORTLANE Portlane AB,SE
 12876   | 62.210.253.44    | AS12876 ONLINE S.A.S.,FR
 60781   | 85.17.164.165    | LEASEWEB-NL LeaseWeb Netherlands B.V.,NL
-201952  | 178.57.2.248     | ATEL-RYBINSK LTD Atel-Rybinsk,RU
+201952  | 178.57.2.248     | ATEL-RYBINSK LTD AtelRybinsk,RU
 5607    | 5.64.247.226     | BSKYB-BROADBAND-AS Sky UK Limited,GB
 21844   | 67.18.92.141     | THEPLANET-AS - SoftLayer Technologies Inc.,US
 42632   | 194.1.238.115    | MNOGOBYTE-AS MnogoByte LLC,RU
@@ -1136,7 +1136,7 @@ NA      | 193.228.143.225  | NA
 9050    | 92.84.61.245     | RTD TELEKOM ROMANIA COMMUNICATION S.A,RO
 52423   | 179.48.248.17    | Data Miners S.A. ( Racknation.cr ),CR
 48172   | 178.57.218.42    | OVERSUN Oversun Ltd,RU
-2516    | 106.187.47.155   | KDDI KDDI CORPORATION,JP
+2516    | 106.187.47.155   | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 18747   | 200.80.42.234    | IFX18747 - IFX Corporation,US
 20473   | 108.61.165.0     | AS-CHOOPA - Choopa, LLC,US
 36352   | 192.3.94.54      | AS-COLOCROSSING - ColoCrossing,US
@@ -1172,6 +1172,7 @@ NA      | 193.228.143.225  | NA
 33363   | 97.100.89.13     | BHN-TAMPA - BRIGHT HOUSE NETWORKS, LLC,US
 14      | 160.39.15.244    | COLUMBIA-GW - Columbia University,US
 202018  | 188.166.67.231   | DIGITALOCEAN-ASN-3 Digital Ocean, Inc.,NL
+3215    | 86.0.240.64      | AS3215 Orange S.A.,FR
 5089    | 86.0.240.64      | NTL Virgin Media Limited,GB
 31400   | 84.200.73.238    | ACCELERATED-IT Accelerated IT Services GmbH,DE
 16276   | 176.31.159.224   | OVH OVH SAS,FR
@@ -1212,7 +1213,7 @@ NA      | 193.228.143.225  | NA
 25515   | 77.51.100.67     | CTCNET-AS PJSC Rostelecom,RU
 36352   | 192.3.28.242     | AS-COLOCROSSING - ColoCrossing,US
 202018  | 178.62.251.8     | DIGITALOCEAN-ASN-3 Digital Ocean, Inc.,NL
-2856    | 86.140.143.195   | BT-UK-AS BT Public Internet Service,GB
+2856    | 86.140.143.195   | BT-UK-AS British Telecommunications PLC,GB
 35141   | 77.70.63.220     | MEGALAN MOBILTEL EAD,BG
 53111   | 187.63.100.24    | Centro Educacional Nossa Senhora Auxiliadora,BR
 15516   | 87.72.73.231     | DK-ARROWHEAD Arrowhead A/S,DK
@@ -1235,7 +1236,7 @@ NA      | 193.228.143.225  | NA
 14061   | 107.170.231.169  | DIGITALOCEAN-ASN - Digital Ocean, Inc.,US
 36351   | 153.92.44.159    | SOFTLAYER - SoftLayer Technologies Inc.,US
 45899   | 123.31.21.248    | VNPT-AS-VN VNPT Corp,VN
-2516    | 106.187.96.82    | KDDI KDDI CORPORATION,JP
+2516    | 106.187.96.82    | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 12876   | 195.154.91.61    | AS12876 ONLINE S.A.S.,FR
 6830    | 78.102.207.115   | LGI-UPC Liberty Global Operations B.V.,AT
 8560    | 74.208.220.222   | ONEANDONE-AS 1&1 Internet AG,DE
@@ -1287,7 +1288,7 @@ NA      | 193.228.143.225  | NA
 50266   | 85.144.162.100   | WIERICKE Vodafone Libertel B.V.,NL
 5410    | 89.92.245.243    | ASN-BOUYGTEL-ISP Bouygues Telecom SA,FR
 5089    | 81.99.247.21     | NTL Virgin Media Limited,GB
-3209    | 178.0.76.172     | VODANET Vodafone GmbH,DE
+31334   | 178.0.76.172     | KABELDEUTSCHLAND-AS Vodafone Kabel Deutschland GmbH,DE
 12876   | 195.154.108.78   | AS12876 ONLINE S.A.S.,FR
 2496    | 129.237.123.57   | UKANS - University of Kansas,US
 3320    | 217.251.213.17   | DTAG Deutsche Telekom AG,DE
@@ -1322,7 +1323,7 @@ NA      | 193.228.143.225  | NA
 19108   | 74.194.155.110   | SUDDENLINK-COMMUNICATIONS - Suddenlink Communications,US
 12876   | 195.154.111.124  | AS12876 ONLINE S.A.S.,FR
 20857   | 77.72.150.150    | TRANSIP-AS TransIP B.V.,NL
-2516    | 106.187.47.17    | KDDI KDDI CORPORATION,JP
+2516    | 106.187.47.17    | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 62567   | 107.170.114.204  | DIGITALOCEAN-ASN-NY2 - Digital Ocean, Inc.,US
 12714   | 79.120.41.147    | TI-AS Net By Net Holding LLC,RU
 14576   | 185.104.8.130    | HOSTING-SOLUTIONS - Hosting Solution Ltd.,US
@@ -1392,12 +1393,12 @@ NA      | 193.228.143.225  | NA
 6939    | 45.79.109.55     | HURRICANE - Hurricane Electric, Inc.,US
 20001   | 75.80.160.236    | ROADRUNNER-WEST - Time Warner Cable Internet LLC,US
 31019   | 91.228.151.52    | MEANIE Paulus M. Hoogsteder trading as Meanie,NL
-NA      | 193.228.143.17   | NA
+43326   | 193.228.143.17   | FLASHDANCE-AS Flashdance AB,SE
 57286   | 185.37.226.197   | ASGIGAS GIGAS HOSTING S.L.,ES
 24940   | 78.46.17.136     | HETZNER-AS Hetzner Online GmbH,DE
 29518   | 83.233.119.138   | BREDBAND2 Bredband2 AB,SE
 198599  | 37.228.134.103   | WEESLY Thomas Moehring trading as Weesly,DE
-2518    | 119.240.82.130   | BIGLOBE BIGLOBE Inc.,JP
+2518    | 119.240.82.130   | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 6871    | 81.174.150.43    | PLUSNET PlusNet plc.,GB
 3320    | 87.153.232.13    | DTAG Deutsche Telekom AG,DE
 5432    | 109.129.253.3    | BELGACOM-SKYNET-AS Proximus NV,BE
@@ -1418,7 +1419,7 @@ NA      | 193.228.143.17   | NA
 14051   | 69.62.162.178    | SUREWEST - Consolidated Communications, Inc.,US
 8972    | 188.138.112.60   | PLUSSERVER-AS PlusServer AG,DE
 39651   | 83.255.49.254    | COMHEM-SWEDEN Com Hem AB,SE
-2514    | 219.117.206.46   | INFOSPHERE NTT PC Communications, Inc.,JP
+2514    | 219.117.206.46   | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 12668   | 188.226.62.174   | MIRALOGIC-AS LLC _KomTehCentr_,RU
 31334   | 91.65.136.92     | KABELDEUTSCHLAND-AS Vodafone Kabel Deutschland GmbH,DE
 60781   | 37.48.81.27      | LEASEWEB-NL LeaseWeb Netherlands B.V.,NL
@@ -1550,7 +1551,7 @@ NA      | 193.228.143.17   | NA
 701     | 108.24.133.240   | UUNET - MCI Communications Services, Inc. d/b/a Verizon Business,US
 8972    | 85.25.201.30     | PLUSSERVER-AS PlusServer AG,DE
 680     | 139.18.25.35     | DFN Verein zur Foerderung eines Deutschen Forschungsnetzes e.V.,DE
-2856    | 31.50.110.134    | BT-UK-AS BT Public Internet Service,GB
+2856    | 31.50.110.134    | BT-UK-AS British Telecommunications PLC,GB
 28099   | 37.235.52.67     | iHosting Servicios Internet Ltda.,CL
 42695   | 141.255.189.161  | CNHAB City Network Hosting AB,SE
 16276   | 198.50.133.245   | OVH OVH SAS,FR
@@ -1863,8 +1864,9 @@ NA      | 193.228.143.17   | NA
 36352   | 199.21.114.114   | AS-COLOCROSSING - ColoCrossing,US
 55053   | 104.167.117.109  | COLOWAREHOUSEONTARIO - 2267921 ONTARIO LTD,CA
 14613   | 199.127.226.150  | TOCICI - TOCICI LLC,US
-2516    | 106.187.55.239   | KDDI KDDI CORPORATION,JP
+2516    | 106.187.55.239   | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 5588    | 217.20.130.72    | GTSCE T-Mobile Czech Republic a.s.,CZ
+8246    | 217.20.130.72    | GTS-POLSKA-AS T-Mobile Polska S.A.,PL
 11427   | 67.11.140.214    | SCRR-11427 - Time Warner Cable Internet LLC,US
 51815   | 62.102.148.67    | TEKNIKBYRAN Teknikbyran i Sverige AB,SE
 11260   | 199.255.223.88   | EASTLINK-HSI - EastLink,CA
@@ -1874,7 +1876,7 @@ NA      | 193.228.143.17   | NA
 15083   | 65.111.186.66    | INFOLINK-MIA-US - Infolink Global Corporation,US
 20657   | 195.68.215.30    | ATLANTIS Atlantis BG, Ltd.,BG
 51852   | 81.17.16.51      | PLI-AS Private Layer INC,CH
-10013   | 36.55.234.221    | FBDC FreeBit Co.,Ltd.,JP
+10013   | 36.55.234.221    | JPNIC-NET-JP-AS-BLOCK Japan Network Information Center,JP
 42708   | 31.220.7.143     | PORTLANE Portlane AB,SE
 16276   | 158.69.214.254   | OVH OVH SAS,FR
 51167   | 178.238.224.132  | CONTABO Contabo GmbH,DE
@@ -1937,13 +1939,13 @@ NA      | 193.228.143.17   | NA
 3320    | 79.210.226.163   | DTAG Deutsche Telekom AG,DE
 13030   | 212.51.155.109   | INIT7 Init7 (Switzerland) Ltd.,CH
 16276   | 37.59.14.201     | OVH OVH SAS,FR
-2856    | 86.173.165.128   | BT-UK-AS BT Public Internet Service,GB
+2856    | 86.173.165.128   | BT-UK-AS British Telecommunications PLC,GB
 6830    | 78.45.8.148      | LGI-UPC Liberty Global Operations B.V.,AT
 13127   | 82.173.59.64     | VERSATEL Tele 2 Nederland B.V.,NL
 15895   | 46.118.39.9      | KSNET-AS _Kyivstar_ PJSC,UA
 3265    | 83.162.188.100   | XS4ALL-NL XS4ALL Internet BV,NL
 12322   | 82.227.125.245   | PROXAD Free SAS,FR
-10753   | 209.148.92.154   | LVLT-10753 - Level 3 Communications, Inc.,US
+394844  | 209.148.92.154   | ROOT-LEVEL-TECHNOLOGY - Root Level Technology, LLC,US
 16276   | 51.254.83.238    | OVH OVH SAS,FR
 29854   | 68.169.38.13     | WESTHOST - WestHost, Inc.,US
 35366   | 81.7.11.70       | ISPPRO-AS ISPpro Internet KG,DE
@@ -1961,7 +1963,7 @@ NA      | 193.228.143.17   | NA
 29278   | 79.172.193.32    | DENINET-HU-AS Deninet KFT,HU
 43541   | 93.185.101.172   | VSHOSTING VSHosting s.r.o.,CZ
 15830   | 178.79.159.224   | TELECITY-LON TELECITYGROUP INTERNATIONAL LIMITED,GB
-2856    | 217.40.85.194    | BT-UK-AS BT Public Internet Service,GB
+2856    | 217.40.85.194    | BT-UK-AS British Telecommunications PLC,GB
 6805    | 95.114.73.6      | TDDE-ASN1 Telefonica Germany GmbH & Co.OHG,DE
 16276   | 167.114.205.2    | OVH OVH SAS,FR
 3209    | 178.4.26.42      | VODANET Vodafone GmbH,DE
@@ -2235,7 +2237,7 @@ NA      | 193.228.143.17   | NA
 7922    | 24.20.185.65     | COMCAST-7922 - Comcast Cable Communications, Inc.,US
 200130  | 146.185.177.103  | DIGITALOCEAN-ASN-1 Digital Ocean, Inc.,EU
 16276   | 51.255.40.227    | OVH OVH SAS,FR
-2856    | 86.166.89.62     | BT-UK-AS BT Public Internet Service,GB
+2856    | 86.166.89.62     | BT-UK-AS British Telecommunications PLC,GB
 7018    | 108.240.182.140  | ATT-INTERNET4 - AT&T Services, Inc.,US
 12695   | 95.163.121.140   | DINET-AS JSC Digital Network,RU
 701     | 108.32.49.20     | UUNET - MCI Communications Services, Inc. d/b/a Verizon Business,US
@@ -2338,7 +2340,7 @@ NA      | 193.228.143.17   | NA
 3243    | 85.242.186.118   | MEO-RESIDENCIAL MEO - SERVICOS DE COMUNICACOES E MULTIMEDIA S.A.,PT
 24940   | 178.63.18.25     | HETZNER-AS Hetzner Online GmbH,DE
 31463   | 178.17.41.141    | FOURD-AS 4D Data Centres Ltd,GB
-2516    | 106.185.38.151   | KDDI KDDI CORPORATION,JP
+2516    | 106.185.38.151   | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 197226  | 155.133.38.226   | SPRINT-SDC _SPRINT_ S.A.,PL
 12322   | 88.170.156.14    | PROXAD Free SAS,FR
 35158   | 85.233.240.94    | DANSKNET Dansk Net A/S,DK
@@ -2548,7 +2550,7 @@ NA      | 193.228.143.17   | NA
 16276   | 37.187.2.173     | OVH OVH SAS,FR
 3209    | 92.210.12.35     | VODANET Vodafone GmbH,DE
 133165  | 128.199.149.173  | DIGITALOCEAN-AS-AP Digital Ocean, Inc.,SG
-2516    | 114.17.212.47    | KDDI KDDI CORPORATION,JP
+2516    | 114.17.212.47    | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 202109  | 178.62.58.43     | DIGITALOCEAN-ASN-2 Digital Ocean, Inc.,GB
 7545    | 14.202.108.2     | TPG-INTERNET-AP TPG Telecom Limited,AU
 24940   | 144.76.92.46     | HETZNER-AS Hetzner Online GmbH,DE
@@ -2591,7 +2593,7 @@ NA      | 193.228.143.17   | NA
 16276   | 149.202.49.87    | OVH OVH SAS,FR
 16276   | 5.196.66.162     | OVH OVH SAS,FR
 24940   | 78.46.247.36     | HETZNER-AS Hetzner Online GmbH,DE
-2856    | 217.42.56.70     | BT-UK-AS BT Public Internet Service,GB
+2856    | 217.42.56.70     | BT-UK-AS British Telecommunications PLC,GB
 55053   | 104.167.107.48   | COLOWAREHOUSEONTARIO - 2267921 ONTARIO LTD,CA
 3320    | 87.159.179.70    | DTAG Deutsche Telekom AG,DE
 24940   | 176.9.119.167    | HETZNER-AS Hetzner Online GmbH,DE
@@ -2664,7 +2666,7 @@ NA      | 193.228.143.17   | NA
 6830    | 92.108.61.249    | LGI-UPC Liberty Global Operations B.V.,AT
 62638   | 104.245.233.128  | QUERY-FOUNDRY - Query Foundry, LLC,US
 1249    | 64.254.175.3     | FIVE-COLLEGES-AS - Five Colleges Network,US
-2527    | 182.169.138.22   | SO-NET So-net Entertainment Corporation,JP
+2527    | 182.169.138.22   | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 200052  | 185.21.217.10    | FERAL Joshua Peter McQuistan,GB
 6830    | 84.113.195.70    | LGI-UPC Liberty Global Operations B.V.,AT
 14061   | 104.131.136.238  | DIGITALOCEAN-ASN - Digital Ocean, Inc.,US
@@ -2765,7 +2767,7 @@ NA      | 193.228.143.17   | NA
 41661   | 37.113.145.106   | ERTH-CHEL-AS JSC _ER-Telecom Holding_,RU
 7922    | 98.221.48.12     | COMCAST-7922 - Comcast Cable Communications, Inc.,US
 49981   | 93.170.77.174    | WORLDSTREAM WorldStream,NL
-2856    | 86.172.19.82     | BT-UK-AS BT Public Internet Service,GB
+2856    | 86.172.19.82     | BT-UK-AS British Telecommunications PLC,GB
 12322   | 82.250.219.141   | PROXAD Free SAS,FR
 701     | 108.31.40.5      | UUNET - MCI Communications Services, Inc. d/b/a Verizon Business,US
 12876   | 195.154.65.29    | AS12876 ONLINE S.A.S.,FR
@@ -3023,7 +3025,7 @@ NA      | 193.228.143.17   | NA
 8551    | 81.218.91.154    | BEZEQ-INTERNATIONAL-AS Bezeq International-Ltd,IL
 3265    | 83.163.77.195    | XS4ALL-NL XS4ALL Internet BV,NL
 63949   | 97.107.139.28    | LINODE-AP Linode, LLC,SG
-10013   | 36.55.243.60     | FBDC FreeBit Co.,Ltd.,JP
+10013   | 36.55.243.60     | JPNIC-NET-JP-AS-BLOCK Japan Network Information Center,JP
 9143    | 84.105.241.19    | ZIGGO Ziggo B.V.,NL
 8708    | 5.15.204.136     | RCS-RDS RCS & RDS SA,RO
 202018  | 178.62.199.226   | DIGITALOCEAN-ASN-3 Digital Ocean, Inc.,NL
@@ -3043,7 +3045,7 @@ NA      | 193.228.143.17   | NA
 394362  | 159.203.22.192   | DIGITALOCEAN-ASN-CA1 - Digital Ocean, Inc.,US
 12876   | 62.210.113.54    | AS12876 ONLINE S.A.S.,FR
 7922    | 73.8.110.203     | COMCAST-7922 - Comcast Cable Communications, Inc.,US
-10013   | 183.181.58.166   | FBDC FreeBit Co.,Ltd.,JP
+10013   | 183.181.58.166   | JPNIC-NET-JP-AS-BLOCK Japan Network Information Center,JP
 3320    | 80.138.76.110    | DTAG Deutsche Telekom AG,DE
 8997    | 92.101.36.97     | ASN-SPBNIT PJSC Rostelecom,RU
 43557   | 78.156.119.200   | ASEMNET EnergiMidt Fiberbredband A/S,DK
@@ -3108,7 +3110,7 @@ NA      | 193.228.143.17   | NA
 9044    | 82.220.89.53     | SOLNET BSE Software GmbH,CH
 38843   | 223.27.33.202    | PUMO-NET PUMO NETWORK DIGITAL TECHNOLOGY CO.,LTD,TW
 3320    | 217.236.102.234  | DTAG Deutsche Telekom AG,DE
-2516    | 106.186.121.129  | KDDI KDDI CORPORATION,JP
+2516    | 106.186.121.129  | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 12876   | 62.210.36.16     | AS12876 ONLINE S.A.S.,FR
 43289   | 178.17.174.10    | TRABIA trabia network,MD
 53755   | 148.163.73.112   | IOFLOOD - Input Output Flood LLC,US
@@ -3213,7 +3215,7 @@ NA      | 193.228.143.17   | NA
 54858   | 104.156.102.200  | AS-SBI - Condointernet.net,US
 24940   | 85.10.202.87     | HETZNER-AS Hetzner Online GmbH,DE
 8767    | 46.244.247.155   | MNET-AS M-net Telekommunikations GmbH, Germany,DE
-2856    | 217.34.135.225   | BT-UK-AS BT Public Internet Service,GB
+2856    | 217.34.135.225   | BT-UK-AS British Telecommunications PLC,GB
 15830   | 178.79.141.108   | TELECITY-LON TELECITYGROUP INTERNATIONAL LIMITED,GB
 16276   | 51.254.101.17    | OVH OVH SAS,FR
 3352    | 88.12.197.111    | TELEFONICA_DE_ESPANA TELEFONICA DE ESPANA,ES
@@ -3330,7 +3332,7 @@ NA      | 193.228.143.17   | NA
 10091   | 202.156.105.95   | SCV-AS-AP StarHub Cable Vision Ltd,SG
 3320    | 84.151.221.109   | DTAG Deutsche Telekom AG,DE
 33387   | 192.187.124.98   | DATASHACK - DataShack, LC,US
-2856    | 86.183.247.248   | BT-UK-AS BT Public Internet Service,GB
+2856    | 86.183.247.248   | BT-UK-AS British Telecommunications PLC,GB
 29670   | 217.197.83.162   | IN-BERLIN-AS Individual Network Berlin e.V.,DE
 29695   | 51.174.197.117   | ALTIBOX_AS Altibox AS,NO
 5739    | 128.114.97.26    | UCSC - University of California, Santa Cruz,US
@@ -3425,16 +3427,16 @@ NA      | 193.228.143.17   | NA
 4766    | 59.5.26.30       | KIXS-AS-KR Korea Telecom,KR
 6724    | 81.169.187.228   | STRATO STRATO AG,DE
 29562   | 109.193.160.140  | KABELBW-ASN Kabel BW GmbH,DE
-6849    | 95.132.124.152   | UKRTELNET JSC UKRTELECOM,UA
+6849    | 95.132.124.152   | UKRTELNET PJSC UKRTELECOM,UA
 60781   | 77.81.240.41     | LEASEWEB-NL LeaseWeb Netherlands B.V.,NL
-2510    | 175.179.114.4    | INFOWEB FUJITSU LIMITED,JP
+2510    | 175.179.114.4    | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 16276   | 37.59.96.82      | OVH OVH SAS,FR
 42005   | 92.240.234.46    | LIGHTSTORM-COMMUNICATIONS-SRO-SK-AS LightStorm Communications s.r.o.,SK
 5577    | 94.242.253.92    | ROOT root SA,LU
 16276   | 167.114.29.117   | OVH OVH SAS,FR
 16276   | 167.114.29.114   | OVH OVH SAS,FR
 16276   | 198.50.145.207   | OVH OVH SAS,FR
-2856    | 81.129.227.199   | BT-UK-AS BT Public Internet Service,GB
+2856    | 81.129.227.199   | BT-UK-AS British Telecommunications PLC,GB
 10103   | 14.136.236.150   | HKBN-AS-AP HK Broadband Network Ltd.,HK
 12876   | 212.47.246.221   | AS12876 ONLINE S.A.S.,FR
 37560   | 46.246.39.166    | CYBERDYNE,LR
@@ -3484,12 +3486,12 @@ NA      | 193.228.143.17   | NA
 8218    | 212.69.166.153   | NEO-ASN Neo Telecoms S.A.S.,FR
 31334   | 188.195.173.149  | KABELDEUTSCHLAND-AS Vodafone Kabel Deutschland GmbH,DE
 28908   | 94.198.68.172    | T3 Telecom3 Sverige AB,SE
-2514    | 111.89.168.73    | INFOSPHERE NTT PC Communications, Inc.,JP
+2514    | 111.89.168.73    | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 202018  | 178.62.207.177   | DIGITALOCEAN-ASN-3 Digital Ocean, Inc.,NL
 680     | 141.54.159.184   | DFN Verein zur Foerderung eines Deutschen Forschungsnetzes e.V.,DE
 7922    | 98.201.49.226    | COMCAST-7922 - Comcast Cable Communications, Inc.,US
 12876   | 212.83.129.104   | AS12876 ONLINE S.A.S.,FR
-2856    | 109.155.198.208  | BT-UK-AS BT Public Internet Service,GB
+2856    | 109.155.198.208  | BT-UK-AS British Telecommunications PLC,GB
 41715   | 91.138.70.15     | ASTBSUHR Technische Betriebe Suhr,CH
 8473    | 79.136.31.149    | BAHNHOF Bahnhof Internet AB,SE
 5089    | 86.27.242.151    | NTL Virgin Media Limited,GB
@@ -3657,12 +3659,12 @@ NA      | 193.228.143.17   | NA
 8839    | 213.225.160.223  | SDV-AS SdV Plurimedia,FR
 31334   | 88.134.8.200     | KABELDEUTSCHLAND-AS Vodafone Kabel Deutschland GmbH,DE
 55536   | 103.10.197.50    | PSWITCH-HK PACSWITCH GLOBAL IP NETWORK,HK
-2510    | 124.25.94.146    | INFOWEB FUJITSU LIMITED,JP
+2510    | 124.25.94.146    | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 6939    | 173.230.154.184  | HURRICANE - Hurricane Electric, Inc.,US
 197922  | 91.229.20.27     | FIRSTHEBERG Techcrea Solutions Sarl,FR
 6830    | 94.114.188.72    | LGI-UPC Liberty Global Operations B.V.,AT
 20857   | 149.210.221.48   | TRANSIP-AS TransIP B.V.,NL
-2516    | 106.185.48.223   | KDDI KDDI CORPORATION,JP
+2516    | 106.185.48.223   | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 8767    | 188.174.189.128  | MNET-AS M-net Telekommunikations GmbH, Germany,DE
 43350   | 109.201.131.11   | NFORCE NFOrce Entertainment BV,NL
 2119    | 95.34.59.250     | TELENOR-NEXTEL Telenor Norge AS,NO
@@ -3671,7 +3673,7 @@ NA      | 193.228.143.17   | NA
 680     | 134.245.207.1    | DFN Verein zur Foerderung eines Deutschen Forschungsnetzes e.V.,DE
 3320    | 93.230.204.222   | DTAG Deutsche Telekom AG,DE
 8972    | 188.138.82.145   | PLUSSERVER-AS PlusServer AG,DE
-2856    | 86.140.24.39     | BT-UK-AS BT Public Internet Service,GB
+2856    | 86.140.24.39     | BT-UK-AS British Telecommunications PLC,GB
 1653    | 193.10.0.225     | SUNET SUNET Swedish University Network,SE
 202018  | 178.62.201.15    | DIGITALOCEAN-ASN-3 Digital Ocean, Inc.,NL
 16276   | 37.187.239.8     | OVH OVH SAS,FR
@@ -3681,7 +3683,7 @@ NA      | 193.228.143.17   | NA
 31246   | 83.240.83.197    | NETBOX-AS SMART Comp. a.s.,CZ
 24940   | 78.47.203.76     | HETZNER-AS Hetzner Online GmbH,DE
 39651   | 80.216.123.252   | COMHEM-SWEDEN Com Hem AB,SE
-2856    | 109.155.154.74   | BT-UK-AS BT Public Internet Service,GB
+2856    | 109.155.154.74   | BT-UK-AS British Telecommunications PLC,GB
 29562   | 46.223.247.17    | KABELBW-ASN Kabel BW GmbH,DE
 6805    | 2.240.117.198    | TDDE-ASN1 Telefonica Germany GmbH & Co.OHG,DE
 26827   | 104.128.161.73   | EPBTELECOM - EPB Fiber Optics,US
@@ -3830,7 +3832,7 @@ NA      | 193.228.143.17   | NA
 8972    | 85.25.86.250     | PLUSSERVER-AS PlusServer AG,DE
 8972    | 85.25.86.252     | PLUSSERVER-AS PlusServer AG,DE
 13768   | 69.28.82.48      | PEER1 - Peer 1 Network (USA) Inc.,US
-17676   | 126.70.7.146     | GIGAINFRA Softbank BB Corp.,JP
+17676   | 126.70.7.146     | JPNIC-JP-ASN-BLOCK Japan Network Information Center,JP
 15516   | 77.75.166.43     | DK-ARROWHEAD Arrowhead A/S,DK
 12741   | 78.11.180.123    | AS-NETIA Netia SA,PL
 57963   | 77.234.49.206    | LYNET-INTERNETT-AS Lynet Internett AS,NO
@@ -3884,7 +3886,7 @@ NA      | 193.228.143.17   | NA
 6315    | 68.69.169.131    | XMISSION - XMission, L.C.,US
 8427    | 46.167.80.118    | MAGINFO-AS Maginfo JSC,RU
 202109  | 46.101.21.143    | DIGITALOCEAN-ASN-2 Digital Ocean, Inc.,GB
-2856    | 213.122.117.7    | BT-UK-AS BT Public Internet Service,GB
+2856    | 213.122.117.7    | BT-UK-AS British Telecommunications PLC,GB
 22759   | 104.220.133.225  | ASTOUND-CABLE - Wave Broadband,US
 30036   | 173.22.240.226   | MEDIACOM-ENTERPRISE-BUSINESS - Mediacom Communications Corp,US
 49981   | 109.236.82.53    | WORLDSTREAM WorldStream,NL
@@ -3894,7 +3896,7 @@ NA      | 193.228.143.17   | NA
 49544   | 213.163.72.162   | INTERACTIVE3D i3d B.V.,NL
 29951   | 70.99.204.97     | SYPTEC-NOC - Syptec,US
 16276   | 5.196.0.149      | OVH OVH SAS,FR
-9609    | 218.33.223.3     | EACCESS Ymobile Corporation,JP
+9609    | 218.33.223.3     | JPNIC-NET-JP-AS-BLOCK Japan Network Information Center,JP
 24940   | 176.9.54.142     | HETZNER-AS Hetzner Online GmbH,DE
 12876   | 212.47.245.76    | AS12876 ONLINE S.A.S.,FR
 47692   | 146.255.57.228   | NESSUS Nessus GmbH,AT
@@ -3965,7 +3967,7 @@ NA      | 193.228.143.17   | NA
 34989   | 91.189.176.65    | SERVETHEWORLD-AS ServeTheWorld AS,NO
 42708   | 31.220.5.153     | PORTLANE Portlane AB,SE
 60781   | 95.211.159.98    | LEASEWEB-NL LeaseWeb Netherlands B.V.,NL
-15836   | 176.123.6.157    | AXAUTSYS Arax-Impex s.r.l.,MD
+200019  | 176.123.6.157    | ASCLOUDATA ALEXHOST SRL,MD
 24940   | 88.198.207.222   | HETZNER-AS Hetzner Online GmbH,DE
 24940   | 144.76.91.135    | HETZNER-AS Hetzner Online GmbH,DE
 24940   | 144.76.39.202    | HETZNER-AS Hetzner Online GmbH,DE
@@ -4039,7 +4041,7 @@ NA      | 193.228.143.17   | NA
 24940   | 176.9.140.108    | HETZNER-AS Hetzner Online GmbH,DE
 16276   | 5.39.88.19       | OVH OVH SAS,FR
 29518   | 31.209.52.80     | BREDBAND2 Bredband2 AB,SE
-2514    | 61.194.148.105   | INFOSPHERE NTT PC Communications, Inc.,JP
+2514    | 61.194.148.105   | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 39642   | 46.32.38.60      | DK-ESS-AS Stofa A/S,DK
 24940   | 5.9.33.29        | HETZNER-AS Hetzner Online GmbH,DE
 209     | 67.42.3.9        | CENTURYLINK-US-LEGACY-QWEST - Qwest Communications Company, LLC,US
@@ -4078,7 +4080,7 @@ NA      | 193.142.30.66    | NA
 12876   | 195.154.77.149   | AS12876 ONLINE S.A.S.,FR
 12876   | 212.47.227.195   | AS12876 ONLINE S.A.S.,FR
 29169   | 217.70.191.13    | GANDI-AS GANDI SAS,FR
-2856    | 86.136.154.138   | BT-UK-AS BT Public Internet Service,GB
+2856    | 86.136.154.138   | BT-UK-AS British Telecommunications PLC,GB
 62567   | 162.243.53.67    | DIGITALOCEAN-ASN-NY2 - Digital Ocean, Inc.,US
 12715   | 37.14.198.44     | JAZZNET Jazz Telecom S.A.,ES
 29580   | 78.83.19.94      | HOMELAN-AS MOBILTEL EAD,BG
@@ -4153,7 +4155,7 @@ NA      | 193.142.30.66    | NA
 47236   | 178.19.242.82    | CITYLINK-AS CityLink Ltd,RU
 6830    | 89.70.84.74      | LGI-UPC Liberty Global Operations B.V.,AT
 16276   | 151.80.164.147   | OVH OVH SAS,FR
-2497    | 125.30.31.144    | IIJ Internet Initiative Japan Inc.,JP
+2497    | 125.30.31.144    | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 24940   | 5.9.7.252        | HETZNER-AS Hetzner Online GmbH,DE
 16276   | 37.59.2.188      | OVH OVH SAS,FR
 7385    | 209.210.210.21   | INTEGRATELECOM - Integra Telecom, Inc.,US
@@ -4169,7 +4171,7 @@ NA      | 193.142.30.66    | NA
 9145    | 85.16.128.242    | EWETEL EWE TEL GmbH,DE
 17746   | 121.98.226.170   | ORCONINTERNET-NZ-AP Orcon Internet,NZ
 4685    | 220.157.195.243  | ASAHI-NET Asahi Net,JP
-2856    | 86.174.223.70    | BT-UK-AS BT Public Internet Service,GB
+2856    | 86.174.223.70    | BT-UK-AS British Telecommunications PLC,GB
 43350   | 77.247.181.164   | NFORCE NFOrce Entertainment BV,NL
 43350   | 77.247.181.165   | NFORCE NFOrce Entertainment BV,NL
 43350   | 77.247.181.166   | NFORCE NFOrce Entertainment BV,NL
@@ -4180,7 +4182,7 @@ NA      | 193.142.30.66    | NA
 3209    | 178.12.99.187    | VODANET Vodafone GmbH,DE
 3320    | 217.88.177.103   | DTAG Deutsche Telekom AG,DE
 24961   | 146.0.36.117     | MYLOC-AS myLoc managed IT AG,DE
-2516    | 106.185.49.137   | KDDI KDDI CORPORATION,JP
+2516    | 106.185.49.137   | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 133165  | 128.199.224.88   | DIGITALOCEAN-AS-AP Digital Ocean, Inc.,SG
 6830    | 188.167.69.224   | LGI-UPC Liberty Global Operations B.V.,AT
 16276   | 37.187.38.147    | OVH OVH SAS,FR
@@ -4217,7 +4219,7 @@ NA      | 193.142.30.66    | NA
 9       | 128.237.157.114  | CMU-ROUTER - Carnegie Mellon University,US
 3320    | 84.130.168.118   | DTAG Deutsche Telekom AG,DE
 7922    | 173.13.141.28    | COMCAST-7922 - Comcast Cable Communications, Inc.,US
-2856    | 86.150.194.5     | BT-UK-AS BT Public Internet Service,GB
+2856    | 86.150.194.5     | BT-UK-AS British Telecommunications PLC,GB
 24282   | 153.127.254.29   | KIR KAGOYA JAPAN Inc.,JP
 209     | 75.175.20.168    | CENTURYLINK-US-LEGACY-QWEST - Qwest Communications Company, LLC,US
 680     | 134.169.92.218   | DFN Verein zur Foerderung eines Deutschen Forschungsnetzes e.V.,DE
@@ -4350,7 +4352,7 @@ NA      | 193.142.30.66    | NA
 8560    | 87.106.49.149    | ONEANDONE-AS 1&1 Internet AG,DE
 55720   | 45.121.147.114   | GIGABIT-MY Gigabit Hosting Sdn Bhd,MY
 51167   | 213.136.91.11    | CONTABO Contabo GmbH,DE
-17506   | 113.38.41.173    | UCOM UCOM Corp.,JP
+17506   | 113.38.41.173    | JPNIC-JP-ASN-BLOCK Japan Network Information Center,JP
 12876   | 62.210.71.167    | AS12876 ONLINE S.A.S.,FR
 33604   | 204.13.46.104    | BTNETWORK - Burlington Telecom,US
 5410    | 89.89.170.153    | ASN-BOUYGTEL-ISP Bouygues Telecom SA,FR
@@ -4435,14 +4437,14 @@ NA      | 193.142.30.66    | NA
 7922    | 69.181.138.121   | COMCAST-7922 - Comcast Cable Communications, Inc.,US
 24940   | 5.9.171.36       | HETZNER-AS Hetzner Online GmbH,DE
 52173   | 185.61.148.93    | MAKONIX Makonix SIA,LV
-2516    | 106.186.28.33    | KDDI KDDI CORPORATION,JP
+2516    | 106.186.28.33    | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 29562   | 134.3.54.196     | KABELBW-ASN Kabel BW GmbH,DE
 3320    | 79.197.194.210   | DTAG Deutsche Telekom AG,DE
 202018  | 188.166.58.218   | DIGITALOCEAN-ASN-3 Digital Ocean, Inc.,NL
 14615   | 67.197.254.50    | ROCK-HILL-TELEPHONE - Comporium, Inc,US
 15626   | 217.12.199.208   | ITLAS ITL Company,UA
 15626   | 217.12.199.209   | ITLAS ITL Company,UA
-2516    | 106.186.114.41   | KDDI KDDI CORPORATION,JP
+2516    | 106.186.114.41   | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 12876   | 212.47.237.73    | AS12876 ONLINE S.A.S.,FR
 41843   | 188.232.112.79   | ERTH-OMSK-AS JSC _ER-Telecom Holding_,RU
 6724    | 81.169.255.235   | STRATO STRATO AG,DE
@@ -4485,7 +4487,7 @@ NA      | 193.142.30.66    | NA
 50837   | 31.171.244.51    | CLOUDSIGMA-AS CLOUDSIGMA AG,CH
 16276   | 198.27.97.184    | OVH OVH SAS,FR
 7018    | 104.190.164.172  | ATT-INTERNET4 - AT&T Services, Inc.,US
-2856    | 86.185.26.106    | BT-UK-AS BT Public Internet Service,GB
+2856    | 86.185.26.106    | BT-UK-AS British Telecommunications PLC,GB
 14061   | 192.241.206.171  | DIGITALOCEAN-ASN - Digital Ocean, Inc.,US
 23679   | 150.107.150.102  | NUSANET-AS-ID Media Antar Nusa PT.,ID
 23679   | 150.107.150.101  | NUSANET-AS-ID Media Antar Nusa PT.,ID
@@ -4711,7 +4713,7 @@ NA      | 193.142.30.66    | NA
 3320    | 217.250.208.45   | DTAG Deutsche Telekom AG,DE
 16276   | 192.99.111.11    | OVH OVH SAS,FR
 29278   | 79.172.249.8     | DENINET-HU-AS Deninet KFT,HU
-2856    | 86.160.118.110   | BT-UK-AS BT Public Internet Service,GB
+2856    | 86.160.118.110   | BT-UK-AS British Telecommunications PLC,GB
 48635   | 92.63.173.24     | PCEXTREME PCextreme B.V.,NL
 16276   | 167.114.153.21   | OVH OVH SAS,FR
 11351   | 74.70.248.40     | RR-NYSREGION-ASN-01 - Time Warner Cable Internet LLC,US
@@ -4771,7 +4773,7 @@ NA      | 193.142.30.66    | NA
 3320    | 93.195.220.167   | DTAG Deutsche Telekom AG,DE
 16276   | 37.187.101.143   | OVH OVH SAS,FR
 9371    | 49.212.166.38    | SAKURA-C SAKURA Internet Inc.,JP
-2516    | 106.186.30.52    | KDDI KDDI CORPORATION,JP
+2516    | 106.186.30.52    | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 24940   | 144.76.117.169   | HETZNER-AS Hetzner Online GmbH,DE
 49335   | 31.192.104.131   | NCONNECT-AS Mir Telematiki Ltd.,RU
 49335   | 31.192.104.130   | NCONNECT-AS Mir Telematiki Ltd.,RU
@@ -5054,7 +5056,7 @@ NA      | 193.142.30.66    | NA
 7922    | 50.177.108.229   | COMCAST-7922 - Comcast Cable Communications, Inc.,US
 20857   | 141.138.141.208  | TRANSIP-AS TransIP B.V.,NL
 12876   | 212.83.177.193   | AS12876 ONLINE S.A.S.,FR
-8422    | 89.0.250.68      | NETCOLOGNE NetCologne GmbH,DE
+9198    | 89.0.250.68      | KAZTELECOM-AS JSC Kazakhtelecom,KZ
 13037   | 82.69.76.35      | ZEN-AS Zen Internet Ltd,GB
 3320    | 91.51.83.239     | DTAG Deutsche Telekom AG,DE
 49770   | 95.143.193.145   | INTERNETPORT-AS Internetport Sweden AB,SE
@@ -5092,14 +5094,14 @@ NA      | 193.142.30.66    | NA
 24940   | 188.40.41.115    | HETZNER-AS Hetzner Online GmbH,DE
 57494   | 109.237.108.128  | ADMAN-AS Krek Ltd.,RU
 49981   | 93.170.77.183    | WORLDSTREAM WorldStream,NL
-10013   | 36.55.228.145    | FBDC FreeBit Co.,Ltd.,JP
+10013   | 36.55.228.145    | JPNIC-NET-JP-AS-BLOCK Japan Network Information Center,JP
 16591   | 23.255.188.254   | GOOGLE-FIBER - Google Fiber Inc.,US
 63949   | 173.255.228.85   | LINODE-AP Linode, LLC,SG
 2119    | 84.202.158.36    | TELENOR-NEXTEL Telenor Norge AS,NO
 12271   | 74.65.215.208    | SCRR-12271 - Time Warner Cable Internet LLC,US
 15830   | 178.79.161.152   | TELECITY-LON TELECITYGROUP INTERNATIONAL LIMITED,GB
 6939    | 173.255.241.235  | HURRICANE - Hurricane Electric, Inc.,US
-2514    | 203.141.154.202  | INFOSPHERE NTT PC Communications, Inc.,JP
+2514    | 203.141.154.202  | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 25596   | 82.197.212.241   | CAMBRIUM-AS Cambrium IT Services B.V.,NL
 3       | 18.82.3.196      | MIT-GATEWAYS - Massachusetts Institute of Technology,US
 21017   | 77.45.142.105    | VSI-AS PJSC Rostelecom,RU
@@ -5175,7 +5177,7 @@ NA      | 193.142.30.66    | NA
 9143    | 82.217.245.7     | ZIGGO Ziggo B.V.,NL
 201229  | 46.101.241.28    | DIGITALOCEAN-GERMANY Digital Ocean, Inc.,DE
 16276   | 37.187.22.87     | OVH OVH SAS,FR
-2516    | 106.186.117.83   | KDDI KDDI CORPORATION,JP
+2516    | 106.186.117.83   | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 8560    | 87.106.55.134    | ONEANDONE-AS 1&1 Internet AG,DE
 16276   | 151.80.200.123   | OVH OVH SAS,FR
 28753   | 185.17.144.81    | LEASEWEB-DE Leaseweb Deutschland GmbH,DE
@@ -5248,7 +5250,7 @@ NA      | 193.142.30.66    | NA
 6830    | 89.71.161.30     | LGI-UPC Liberty Global Operations B.V.,AT
 15943   | 46.59.251.162    | WTNET-AS wilhelm.tel GmbH,DE
 35366   | 81.7.3.141       | ISPPRO-AS ISPpro Internet KG,DE
-2527    | 223.134.115.151  | SO-NET So-net Entertainment Corporation,JP
+2527    | 223.134.115.151  | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 3320    | 84.151.223.63    | DTAG Deutsche Telekom AG,DE
 30633   | 108.59.11.225    | LEASEWEB-US - Leaseweb USA, Inc.,US
 24940   | 144.76.14.145    | HETZNER-AS Hetzner Online GmbH,DE
@@ -5259,7 +5261,7 @@ NA      | 193.142.30.66    | NA
 22773   | 98.164.90.254    | ASN-CXA-ALL-CCI-22773-RDC - Cox Communications Inc.,US
 44923   | 93.92.200.67     | AIRNET Saint-Petersburg Computer Networks Ltd.,RU
 30036   | 50.83.41.151     | MEDIACOM-ENTERPRISE-BUSINESS - Mediacom Communications Corp,US
-2856    | 109.156.170.45   | BT-UK-AS BT Public Internet Service,GB
+2856    | 109.156.170.45   | BT-UK-AS British Telecommunications PLC,GB
 15732   | 87.111.64.7      | IBERBANDA-SPAIN Iberbanda S.A.,ES
 3320    | 87.163.249.133   | DTAG Deutsche Telekom AG,DE
 51815   | 213.185.227.85   | TEKNIKBYRAN Teknikbyran i Sverige AB,SE
@@ -5361,7 +5363,7 @@ NA      | 193.142.30.66    | NA
 60781   | 85.17.249.170    | LEASEWEB-NL LeaseWeb Netherlands B.V.,NL
 28908   | 213.21.123.232   | T3 Telecom3 Sverige AB,SE
 12714   | 176.77.28.49     | TI-AS Net By Net Holding LLC,RU
-2510    | 115.176.25.71    | INFOWEB FUJITSU LIMITED,JP
+2510    | 115.176.25.71    | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 812     | 99.234.43.160    | ROGERS-CABLE - Rogers Cable Communications Inc.,CA
 24940   | 213.239.217.18   | HETZNER-AS Hetzner Online GmbH,DE
 51191   | 130.185.104.44   | XIRRA Xirra GmbH,DE
@@ -5476,7 +5478,7 @@ NA      | 193.142.30.66    | NA
 16276   | 192.99.43.113    | OVH OVH SAS,FR
 48039   | 94.103.175.85    | KGT-AS GHOSTnet GmbH,DE
 16276   | 167.114.166.254  | OVH OVH SAS,FR
-13703   | 216.24.174.245   | BROADRIVER-13703 - BroadRiver Communication Corp.,US
+13703   | 216.24.174.245   | BROADRIVER-13703 - BroadRiver Inc.,US
 36352   | 23.95.43.29      | AS-COLOCROSSING - ColoCrossing,US
 14618   | 52.2.163.62      | AMAZON-AES - Amazon.com, Inc.,US
 12876   | 195.154.81.169   | AS12876 ONLINE S.A.S.,FR
@@ -5489,7 +5491,7 @@ NA      | 193.142.30.66    | NA
 8402    | 95.26.194.78     | CORBINA-AS OJSC _Vimpelcom_,RU
 20115   | 75.132.141.36    | CHARTER-NET-HKY-NC - Charter Communications,US
 7922    | 67.183.173.246   | COMCAST-7922 - Comcast Cable Communications, Inc.,US
-2527    | 121.101.94.167   | SO-NET So-net Entertainment Corporation,JP
+2527    | 121.101.94.167   | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 12876   | 62.210.92.11     | AS12876 ONLINE S.A.S.,FR
 16509   | 52.62.56.46      | AMAZON-02 - Amazon.com, Inc.,US
 701     | 108.29.46.242    | UUNET - MCI Communications Services, Inc. d/b/a Verizon Business,US
@@ -5540,7 +5542,7 @@ NA      | 193.142.30.66    | NA
 7459    | 65.111.114.137   | GRANDECOM-AS1 - Grande Communications Networks, LLC,US
 24940   | 178.63.65.179    | HETZNER-AS Hetzner Online GmbH,DE
 15830   | 109.74.206.21    | TELECITY-LON TELECITYGROUP INTERNATIONAL LIMITED,GB
-2514    | 202.171.156.84   | INFOSPHERE NTT PC Communications, Inc.,JP
+2514    | 202.171.156.84   | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 133165  | 128.199.71.74    | DIGITALOCEAN-AS-AP Digital Ocean, Inc.,SG
 52173   | 185.86.148.142   | MAKONIX Makonix SIA,LV
 34240   | 89.238.77.4      | MANITU manitu GmbH,DE
@@ -5713,7 +5715,7 @@ NA      | 193.142.30.66    | NA
 3265    | 82.161.182.20    | XS4ALL-NL XS4ALL Internet BV,NL
 286     | 86.88.32.199     | KPN KPN International / KPN Eurorings,NL
 1136    | 86.88.32.199     | KPN KPN Internet Solutions,NL
-3209    | 178.2.238.18     | VODANET Vodafone GmbH,DE
+31334   | 178.2.238.18     | KABELDEUTSCHLAND-AS Vodafone Kabel Deutschland GmbH,DE
 8972    | 85.25.130.154    | PLUSSERVER-AS PlusServer AG,DE
 24940   | 46.4.68.38       | HETZNER-AS Hetzner Online GmbH,DE
 31012   | 88.207.20.28     | DCM-AS B.Net Hrvatska d.o.o.,HR
@@ -5781,7 +5783,7 @@ NA      | 193.142.30.66    | NA
 6830    | 84.74.143.7      | LGI-UPC Liberty Global Operations B.V.,AT
 62282   | 79.98.31.42      | RACKRAY UAB Rakrejus,LT
 24961   | 46.228.199.19    | MYLOC-AS myLoc managed IT AG,DE
-2856    | 86.161.182.156   | BT-UK-AS BT Public Internet Service,GB
+2856    | 86.161.182.156   | BT-UK-AS British Telecommunications PLC,GB
 5390    | 83.117.96.178    | EURONET Euronet Communications B.V.,NL
 16086   | 82.128.249.249   | DNA DNA Oy,FI
 42682   | 5.164.229.235    | ERTH-NNOV-AS JSC _ER-Telecom Holding_,RU
@@ -5922,7 +5924,7 @@ NA      | 193.142.30.66    | NA
 50989   | 178.16.208.59    | SITABINFRA-NORDIC-AS SITAB Infrastruktur,NO
 50989   | 178.16.208.58    | SITABINFRA-NORDIC-AS SITAB Infrastruktur,NO
 38333   | 115.187.243.41   | SYMBIO-AS-AU-AP Symbio Networks,AU
-2516    | 106.186.27.209   | KDDI KDDI CORPORATION,JP
+2516    | 106.186.27.209   | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 12871   | 213.148.240.32   | NL-CONCEPTS KPN B.V.,NL
 12271   | 74.66.248.192    | SCRR-12271 - Time Warner Cable Internet LLC,US
 7922    | 68.56.35.133     | COMCAST-7922 - Comcast Cable Communications, Inc.,US
@@ -5990,7 +5992,7 @@ NA      | 193.142.30.66    | NA
 20115   | 66.214.15.139    | CHARTER-NET-HKY-NC - Charter Communications,US
 60781   | 185.17.184.228   | LEASEWEB-NL LeaseWeb Netherlands B.V.,NL
 63949   | 139.162.130.249  | LINODE-AP Linode, LLC,SG
-2856    | 86.165.15.192    | BT-UK-AS BT Public Internet Service,GB
+2856    | 86.165.15.192    | BT-UK-AS British Telecommunications PLC,GB
 8402    | 95.27.163.172    | CORBINA-AS OJSC _Vimpelcom_,RU
 3320    | 91.54.66.185     | DTAG Deutsche Telekom AG,DE
 12876   | 195.154.117.182  | AS12876 ONLINE S.A.S.,FR
@@ -5999,7 +6001,7 @@ NA      | 193.142.30.66    | NA
 6830    | 84.74.125.85     | LGI-UPC Liberty Global Operations B.V.,AT
 3265    | 82.94.251.227    | XS4ALL-NL XS4ALL Internet BV,NL
 46562   | 107.181.174.22   | TOTAL-SERVER-SOLUTIONS - Total Server Solutions L.L.C.,US
-8717    | 92.247.51.169    | SPECTRUMNET MOBILTEL EAD,BG
+29580   | 92.247.51.169    | HOMELAN-AS MOBILTEL EAD,BG
 197019  | 31.31.75.181     | WEDOS WEDOS Internet, a.s.,CZ
 31334   | 31.18.222.91     | KABELDEUTSCHLAND-AS Vodafone Kabel Deutschland GmbH,DE
 8339    | 81.217.13.148    | KABSI-AS Kabelplus GmbH,AT
@@ -6033,6 +6035,7 @@ NA      | 193.142.30.66    | NA
 20742   | 80.64.65.25      | AHOL Internet4U Kereskedelmi es Szolgaltato Kft.,HU
 55470   | 111.118.177.101  | CYFUTURE-AS-IN Cyber Futuristics India Pvt Ltd,IN
 5588    | 62.168.3.212     | GTSCE T-Mobile Czech Republic a.s.,CZ
+8246    | 62.168.3.212     | GTS-POLSKA-AS T-Mobile Polska S.A.,PL
 202018  | 188.166.112.197  | DIGITALOCEAN-ASN-3 Digital Ocean, Inc.,NL
 202018  | 188.166.47.63    | DIGITALOCEAN-ASN-3 Digital Ocean, Inc.,NL
 16276   | 94.23.204.175    | OVH OVH SAS,FR
@@ -6079,7 +6082,7 @@ NA      | 193.142.30.66    | NA
 3320    | 217.85.241.236   | DTAG Deutsche Telekom AG,DE
 34533   | 46.0.191.162     | ESAMARA-AS JSC _ER-Telecom Holding_,RU
 16276   | 151.80.38.15     | OVH OVH SAS,FR
-2527    | 110.66.228.149   | SO-NET So-net Entertainment Corporation,JP
+2527    | 110.66.228.149   | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 36351   | 173.255.194.77   | SOFTLAYER - SoftLayer Technologies Inc.,US
 9143    | 217.122.195.190  | ZIGGO Ziggo B.V.,NL
 47069   | 69.163.100.12    | LYONLABS - LyonLabs, LLC,US
@@ -6120,7 +6123,7 @@ NA      | 193.142.30.66    | NA
 16276   | 91.121.76.207    | OVH OVH SAS,FR
 44136   | 46.16.234.131    | ASODERLAND ODERLAND Webbhotell AB,SE
 42038   | 46.37.157.31     | VLADLINK-AS VladLink LTD AS,RU
-2856    | 217.37.19.115    | BT-UK-AS BT Public Internet Service,GB
+2856    | 217.37.19.115    | BT-UK-AS British Telecommunications PLC,GB
 6128    | 74.88.96.207     | CABLE-NET-1 - Cablevision Systems Corp.,US
 49981   | 217.23.3.253     | WORLDSTREAM WorldStream,NL
 24940   | 5.9.153.114      | HETZNER-AS Hetzner Online GmbH,DE
@@ -6142,7 +6145,7 @@ NA      | 193.142.30.66    | NA
 24940   | 144.76.64.66     | HETZNER-AS Hetzner Online GmbH,DE
 12741   | 83.238.63.29     | AS-NETIA Netia SA,PL
 60781   | 5.79.100.73      | LEASEWEB-NL LeaseWeb Netherlands B.V.,NL
-2516    | 106.186.16.154   | KDDI KDDI CORPORATION,JP
+2516    | 106.186.16.154   | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 3320    | 91.48.66.131     | DTAG Deutsche Telekom AG,DE
 12322   | 88.164.140.200   | PROXAD Free SAS,FR
 34702   | 46.22.223.45     | WAVECOM-AS WaveCom AS,EE
@@ -6318,7 +6321,7 @@ NA      | 193.142.30.66    | NA
 15626   | 82.118.19.134    | ITLAS ITL Company,UA
 6461    | 50.7.141.18      | ABOVENET - Abovenet Communications, Inc,US
 12876   | 212.47.230.239   | AS12876 ONLINE S.A.S.,FR
-2856    | 86.184.179.141   | BT-UK-AS BT Public Internet Service,GB
+2856    | 86.184.179.141   | BT-UK-AS British Telecommunications PLC,GB
 21232   | 82.192.249.179   | GGAMAUR Genossenschaft GGA Maur,CH
 6280    | 216.221.55.133   | SYNAPSE - Babillard Synapse Inc.,CA
 20773   | 5.35.251.247     | HOSTEUROPE-AS Host Europe GmbH,DE
@@ -6356,7 +6359,7 @@ NA      | 193.142.30.66    | NA
 5432    | 91.181.222.51    | BELGACOM-SKYNET-AS Proximus NV,BE
 35366   | 81.7.3.247       | ISPPRO-AS ISPpro Internet KG,DE
 42610   | 46.242.66.240    | NCNET-AS PJSC Rostelecom,RU
-2856    | 86.166.34.226    | BT-UK-AS BT Public Internet Service,GB
+2856    | 86.166.34.226    | BT-UK-AS British Telecommunications PLC,GB
 8473    | 5.150.204.176    | BAHNHOF Bahnhof Internet AB,SE
 20115   | 75.128.151.40    | CHARTER-NET-HKY-NC - Charter Communications,US
 1103    | 195.169.216.191  | SURFNET-NL SURFnet, The Netherlands,NL
@@ -6510,7 +6513,7 @@ NA      | 193.142.30.66    | NA
 24940   | 78.46.82.123     | HETZNER-AS Hetzner Online GmbH,DE
 28769   | 46.182.132.90    | STTK-AS Closed Joint Stock Company SibTransTelecom,RU
 7922    | 67.168.38.248    | COMCAST-7922 - Comcast Cable Communications, Inc.,US
-2516    | 106.186.18.40    | KDDI KDDI CORPORATION,JP
+2516    | 106.186.18.40    | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 197019  | 31.31.73.222     | WEDOS WEDOS Internet, a.s.,CZ
 20454   | 66.85.131.72     | SSASN2 - SECURED SERVERS LLC,US
 3265    | 80.127.118.93    | XS4ALL-NL XS4ALL Internet BV,NL
@@ -6563,7 +6566,7 @@ NA      | 193.142.30.66    | NA
 20115   | 97.82.4.105      | CHARTER-NET-HKY-NC - Charter Communications,US
 9143    | 94.213.119.145   | ZIGGO Ziggo B.V.,NL
 701     | 100.36.124.105   | UUNET - MCI Communications Services, Inc. d/b/a Verizon Business,US
-2856    | 86.186.53.156    | BT-UK-AS BT Public Internet Service,GB
+2856    | 86.186.53.156    | BT-UK-AS British Telecommunications PLC,GB
 62567   | 162.243.72.198   | DIGITALOCEAN-ASN-NY2 - Digital Ocean, Inc.,US
 36351   | 23.91.124.124    | SOFTLAYER - SoftLayer Technologies Inc.,US
 6724    | 85.214.240.223   | STRATO STRATO AG,DE
@@ -6591,7 +6594,7 @@ NA      | 193.142.30.66    | NA
 201011  | 82.199.155.89    | NETZBETRIEB-GMBH AS33891 Netzbetrieb GmbH,DE
 198414  | 91.237.52.170    | BIZNESHOST-AS Biznes-Host.pl sp. z o.o.,PL
 50113   | 194.63.141.120   | SUPERSERVERSDATACENTER MediaServicePlus Ltd.,RU
-10013   | 36.55.240.37     | FBDC FreeBit Co.,Ltd.,JP
+10013   | 36.55.240.37     | JPNIC-NET-JP-AS-BLOCK Japan Network Information Center,JP
 16276   | 51.254.119.95    | OVH OVH SAS,FR
 55053   | 104.233.92.73    | COLOWAREHOUSEONTARIO - 2267921 ONTARIO LTD,CA
 34549   | 94.247.41.130    | MEER-AS meerfarbig GmbH & Co. KG,DE
@@ -6714,13 +6717,13 @@ NA      | 193.142.30.66    | NA
 49544   | 213.179.207.148  | INTERACTIVE3D i3d B.V.,NL
 3265    | 80.100.206.150   | XS4ALL-NL XS4ALL Internet BV,NL
 3301    | 90.227.195.223   | TELIANET-SWEDEN TeliaSonera AB,SE
-2516    | 175.135.149.24   | KDDI KDDI CORPORATION,JP
+2516    | 175.135.149.24   | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 36012   | 216.115.3.26     | HUNTER-COMM - Hunter Communications,US
 60117   | 185.82.201.54    | HS Host Sailor Ltd.,AE
 3320    | 91.14.105.34     | DTAG Deutsche Telekom AG,DE
 35041   | 83.168.200.204   | NET-CRYSTONE-STHLM Crystone AB,SE
 8473    | 5.150.214.170    | BAHNHOF Bahnhof Internet AB,SE
-2514    | 61.197.33.148    | INFOSPHERE NTT PC Communications, Inc.,JP
+2514    | 61.197.33.148    | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 5089    | 80.2.87.65       | NTL Virgin Media Limited,GB
 10103   | 14.136.236.129   | HKBN-AS-AP HK Broadband Network Ltd.,HK
 12876   | 212.129.37.75    | AS12876 ONLINE S.A.S.,FR
@@ -6739,10 +6742,10 @@ NA      | 193.142.30.66    | NA
 30693   | 107.158.255.22   | SERVERHUB-PHOENIX - Eonix Corporation,US
 30693   | 107.158.255.21   | SERVERHUB-PHOENIX - Eonix Corporation,US
 7922    | 24.8.76.174      | COMCAST-7922 - Comcast Cable Communications, Inc.,US
-2856    | 217.34.135.230   | BT-UK-AS BT Public Internet Service,GB
+2856    | 217.34.135.230   | BT-UK-AS British Telecommunications PLC,GB
 62567   | 107.170.78.42    | DIGITALOCEAN-ASN-NY2 - Digital Ocean, Inc.,US
 6364    | 209.208.79.5     | ATLANTIC-NET - Atlantic.net, Inc.,US
-2516    | 113.146.77.187   | KDDI KDDI CORPORATION,JP
+2516    | 113.146.77.187   | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 200130  | 146.185.150.219  | DIGITALOCEAN-ASN-1 Digital Ocean, Inc.,EU
 24940   | 144.76.96.7      | HETZNER-AS Hetzner Online GmbH,DE
 6871    | 84.92.24.214     | PLUSNET PlusNet plc.,GB
@@ -6789,7 +6792,7 @@ NA      | 193.142.30.66    | NA
 16276   | 198.245.62.104   | OVH OVH SAS,FR
 9737    | 118.172.172.189  | TOTNET-TH-AS-AP TOT Public Company Limited,TH
 41733   | 5.19.184.37      | ZTELECOM-AS Perspectiva Ltd.,RU
-2516    | 106.185.28.25    | KDDI KDDI CORPORATION,JP
+2516    | 106.185.28.25    | JPNIC-2BYTE-ASBLOCK-AP Block of 32 AS numbers from AS2497 to AS2528,JP
 6830    | 80.110.190.147   | LGI-UPC Liberty Global Operations B.V.,AT
 16276   | 192.99.154.234   | OVH OVH SAS,FR
 13122   | 80.65.244.238    | MANX-AS Manx Telecom,GB
