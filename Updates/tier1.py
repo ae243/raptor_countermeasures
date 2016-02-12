@@ -144,7 +144,7 @@ def update_resilience(root):
                             num_unreach += 1
                     # take care of equal nodes
                     frac = 0
-                    if node in eq_nodes:
+                    if node[0] in eq_nodes:
                         if len(eq_nodes) > 1:
                             eq_nodes.remove(node[0])
                             set_unreach = unreach_set & Set(eq_nodes)
@@ -192,7 +192,7 @@ def update_resilience(root):
                 num_unreach += 1
         # take care of equal nodes
         frac = 0
-        if node in eq_nodes:
+        if node[0] in eq_nodes:
             if len(eq_nodes) > 1:
                 eq_nodes.remove(node[0])
                 set_unreach = unreach_set & Set(eq_nodes)
