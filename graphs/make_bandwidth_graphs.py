@@ -1,19 +1,22 @@
 import sys
 import constants
+import collections
+import matplotlib.pyplot as plt
 
 def bandwidth_per_as_graph(as_bw_map):
     data_map = constants.resilience_vals
     data_map2 = as_bw_map
     data_map3 = {}
     for asn in data_map2:
-        data_map3[data_map2[asn]] = data_map[asn]
+        if asn.strip() != 'NA':
+            data_map3[data_map2[asn]] = data_map[asn]
 
     # to make graph of resiliency based on number of relays in an AS
     od = collections.OrderedDict(sorted(data_map3.items()))
 
     x = od.values()
     y = od.keys()
-    plt.plot(x, y, '.', markersize=20)
+    plt.plot(x, y, '.', markersize=10)
     plt.xlabel('Resilience')
     plt.ylabel('Bandwidth per AS')
     plt.title('Resilience and Corresponding Bandwidth per AS')
