@@ -114,6 +114,20 @@ We then looked at which ASes had the most relays, and what their corresponding r
 
 We can see one outlier - AS16276 - which contains 339 relays; unfortunately, this AS also has a relatively low resilience against hijack attacks.  This motivates our proactive and reactive countermeasures against hijack attacks.
 
+\begin{figure}
+\centering
+\includegraphics[width=.5\textwidth]{hijack_bandwidth}
+\caption{Bandwidth of all Tor relays in an AS, and the corresponding AS hijack resiliency.}
+\label{fig:hijack_bw}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=.5\textwidth]{interception_bandwidth}
+\caption{Bandwidth of all Tor relays in an AS, and the corresponding AS interception resiliency.}
+\label{fig:interception_bw}
+\end{figure}
+
 \subsection{Longitudinal Resiliency Results}
 
 We conducted our measurements on past data to analyze the hijack resiliency trend on the Tor network.  Figure~\ref{fig:resilience_trend} shows the average AS resiliency to hijack attacks each year.  We can see that the average resiliency has increased since 2008, but still remains below .50.  
@@ -123,4 +137,14 @@ We conducted our measurements on past data to analyze the hijack resiliency tren
 \includegraphics[width=.5\textwidth]{hijack_resilience_trend}
 \caption{Average Tor AS resilience each year from 2008-2016.}
 \label{fig:resilience_trend}
+\end{figure}
+
+\subsection{Case Study: Indosat 2014}
+In 2014, Indosat, one of Indonesia's largest telecommunications networks, announced 417,038 new prefixes, but it usually only announces about 300 prefixes~\cite{indosat2014}.  In previous work, we found that this compromised 44 Tor relays, 38 of which were guard relays and 17 of which were exit relays (11 hijacked relays were both guards and exits)~\cite{sun2015raptor}.  We calculated the hijack resilience of the hijacked ASes; the results are shown in Figure~\ref{fig:case_study}.  We can see that the AS hijack resiliency ranges from 0.0 to .76, with most ASes falling in the middle of the spectrum. This means that even ASes with relatively high resilience values (.72 and .76) have the potential to be hijacked.  
+
+\begin{figure}
+\centering
+\includegraphics[width=.5\textwidth]{case_study_graph}
+\caption{The ASes that contain at least one Tor relay, and were affected by the Indosat hijack attack in 2014, along with their corresponding hijack resiliency values.}
+\label{fig:case_study}
 \end{figure}

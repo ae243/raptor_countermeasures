@@ -17,9 +17,9 @@ def bandwidth_per_as_graph(as_bw_map):
     x = od.values()
     y = od.keys()
     plt.plot(x, y, '.', markersize=10)
-    plt.xlabel('Resilience')
-    plt.ylabel('Bandwidth per AS')
-    plt.title('Resilience and Corresponding Bandwidth per AS')
+    plt.xlabel('Hijack Resilience')
+    plt.ylabel('Bandwidth of Tor Relays per AS')
+    plt.title('Hijack Resilience and Corresponding Tor Relay Bandwidth per AS')
     plt.show()
 
 f = open('2016-01-01-00-00-00-consensus', 'r')
