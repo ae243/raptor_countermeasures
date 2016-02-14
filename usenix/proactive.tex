@@ -5,7 +5,13 @@ Proactive approaches aim at lowering the possibility of Tor users being affected
 \label{subsec:24prefix}
 
 Sun \emph{et al.} \cite{sun2015raptor} recently found that more than 90\% of BGP prefixes hosting relays are
-shorter than /24, making them vulnerable to a more-specific BGP prefix attack. Thus, one quick way to make Tor relays more resilient to such active routing attacks is to announce /24 prefix covering Tor relays. In order to make real world impact of this approach, we start a campaign by contacting network operators whose prefixes contain Tor relays, and asking them to announce a more specific /24 prefix covering the relay. 
+shorter than /24, making them vulnerable to a more-specific BGP prefix attack. We performed the measurement on the distribution of prefix lengths on Tor bandwidth (instead of number of relays) using Tor consensus data in January 2016, shown in ~\ref{fig_prefixlen}. Consistent with the finding in \cite{sun2015raptor}, a large percentage of the bandwidth are under prefixes shorter than /24. Thus, one quick way to make Tor relays more resilient to such active routing attacks is to announce /24 prefix covering Tor relays. In order to make real world impact of this approach, we start a campaign by contacting network operators whose prefixes contain Tor relays, and asking them to announce a more specific /24 prefix covering the relay. 
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=80mm]{prefix_len_graph}
+\caption{Attack Probability with $g=10\%$ sampling \label{fig_prefixlen}}
+\end{figure}
 
 We start by cooperating with Princeton University, which contains a Tor relay under a /16 prefix. 
 
