@@ -1,43 +1,51 @@
-\section{Background}
-Here we discuss some background on the Tor network as well as RAPTOR attacks~\cite{sun2015raptor}.
+\section{Background and Related Work}
+Here we discuss network level adversaries on the Tor network and past work on defending against such network level adversaries. 
 
-\subsection{Tor}
-To communicate with a destination, Tor clients establish
-layered circuits through three subsequent Tor relays. The
-three relays are referred to as: entry (or guard) for the
-first one, middle for the second one, and exit relay for
-the last one. To load balance its traffic, Tor clients select
-relays with a probability that is proportional to their
-network capacity. Encryption is used to ensure that each
-relay learns the identity of only the previous hop and the
-next hop in the communications, and no single relay can
-link the client to the destination server.
+\subsection{Network Adversaries on Tor}
+%To communicate with a destination, Tor clients establish
+%layered circuits through three subsequent Tor relays. The
+%three relays are referred to as: entry (or guard) for the
+%first one, middle for the second one, and exit relay for
+%the last one. To load balance its traffic, Tor clients select
+%relays with a probability that is proportional to their
+%network capacity. Encryption is used to ensure that each
+%relay learns the identity of only the previous hop and the
+%next hop in the communications, and no single relay can
+%link the client to the destination server.
+%
+%It is well known that if an attacker can observe the
+%traffic from the destination server to the exit relay as well
+%as from the entry relay to the client (or traffic from the
+%client to the entry relay and from the exit relay to the
+%destination server), then it can leverage correlation between
+%packet timing and sizes to infer the network identities
+%of clients and servers (end-to-end timing analysis).
+%This timing analysis works even if the communication is
+%encrypted~\cite{sun2015raptor}.
+Network-level adversaries are known in anonymity networks. Feamster and Dingledine \cite{feamster2004location} first investigated AS-level path in anonymity networks, which showed that some AS could appear on nearly 30\% of entry-exit pairs. Murdoch and Zielinski \cite{murdoch2007sampled} later demonstrated the threat posed by network-level adversaries who can deanonymize users by performing traffic analysis. Furthermore, Edman and Syverson \cite{edman2009awareness} demonstrated that even given the explosive growth of Tor during the past years, still about 18\% of Tor circuits result in a single AS being able to observe both ends. In 2013, Johnson \emph{et al.} \cite{johnson2013users} evaluated the security of Tor users over a period of time, and the result indicated that a network-level adversary with just low bandwidth cost can deanonymize any users within three months with over 50\% probability and within six months with over 80\% probability.
 
-It is well known that if an attacker can observe the
-traffic from the destination server to the exit relay as well
-as from the entry relay to the client (or traffic from the
-client to the entry relay and from the exit relay to the
-destination server), then it can leverage correlation between
-packet timing and sizes to infer the network identities
-of clients and servers (end-to-end timing analysis).
-This timing analysis works even if the communication is
-encrypted~\cite{sun2015raptor}.
+While all the above work focus on passive adversaries, more recently, Sun \emph{et al.} ~\cite{sun2015raptor} discovered the threat posed by an active AS-level adversaries who can perform active BGP routing attacks to put itself onto the path between client-entry and/or exit-destination, and thus being able to observe Tor traffic. The paper also showed from past BGP data that during past known BGP prefix attacks that happened in real world, Tor relays were affected as well - i.e., in the Indosat hijack in 2014, among the victims there were 44 Tor relays, and 33 of them were guard relays which had direct connections with Tor clients. 
 
-\subsection{RAPTOR Attacks}
-RAPTOR attacks are a suite of attacks that can be launched by 
-Autonomous Systems (ASes) to compromise user anonymity.  There are 
-three different types of attacks in this classification.
+\subsection{Tor Path Selection against Network Adversaries}
+The existence of network-level adversaires urges the need to incorporate AS-awareness path selection in Tor. In 2012, Akhoondi \emph{et al.} \cite{akhoondi2012lastor} proposed LASTor, a Tor client which takes into account AS-level path and relay locations in path selection, although LASTor neglected relay capacity and its AS resilience to active attacks. Recently, Nithyanand \emph{et al.} \cite{starov2015measuring} constructed a new Tor client, Astoria, which adopted a new path selection algorithm which considered more aspects - relay capacity, asymmetric routing, colluding ASes, etc.. However, Astoria only considers a passive AS-level attacker, while does not consider the case of active routing attacks.\\
+\\
+These motivate our work on defending against active AS-level adversaries on Tor who can launch active routing attacks such as BGP prefix hijacks and interceptions. Towards this goal, it is important to understand AS-level internet topology and network path predictions. Lad \emph{et al.} \cite{lad2007understanding} investigated the relation between internet topology and prefix hijacking, and provided a metric for evaluating AS resilience to active prefix hijack attacks. Although, the study was conducted in 2007 when there were far less ASes than now, and the study only simulated a partial attack scenario of 1000 randomly-selected ASes as attackers. Thus, in section ~\ref{hijack_interception_measurement}, we will start with applying the AS resiliency metric to the Tor network, but considering \emph{all} attack scenarios; then, we will further extend the metric to evaluate AS resiliency to active prefix interception attacks. In Section ~\ref{subsec:relayselection}, we incorporate the AS resiliency metric into Tor guard relay selection. 
 
-{\bf Asymmetric Traffic Analysis.} AS-level adversaries can
-exploit the asymmetric nature of Internet routing to increase
-the chance of observing at least one direction of
-user traffic at both ends of the communication.
 
-{\bf Natural Churn.} AS-level adversaries can exploit natural churn in Internet
-routing to lie on the BGP paths for more users over
-time.
-
-{\bf BGP Hijacks.} Strategic AS-level adversaries can manipulate Internet
-routing via BGP hijacks (to discover the users using
-specific Tor guard nodes) and interceptions (to perform
-traffic analysis).
+%RAPTOR attacks are a suite of attacks that can be launched by 
+%Autonomous Systems (ASes) to compromise user anonymity.  There are 
+%three different types of attacks in this classification.
+%
+%{\bf Asymmetric Traffic Analysis.} AS-level adversaries can
+%exploit the asymmetric nature of Internet routing to increase
+%the chance of observing at least one direction of
+%user traffic at both ends of the communication.
+%
+%{\bf Natural Churn.} AS-level adversaries can exploit natural churn in Internet
+%routing to lie on the BGP paths for more users over
+%time.
+%
+%{\bf BGP Hijacks.} Strategic AS-level adversaries can manipulate Internet
+%routing via BGP hijacks (to discover the users using
+%specific Tor guard nodes) and interceptions (to perform
+%traffic analysis).

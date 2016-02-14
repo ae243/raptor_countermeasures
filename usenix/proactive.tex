@@ -10,6 +10,7 @@ shorter than /24, making them vulnerable to a more-specific BGP prefix attack. T
 We start by cooperating with Princeton University, which contains a Tor relay under a /16 prefix. 
 
 \subsection{Guard Relay Selection}
+\label{subsec:relayselection}
 
 Guard relay is at an important position that it has direct connection with the Tor client. It has been shown that network-level adversaries can launch a more-specific BGP prefix attack to hijack the Tor traffic from the guard relay to the malicious AS \cite{sun2015raptor}, and this can be potentially prevented by advertising /24 prefixes, as discussed in Section ~\ref{subsec:24prefix}. However, even if the guard relay belongs to a /24 prefix, it is still subject to an equally-specific prefix attack. Unlike more-specific attacks which spread through the whole internet, equally-specific attacks can only affect connections within a small range - i.e., ASes that have more preferred paths to the hijacking AS than the true origin AS. Thus, picking a Tor guard relay that has relatively high AS resiliency against such equally-specific attacks could protect Tor clients from being affected and deanonymized by network-level adversaries. Therefore, we propose a new guard relay selection algorithm that incorporates this aspect.
 

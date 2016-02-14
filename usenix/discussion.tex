@@ -1,0 +1,36 @@
+\section{Discussion}
+
+%This is an important research area, and there is still much more to do.  There are three main areas where we wish to further this work: quantification of resiliency, monitoring framework, and qualitative suggestions for relay operators.
+
+%{\bf Resiliency.}  
+%We plan to measure how resilience to interception attacks has changed over time (similar to our longitudinal analysis of hijack resiliency).
+%
+%We also want to give some perspective to the resilience values by running the resilience calculations on a topology from a time when a known attack has occurred.  We can then check what the resilience is of the AS that was actually hijacked - this will give up a notion of how accurate resiliency is.  (This can be done multiple times to increase our confidence in the resiliency metric.)
+%
+%{\bf Monitoring Framework.}  
+%
+%As of now, our live monitoring framework consists of two parts: data plane and control plane.  One of the most important next steps is to connect both parts and run the system as one large framework.  The BGP monitoring framework could run consistently, and when any suspicious announcements are flagged (either by the heuristics or the AS comparison), then this could trigger the traceroute monitoring framework.  
+%
+%Other future work includes developing methods to detect interception attacks - this has been shown to be difficult and accurate detection is still an open problem~\cite{ballani2007study}.  Furthermore, making the already implemented heuristics and techniques more accurate and precise is still to be done.  
+%
+%Lastly, the monitoring framework needs methods for evaluation.  Metrics such as false positive rate, true positive rate, time and performance, will all be beneficial to showing the importance of the framework, as well as for improving the framework.  
+%
+%{\bf Qualitative Suggestions.}
+%
+%Additional work includes setting up our own set of relays at Princeton University and working with the necessary operators to announce the relays in their own /24 network and think of the possibility of static routing to the guard relay.
+ 
+{\bf Accuracy of AS path inference.}  
+Part of our AS resiliency calculation involves AS-level path inference on network topology. There has been recent work (citation here) showing that path inferences using local preference and shortest path may not be so accurate, and thus path selection algorithms (citation here) that rely on the accuracy of AS path inferences could be affected. However, we only use path inference as an indicator of network connectivity to calculate aggregated resiliency instead of predicting any \emph{precise} routes. This is also the reason why even after we "perturb" the AS resiliencies by doing unequal probability sampling, we still have almost as good result in reducing attack probability as without the sampling. Thus, our resiliency calculation is robust to certain degree of AS path inference inaccuracy and/or AS path churn. 
+\\
+{\bf BGP Attacks and Security.}
+BGP attacks are well-studied, particularly prefix hijack and interception attacks~\cite{ballani2007study, mcarthur2009stealthy, zhang2012studying}.  Arnbak, et al. showed that prefix interceptions could be used by nation-states as a way to conduct surveillance on their citizens \cite{arnbak2014loopholes}.  It's also known that routing anomalies can lead to network snapshots that look similar to attack scenarios.  These are due to a range of routing policies, misconfigurations, and multiple origin AS conflicts~\cite{caesar2005bgp, mahajan2002understanding, zhao2001analysis}.  
+
+The research community has contributed a number of protocols to help secure interdomain routing \cite{boldyreva2012provable, chan2006modeling, gill2011let, hu2004spv, zhang2009hc, van2007interdomain}.  Unfortunately, it has also been shown that partial deployment of secure interdomain routing protocols does not provide much security \cite{lychev2013bgp}.
+
+There is also a large body of research with the goal of defending against and detecting prefix hijacks and interceptions.  These include defensive and detection tools~\cite{lad2006phas, hu2007accurate, shi2012detecting, zhang2008ispy, zheng2007light, sriram2009comparative, zhang2007practical}, as well as mechanisms such as PGBGP, which allow network administrators more time to determine if an attack is happening before using new routes~\cite{karlin2006pretty}.  There has also been research not only on detecting attacks, but on determining the location of the attacker~\cite{qiu2009locating}.  Qui, et al. detected any bogus routes, not just hijacks or interceptions~\cite{qiu2007detecting}.  In addition to detection algorithms, there has been research in visualization of real-time detection algorithms \cite{teoh2006bgp}.  Our work does not aim to contribute a new hijack detection tool, but rather compliments existing tools by applying a monitoring framework to the Tor network. 
+\\
+{\bf Detecting interception attacks.}  
+This has been shown to be difficult and accurate detection is still an open problem~\cite{ballani2007study}.  Furthermore, making the already implemented heuristics and techniques more accurate and precise is still to be done. 
+
+
+
