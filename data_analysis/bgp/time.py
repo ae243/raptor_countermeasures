@@ -1,5 +1,7 @@
 import sys
 
+# usage: python time.py <threshold value>
+
 f = open('tor_log.txt', 'r')
 time_map = {} # <(prefix,originAS) -> time announced>
 bool_map = {} # <(prefix,originAS) -> '' or latest announcement time>
@@ -36,14 +38,21 @@ for b in bool_map:
         else:
             time_map[b] = (float(last_time) - float(bool_map[b]))
 
+total = 0
 for t in time_map:
     pref = t[0]
     if pref in total_time:
         total_time[pref] += time_map[t]
     else:
         total_time[pref] = time_map[t]
+    total += 1
+print total
 
+fp = 0
 for x in time_map:
     pref = x[0]
-    if (float(total_time[pref]) != 0.0) and float(float(time_map[x])/float(total_time[pref])) < .00001:
+    if (float(total_time[pref]) != float(0.0)) and (float(time_map[x]) != float(0.0)) and float(float(time_map[x])/float(total_time[pref])) < float(sys.argv[1]):
+        fp += 1
         print x, time_map[x], float(float(time_map[x])/float(total_time[pref]))
+
+print fp
