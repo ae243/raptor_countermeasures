@@ -53,9 +53,7 @@ def analysis1d():
 
 # Analysis2: does this prefix pair appear in anomalous BGP updates?
 def analysis2():
-    f = open('tor_mismatch_log.txt', 'r')
-    for line in f:
-
+    print "implement me"
 
 # Analysis3: does this prefix pair have a different origin?
 def analysis3():
@@ -84,5 +82,6 @@ analysis1a()
 analysis1b()
 analysis1c()
 analysis1d()
+analysis3()
 #f = open('all_trace_anomalies.txt', 'r')
 #f.close()

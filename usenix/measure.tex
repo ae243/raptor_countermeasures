@@ -124,16 +124,23 @@ After calculating the hijack resilience for each AS that contains at least one T
 
 \begin{figure}
 \centering
-\includegraphics[width=.5\textwidth]{resilience_histogram}
+\includegraphics[width=.4\textwidth]{resilience_histogram}
 \caption{A histogram of resilience values for all ASes that contain a Tor relay.}
 \label{fig:resilience_histogram}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=.4\textwidth]{hijack_tier1}
+\caption{A histogram of resilience to Tier1 hijack attacks for all ASes that contain a Tor relay.}
+\label{fig:resilience_histogram_tier1}
 \end{figure}
 
 We then looked at which ASes had the most relays, and what their corresponding resilience is; ideally, ASes with more relays are also more resilient to hijack attacks.  Figure~\ref{fig:res_relays} shows the resilience value for an AS and the AS's corresponding number of relays.  
 
 \begin{figure}
 \centering
-\includegraphics[width=.5\textwidth]{res_num_relays}
+\includegraphics[width=.4\textwidth]{res_num_relays}
 \caption{Resilience values for each AS and each AS's corresponding number of relays.}
 \label{fig:res_relays}
 \end{figure}
@@ -142,7 +149,7 @@ We can see one significant outlier - AS16276, OVH - which contains 339 relays; u
 
 \begin{figure}
 \centering
-\includegraphics[width=.5\textwidth]{hijack_bandwidth}
+\includegraphics[width=.4\textwidth]{hijack_bandwidth}
 \caption{Bandwidth of all Tor relays in an AS, and the corresponding AS hijack resiliency.}
 \label{fig:hijack_bw}
 \end{figure}
@@ -151,7 +158,7 @@ We also conducted our measurements on past data to analyze the hijack resiliency
 
 \begin{figure}
 \centering
-\includegraphics[width=.5\textwidth]{hijack_resilience_trend}
+\includegraphics[width=.4\textwidth]{hijack_resilience_trend}
 \caption{Average Tor AS resilience each year from 2008-2016.}
 \label{fig:resilience_trend}
 \end{figure}
@@ -164,14 +171,14 @@ We measured the resilience to interception attacks for each Tor-related AS.  The
 
 \begin{figure}
 \centering
-\includegraphics[width=.5\textwidth]{interception_resiliency}
+\includegraphics[width=.4\textwidth]{interception_resiliency}
 \caption{A histogram of resilience values for all ASes that contain a Tor relay in 2015.}
 \label{fig:interception_histogram}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[width=.5\textwidth]{interception_bandwidth}
+\includegraphics[width=.4\textwidth]{interception_bandwidth}
 \caption{Bandwidth of all Tor relays in an AS, and the corresponding AS interception resiliency.}
 \label{fig:interception_bw}
 \end{figure}
@@ -182,7 +189,7 @@ In 2014, Indosat, one of Indonesia's largest telecommunications networks, announ
 
 \begin{figure}
 \centering
-\includegraphics[width=.5\textwidth]{case_study_graph}
+\includegraphics[width=.4\textwidth]{case_study_graph}
 \caption{The ASes that contain at least one Tor relay, and were affected by the Indosat hijack attack in 2014, along with their corresponding hijack resiliency values.}
 \label{fig:case_study}
 \end{figure}
