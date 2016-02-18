@@ -1,36 +1,42 @@
 \section{Proactive Approaches}
-Proactive approaches aim at lowering the possibility of Tor users being affected by an active BGP routing attack on Tor relays. Network-level adversaries can announce a more-specific prefix or an equally-specific prefix to hijack the traffic between the client and the Tor guard relay. To counter these routing attacks, we propose two methods: 1) convincing relay operators to announce the relay in a /24 prefix to defend against a more-specific prefix attack, 2) introducing a new Tor guard relay selection algorithm that minimizes the likelihood that a Tor client sees a hijacked route in the case of an equally-specific prefix attack.
+\label{sec:proactive}
+Sun \emph{et al.} \cite{sun2015raptor} recently demonstrated a successful real-world BGP routing attack on a Tor guard relay by announcing a more-specific prefix (i.e., /24 prefix against /23 prefix) which covers the guard relay. We have also showed in Section ~\ref{hijack_interception_measurement} that network-level adversaries can hijack a portion of the traffic by announcing an equally-specific prefix (i.e., same prefix length). To counter these two routing attacks, we propose two methods, respectively: 1) convincing relay operators to move the relay into a /24 prefix to defend against a more-specific prefix attack, 2) introducing a new Tor guard relay selection algorithm that minimizes the likelihood that a Tor client sees a hijacked route in the case of an equally-specific prefix attack.
 
 \subsection{Using /24 Prefixes}
 \label{subsec:24prefix}
 
-Sun \emph{et al.} \cite{sun2015raptor} recently found that more than 90\% of BGP prefixes hosting relays are
-shorter than /24, making them vulnerable to a more-specific BGP prefix attack. We performed the measurement on the distribution of prefix lengths on Tor bandwidth (instead of number of relays) using Tor consensus data in January 2016, shown in ~\ref{fig_prefixlen}. Consistent with the finding in \cite{sun2015raptor}, a large percentage of the bandwidth are under prefixes shorter than /24. Thus, one quick way to make Tor relays more resilient to such active routing attacks is to announce /24 prefix covering Tor relays. In order to make real world impact of this approach, we start a campaign by contacting network operators whose prefixes contain Tor relays, and asking them to announce a more specific /24 prefix covering the relay. 
+Network-level adversaries can hijack internet traffic by announcing a more-specific prefix that belongs to the true origin AS. Since BGP routing prefers longer prefixes over shorter ones, the traffic will go to the false origin with the more-specific prefix instead. The longest prefix length that BGP usually accepts is /24, and thus any prefix that's shorter than /24 is vulnerable to such more-specific prefix attacks. 
+Sun \emph{et al.} \cite{sun2015raptor} recently found that more than 90\% of BGP prefixes hosting Tor relays are
+shorter than /24, making them vulnerable to a more-specific BGP prefix attack. We performed the measurement on the distribution of prefix lengths on Tor bandwidth (instead of number of relays) using Tor consensus data in January 2016, shown in ~\ref{fig_prefixlen}. Consistent with the finding in \cite{sun2015raptor}, a large percentage of the bandwidth are under prefixes shorter than /24. 
 
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=80mm]{prefix_len_graph}
-\caption{Distribution of Tor bandwidth to Prefix Lengths (we need to fix this plot) \label{fig_prefixlen}}
+\caption{Distribution of Tor bandwidth to Prefix Lengths \yixin{we need to fix this plot} \label{fig_prefixlen}}
 \end{figure}
 
-We start by cooperating with Princeton University, which contains a Tor relay under a /16 prefix. 
+Therefore, one quick way to defend against more-specific prefix attacks is to move Tor guard relays into /24 prefixes. One concern that may rise is the extra burden which can be created on the routing table if announcing /24 prefixes for all Tor guard relays. We obtained a snapshot of the routing table from RIB \yixin{citation}, and Tor consensus data from January 2016. We found that there are 607,335 unique prefixes in the routing table, whereas there are only 1484 unique /24 prefixes covering all Tor guard relays (roughly 0.24\% of the routing table prefixes). Thus, the impact on the routing table size can be negligible. 
+
+To make real world impact of this approach, we start a campaign by contacting network operators whose prefixes contain Tor relays, and asking them to move the Tor relays into a more specific /24 prefix. We start by cooperating with Princeton University, which contains a Tor relay under a /16 prefix. 
 
 \subsection{Guard Relay Selection}
 \label{subsec:relayselection}
 
-Guard relay is at an important position in the Tor circuit, since it  it has direct connection with the Tor client. It has been shown that network-level adversaries can launch a more-specific BGP prefix attack to hijack the Tor traffic from the guard relay to the malicious AS \cite{sun2015raptor}. This can be potentially prevented by advertising /24 prefixes, as discussed in Section ~\ref{subsec:24prefix}. However, even if the guard relay belongs to a /24 prefix, it is still subject to an equally-specific prefix attack. Unlike more-specific attacks which spread through the whole internet, equally-specific attacks can only affect connections within a small range - i.e., ASes that have more preferred paths to the hijacking AS than the true origin AS. Thus, picking a Tor guard relay that has relatively high AS resiliency against such equally-specific attacks could protect Tor clients from being affected and deanonymized by network-level adversaries. Therefore, we propose a new guard relay selection algorithm that incorporates this aspect.
+Guard relay is at an important position in the Tor circuit, since it  it has direct connection with the Tor client. Section ~\ref{subsec:24prefix} discusses how to mitigate more-specific prefix attacks, however, even if the guard relay belongs to a /24 prefix, it is still subject to an equally-specific prefix attack. We have shown in Section ~\ref{hijack_interception_measurement} that high-bandwidth Tor relays could belong to ASes with low resilience to prefix hijack attacks, which put many Tor users at risk. Therefore, we propose a new guard relay selection algorithm that incorporates the AS resilience aspect to mitigate such active prefix hijacks on Tor.
+
+%It has been shown that network-level adversaries can launch a more-specific BGP prefix attack to hijack the Tor traffic from the guard relay to the malicious AS \cite{sun2015raptor}. This can be potentially prevented by advertising /24 prefixes, as discussed in Section ~\ref{subsec:24prefix}. However, even if the guard relay belongs to a /24 prefix, it is still subject to an equally-specific prefix attack. Unlike more-specific attacks which spread through the whole internet, equally-specific attacks can only affect connections within a small range - i.e., ASes that have more preferred paths to the hijacking AS than the true origin AS. Thus, picking a Tor guard relay that has relatively high AS resiliency against such equally-specific attacks could protect Tor clients from being affected and deanonymized by network-level adversaries. Therefore, we propose a new guard relay selection algorithm that incorporates this aspect.
 
 \subsubsection{Design Goals}
 \begin{enumerate}
 \item \emph{Mitigate prefix hijacks on Tor.} This is the main goal of the new guard relay selection algorithm. The algorithm computes the AS resilience against prefix hijacks of all Tor guard relays from the client source AS, and prefers the ones that have higher resilience, minimizing the likelihood that the client would be affected by a prefix hijack on its guard relay. 
-\item \emph{Protect the anonymity and privacy of Tor clients.} In addition to lowering possibilities of being hijacked, the algorithm should also protect the anonymity of Tor users, i.e., variance in relay selection preferences and sender/recipient anonymity. 
-\item \emph{Load balance Tor traffic.} The algorithm should incorporate relay bandwidth into selection decision and avoid causing excessive traffic congestion on low bandwidth relays. 
-\item \emph{Performance overhead.} The algorithm should have a reasonable performance overhead over the vanilla Tor algorithm when bootstrapping, and fast page load time. 
+\item \emph{Protect the anonymity of Tor clients.} In addition to lowering possibilities of being hijacked, the algorithm should also protect the anonymity of Tor users by balancing preferences among relays and providing rigorously assessed anonymity bounds. 
+\item \emph{Performance and Load balancing.} The algorithm should incorporate relay bandwidth into selection decision and avoid causing excessive traffic congestion on low bandwidth relays.
+%\item \emph{Performance overhead.} The algorithm should have a reasonable performance overhead over the vanilla Tor algorithm when bootstrapping, and fast page load time. 
 \end{enumerate}
 
-\subsubsection{Deal with the possibility of prefix hijacks}
+\subsubsection{Mitigate Prefix Hijacks on Tor}
 
-In section ~\ref{hijack_methodology}, we measured AS resilience of each Tor-related ASes based on the metrics proposed by (cite me here). The algorithm computes \emph{total} resilience of an AS by summing individual resiliencies from each source AS. \emph{However, the Tor client would only care about the individual resilience to a Tor-related AS from the source AS where the client is located}. Thus, instead of computing the total resilience, we use Algorithm ~\ref{algo:calcres} to calculate resilience $R(i)$ of each Tor-related AS $i$, from the client AS $t$. 
+In Section ~\ref{hijack_methodology}, we measured AS resilience of each Tor-related ASes based on the metrics proposed by (cite me here). The algorithm computes \emph{total} resilience of an AS by summing individual resiliencies from each source AS. \emph{However, the Tor client would only care about the individual resilience to a Tor-related AS from the source AS where the client is located}. Thus, instead of computing the total resilience, we use Algorithm ~\ref{algo:calcres} to calculate individual resilience $R(i)$ of each Tor-related AS $i$, from the client AS $t$. 
 
 Tor relay selection is bandwidth-aware and prefers high bandwidth relays. The probability of each relay $i$ being chosen is based on its bandwidth $B(i)$. Thus, in order to still provide clients with the load balancing option of Tor bandwidths, we offer a tunable parameter $\alpha$ in the relay selection algorithm combining AS resiliency $R(i)$ and bandwidth $B(i)$. Each relay $i$ will be assigned a weight as following:
 \begin{equation*}
@@ -39,16 +45,26 @@ W(i) = \alpha \times R(i) + (1 - \alpha) \times B(i)
 Note that, when $\alpha$ is set to $0$, the relay selection becomes the same as bandwidth-only selection; while when $\alpha$ is set to $1$, the selection becomes resiliency-only selection. 
 
 \subsubsection{Randomization is needed}
+\label{relay_randomization}
+If we simply select the set of guard relays based on the probability of $W(i)/\sum W(i)$, an adversary can potentially run a relay that has AS-level path with high local preferences and/or short path length to the Tor client, such that it has high resilience from the client AS as the source, and thus obtains high probability of being chosen. Furthermore, the Tor client might also be susceptible to fingerprinting attacks due to the differences in relay selection probabilities based on AS-location of the client. An adversary that can observe the client for a long enough time may be able to infer the AS-location of the client based on its observed relay selection choices. Thus, we need to take into account these potential vulnerabilities and protect the anonymity of clients. Note that, the weight of a Tor relay depends on two components: (1) resilience of the AS where relay is located, and (2) relay bandwidth. Relay bandwidth is not specific to client locations, and thus would not reveal any client identities; in addition, due to resource constraints, it is not trivial to run a relay with significantly higher bandwidth than all other relays to obtain high probability of being chosen. While on the contrary, AS resilience of relays \emph{is} client-specific, and requires much less resources to run a malicious relay with high AS resilience. Thus, we would only focus on randomizing the AS resilience component here. 
 
-If we simply select the set of guard relays based on the probability of $relay\_weight/total\_weight$, an adversary can potentially run a relay that has short AS-level path to the Tor client, such that it has high resilience from the client AS as the source, and thus obtains high probability of being chosen. Further more, the Tor client might also be susceptible to fingerprinting attacks due to the differences in relay selection probabilities based on AS-location of the client. An adversaries that can observe the client for a long enough time may be able to infer the AS-location of the client based on its observed relay selection choices. Thus, we need to take into account these potential vulnerabilities and protect the anonymity of clients. Note that, the weight of a Tor relay depends on two factors: (1) resilience of the AS where relay is located, and (2) relay bandwidth. Relay bandwidth is not specific to client locations, and thus would not reveal any client identities; in addition, it is not trivial to run a high bandwidth relay with significantly higher bandwidth than all other relays to obtain high probability of being chosen due to resource constraints. While on the contrary, AS resilience of relays \emph{is} client-specific, and requires much less resources to run a malicious relay with high AS resilience. Thus, we would only focus on randomizing the AS resilience part here. 
+Instead of having resilience $R(i)$ for relay $i$ into the weight calculation directly, we will first adjust it to $R(i)\prime$ by calculating the estimated inclusion probability of the relay in a random sampling of size $(g \cdot N)$ using algorithm proposed by Tille ~\cite{tille1996elimination}. Note that N corresponds to total number of ASes containing Tor guard relays, and g is a configurable parameter indicating the percentage of random sampling we want to perform. The steps are as following:
+\begin{enumerate}
+\item For each relay $i$, $R(i)\prime = \frac {k \cdot R(i)} {\sum R(i)}$ in which k equals to sample size $(g \cdot N)$ initially.
+\item For each relay $i$, if $R(i)\prime > 1$, $R(i)\prime = 1$ and $k = k - 1$.
+\item Repeat the above process until each $R(i)\prime$ is in $[0,1]$.
+\item For each relay $i$, $R(i)\prime = \frac{R(i)\prime} {g \cdot N}$
+\end{enumerate}
 
-Instead of having resilience $R(i)$ for relay $i$ into the weight calculation directly, we will first adjust it to $R(i)\prime$ by performing a pseudorandom sampling without replacement using algorithm proposed by Tille (cite here). We compute the inclusion probability of each relay $i$ into a sample of size $(g \cdot total\_TorASes)$ given the fraction of its resilience $R(i)$ over total resiliences $\sum R(i)$, and then divide the inclusion probability by sample size $(g \cdot total\_TorASes)$ to get the probability of being chosen randomly within the sample. So the new resilience weight becomes:
+%performing a pseudorandom sampling without replacement using algorithm proposed by Tille (cite here). We compute the inclusion probability of each relay $i$ into a sample of size $(g \cdot total\_TorASes)$ given the fraction of its resilience $R(i)$ over total resiliences $\sum R(i)$, and then divide the inclusion probability by sample size $(g \cdot total\_TorASes)$ to get the probability of being chosen randomly within the sample. So the new resilience weight becomes:
+%
+%\begin{equation*}
+%R(i) \prime = \frac {\pi(i | (g \cdot N))} {g \cdot N}
+%\end{equation*}
+%
+%in which $\pi(i | m)$ represents inclusion probability of relay $i$ given sample size $m$, and $N$ is the total number of ASes that Tor relays reside in. $g$ is a configurable parameter indicating the percentage of random sampling we want to perform in the Tor-related AS set. 
 
-\begin{equation*}
-R(i) \prime = \frac {\pi(i | (g \cdot N))} {g \cdot N}
-\end{equation*}
-
-in which $\pi(i | m)$ represents inclusion probability of relay $i$ given sample size $m$, and $N$ is the total number of ASes that Tor relays reside in. $g$ is a configurable parameter indicating the percentage of random sampling we want to perform in the Tor-related AS set. Note that when $g$ is set to $0$, then no random sampling will be performed, while if $g$ is set to $1$, then all relays will have the same $R(i)\prime$ into their weights.
+Note that when $g$ is set to $0$, then no random sampling will be performed, while if $g$ is set to $1$, then all relays will have the same $R(i)\prime$ into their weights. 
 
 %Instead of selecting relay directly based on its weight, we will first select a cluster of 
 %\begin{equation*}
@@ -70,12 +86,17 @@ If the Tor client specifies in the torrc configuration file that the AS resilien
 \item The Tor client will proceed with the path selection. The remaining part of the circuit construction process stays the same as it is in Tor. 
 \end{enumerate}
 
-\subsection{Relay Selection Evaluation}
+\subsection{Security and Anonymity Evaluation}
+We evaluate the security and anonymity of the Tor guard relay selection algorithm from three perspectives: (1) reduction in probability of a Tor client being affected by a hijack attack on the Tor guard relay, (2) balancing preferences in relay selection to avoid favoring certain relays significantly more than the others, (3) vulnerability to client fingerprinting attacks, and (4) rigorously assessed anonymity bound for a given Tor client. 
 
-\subsubsection{Security Evaluation}
+\subsubsection{Probability of a Tor client being affected by a hijack attack on Tor guard relay}
+\label{attack_probability}
+This is the main goal of the new relay selection algorithm. Let $P_{pick}(i)$ denotes the probability that a Tor client will choose relay $i$ using our algorithm, and $P_{deceived}(i)$ denotes the probability that a Tor client will be deceived if relay $i$ is being hijacked. $P_{deceived}(i)$ can be calculated using similar method in Section ~\ref{hijack_interception_measurement}, the details of which will be addressed in the Appendix. \yixin{add appendix} The overall probability of a Tor client being affected by a hijack attack on guard relay can then be expressed as:
+\begin{equation*}
+\sum_{i \in \{all guard relays\}} P_{pick}(i) * P_{deceived}(i)
+\end{equation*}
 
-\textbf{Probability of being affected by a hijack attack} is evaluated by
- $\sum Pr(client\_affected | hijacked(i)) * Pr(choose(i))$ for all candidate relay $i$. We first evaluate it without random sampling, for five values of $\alpha=\{0, 0.25, 0.5, 0.75, 1\}$ with $1000$ randomly selected ASes as source AS and Tor consensus data from January 2016. Figure ~\ref{fig_attack} shows the result. 
+We first evaluate the probability without random sampling, for five values of $\alpha=\{0, 0.25, 0.5, 0.75, 1\}$ with $1000$ randomly selected ASes as source AS and Tor consensus data from January 2016. Figure ~\ref{fig_attack} shows the result. 
 
 \begin{figure}[ht!]
 \centering
@@ -93,33 +114,40 @@ We then evaluate it with random sampling of $g=10\%$ for $\alpha=\{0.25, 0.5\}$.
 \caption{Attack Probability with $g=10\%$ sampling \label{fig_attack_random}}
 \end{figure}
 
-\textbf{Relay selection variance} in entropy can be evaluated using Gini coefficient as the entropy evaluation metric, as it has been used in previous work to measure anonymity selection in Tor ~\cite{akhoondi2012lastor}. We first evaluate without  random sampling, for five values of $\alpha: \{0, 0.25, 0.5, 0.75, 1\}$ with $1000$ randomly selected ASes as source AS and Tor consensus data from January 2016. Figure ~\ref{fig_gini} shows the result. The green line to the right is when $\alpha = 0$, which is solely based on bandwidth resulting in a Gini coefficient of $0.51$ for all source ASes. The Gini coefficients for the other four $\alpha$ values which involve resilience-based selection are much lower than bandwidth-based selection, meaning that there is higher entropy and lower skew in probabilities of selecting any particular relay.
+\subsubsection{Balancing Relay Selection Preferences} 
+We want to main good balance among the weights/preferences for each candidate relay to avoid strongly favoring certain relays over the others. For instance, if relay $i$ has 90\% probability of being chosen while all other relays totals up to 10\% probability, then this can create potential security vulnerabilities, let alone performance issues. An adversary may easily target relay $i$ to launch an attack, or even manipulate the selection algorithm to strongly favor the relay run by the adversary instead. Thus, we want to evaluate the variance in probabilities of a Tor client picking any certain relay and show that it's well-balanced. 
+
+We used Gini coefficient as the variance evaluation metric, as it has been used in previous work ~\cite{akhoondi2012lastor}. We first evaluate without random sampling, for five values of $\alpha: \{0, 0.25, 0.5, 0.75, 1\}$ with $1000$ randomly selected ASes as source AS and Tor consensus data from January 2016. Figure ~\ref{fig_gini} shows the result. The green line to the right is when $\alpha = 0$, which is solely based on bandwidth, resulting in a Gini coefficient of $0.51$ for all source ASes. The Gini coefficients for the other four $\alpha$ values which involve resilience-based selection are much lower than bandwidth-only selection, meaning that there is lower skew in probability of selecting any particular relay and thus is more well-balanced. 
 
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=80mm]{figure/gini_relay_variance}
-\caption{Gini coefficients for relay variance given a client \label{fig_gini}}
+\caption{Gini coefficients for variance in relay selection preferences given a Tor client. Lower Gini coefficient value indicates higher variance and less skew. \label{fig_gini}}
 \end{figure}
+
+\subsubsection{Vulnerability to client fingerprinting attacks}
+This is a potential security tradeoff of the relay selection algorithm. We briefly discussed in Section ~\ref{relay_randomization} about fingerprinting a client location based on its preferences of relays in the long term. For instance, for a given relay, if client $a$ has 70\% probability of choosing the relay while client $b$ only has 30\% probability, then an adversary can observe the client's choice of relays overtime to infer client information. The resilience component of our relay selection algorithm may be subjective to such fingerprinting attacks, which we will evaluate here. 
+
+We used Gini coefficient again as the variance evaluation metric, but evaluating \emph{the variance in the probability of each client choosing a given relay} instead. Figure ~\ref{fig_gini_client} shows the result for $1000$ randomly selected ASes as client AS. 
 
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=80mm]{figure/gini_client_variance}
-\caption{Gini coefficients for client variance given a relay \label{fig_gini_client}}
+\caption{Gini coefficients for variance in client's probability of choosing a given relay \label{fig_gini_client}}
 \end{figure}
 
-Figure ~\ref{fig_gini_client} shows the Gini coefficient for the \emph{client} variance - probabilities of different Tor clients choosing a particular relay. The top line is bandwidth-only selection when $\alpha = 0$, and thus the probabilities of different clients choosing a relay are the same, resulting in Gini coefficient$=0$ for all relays. With resiliency-based selection, the skews in probabilities are higher. When $\alpha = 1$ (resiliency-only), $80\%$ of the relays have coefficients $> 0.4$. This skew in probability might be exploited by adversaries who can observe the client over a period of time to infer client locations given the differences in relay selection.
+We can see that the bandwidth-only selection in Vanilla Tor ($\alpha = 0$) has perfect Gini coefficient value of 0 for all relays, since given a relay, the probability of it being chosen is the same across all clients. With resilience-based selection, the skews in probabilities are higher. When $\alpha = 1$ (resilience-only), $80\%$ of the relays have coefficients $> 0.4$. This skew in probability might be exploited by adversaries who can observe the client over a period of time to infer client locations given the differences in relay selection.
+
+We then evaluate it again with $g=10\%$ random sampling. Note that since $\alpha=\{0.75,1\}$ does not have a significant advantage in attack resilience over $\alpha=\{0.25,0.5\}$ in Section ~\ref{attack_probability}, while resulting in higher skew in probabilities, so we focus on evaluating the later here. Figure ~\ref{fig_gini_client_random} shows that by performing $10\%$ random sampling, when $\alpha=0.25$, $80\%$ of the relays have coefficients reduced to $< 0.28$. Although this may still pose some vulnerability to client fingerprinting, we argue that since Tor clients only select guard relays at bootstrapping time, and would then use the same guard relays over several months or until the relays become unavailable, so fingerprinting the client could not be done in a reasonably short time, especially given the low variance of probabilities (although not perfect) as shown.
 
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=80mm]{figure/randomize_client_gini}
-\caption{Gini coefficients for client variance with $g=10\%$ sampling \label{fig_gini_client_random}}
+\caption{Gini coefficients for variance in client's probability of choosing a given relay, with $g=10\%$ sampling \label{fig_gini_client_random}}
 \end{figure}
 
-We then evaluate the Gini coefficient for client variance again with $g=10\%$ random sampling. Note that since $\alpha=\{0.75,1\}$ does not have a significant advantage in attack resiliency over $\alpha=\{0.25,0.5\}$ while resulting in higher skew in probabilities, so we focus on evaluating the later here. Figure ~\ref{fig_gini_client_random} shows that by performing $10\%$ random sampling, when $\alpha=0.25$, $80\%$ of the relays have coefficients reduced to $< 0.28$. Although this may still pose some vulnerability to client fingerprinting, we argue that since Tor clients only select guard relays at bootstrapping time, and would then use the same guard relays over several months or until the relays become unavailable, so fingerprinting the client could not be done in a reasonably short time, especially given the low variance of probabilities, as shown above.\\
-
-
-
-\textbf{Formal anonymity assessment} of the relay selection algorithm is performed using MATor, a framework for assessing the degree of anonymity in Tor with rigorously proved anonymity bounds(citation here). We implemented our new relay selection algorithm into MATor source code, and evaluated in comparison with vanilla Tor. We used configuration of multiplicative factor$\epsilon=1.3$, ports setting of HTTPS+IRC vs. HTTPS, and for compromised nodes $0.5\%$ of total nodes. We evaluated using Tor consensus files from 2/1/2016 - 2/9/2016 and server descriptor from February 2016. Figure ~\ref{fig_mator} shows the result. 
+\subsubsection{Formal anonymity assessment}
+Finally, we evaluate the anonymity of a given Tor client using MATor, a framework for assessing the degree of anonymity in Tor with rigorously proved anonymity bounds ~\cite{backes2014nothing}. We implemented our new relay selection algorithm into MATor source code, and evaluated in comparison with vanilla Tor. Note that we picked the top Tor client location AS6128 ~\cite{juen2012protecting} to evaluate here. We used configuration of multiplicative factor $\epsilon=1.3$, ports setting of HTTPS+IRC vs. HTTPS, and for compromised nodes $0.5\%$ of total nodes. We evaluated using Tor consensus files from 2/1/2016 - 2/9/2016 and server descriptor from February 2016. Figure ~\ref{fig_mator} shows the result. 
 
 \begin{figure}[ht!]
 \centering
@@ -127,24 +155,23 @@ We then evaluate the Gini coefficient for client variance again with $g=10\%$ ra
 \caption{MATor 2/1/2016 - 2/9/2016 (Ignore the numbers on x axis. I need to reformat this plot.) \label{fig_mator}}
 \end{figure}
 
-Our new guard relay selection has better (lower) anonymity bound on sender anonymity and relationship anonymity compared to current Tor path selection. Since we do not alter selection for exit relay, so recipient anonymity remains the same as vanilla Tor. 
+Our new guard relay selection has better (lower) anonymity bound on sender anonymity and relationship anonymity compared to current Tor path selection for clients located in AS6128. Since we do not alter selection for exit relay, so recipient anonymity remains the same as vanilla Tor. 
 
 
 %However, the variance in relay selection probability \emph{across} different source ASes is bigger than bandwidth-only: when $\alpha = 0$, all sources ASes have the same gini coefficient of $0.607$, while for other $\alpha$ values, the gini coefficient could vary from approximately $0.2$ to $0.4$, depending on the source AS. 
 
 
+\subsection{Performance Evaluation}
 
-\subsubsection{Performance Evaluation}
+We first evaluate the runtime of the AS resilience calculation given a source AS. We pick $1000$ ASes randomly as the source AS, and record how much time it takes each of them to complete the calculation. Most of the source ASes finish within $0.6$ second. \\
 
-First, we evaluate the runtime of the AS resilience calculation given a source AS. We pick $1000$ ASes randomly as the source AS, and record how much time it takes each of them to complete the calculation. Figure ~\ref{fig_ascal} show the CDF of the runtime of AS resilience calculation. Most of the source ASes finish within $0.6$ second. 
+%\begin{figure}[ht!]
+%\centering
+%\includegraphics[width=80mm]{figure/runtime}
+%\caption{Runtime of AS resilience calculation from a given source AS \label{fig_ascal}}
+%\end{figure}
 
-\begin{figure}[ht!]
-\centering
-\includegraphics[width=80mm]{figure/runtime}
-\caption{Runtime of AS resilience calculation from a given source AS \label{fig_ascal}}
-\end{figure}
-
-Next, we installed our new Tor client on $26$ Planetlab nodes located in different ASes, and performed page loads of Alexa top 100 websites. We compared the performance of $\alpha={0.25,0.5}$ with $g=10\%$ random sampling against vanilla Tor. Figure ~\ref{fig_pageload} shows the page load time, and all have almost the same performance. This shows that we do not have any performance loss by using our new relay selection algorithm. 
+Next, we installed our new Tor client on $26$ Planetlab nodes located in different ASes, and performed page loads of Alexa top 100 websites. We compared the performance of $\alpha=\{0.25,0.5\}$ with $g=10\%$ random sampling against vanilla Tor. Figure ~\ref{fig_pageload} shows the page load time. We can see that all three have very similar performance. This can be explained in the following ways. First, we do not restrict the relay selection to a smaller set of relays, but rather \emph{preferring} certain relays over the others; second, the $\alpha$ value was tuned to be $\{0.25,0.5\}$, which gives sufficient weight to the bandwidth in relay selection; finally, the algorithm is only for guard relay selection, whereas exit relay selection remains the same as purely bandwidth-weighted selection. There are the potential reasons why the new guard relay selection algorithm does not suffer any performance loss in page load time. 
 
 \begin{figure}[ht!]
 \centering
