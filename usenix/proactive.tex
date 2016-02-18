@@ -4,15 +4,16 @@ Sun \emph{et al.} \cite{sun2015raptor} recently demonstrated a successful real-w
 
 \subsection{Using /24 Prefixes}
 \label{subsec:24prefix}
-Network-level adversaries can hijack internet traffic by announcing a more-specific prefix that belongs to the true origin AS. Since BGP routing prefers longer prefixes over shorter ones, the traffic will go to the false origin with the more-specific prefix instead. The longest prefix length that BGP usually accepts is /24, and thus any prefix that's shorter than /24 is vulnerable to more-specific prefix attacks. 
-Sun \emph{et al.} \cite{sun2015raptor} recently found that more than 90\% of BGP prefixes hosting relays are
-shorter than /24, making them vulnerable to a more-specific BGP prefix attack. We measured the distribution of prefix lengths in relation to Tor bandwidth using the Tor consensus data in January 2016; this is shown in ~\ref{fig_prefixlen}. Consistent with the findings in \cite{sun2015raptor}, a large percentage of the bandwidth are under prefixes shorter than /24. 
+Network-level adversaries can hijack internet traffic by announcing a more-specific prefix that belongs to the true origin AS. Since BGP routing prefers longer prefixes over shorter ones, the traffic will go to the false origin with the more-specific prefix instead. The longest prefix length that BGP usually accepts is /24, and thus any prefix that's shorter than /24 is vulnerable to more-specific prefix attacks. Sun \emph{et al.} \cite{sun2015raptor} recently found that more than 90\% of BGP prefixes hosting relays are
+shorter than /24, making them vulnerable to a more-specific BGP prefix attack. 
 
-\begin{figure}[ht!]
-\centering
-\includegraphics[width=80mm]{prefix_len_graph}
-\caption{Distribution of Tor bandwidth to Prefix Lengths \yixin{we need to fix this plot} \label{fig_prefixlen}}
-\end{figure}
+%We measured the distribution of prefix lengths in relation to Tor bandwidth using the Tor consensus data in January 2016; this is shown in ~\ref{fig_prefixlen}. Consistent with the findings in \cite{sun2015raptor}, a large percentage of the bandwidth are under prefixes shorter than /24. 
+
+%\begin{figure}[ht!]
+%\centering
+%\includegraphics[width=80mm]{prefix_len_graph}
+%\caption{Distribution of Tor bandwidth to Prefix Lengths \yixin{we need to fix this plot} \label{fig_prefixlen}}
+%\end{figure}
 
 Therefore, one way to defend against more-specific prefix hijack attacks is to move Tor guard relays into /24 prefixes. One concern that may arise is the extra burden which can be created on the routing table if announcing /24 prefixes for all Tor guard relays. We obtained a snapshot of the routing table from RouteViews \yixin{citation}, and the Tor consensus data from January 2016. We found that there are 607,335 unique prefixes in the routing table, whereas there are only 1484 unique /24 prefixes covering all Tor guard relays (roughly 0.24\% of the routing table prefixes). Thus, the impact on the routing table size would be negligible. 
 
@@ -95,7 +96,7 @@ This is the main goal of the new relay selection algorithm. Let $P_{pick}(i)$ de
 \sum_{i \in \{all guard relays\}} P_{pick}(i) * P_{deceived}(i)
 \end{equation*}
 
-We first evaluate the probability without random sampling for five values of $\alpha=\{0, 0.25, 0.5, 0.75, 1\}$ with $1000$ randomly selected ASes as the source AS and Tor consensus data from January 2016. Figure ~\ref{fig_attack} shows the result. 
+We first evaluate the probability without random sampling for five values of $\alpha=\{0, 0.25, 0.5, 0.75, 1\}$ with $1000$ randomly selected ASes as the source AS and Tor consensus data from January 2016. Figure ~\ref{fig_attack} shows the result. Table ~\ref{tbl_attack_reduction} shows the average percentage of reduction in the probability of being affected by a hijack attack compared to $\alpha=0$. We can see that $\alpha=1$ has the lowest probability of being affected by an attack, with an average of 31\% reduction. 
 
 \begin{figure}[ht!]
 \centering
@@ -103,15 +104,30 @@ We first evaluate the probability without random sampling for five values of $\a
 \caption{Attack Probability with different $\alpha$ values \label{fig_attack}}
 \end{figure}
 
-We can see that $\alpha=1$ has the lowest probability of being affected by an attack, while its advantage to other $\alpha$ values is marginal. All of them have much lower probability compared to the bandwidth-only selection. 
+%in probability for the $1000$ client ASes compared to $\alpha=0$. When $\alpha=0.25$, the probability increases a bit, with an average of 24\% reduction compared to $\alpha=0$. While $\alpha=\{0.5,0.75\}$ has similar probability to $\alpha=1$, with average of 28\% and 30\% reduction in probability, respectively. 
 
-We then evaluate it with random sampling of $g=10\%$ for $\alpha=\{0.25, 0.5\}$. Figure ~\ref{fig_attack_random} shows the result. Although there is a small increase in attack probability after the random sampling, it is still much lower than Vanilla Tor ($\alpha=0$). 
+We then evaluate it with random sampling of $g=10\%$. Figure ~\ref{fig_attack_random} shows the comparison of $\alpha=\{0.25, 0.5\}$ with and without random sampling. Table ~\ref{tbl_attack_reduction} shows the average percentage of reduction in attack probability with $g=10\%$ random sampling. We can see that there is only a very slight decrease in the reduction percentage with the random sampling. 
 
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=80mm]{figure/attack_randomize}
 \caption{Attack Probability with $g=10\%$ sampling \label{fig_attack_random}}
 \end{figure}
+
+\begin{table}[ht!]
+\begin{center}
+ \begin{tabular}{ p{5mm} | p{2.5cm} | p{2.5cm}}
+    \hline
+    $\alpha$ & Without Random Sampling & With  $g=10\%$ sampling\\ \hline
+    0.25 & 24\% & 19\% \\
+    0.5 & 28\% & 25\% \\
+    0.75 & 30\% & 29\% \\
+    1 & 31\% & 31\% \\
+    \hline
+  \end{tabular}
+\end{center}
+\caption{Percentage of reduction in attack probability compared to $\alpha=0$ \label{tbl_attack_reduction}}
+\end{table}
 
 \subsubsection{Balancing Relay Selection Preferences} 
 We want to main good balance among the weights/preferences for each candidate relay to avoid strongly favoring certain relays over the others. For instance, if relay $i$ has 90\% probability of being chosen while all other relays totals up to 10\% probability, then this can create potential security vulnerabilities, let alone performance issues. An adversary may easily target relay $i$ to launch an attack, or even manipulate the selection algorithm to strongly favor the relay run by the adversary instead. Thus, we want to evaluate the variance in probabilities of a Tor client picking any certain relay and show that it's well-balanced. 
