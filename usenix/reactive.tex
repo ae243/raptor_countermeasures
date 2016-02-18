@@ -13,7 +13,9 @@ The live monitoring framework aims at detecting suspicious routing attacks that 
 
 \subsubsection{Data} 
 \label{sec:data}
-The Tor Project releases up-to-date information about current running relays every hour. Our system automatically fetches this consensus data once it's updated. We focus on guard relays and exit relays, which reside at the two ends of the communication path and can easily be the target of an adversary. Further more, since we focus on AS-level adversaries, it is unnecessary to monitor each individual relay by its IP address. Instead, we monitor the /24 prefixes which contain Tor guard and exit relays. Note that, there is no need to monitor a more specific prefix than /24, since generally /24 is the longest prefix accepted in BGP announcement. \\
+Our framework requires information about current Tor relays.  The Tor Project releases up-to-date information about current running relays every hour. Our system automatically fetches this consensus data once it's updated. We focus on guard relays and exit relays, which reside at the two ends of the communication path and can easily be the target of an adversary. Further more, since we focus on AS-level adversaries, it is unnecessary to monitor each individual relay by its IP address. Instead, we monitor the /24 prefixes which contain Tor guard and exit relays. Note that, there is no need to monitor a more specific prefix than /24, since generally /24 is the longest prefix accepted in BGP announcement.
+
+The framework also uses IP to ASN mappings from Team Cymru \cite{teamcymru}.  This is used in both the BGP monitoring component and Traceroute monitoring component to find the ASes that contain Tor relays, as well as map traceroutes (IP-level paths) to AS-level paths.  One caveat of using Team Cymru is the potential inaccuracy and incompleteness of the data \annie{should we mention anything else about Team Cymru re accuracy/completeness?}.
 
 %Thus, we construct a live monitoring database which is being updated every hour with latest Tor relay data. The table contains the following fields:
 %\begin{center}
@@ -27,6 +29,7 @@ The Tor Project releases up-to-date information about current running relays eve
 %Each /24 prefix that contains any guard/exit relays will have one entry in the table, and the list of /24 prefixes will be used for our BGP and Traceroute monitoring frameworks, which we describe in the following. 
 
 \subsubsection{BGP Monitoring Framework} 
+\label{sec:bgp}
 The BGP Monitoring framework monitors the control plane of internet routing. We collect live BGP updates in combination with the latest Tor relay data. We monitor all the /24 prefixes we obtain, as described in Section \ref{sec:data}. We check if any activity related with the prefixes exhibit any anomaly. These anomalies can be detected by applying heuristics, such as the amount of time that a BGP path is used or the frequency that a path is announced; if certain anomalies fall under a threshold for a given heuristic, they should be flagged as potential attacks. This analysis will require saving inactive relay BGP info for some period of time.  This framework helps:
 
 \begin{itemize}
@@ -54,9 +57,11 @@ then there is the possibility of it being a routing attack.
 \end{enumerate}  
 
 \subsubsection{Traceroute Monitoring Framework} 
-The Traceroute Monitoring Framework monitors the data plane of Internet routing, i.e., how packets travel through the Internet in reality. The traceroute monitoring framework is used as a verification mechanism if the BGP monitoring framework flags certain behavior. There may be many false positives in detecting hijack/interception attacks due to the nature of BGP.  With many false positives, the traceroute monitoring framework will be used often for verification.
+The Traceroute Monitoring Framework monitors the data plane of Internet routing, i.e., how packets travel through the Internet in reality. The traceroute monitoring framework is used as a verification mechanism if the BGP monitoring framework flags anomalous behavior. There may be many false positives in detecting hijack attacks due to the nature of BGP.  With many false positives, the traceroute monitoring framework will be used often for verification.
 
 Our Traceroute monitoring framework retrieves updated Tor relay data hourly from the Tor consensus as described in Section \ref{sec:data}. Since running large numbers of continuous traceroutes to relay IP addresses may create unnecessary extra traffic on the Tor network, we run traceroutes only when necessary.  When there is suspicious activity report by the BGP monitoring framework, the traceroute monitoring framework can be ``triggered'' to target the prefix in the suspicious announcement to verify or disregard the anomaly. If we detect any anomaly from the BGP monitoring framework, we will immediately send traceroutes to the suspicious prefixes to verify whether there is truly a path change happening on the data plane to the Tor relays. 
+
+Prior research has discussed the vulnerabilities of traceroute~\cite{padmanabhan2003secure}; an attacker can manipulate responses to traceroute.  Our framework runs traceroutes from approximately 60 different locations; a consensus can then be taken among the traceroutes.  Therefore, our framework is resistant to attackers that can manipulate a small number of traceroutes.  \annie{should we mention anything else about this type of potential attacker?}
 
 %\begin{itemize}
 %\item Selectively monitor relays of interest.\\
@@ -89,6 +94,62 @@ Our Traceroute monitoring framework retrieves updated Tor relay data hourly from
 %\end{itemize}
 
 \subsection{Framework Evaluation}
-The BGP monitoring framework has been running for X.  It has recorded X announcements that include a Tor guard or exit relay, and X announcements that include a Tor relay and have an origin AS that disagrees with Team Cymru's data.  
+The BGP monitoring framework has been running since Febuary 4th, 2016; for the purposes of our evaluation, we analyze data collected between February 4th, 2016 and February 16th, 2016.  It has recorded 2,248 updates that include a Tor guard or exit relay, and 28 announcements that include a Tor relay and have an origin AS that disagrees with Team Cymru's data.  After implementing the frequency and time heuristics described in Section \ref{sec:bgp}, we applied them to the data collected between February 4th and 16th.  The origin AS check occurs in real-time as part of the BGP monitoring framework.  For our analysis, we assume that there were no hijack attacks on the Tor network during the time we collected data.  
 
-After implementing the three heuristics described above (frequency, time, session), we ran them on the data collected during the week of live monitoring.  For our analysis, we assume that there were no hijack attacks on the Tor network during the week we collected data.  Our frequency heuristic was tuned to a threshold of .01\%, meaning that any prefix announced by an AS with a frequency lower than .01\% of all announcements would be flagged as suspicious.  This resulted in approximately 40 suspicious AS - prefix pairs.  Our time heuristics was set to the same threshold, and resulted in approximately 60 suspicious pairs.  This indicates that our heuristics need to be tuned for more precise and accurate results. \annie{We will add more results here.}
+\subsubsection{Origin AS Check Evaluation}
+
+The analysis done within our framework (in real-time) is the origin AS check; we compare the origin AS of an announcement with the owner of the prefix (according to Team Cymru).  From the data collected, there were 28 BGP updates that were flagged by this check; 4 unique prefixes were announced among these 28 updates.  By manually analyzing the anomalous updates, we found that all four prefixes contained sub-prefixes announced by the owner (accourding to Team Cymru) and were in the log of non-suspicious updates.  For example, {\fontfamily{qcr}\selectfont 50.116.48.0/20} was flagged as suspicious because Team Cymru reports AS63949 as the owner, but the AS path in the prefix announcement was: 
+\[{\fontfamily{qcr}\selectfont 286~1299~8001}\]  When comparing to the non-suspicious updates, we found prefix {\fontfamily{qcr}\selectfont 50.116.49.0/24}, a sub-prefix of {\fontfamily{qcr}\selectfont 50.116.48.0/20}, being announced by AS63949 with the AS path: \[{\fontfamily{qcr}\selectfont 286~1299~8001~63949}\]  \annie{is there a name for this type of AS relationship?}  Because the origin AS of the update in question, AS8001, is already on the path for a sub-prefix, it does not appear to be a BGP hijack attack.  We found this was the case for the remaining 3 prefixes that were flagged, and therefore categorized them as non-suspicious updates.
+
+\subsubsection{Frequency Heuristic Evaluation}
+
+The frequency heuristic is applied to past data, and can be run consistently and automatically throughout the day.  For our evaluation, we applied this heuristic to the updates collected between February 4th and 16th.  This data included 2,248 updates that involved 293 unique prefixes that contain Tor guard or exit relays.  Because we assume that there were no routing attacks on the Tor network during this time period, our system would have a false positive rate of 0 if we detected 0 attacks.  If any updates are flagged as suspicious, then this would be considered a false positive for this time frame.
+
+\begin{table}[h]
+\begin{center}
+    \begin{tabular}{| l | l |}
+    \hline
+    Threshold & False Positive Percentage \\ \hline \hline
+    .001 & 0.00\% \\ \hline
+    .002 & 0.00\% \\ \hline
+    .003 & 0.00\% \\ \hline
+    .004 & 0.00\% \\ \hline
+    .005 & 2.63\% \\ \hline
+    .006 & 4.29\% \\ \hline
+    .007 & 4.29\% \\ \hline
+    .008 & 4.29\% \\ \hline
+    .009 & 5.96\% \\ \hline
+    .01 & 9.90\% \\
+    \hline
+    \end{tabular}
+\end{center}
+\caption{The false positive rates for different thresholds used in the frequency heuristic.}
+\label{tab:frequency}
+\end{table}
+
+The number of false positives is directly related to the threshold value that is set for the heuristic; the higher the threshold value, the more false positives are reported.  On the other hand, setting the threshold value too high can cause false negatives (actual attacks that are not detected).  Table~\ref{tab:frequency} shows the number of percentage of updates flagged as false positives for varying threshold values.  Based on these values, the optimal threshold value would be .004.  
+
+It's important to note that it may be safer to set a higher threshold value, as false positives are not as detrimental as false negatives; additionally, we can use the Traceroute monitoring framework to verify the paths in the flagged updates before determining their status as an attack.  
+
+\subsubsection{Time Heuristic}
+
+\begin{table}[h]
+\begin{center}
+    \begin{tabular}{| l | l |}
+    \hline
+    Threshold & False Positive Percentage \\ \hline \hline
+    .00000001 & 0.00\% \\ \hline
+    .0000001 & 0.44\% \\ \hline
+    .000001 & 1.67\% \\ \hline
+    .00001 & 2.02\% \\ \hline
+    .0001 & 2.28\% \\ \hline
+    .001 & 2.28\% \\ \hline
+    .01 & 5.26\% \\
+    \hline
+    \end{tabular}
+\end{center}
+\caption{The false positive rates for different thresholds used in the time heuristic.}
+\label{tab:time}
+\end{table}
+
+%Our frequency heuristic was tuned to a threshold of .01\%, meaning that any prefix announced by an AS with a frequency lower than .01\% of all announcements would be flagged as suspicious.  This resulted in approximately 40 suspicious AS - prefix pairs.  Our time heuristics was set to the same threshold, and resulted in approximately 60 suspicious pairs.  This indicates that our heuristics need to be tuned for more precise and accurate results. \annie{We will add more results here.}

@@ -1,6 +1,6 @@
 import sys
 
-# usage: python frequency.py
+# usage: python frequency.py <threshold numerator>
 # Calculates the frequency of an AS announcing a path to prefix p - if the frequency is below a threshold, then flag it.
 
 f = open('tor_log.txt', 'r')
@@ -24,19 +24,18 @@ for line in f:
 unique_asns = []
 unique_prefs = []
 freq_map = {}
+fp = 0
 for x in count_map:
     pref = x[0]
     total = total_map[pref]
     count = count_map[x]
     fraction = float(float(count)/float(total))
     freq_map[x] = fraction
-    print "Threshold: " + str(float(float(1)/float(total_map[pref])))
-    if fraction < float(float(1)/float(total_map[pref])):
-        print x, fraction
+#    if fraction < float(float(sys.argv[1])/float(total_map[pref])):
+    if fraction < float(sys.argv[1]):
+        fp += 1
         unique_prefs.append(x[0])
         unique_asns.append(x[1])
-
+print fp
 prefs = list(set(unique_prefs))
 asns = list(set(unique_asns))
-print len(prefs)
-print len(asns)

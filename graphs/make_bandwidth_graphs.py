@@ -6,16 +6,40 @@ import matplotlib.pyplot as plt
 def bandwidth_per_as_graph(as_bw_map):
     data_map = constants.resilience_vals
     data_map2 = as_bw_map
+
+    #print len(data_map) # as -> resilience
+    #print len(data_map2) # as -> bandwidth
+
+    data_mapX = {}
+    data_mapY = {}
+    for d in data_map:
+        if d in data_map2:
+            data_mapX[d] = data_map2[d]
+            data_mapY[d] = data_map[d]
+
+    od1 = collections.OrderedDict(sorted(data_mapY.items()))
+    od2 = collections.OrderedDict(sorted(data_mapX.items()))
+
+    for o in od2:
+        if int(od2[o]) > 2000000:
+            print o, od1[o], od2[o]
+
+    print len(od1)
+    print len(od2)
+
+    count = 0
     data_map3 = {}
     for asn in data_map2:
         if asn.strip() != 'NA':
             data_map3[data_map2[asn]] = data_map[asn]
+        else:
+            count += 1
 
     # to make graph of resiliency based on number of relays in an AS
     od = collections.OrderedDict(sorted(data_map3.items()))
 
-    x = od.values()
-    y = od.keys()
+    x = od1.values()
+    y = od2.values()
     plt.plot(x, y, '.', markersize=10)
     plt.xlabel('Hijack Resilience')
     plt.ylabel('Bandwidth of Tor Relays per AS')
