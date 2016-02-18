@@ -30,7 +30,7 @@ R(t) = \sum_{a \in N} \sum_{v \in N} \frac {\bar{\beta}(t,a,v)} {(N-1)(N-2)}
 
 where N is the total number of ASes.
 
-In order to measure the resilience of Tor-related ASes, we first use an Internet topology~\cite{caida} to get all of the AS relationships, and construct an AS-level graph.  We identify the Tor-related ASes and simulate prefix hijacks on the graph. Algorithm~\ref{algo:calcres} shows the steps we take on the AS graph to calculate the resilience of Tor-related ASes from a source AS $t$. Then, by summing the resilience values from \emph{all} source ASes and dividing by $(N-1)$, we get the total resilience of each Tor-related AS.
+To measure the resilience of Tor-related ASes, we first use an Internet topology~\cite{caida} to get all of the AS relationships, and construct an AS-level graph.  We identify the Tor-related ASes and simulate prefix hijacks on the graph. Algorithm~\ref{algo:calcres} shows the steps we take on the AS graph to calculate the resilience of Tor-related ASes from a source AS $t$. Then, by summing the resilience values from \emph{all} source ASes and dividing by $(N-1)$, we get the total resilience of each Tor-related AS.
 %Specifically, our methodology consists of:
 
 %\begin{enumerate}
@@ -44,7 +44,7 @@ In order to measure the resilience of Tor-related ASes, we first use an Internet
 %We follow this methodology for every AS A $\neq$ a Tor-related AS, every AS C $\neq$ a Tor-related AS, and for every AS B $=$ Tor-related AS.  
 
 \begin{algorithm}
-\caption{Algorithm to calculate prefix hijack resiliency.}
+\caption{Algorithm to calculate prefix hijack resiliency for Tor-related ASes.}
 \label{algo:calcres}
 \begin{algorithmic}
 \Function{CalcResilience}{graph $G$, node $t$}
@@ -82,7 +82,7 @@ Next, we measure the resilience of Tor-related ASes to prefix interception attac
 Based on the above property, we modify the Algorithm ~\ref{algo:calcres} to the following Algorithm~\ref{algo:calcintercept} to evaluate resilience to interception attacks. 
 
 \begin{algorithm}
-\caption{Algorithm to calculate prefix interception resiliency.}
+\caption{Algorithm to calculate prefix interception resiliency for Tor-related ASes.}
 \label{algo:calcintercept}
 \begin{algorithmic}
 \Function{CalcResilience}{graph $G$, node $t$}
@@ -216,3 +216,8 @@ In 2014, Indosat, one of Indonesia's largest telecommunications networks, announ
 \caption{The ASes that contain at least one Tor relay, and were affected by the Indosat hijack attack in 2014, along with their corresponding hijack resiliency values.}
 \label{fig:case_study}
 \end{figure}
+
+{\bf Bandwidth is not enough.} We have shown in this section that Tor-related ASes with high bandwidth can have low resilience values to both hijack and interception attacks, and thus are more likely to be susceptible to active BGP attacks compared to high resilience ASes. What's even worse is that high bandwidth relays are more preferred by Tor users during relay selection, resulting in exposing many Tor users to the high risk of being compromised by active BGP attacks. Therefore, this vulnerability motivates our work on incorporating AS resilience into relay selection, which we will delve into details in Section ~\ref{subsec:relayselection}.
+
+
+

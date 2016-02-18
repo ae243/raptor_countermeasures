@@ -1,8 +1,9 @@
 \section{Reactive Approaches}
-In addition to proactive approaches to helping prevent active BGP routing attacks, we have also taken a reactive approach.  In the case that an attack is happening, we can detect it using a live monitoring framework.
+The new Tor guard relay selection algorithm in Section ~\ref{subsec:relayselection} \emph{proactively} mitigates the affect of active BGP hijacks on the Tor client. In this section, we focus on a live monitoring framework that \emph{reactively} provides information of an attack on Tor while it's happening, whether or not there are Tor clients being affected. 
+%In addition to proactive approaches to helping prevent active BGP routing attacks, we have also taken a reactive approach.  In the case that an attack is happening, we can detect it using a live monitoring framework.
 
 \subsection{A Live Monitoring Framework for Tor}
-A possible countermeasure against routing attacks on the Tor network is attack 
+A possible reactive countermeasure against routing attacks on the Tor network is attack 
 detection and user notification.  Routing authorities then know which relays are 
 being hijacked and/or intercepted, and can make routing decisions accordingly.  
 Real world routing attacks are almost always short-lived\annie{add citation}, which allows 
