@@ -145,20 +145,25 @@ This is a potential security tradeoff of the relay selection algorithm. We brief
 
 We used Gini coefficient again as the variance evaluation metric, but evaluating \emph{the variance in the probability of each client choosing a given relay} instead. Figure ~\ref{fig_gini_client} shows the result for $1000$ randomly selected ASes as client AS. 
 
-\begin{figure}[ht!]
-\centering
-\includegraphics[width=80mm]{figure/gini_client_variance}
-\caption{Gini coefficients for variance in client's probability of choosing a given relay \label{fig_gini_client}}
-\end{figure}
-
 We can see that the bandwidth-only selection in Vanilla Tor ($\alpha = 0$) has perfect Gini coefficient value of 0 for all relays, since given a relay, the probability of it being chosen is the same across all clients. With resilience-based selection, the skews in probabilities are higher. When $\alpha = 1$ (resilience-only), $80\%$ of the relays have coefficients $> 0.4$. This skew in probability might be exploited by adversaries who can observe the client over a period of time to infer client locations given the differences in relay selection.
 
 We then evaluate it again with $g=10\%$ random sampling. Note that since $\alpha=\{0.75,1\}$ does not have a significant advantage in attack resilience over $\alpha=\{0.25,0.5\}$ in Section ~\ref{attack_probability}, while resulting in higher skew in probabilities, so we focus on evaluating the later here. Figure ~\ref{fig_gini_client_random} shows that by performing $10\%$ random sampling, when $\alpha=0.25$, $80\%$ of the relays have coefficients reduced to $< 0.28$. Although this may still pose some vulnerability to client fingerprinting, we argue that since Tor clients only select guard relays at bootstrapping time, and would then use the same guard relays over several months or until the relays become unavailable, so fingerprinting the client could not be done in a reasonably short time, especially given the low variance of probabilities (although not perfect) as shown.
 
+
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=80mm]{figure/randomize_client_gini}
-\caption{Gini coefficients for variance in client's probability of choosing a given relay, with $g=10\%$ sampling \label{fig_gini_client_random}}
+\begin{subfigure}{.25\textwidth}
+\centering
+\includegraphics[width=.9\linewidth]{figure/gini_client_variance}
+\caption{Without random sampling \label{fig_gini_client}}
+\end{subfigure}%
+\begin{subfigure}{.25\textwidth}
+\centering
+\includegraphics[width=.9\linewidth]{figure/randomize_client_gini}
+\caption{With $g=10\%$ sampling \label{fig_gini_client_random}}
+\end{subfigure}
+\caption{Gini coefficients for variance in client's probability of choosing a given relay.}
+\label{fig:gini_client}
 \end{figure}
 
 \subsubsection{Formal anonymity assessment}
