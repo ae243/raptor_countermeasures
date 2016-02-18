@@ -61,7 +61,7 @@ The Traceroute Monitoring Framework monitors the data plane of Internet routing,
 
 Our Traceroute monitoring framework retrieves updated Tor relay data hourly from the Tor consensus as described in Section \ref{sec:data}. Since running large numbers of continuous traceroutes to relay IP addresses may create unnecessary extra traffic on the Tor network, we run traceroutes only when necessary.  When there is suspicious activity report by the BGP monitoring framework, the traceroute monitoring framework can be ``triggered'' to target the prefix in the suspicious announcement to verify or disregard the anomaly. If we detect any anomaly from the BGP monitoring framework, we will immediately send traceroutes to the suspicious prefixes to verify whether there is truly a path change happening on the data plane to the Tor relays. 
 
-Prior research has studied the vulnerabilities of traceroute; an attacker can manipulate responses to traceroute.  Our framework runs traceroutes from approximately 60 different locations; a consensus can then be taken among the traceroutes.  Therefore, our framework is resistant to attackers that can manipulate a small number of traceroutes.  \annie{should we mention anything else about this type of potential attacker?}
+Prior research has discussed the vulnerabilities of traceroute~\cite{padmanabhan2003secure}; an attacker can manipulate responses to traceroute.  Our framework runs traceroutes from approximately 60 different locations; a consensus can then be taken among the traceroutes.  Therefore, our framework is resistant to attackers that can manipulate a small number of traceroutes.  \annie{should we mention anything else about this type of potential attacker?}
 
 %\begin{itemize}
 %\item Selectively monitor relays of interest.\\
@@ -98,7 +98,8 @@ The BGP monitoring framework has been running since Febuary 4th, 2016; for the p
 
 \subsubsection{Origin AS Check Evaluation}
 
-\annie{manual check with past tor updates}
+The analysis done within our framework (in real-time) is the origin AS check; we compare the origin AS of an announcement with the owner of the prefix (according to Team Cymru).  From the data collected, there were 28 BGP updates that were flagged by this check; 4 unique prefixes were announced among these 28 updates.  By manually analyzing the anomalous updates, we found that all four prefixes contained sub-prefixes announced by the owner (accourding to Team Cymru) and were in the log of non-suspicious updates.  For example, {\fontfamily{qcr}\selectfont 50.116.48.0/20} was flagged as suspicious because Team Cymru reports AS63949 as the owner, but the AS path in the prefix announcement was: 
+\[{\fontfamily{qcr}\selectfont 286~1299~8001}\]  When comparing to the non-suspicious updates, we found prefix {\fontfamily{qcr}\selectfont 50.116.49.0/24}, a sub-prefix of {\fontfamily{qcr}\selectfont 50.116.48.0/20}, being announced by AS63949 with the AS path: \[{\fontfamily{qcr}\selectfont 286~1299~8001~63949}\]  \annie{is there a name for this type of AS relationship?}  Because the origin AS of the update in question, AS8001, is already on the path for a sub-prefix, it does not appear to be a BGP hijack attack.  We found this was the case for the remaining 3 prefixes that were flagged, and therefore categorized them as non-suspicious updates.
 
 \subsubsection{Frequency Heuristic Evaluation}
 
@@ -120,6 +121,8 @@ The BGP monitoring framework has been running since Febuary 4th, 2016; for the p
     \hline
     \end{tabular}
 \end{center}
+\caption{The false positive rates for different thresholds used in the frequency heuristic.}
+\label{tab:frequency}
 \end{table}
 
 \subsubsection{Time Heuristic}
@@ -139,6 +142,8 @@ The BGP monitoring framework has been running since Febuary 4th, 2016; for the p
     \hline
     \end{tabular}
 \end{center}
+\caption{The false positive rates for different thresholds used in the time heuristic.}
+\label{tab:time}
 \end{table}
 
 %Our frequency heuristic was tuned to a threshold of .01\%, meaning that any prefix announced by an AS with a frequency lower than .01\% of all announcements would be flagged as suspicious.  This resulted in approximately 40 suspicious AS - prefix pairs.  Our time heuristics was set to the same threshold, and resulted in approximately 60 suspicious pairs.  This indicates that our heuristics need to be tuned for more precise and accurate results. \annie{We will add more results here.}
