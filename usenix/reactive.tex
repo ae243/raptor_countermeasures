@@ -31,7 +31,7 @@ The framework also uses IP to ASN mappings from Team Cymru \cite{teamcymru}.  Th
 
 \subsubsection{BGP Monitoring Framework} 
 \label{sec:bgp}
-The BGP Monitoring framework monitors the control plane of internet routing. We collect live BGP updates in combination with the latest Tor relay data. We monitor all the /24 prefixes we obtain, as described in Section \ref{sec:data}. We check if any activity related with the prefixes exhibit any anomaly. These anomalies can be detected by applying heuristics, such as the amount of time that a BGP path is used or the frequency that a path is announced; if certain anomalies fall under a threshold for a given heuristic, they should be flagged as potential attacks. This analysis will require saving inactive relay BGP info for some period of time.  This framework helps:
+The BGP Monitoring framework monitors the control plane of Internet routing. We collect live BGP updates in combination with the latest Tor relay data. We monitor all the /24 prefixes we obtain, as described in Section \ref{sec:data}. We check if any activity related with the prefixes exhibit any anomaly. These anomalies can be detected by applying heuristics, such as the amount of time that a BGP path is used or the frequency that a path is announced; if certain anomalies fall under a threshold for a given heuristic, they should be flagged as potential attacks. This analysis will require saving inactive relay BGP info for some period of time.  This framework helps:
 
 \begin{itemize}
 \item Identify suspicious prefix announcements.

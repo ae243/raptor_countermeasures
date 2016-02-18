@@ -1,4 +1,4 @@
-\section{Measuring Tor's Current State of Resiliency to BGP Attacks}
+\section{Measuring Tor's Current State of Resilience to BGP Attacks}
 \label{hijack_interception_measurement}
 
 In order to defend Tor against active BGP attacks launched by network-level adversaries, we start by investigating the vulnerability of the Tor network to BGP prefix attacks and quantifying how much of the Tor network would be affected. First, we look at how to evaluate the Tor network in terms of susceptibility to hijack attacks. Second, we extend the metric to quantify how resilient the Tor network is to prefix interception attacks by Tier 1 ASes. These steps help quantify how vulnerable the Tor network is to network-level adversaries in a novel way.  Specifically, we measure:
@@ -44,7 +44,7 @@ To measure the resilience of Tor-related ASes, we first use an Internet topology
 %We follow this methodology for every AS A $\neq$ a Tor-related AS, every AS C $\neq$ a Tor-related AS, and for every AS B $=$ Tor-related AS.  
 
 \begin{algorithm}
-\caption{Algorithm to calculate prefix hijack resiliency for Tor-related ASes.}
+\caption{Algorithm to calculate prefix hijack resilience for Tor-related ASes.}
 \label{algo:calcres}
 \begin{algorithmic}
 \Function{CalcResilience}{graph $G$, node $t$}
@@ -82,7 +82,7 @@ Next, we measure the resilience of Tor-related ASes to prefix interception attac
 Based on the above property, we modify the Algorithm ~\ref{algo:calcres} to the following Algorithm~\ref{algo:calcintercept} to evaluate resilience to interception attacks. 
 
 \begin{algorithm}
-\caption{Algorithm to calculate prefix interception resiliency for Tor-related ASes.}
+\caption{Algorithm to calculate prefix interception resilience for Tor-related ASes.}
 \label{algo:calcintercept}
 \begin{algorithmic}
 \Function{CalcResilience}{graph $G$, node $t$}
@@ -204,18 +204,18 @@ Figure ~\ref{fig:interception_bw} shows the plot of interception resilience valu
 \label{fig:interception_bw}
 \end{figure}
 
-\subsection{Case Study: Indosat 2014}
-In 2014, Indosat, one of Indonesia's largest telecommunications networks, announced 417,038 new prefixes, but it usually only announces about 300 prefixes~\cite{indosat2014}.  Previous work found that this compromised 44 Tor relays, 38 of which were guard relays and 17 of which were exit relays (11 hijacked relays were both guards and exits) ~\cite{sun2015raptor}.  We calculated the hijack resilience of the hijacked ASes; the results are shown in Figure~\ref{fig:case_study}.  We can see that the AS hijack resilience values range from 0.0 to .76, with most ASes falling in the middle of the spectrum. 
+%\subsection{Case Study: Indosat 2014}
+%In 2014, Indosat, one of Indonesia's largest telecommunications networks, announced 417,038 new prefixes, but it usually only announces about 300 prefixes~\cite{indosat2014}.  Previous work found that this compromised 44 Tor relays, 38 of which were guard relays and 17 of which were exit relays (11 hijacked relays were both guards and exits) ~\cite{sun2015raptor}.  We calculated the hijack resilience of the hijacked ASes; the results are shown in Figure~\ref{fig:case_study}.  We can see that the AS hijack resilience values range from 0.0 to .76, with most ASes falling in the middle of the spectrum. 
 %This means that even ASes with relatively high resilience values (.72 and .76) have the potential to be hijacked.  
 
-\yixin{Should we omit this subsection completely? The intention was to validate our metric by doing a case study, but it does not seem to serve the purpose without going into more details. Plus, a better way to validate the metric might be to perform a hijack attack ourselves using transit portal and evaluate the affected ASes vs. their resilience values. However, we do not have the TP ready and thus cannot perform this experiment now.}
+%\yixin{Should we omit this subsection completely? The intention was to validate our metric by doing a case study, but it does not seem to serve the purpose without going into more details. Plus, a better way to validate the metric might be to perform a hijack attack ourselves using transit portal and evaluate the affected ASes vs. their resilience values. However, we do not have the TP ready and thus cannot perform this experiment now.}
 
-\begin{figure}
-\centering
-\includegraphics[width=.4\textwidth]{case_study_graph}
-\caption{The ASes that contain at least one Tor relay, and were affected by the Indosat hijack attack in 2014, along with their corresponding hijack resiliency values.}
-\label{fig:case_study}
-\end{figure}
+%\begin{figure}
+%\centering
+%\includegraphics[width=.4\textwidth]{case_study_graph}
+%\caption{The ASes that contain at least one Tor relay, and were affected by the Indosat hijack attack in 2014, along with their corresponding hijack resiliency values.}
+%\label{fig:case_study}
+%\end{figure}
 
 {\bf Bandwidth is not enough.} We have shown in this section that Tor-related ASes with high bandwidth can have low resilience values to both hijack and interception attacks, and thus are more likely to be susceptible to active BGP attacks compared to high resilience ASes. What's even worse is that high bandwidth relays are more preferred by Tor users during relay selection, resulting in exposing many Tor users to the high risk of being compromised by active BGP attacks. Therefore, this vulnerability motivates our work on incorporating AS resilience into relay selection, which we will delve into details in Section ~\ref{subsec:relayselection}.
 
