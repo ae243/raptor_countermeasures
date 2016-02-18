@@ -1,12 +1,12 @@
 \section{Measuring Tor's Current State of Resiliency to BGP Attacks}
 \label{hijack_interception_measurement}
 
-Because the Tor network is susceptible to network-level adversaries, we aim to quantify how much of the Tor network would be affected by a BGP prefix hijack.  First, we look at how to evaluate the Tor network in terms of susceptibility to hijack attacks. Second, we extend the metric to quantify how resilient the Tor network is to prefix interception attacks by Tier 1 ASes. These steps help quantify how vulnerable the Tor network is to network-level adversaries in a novel way.  Specifically, we measure:
+In order to defend Tor against active BGP attacks launched by network-level adversaries, we start by investigating the vulnerability of the Tor network to BGP prefix attacks and quantifying how much of the Tor network would be affected. First, we look at how to evaluate the Tor network in terms of susceptibility to hijack attacks. Second, we extend the metric to quantify how resilient the Tor network is to prefix interception attacks by Tier 1 ASes. These steps help quantify how vulnerable the Tor network is to network-level adversaries in a novel way.  Specifically, we measure:
 %The metric used helps enlighten the community about the state of the Tor network, in terms of how resilient the relays are to hijack attacks.  
 
 \begin{itemize}
-\item Resilience to prefix hijack attacks of the ASes that contain Tor guard/exit relays
-\item Resilience to prefix interception attacks of the ASes that contain Tor guard/exit relays
+\item Resilience to prefix hijack attacks of the ASes that contain Tor relays
+\item Resilience to prefix interception attacks of the ASes that contain Tor relays
 \item Resilience of the ASes that were affected in the Indosat hijack in 2014. 
 %\item Resiliency (to prefix hijack attacks) of the ASes that contain relays and compare the resiliency of ASes that contain more relays to those that contain few relays.
 %\item Resiliency (to prefix interception attacks) of the ASes that contain relays and compare the resiliency of ASes that contain more relays to those that contain few relays.
@@ -16,7 +16,7 @@ Because the Tor network is susceptible to network-level adversaries, we aim to q
 \subsection{Resilience to prefix hijack attacks}
 \label{hijack_methodology}
 
-Previous work has tackled questions of AS resilience using simulations of the entire Internet \cite{lad2007understanding}.  We build off this work by applying these metrics to the Tor network. \cite{lad2007understanding} explains the probability of a node $v$ believing the true origin $t$ given a false origin $a$ announcing a route that belongs to true origin $t$:
+Network-level adversaries can launch a BGP prefix hijack by announcing a prefix that it does not own. Consequently, some ASes would be deceived by the false announcement and thus send traffic to the false origin AS instead of the true origin AS. Previous work has tackled questions of AS resilience to prefix hijack attacks using simulations of the entire Internet \cite{lad2007understanding}.  We build off this work by applying these metrics to the Tor network. \cite{lad2007understanding} explains the probability of a node $v$ believing the true origin $t$ given a false origin $a$ announcing a route that belongs to true origin $t$:
 
 \begin{equation}
 \bar{\beta}(t,a,v) = \frac {p(v,t)} {p(v,t) + p(v,a)}
@@ -30,7 +30,7 @@ R(t) = \sum_{a \in N} \sum_{v \in N} \frac {\bar{\beta}(t,a,v)} {(N-1)(N-2)}
 
 where N is the total number of ASes.
 
-In order to measure the resiliency of Tor-related ASes, we first use an Internet topology~\cite{caida} to get all of the AS relationships, and construct an AS-level graph.  We identify the Tor-related ASes and simulate prefix hijacks on the graph. Algorithm~\ref{algo:calcres} shows the steps we take on the AS graph to calculate the resilience of Tor-related ASes from a source AS t. Then by summing the resiliences from \emph{all} source ASes and divided by $(N-1)$, we get the the total resilience of each Tor-related AS.
+In order to measure the resilience of Tor-related ASes, we first use an Internet topology~\cite{caida} to get all of the AS relationships, and construct an AS-level graph.  We identify the Tor-related ASes and simulate prefix hijacks on the graph. Algorithm~\ref{algo:calcres} shows the steps we take on the AS graph to calculate the resilience of Tor-related ASes from a source AS t. Then by summing the resiliences from \emph{all} source ASes and divided by $(N-1)$, we get the the total resilience of each Tor-related AS.
 %Specifically, our methodology consists of:
 
 %\begin{enumerate}
@@ -62,23 +62,23 @@ In order to measure the resiliency of Tor-related ASes, we first use an Internet
 \end{algorithmic}
 \end{algorithm}
 
-Note that, the $\Call{CalcPathsFromNode}{G,t}$ step computes paths from source AS t to all other ASes, which requires AS-level path predictions. Previous works have shown that AS level paths are determined mainly based on two preferences (citation here):
+Note that, the $\Call{CalcPathsFromNode}{G,t}$ step computes paths from source AS t to all other ASes, which requires AS-level path predictions. Previous works have shown that AS level paths are determined mainly based on two preferences ~\cite{gao2001stable}:
 
 \begin{itemize}
 \item Local Preference: customer route is preferred over peer route, which is preferred over provider route. 
 \item Shortest Path: With the highest local preference, paths with the shortest hops will be preferred. 
 \end{itemize}
 
-Further more, the AS paths should also have the \emph{valley free} property. (citation here) Thus, we use breadth first search to traverse the graph from a given source node based on this property and the preferences. We first explore provider-customer paths, which are the most preferred; next, we explore one peer-to-peer path followed by a sequence of provider-customer paths, which are the next preferred; finally, we explore customer-provider paths followed by an optional peer-to-peer path and then followed by a sequence of provider-customer paths. Note that, nodes are explored in the most preferred to least preferred order, and those which are explored in the same step are equally preferred. This ordering will help accelerate the resiliency calculation. 
+Further more, the AS paths should also have the \emph{valley free} property ~\cite{gao2001inferring}. Thus, we use breadth first search to traverse the graph from a given source node based on this property and the preferences. We first explore provider-customer paths, which are the most preferred; next, we explore one peer-to-peer path followed by a sequence of provider-customer paths, which are the next preferred; finally, we explore customer-provider paths followed by an optional peer-to-peer path and then followed by a sequence of provider-customer paths. Note that, nodes are explored in the most preferred to least preferred order, and those which are explored in the same step are equally preferred. This ordering will help accelerate the resilience calculation. We will expand more details of our AS-level path prediction algorithm in Discussion section. \yixin{add this to discussion}
 
 %There is also space for metrics regarding specific relays' resiliency to BGP prefix hijack attacks, as well as metrics regarding BGP prefix interception attacks (AS- and relay-level).  
 
 %  We also plan to specifically look at the resiliency of guard relays (as a group) as well as exit relays (as a group). 
 
 \subsection{Resilience to prefix interception attacks}
-Next we measure the resilience of Tor-related ASes to prefix interception attacks. Ballani \emph{et al.} \cite{ballani2007study} pointed that, in order for an AS to perform interception attack, it needs to maintain its existing route to the true origin AS and thus be able to forward the traffic back to the true origin. Thus, if the attacking AS's existing route to the true origin AS is through a provider route, then the attacking AS can only make the false prefix announcement to its peers and customers, but not providers; on the other hand, if the existing route is through a peer or customer route, then it's safe to make the false announcement to all its neighbors.
+Next, we measure the resilience of Tor-related ASes to prefix interception attacks. Launching prefix interception attacks requires one further step than prefix hijack attacks - the false origin AS needs to forward the hijacked traffic back to the true origin AS. Ballani \emph{et al.} \cite{ballani2007study} pointed that, in order to be able to do this, the false origin AS needs to satisfy a \emph{safety condition}: none of the ASes along the existing route from false origin AS to true origin AS should choose the invalid route advertised by the false origin AS, and thus the false origin AS can still use its existing route to forward the hijacked traffic back to the true origin. Thus, when making the invalid route announcement, there are two cases to consider: (1) if the false origin AS's existing route to the true origin AS is through a peer or customer route, then it's safe to make the false announcement to all its neighbors without affecting its existing route to the true origin; (2) if the false origin AS's existing route to the true origin AS is through a provider route, then it can only make the false announcement to its peers and customers, but not providers. 
 
-Therefore, we modify the algorithm from Section~\ref{hijack_methodology} to the following Algorithm~\ref{algo:calcintercept}. 
+Based on the above property, we modify the Algorithm ~\ref{algo:calcres} to the following Algorithm~\ref{algo:calcintercept} to evaluate resilience to interception attacks. 
 
 \begin{algorithm}
 \caption{Algorithm to calculate prefix interception resiliency.}
@@ -116,47 +116,65 @@ Therefore, we modify the algorithm from Section~\ref{hijack_methodology} to the 
 
 \subsection{Hijack Resilience Results}
 
-We obtained the list of Tor guard/exit relays from Tor consensus in December 2015 and retrieved their belonging ASes. Then, we downloaded the AS topology published by CAIDA in December 2015. We evaluated the resilience of each of the ASes which contain Tor guard/exit relays based on the AS topology using the method in ~\ref{algo:calcres}. 
+{\bf Resilience of the current Tor network.} We obtained the list of Tor relays from Tor consensus in January 2016 and retrieved their belonging ASes. Then, we downloaded the AS topology published by CAIDA in January 2016. The AS topology contains 52838 ASes, in which 1202 ASes contain a total of 6942 Tor relays. We simulated \emph{all} possible hijacking scenarios against each of the 1202 Tor-related ASes, totaling $52837 \times 1202 = 63,510,074$ prefix hijacks. We used method described in Section ~\ref{hijack_methodology} to evaluate the resilience of each Tor-related AS. 
 
-The AS topology contains 52680 ASes, in which 612 ASes contain a total of 2548 Tor guard/exit relays. We simulated \emph{all} possible hijacking scenarios against each of the 612 ASes, totaling $52679 \times 612 = 32,239,548$ prefix hijacks. Thus, we first calculate the resiliency of each Tor AS from each of the 52680 ASes as the \emph{source} AS as following, and then sum up the resulting resiliency $R$ to obtain the total resiliency for each of the Tor ASes. 
-
-After calculating the hijack resilience for each AS that contains at least one Tor relay, we can see that most ASes lie in the middle of the spectrum for resilience (as shown in Figure~\ref{fig:resilience_histogram}).
-
-\begin{figure}
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=.4\textwidth]{resilience_histogram}
-\caption{A histogram of resilience values for all ASes that contain a Tor relay.}
-\label{fig:resilience_histogram}
+\caption{Histogram of hijack resiliences for all Tor-related ASes.}
+\label{fig:hijack_resilience_histogram}
 \end{figure}
 
-\begin{figure}
+Figure~\ref{fig:hijack_resilience_histogram} shows the results. We can see that most Tor-related ASes lie in the middle of the spectrum for resilience. We then look at AS resilience corresponding to its involvement in Tor in terms of number of Tor relays and aggregated Tor bandwidth that it contains. Figure ~\ref{fig:res_relays} shows the resilience value for an AS corresponding to its number of Tor relays. Figure ~\ref{fig:hijack_bw} shows the resilience value for an AS corresponding to its total Tor bandwidth. 
+
+\begin{figure}[ht!]
+\centering
+\begin{subfigure}{.25\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{new_resilience_per_as}
+  \caption{Hijack Resilience v.s. Number of Tor Relays per AS}
+  \label{fig:res_relays}
+\end{subfigure}%
+\begin{subfigure}{.25\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{new_bandwidth}
+  \caption{Hijack Resilience v.s. Tor Bandwidth per AS}
+  \label{fig:hijack_bw}
+\end{subfigure}
+\caption{Hijack resilience v.s. relays/bandwidths for all Tor-related ASes.}
+\label{fig:hijack_as}
+\end{figure}
+
+We can see that in both figures ~\ref{fig:res_relays} and ~\ref{fig:hijack_bw}, there is one significant outlier - AS16276, OVH - which contains 339 relays and carries \yixin{add here} Tor bandwidths. Unfortunately, this AS also has a relatively low resilience against hijack attacks.  This motivates our proactive and reactive countermeasures against hijack attacks. \yixin{this part needs to be polished after getting exact data of relays, bandwidth and resilience}.\\
+
+%We then looked at which ASes had the most relays, and what their corresponding resilience is; ideally, ASes with more relays are also more resilient to hijack attacks.  Figure~\ref{fig:res_relays} shows the resilience value for an AS and the AS's corresponding number of relays.  
+
+%\begin{figure}
+%\centering
+%\includegraphics[width=.4\textwidth]{res_num_relays}
+%\caption{Resilience values for each AS and each AS's corresponding number of relays.}
+%\label{fig:res_relays}
+%\end{figure}
+
+%\begin{figure}
+%\centering
+%\includegraphics[width=.4\textwidth]{hijack_bandwidth}
+%\caption{Bandwidth of all Tor relays in an AS, and the corresponding AS hijack resiliency.}
+%\label{fig:hijack_bw}
+%\end{figure}
+
+{\bf Resilience against Tier 1 ASes.} Tier 1 ASes play an important role in Internet routing and carry large amount of network traffic. Thus, we measured the resilience of Tor-related ASes specifically to Tier 1 ASes as hijacking ASes (instead of \emph{all} ASes). Figure~\ref{fig:resilience_histogram_tier1} shows the result. Surprisingly, 
+
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=.4\textwidth]{hijack_tier1}
-\caption{A histogram of resilience to Tier1 hijack attacks for all ASes that contain a Tor relay.}
+\caption{Histogram of hijack resiliences to Tier 1 ASes for all Tor-related ASes.}
 \label{fig:resilience_histogram_tier1}
 \end{figure}
 
-We then looked at which ASes had the most relays, and what their corresponding resilience is; ideally, ASes with more relays are also more resilient to hijack attacks.  Figure~\ref{fig:res_relays} shows the resilience value for an AS and the AS's corresponding number of relays.  
+{\bf Resilience over the years.} We also conducted our measurements on past data to analyze the hijack resiliency trend on the Tor network.  Figure~\ref{fig:resilience_trend} shows the average AS resiliency to hijack attacks each year.  We can see that the average resiliency has increased since 2008, but still remains below .50.  
 
-\begin{figure}
-\centering
-\includegraphics[width=.4\textwidth]{res_num_relays}
-\caption{Resilience values for each AS and each AS's corresponding number of relays.}
-\label{fig:res_relays}
-\end{figure}
-
-We can see one significant outlier - AS16276, OVH - which contains 339 relays; unfortunately, this AS also has a relatively low resilience against hijack attacks.  This motivates our proactive and reactive countermeasures against hijack attacks.
-
-\begin{figure}
-\centering
-\includegraphics[width=.4\textwidth]{hijack_bandwidth}
-\caption{Bandwidth of all Tor relays in an AS, and the corresponding AS hijack resiliency.}
-\label{fig:hijack_bw}
-\end{figure}
-
-We also conducted our measurements on past data to analyze the hijack resiliency trend on the Tor network.  Figure~\ref{fig:resilience_trend} shows the average AS resiliency to hijack attacks each year.  We can see that the average resiliency has increased since 2008, but still remains below .50.  
-
-\begin{figure}
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=.4\textwidth]{hijack_resilience_trend}
 \caption{Average Tor AS resilience each year from 2008-2016.}
