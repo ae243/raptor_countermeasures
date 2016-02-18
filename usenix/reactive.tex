@@ -102,7 +102,7 @@ The analysis done within our framework (in real-time) is the origin AS check; we
 \[{\fontfamily{qcr}\selectfont 286~1299~8001}\]  When comparing to the non-suspicious updates, we found prefix {\fontfamily{qcr}\selectfont 50.116.49.0/24}, a sub-prefix of {\fontfamily{qcr}\selectfont 50.116.48.0/20}, being announced by AS63949 with the AS path: \[{\fontfamily{qcr}\selectfont 286~1299~8001~63949}\]  \annie{is there a name for this type of AS relationship?}  Because the origin AS of the update in question, AS8001, is already on the path for a sub-prefix, it does not appear to be a BGP hijack attack.  We found this was the case for the remaining 3 prefixes that were flagged, and therefore categorized them as non-suspicious updates.
 
 \subsubsection{Frequency Heuristic Evaluation}
-
+\label{sec:freq}
 The frequency heuristic is applied to past data, and can be run consistently and automatically throughout the day.  For our evaluation, we applied this heuristic to the updates collected between February 4th and 16th.  This data included 2,248 updates that involved 293 unique prefixes that contain Tor guard or exit relays.  Because we assume that there were no routing attacks on the Tor network during this time period, our system would have a false positive rate of 0 if we detected 0 attacks.  If any updates are flagged as suspicious, then this would be considered a false positive for this time frame.
 
 \begin{table}[h]
@@ -132,6 +132,8 @@ The number of false positives is directly related to the threshold value that is
 It's important to note that it may be safer to set a higher threshold value, as false positives are not as detrimental as false negatives; additionally, we can use the Traceroute monitoring framework to verify the paths in the flagged updates before determining their status as an attack.  
 
 \subsubsection{Time Heuristic}
+
+Using the same data that the frequency heuristic was evaluated on, we found the threshold values and their corresponding false positive rates for the time heuristic (as shown in Table~\ref{tab:time}).  According to these values, an optimal threshold is .00000001, but, as mentioned in \ref{sec:freq}, it might be wiser to select a higher threshold to minimize the false negatives, and then minimize the number of false positives by using the traceroute monitoring framework.
 
 \begin{table}[h]
 \begin{center}
