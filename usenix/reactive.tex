@@ -103,6 +103,8 @@ The analysis done within our framework (in real-time) is the origin AS check; we
 
 \subsubsection{Frequency Heuristic Evaluation}
 
+The frequency heuristic is applied to past data, and can be run consistently and automatically throughout the day.  For our evaluation, we applied this heuristic to the updates collected between February 4th and 16th.  This data included 2,248 updates that involved 293 unique prefixes that contain Tor guard or exit relays.  Because we assume that there were no routing attacks on the Tor network during this time period, our system would have a false positive rate of 0 if we detected 0 attacks.  If any updates are flagged as suspicious, then this would be considered a false positive for this time frame.
+
 \begin{table}[h]
 \begin{center}
     \begin{tabular}{| l | l |}
@@ -124,6 +126,10 @@ The analysis done within our framework (in real-time) is the origin AS check; we
 \caption{The false positive rates for different thresholds used in the frequency heuristic.}
 \label{tab:frequency}
 \end{table}
+
+The number of false positives is directly related to the threshold value that is set for the heuristic; the higher the threshold value, the more false positives are reported.  On the other hand, setting the threshold value too high can cause false negatives (actual attacks that are not detected).  Table~\ref{tab:frequency} shows the number of percentage of updates flagged as false positives for varying threshold values.  Based on these values, the optimal threshold value would be .004.  
+
+It's important to note that it may be safer to set a higher threshold value, as false positives are not as detrimental as false negatives; additionally, we can use the Traceroute monitoring framework to verify the paths in the flagged updates before determining their status as an attack.  
 
 \subsubsection{Time Heuristic}
 
