@@ -101,7 +101,7 @@ The analysis done within our system (in real-time) is the origin AS check; we co
 \label{sec:freq}
 The frequency heuristic is applied to past data, and can be run consistently and automatically throughout the day.  For our evaluation, we applied this heuristic to the updates collected between February 4th and 16th.  This data included 2,248 updates that involved 293 unique prefixes that contain Tor guard or exit relays.  Because we assume that there were no routing attacks on the Tor network during this time period, our system would have a false positive rate of 0 if we detected 0 attacks.  If any updates are flagged as suspicious, then this would be considered a false positive for this time frame.
 
-\begin{table*}[h!]
+\begin{table*}[ht!]
 \begin{center}
     \begin{tabular}{| p{2cm} | p{3cm} | p{3cm} | p{3cm} | p{2cm} |}
     \hline
