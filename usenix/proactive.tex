@@ -91,7 +91,7 @@ We evaluate the security and anonymity of the Tor guard relay selection algorith
 
 \subsubsection{Probability of a Tor client being affected by a hijack attack on Tor guard relay}
 \label{attack_probability}
-This is the main goal of the new relay selection algorithm. Let $P_{pick}(i)$ denotes the probability that a Tor client will choose relay $i$ using our algorithm, and $P_{deceived}(i)$ denotes the probability that a Tor client will be deceived if relay $i$ is being hijacked. $P_{deceived}(i)$ can be calculated using similar method in Section ~\ref{hijack_interception_measurement}, the details of which will be addressed in the Appendix. The overall probability of a Tor client being affected by a hijack attack on guard relay can then be expressed as:
+This is the main goal of the new relay selection algorithm. Let $P_{pick}(i)$ denotes the probability that a Tor client will choose relay $i$ using our algorithm, and $P_{deceived}(i)$ denotes the probability that a Tor client will be deceived if relay $i$ is being hijacked. $P_{deceived}(i)$ can be calculated using similar approach in Section ~\ref{hijack_interception_measurement}. The overall probability of a Tor client being affected by a hijack attack on guard relay can then be expressed as:
 \begin{equation*}
 \sum_{i \in \{all guard relays\}} P_{pick}(i) * P_{deceived}(i)
 \end{equation*}
