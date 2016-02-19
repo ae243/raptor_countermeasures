@@ -22,7 +22,7 @@ detection.  The live monitoring system aims to detect suspicious routing attacks
 
 Our system requires information about current Tor relays.  The Tor Project releases up-to-date information about current running relays every hour. Our system automatically fetches this consensus data. We focus on guard relays and exit relays, which reside at the two ends of the communication path and can easily be the target of an adversary. Furthermore, since we focus on AS-level adversaries, it is unnecessary to monitor each individual relay by its IP address. Instead, we monitor the /24 prefixes which contain Tor guard and exit relays. There is no need to monitor a more specific prefix than /24, since generally /24 is the longest prefix accepted in BGP announcement.
 
-The system also uses IP to ASN mappings from Team Cymru \cite{teamcymru}.  This is used in both the BGP monitoring component and {\tt traceroute} monitoring component to find the ASes that contain Tor relays, as well as map traceroutes (IP-level paths) to AS-level paths.  One caveat of using Team Cymru is the potential inaccuracy and incompleteness of the data; the system could easily be augmented to check multiple registries and compare results.
+The system also uses IP to ASN mappings from Team Cymru \cite{teamcymru} to find the ASes that contain Tor relays, as well as map traceroutes (IP-level paths) to AS-level paths. We also use Team Cymru \cite{teamcymru} to obtain AS ownership of prefixes. Some prefixes are owned by an organization with multiple AS numbers, so we take this into consideration and store all AS origins of these prefixes.  One caveat of using Team Cymru is the potential inaccuracy and incompleteness of the data; the system could easily be augmented to check multiple registries and compare results.
 
 The BGP Monitoring system collects live BGP updates in combination with the latest Tor relay data. We monitor all the /24 prefixes we obtain. We check if any activity related with the prefixes exhibit any anomaly. These anomalies can be detected by applying heuristics, such as the amount of time that a BGP path is used or the frequency that a path is announced; if certain anomalies fall under a threshold for a given heuristic, they should be flagged as potential attacks. This analysis will require saving inactive relay BGP info for some period of time.  This system helps:
 
@@ -30,8 +30,6 @@ The BGP Monitoring system collects live BGP updates in combination with the late
 \item Identify suspicious prefix announcements.
 \item Differentiate between potential attacks and ``normal'' behavior, such as multiple origin AS conflicts, backup paths, etc~\cite{zhao2001analysis}.
 \end{itemize}
-
-We use Team Cymru \cite{teamcymru} to obtain AS ownership of prefixes. Some prefixes are owned by an organization with multiple AS numbers, so we take this into consideration and store all AS origins of these prefixes. If we observe any change in AS paths, we will first check if the prefix has multiple AS origins, and if so, as long as the new origin AS also owns the prefix, then it would not be seen as an attack. 
 
 The implementation of the BGP Monitoring system is based on BGP Stream~\cite{bgpstream}.  We analyze the live stream of BGP announcements and withdrawals, focusing just on the prefixes that contain a Tor guard or exit.  We monitor the prefixes that are reported through Team Cymru, as well as the /24 that contains each relay; we do this in order to detect sub-prefix hijack attacks -- we must monitor longer prefixes in addition to the reported prefix.  
 
