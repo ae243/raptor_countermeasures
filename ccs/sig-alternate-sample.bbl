@@ -1,0 +1,227 @@
+\begin{thebibliography}{10}
+
+\bibitem{syriahijack}
+Bgp hijack incident by syrian telecommunications establishment.
+\newblock
+  \url{http://www.bgpmon.net/bgp-hijack-incident-by-syrian-telecommunications-establishment/}.
+
+\bibitem{bgpstream}
+Bgp stream.
+\newblock \url{http://bgpstream.caida.org/}.
+
+\bibitem{topology}
+Caida internet topology map.
+\newblock \url{https://www.caida.org/research/topology/}.
+
+\bibitem{indosat2014}
+Hijack event today by indosat.
+\newblock \url{http://www.bgpmon.net/hijack-event-today-by-indosat/}.
+
+\bibitem{caida}
+The ipv4 routed /24 topology dataset.
+\newblock
+  \url{http://www.caida.org/data/active/ipv4_routed_24_topology_dataset.xml}.
+
+\bibitem{indiahijack}
+Large scale bgp hijack out of india.
+\newblock \url{http://www.bgpmon.net/large-scale-bgp-hijack-out-of-india/}.
+
+\bibitem{malaysialeak}
+Massive route leak causes internet slowdown.
+\newblock
+  \url{http://www.bgpmon.net/massive-route-leak-cause-internet-slowdown/}.
+
+\bibitem{maxmind}
+Maxmind geolite asn database.
+\newblock \url{http://dev.maxmind.com/geoip/legacy/geolite/}.
+
+\bibitem{routeviews}
+Route views project.
+\newblock \url{http://www.routeviews.org/}.
+
+\bibitem{teamcymru}
+Team-cymru.
+\newblock \url{http://www.team-cymru.org/}.
+
+\bibitem{torconsensus}
+Tor consensus.
+\newblock
+  \url{https://collector.torproject.org/recent/relay-descriptors/consensuses/}.
+
+\bibitem{tormetrics}
+Tor metrics.
+\newblock \url{https://metrics.torproject.org/}.
+
+\bibitem{akhoondi2012lastor}
+M.~Akhoondi, C.~Yu, and H.~V. Madhyastha.
+\newblock Lastor: A low-latency as-aware tor client.
+\newblock In {\em Security and Privacy (SP), 2012 IEEE Symposium on}, pages
+  476--490. IEEE, 2012.
+
+\bibitem{backes2014nothing}
+M.~Backes, A.~Kate, S.~Meiser, and E.~Mohammadi.
+\newblock (nothing else) mator (s): Monitoring the anonymity of tor's path
+  selection.
+\newblock In {\em Proceedings of the 2014 ACM SIGSAC Conference on Computer and
+  Communications Security}, pages 513--524. ACM, 2014.
+
+\bibitem{ballani2007study}
+H.~Ballani, P.~Francis, and X.~Zhang.
+\newblock A study of prefix hijacking and interception in the internet.
+\newblock In {\em ACM SIGCOMM Computer Communication Review}, volume~37, pages
+  265--276. ACM, 2007.
+
+\bibitem{dingledine2004tor}
+R.~Dingledine, N.~Mathewson, and P.~Syverson.
+\newblock Tor: The second-generation onion router.
+\newblock Technical report, DTIC Document, 2004.
+
+\bibitem{edman2009awareness}
+M.~Edman and P.~Syverson.
+\newblock As-awareness in tor path selection.
+\newblock In {\em Proceedings of the 16th ACM conference on Computer and
+  communications security}, pages 380--389. ACM, 2009.
+
+\bibitem{feamster2004location}
+N.~Feamster and R.~Dingledine.
+\newblock Location diversity in anonymity networks.
+\newblock In {\em Proceedings of the 2004 ACM workshop on Privacy in the
+  electronic society}, pages 66--76. ACM, 2004.
+
+\bibitem{gao2001inferring}
+L.~Gao.
+\newblock On inferring autonomous system relationships in the internet.
+\newblock {\em IEEE/ACM Transactions on Networking (ToN)}, 9(6):733--745, 2001.
+
+\bibitem{gao2001stable}
+L.~Gao and J.~Rexford.
+\newblock Stable internet routing without global coordination.
+\newblock {\em IEEE/ACM Transactions on Networking (TON)}, 9(6):681--692, 2001.
+
+\bibitem{hu2007accurate}
+X.~Hu and Z.~M. Mao.
+\newblock Accurate real-time identification of ip prefix hijacking.
+\newblock In {\em Security and Privacy, 2007. SP'07. IEEE Symposium on}, pages
+  3--17. IEEE, 2007.
+
+\bibitem{johnson2013users}
+A.~Johnson, C.~Wacek, R.~Jansen, M.~Sherr, and P.~Syverson.
+\newblock Users get routed: Traffic correlation on tor by realistic
+  adversaries.
+\newblock In {\em Proceedings of the 2013 ACM SIGSAC conference on Computer \&
+  communications security}, pages 337--348. ACM, 2013.
+
+\bibitem{juen2012protecting}
+J.~Juen.
+\newblock Protecting anonymity in the presence of autonomous system and
+  internet exchange level adversaries.
+\newblock 2012.
+
+\bibitem{juen2015defending}
+J.~Juen, A.~Johnson, A.~Das, N.~Borisov, and M.~Caesar.
+\newblock Defending tor from network adversaries: A case study of network path
+  prediction.
+\newblock {\em Proceedings on Privacy Enhancing Technologies},
+  2015(2):171--187, 2015.
+
+\bibitem{karlin2006pretty}
+J.~Karlin, S.~Forrest, and J.~Rexford.
+\newblock Pretty good bgp: Improving bgp by cautiously adopting routes.
+\newblock In {\em Network Protocols, 2006. ICNP'06. Proceedings of the 2006
+  14th IEEE International Conference on}, pages 290--299. IEEE, 2006.
+
+\bibitem{lad2006phas}
+M.~Lad, D.~Massey, D.~Pei, Y.~Wu, B.~Zhang, and L.~Zhang.
+\newblock Phas: A prefix hijack alert system.
+\newblock In {\em Usenix Security}, 2006.
+
+\bibitem{lad2007understanding}
+M.~Lad, R.~Oliveira, B.~Zhang, and L.~Zhang.
+\newblock Understanding resiliency of internet topology against prefix hijack
+  attacks.
+\newblock In {\em Dependable Systems and Networks, 2007. DSN'07. 37th Annual
+  IEEE/IFIP International Conference on}, pages 368--377. IEEE, 2007.
+
+\bibitem{murdoch2007sampled}
+S.~J. Murdoch and P.~Zieli{\'n}ski.
+\newblock Sampled traffic analysis by internet-exchange-level adversaries.
+\newblock In {\em Privacy Enhancing Technologies}, pages 167--183. Springer,
+  2007.
+
+\bibitem{padmanabhan2003secure}
+V.~N. Padmanabhan and D.~R. Simon.
+\newblock Secure traceroute to detect faulty or malicious routing.
+\newblock {\em ACM SIGCOMM Computer Communication Review}, 33(1):77--82, 2003.
+
+\bibitem{pilosov16stealing}
+A.~Pilosov and T.~Kapela.
+\newblock Stealing the internet: An internet-scale man in the middle attack,
+  2008.
+
+\bibitem{shi2012detecting}
+X.~Shi, Y.~Xiang, Z.~Wang, X.~Yin, and J.~Wu.
+\newblock Detecting prefix hijackings in the internet with argus.
+\newblock In {\em Proceedings of the 2012 ACM conference on Internet
+  measurement conference}, pages 15--28. ACM, 2012.
+
+\bibitem{shmatikov2006timing}
+V.~Shmatikov and M.-H. Wang.
+\newblock Timing analysis in low-latency mix networks: Attacks and defenses.
+\newblock In {\em Computer Security--ESORICS 2006}, pages 18--33. Springer,
+  2006.
+
+\bibitem{sriram2009comparative}
+K.~Sriram, O.~Borchert, O.~Kim, P.~Gleichmann, and D.~Montgomery.
+\newblock A comparative analysis of bgp anomaly detection and robustness
+  algorithms.
+\newblock In {\em Conference For Homeland Security, 2009. CATCH'09.
+  Cybersecurity Applications \& Technology}, pages 25--38. IEEE, 2009.
+
+\bibitem{starov2015measuring}
+O.~Starov, R.~Nithyanand, A.~Zair, P.~Gill, and M.~Schapira.
+\newblock Measuring and mitigating as-level adversaries against tor.
+\newblock {\em arXiv preprint arXiv:1505.05173}, 2015.
+
+\bibitem{sun2015raptor}
+Y.~Sun, A.~Edmundson, L.~Vanbever, O.~Li, J.~Rexford, M.~Chiang, and P.~Mittal.
+\newblock Raptor: routing attacks on privacy in tor.
+\newblock {\em arXiv preprint arXiv:1503.03940}, 2015.
+
+\bibitem{syverson2001towards}
+P.~Syverson, G.~Tsudik, M.~Reed, and C.~Landwehr.
+\newblock Towards an analysis of onion routing security.
+\newblock In {\em Designing Privacy Enhancing Technologies}, pages 96--114.
+  Springer, 2001.
+
+\bibitem{tille1996elimination}
+Y.~Till{\'e}.
+\newblock An elimination procedure for unequal probability sampling without
+  replacement.
+\newblock {\em Biometrika}, 83(1):238--241, 1996.
+
+\bibitem{zhang2007practical}
+Z.~Zhang, Y.~Zhang, Y.~C. Hu, and Z.~M. Mao.
+\newblock Practical defenses against bgp prefix hijacking.
+\newblock In {\em Proceedings of the 2007 ACM CoNEXT conference}, page~3. ACM,
+  2007.
+
+\bibitem{zhang2008ispy}
+Z.~Zhang, Y.~Zhang, Y.~C. Hu, Z.~M. Mao, and R.~Bush.
+\newblock Ispy: detecting ip prefix hijacking on my own.
+\newblock In {\em ACM SIGCOMM Computer Communication Review}, volume~38, pages
+  327--338. ACM, 2008.
+
+\bibitem{zhao2001analysis}
+X.~Zhao, D.~Pei, L.~Wang, D.~Massey, A.~Mankin, S.~F. Wu, and L.~Zhang.
+\newblock An analysis of bgp multiple origin as (moas) conflicts.
+\newblock In {\em Proceedings of the 1st ACM SIGCOMM Workshop on Internet
+  Measurement}, pages 31--35. ACM, 2001.
+
+\bibitem{zheng2007light}
+C.~Zheng, L.~Ji, D.~Pei, J.~Wang, and P.~Francis.
+\newblock A light-weight distributed scheme for detecting ip prefix hijacks in
+  real-time.
+\newblock In {\em ACM SIGCOMM Computer Communication Review}, volume~37, pages
+  277--288. ACM, 2007.
+
+\end{thebibliography}
