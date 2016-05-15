@@ -11,7 +11,7 @@ def plot_data(data, color):
     plt.xlabel('Resilience')
     plt.ylabel('# of ASes')
     plt.title('Histogram of Tor-related AS Resiliency')
-    plt.axis([0, 1, 0, 35])
+    plt.axis([0, 1, 0, 70])
     plt.show()
 
 data_map = constants.resilience_vals # as -> resilience
@@ -59,5 +59,5 @@ plt.title('Resilience and Corresponding Number of Relays per AS')
 plt.show()
 
 # To plot histogram of resiliency
-#data_list = data_map.values()
-#plot_data(data_list, 'blue')
+data_list = data_map.values()
+plot_data(data_list, 'blue')
